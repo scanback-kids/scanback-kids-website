@@ -1,6 +1,168 @@
-<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Return item | ScanBack Kids</title><style>body{font-family:Arial;background:#f5f7fb;padding:18px;color:#182230}.card{max-width:550px;margin:25px auto;background:white;padding:24px;border-radius:18px}label{display:block;font-weight:bold;margin:12px 0 6px}input,textarea{width:100%;box-sizing:border-box;padding:12px;border:1px solid #ccd2dc;border-radius:9px;font-size:16px}button{width:100%;padding:13px;margin-top:12px;border:0;border-radius:9px;background:#175cd3;color:white;font-weight:bold}.secondary{background:#eef2f6;color:#182230}.notice{background:#fff8e1;padding:12px;border-radius:10px;font-size:14px;line-height:1.5}.muted{color:#667085;font-size:14px}</style><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="config.js"></script></head><body><section class="card"><h1>🎒 Help return this item</h1><p id="info">Checking sticker…</p><div class="notice"><b>Optional location:</b> If you choose to share your location, your current coordinates will be sent to the registered owner to help return the item. You can send a report without location.</div><label>Your name (optional)</label><input id="name" placeholder="e.g. school staff"><label>Message (optional)</label><textarea id="message" rows="3" placeholder="I found this item near…"></textarea><button onclick="send(true)">Share location & send report</button><button class="secondary" onclick="send(false)">Send report without location</button><p id="status" class="muted"></p></section><script>
-const id=new URLSearchParams(location.search).get("id");let sb;
-function init(){let c=window.SCANBACK_CONFIG;if(!c.SUPABASE_URL.startsWith("https://")||c.SUPABASE_URL.includes("PASTE_")){document.getElementById("info").textContent="This service is not configured yet.";return}sb=window.supabase.createClient(c.SUPABASE_URL,c.SUPABASE_ANON_KEY);if(!id){document.getElementById("info").textContent="Invalid sticker link.";return}sb.functions.invoke("public-item",{body:{id}}).then(({data,error})=>{document.getElementById("info").innerHTML=error||!data?.item?"Sticker not found or inactive.":"Registered item: <b>"+esc(data.item.child_name)+"'s "+esc(data.item.item_name)+"</b>. Thank you for helping!"})}
-function send(want){if(!sb||!id)return;const submit=coords=>sb.functions.invoke("submit-scan",{body:{item_id:id,finder_name:document.getElementById("name").value.trim(),message:document.getElementById("message").value.trim(),location_shared:!!coords,consent_location:!!coords,latitude:coords?.latitude??null,longitude:coords?.longitude??null,accuracy:coords?.accuracy??null}}).then(({data,error})=>document.getElementById("status").textContent=error?"Report could not be sent. Please try again.":(data?.message||"Report sent. Thank you!"));if(!want)return submit(null);if(!navigator.geolocation){document.getElementById("status").textContent="Location unavailable. You can send without location.";return}document.getElementById("status").textContent="Your browser will ask whether to share location.";navigator.geolocation.getCurrentPosition(p=>submit({latitude:p.coords.latitude,longitude:p.coords.longitude,accuracy:p.coords.accuracy}),()=>document.getElementById("status").textContent="Location not shared. You can send without location.",{enableHighAccuracy:true,timeout:12000,maximumAge:0})}
-function esc(s){return String(s||"").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[m]))}init();
-</script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Return item | ScanBack Kids</title>
+  <style>
+    *{box-sizing:border-box}
+    body{font-family:Arial,sans-serif;background:#f5f7fb;padding:18px;color:#182230;margin:0}
+    .card{max-width:550px;margin:25px auto;background:#fff;padding:24px;border-radius:18px;box-shadow:0 6px 24px rgba(16,24,40,.06)}
+    label{display:block;font-weight:bold;margin:12px 0 6px}
+    input,textarea{width:100%;padding:12px;border:1px solid #ccd2dc;border-radius:9px;font-size:16px}
+    button{width:100%;padding:13px;margin-top:12px;border:0;border-radius:9px;background:#175cd3;color:white;font-weight:bold;font-size:15px;cursor:pointer}
+    button.secondary{background:#eef2f6;color:#182230}
+    button:disabled{opacity:.55;cursor:not-allowed}
+    .notice{background:#fff8e1;padding:12px;border-radius:10px;font-size:14px;line-height:1.5}
+    .muted{color:#667085;font-size:14px;line-height:1.5}
+    .success{font-size:42px;margin:0 0 12px}
+    .hidden{display:none}
+    .center{text-align:center}
+    .error{color:#b42318}
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="config.js"></script>
+</head>
+<body>
+  <section class="card" id="reportPage">
+    <h1>🎒 Help return this item</h1>
+    <p id="info">Checking sticker…</p>
+    <div class="notice"><b>Optional location:</b> If you choose to share your location, your current coordinates will be sent to the registered owner to help return the item. You can send a report without location.</div>
+    <label for="name">Your name (optional)</label>
+    <input id="name" maxlength="100" placeholder="e.g. school staff" autocomplete="name">
+    <label for="message">Message (optional)</label>
+    <textarea id="message" rows="3" maxlength="1200" placeholder="I found this item near…"></textarea>
+    <button id="withLocation" type="button">Share location &amp; send report</button>
+    <button id="withoutLocation" type="button" class="secondary">Send report without location</button>
+    <p id="status" class="muted" role="status" aria-live="polite"></p>
+  </section>
+
+  <section class="card center hidden" id="thankYouPage">
+    <p class="success">✅</p>
+    <h1>Thank you for helping!</h1>
+    <p>Your report has been received. The registered parent has been notified if their email alert was successfully sent.</p>
+    <p class="muted">Your kindness can help reunite a child with their belongings.</p>
+    <hr style="border:0;border-top:1px solid #e4e7ec;margin:24px 0">
+    <h2>Want the parent to contact you?</h2>
+    <p class="muted">Sharing contact information is entirely optional. This feature is being set up securely and is not available yet. Please do not enter phone numbers or email addresses in the report message.</p>
+    <p class="muted">You can close this page now.</p>
+  </section>
+
+  <script>
+    const itemId = new URLSearchParams(location.search).get('id');
+    const reportPage = document.getElementById('reportPage');
+    const thankYouPage = document.getElementById('thankYouPage');
+    const info = document.getElementById('info');
+    const status = document.getElementById('status');
+    const sendButtons = [document.getElementById('withLocation'), document.getElementById('withoutLocation')];
+    let sb = null;
+    let sending = false;
+    let itemReady = false;
+
+    // Local UI safeguard only. The server still needs a unique request ID + database
+    // uniqueness constraint to prevent duplicate records/emails across devices.
+    const storageKey = 'scanback:report-completed:' + itemId;
+    let completed = false;
+    try { completed = sessionStorage.getItem(storageKey) === 'yes'; } catch (_) {}
+
+    function setButtonsDisabled(disabled) {
+      sendButtons.forEach(button => { button.disabled = disabled; });
+    }
+    function showThankYou() {
+      completed = true;
+      try { sessionStorage.setItem(storageKey, 'yes'); } catch (_) {}
+      reportPage.classList.add('hidden');
+      thankYouPage.classList.remove('hidden');
+    }
+    function setStatus(message, isError = false) {
+      status.textContent = message;
+      status.classList.toggle('error', isError);
+    }
+    function resetAfterFailure(message) {
+      sending = false;
+      setButtonsDisabled(!itemReady || completed);
+      setStatus(message, true);
+    }
+
+    async function init() {
+      setButtonsDisabled(true);
+      if (completed) { showThankYou(); return; }
+      const c = window.SCANBACK_CONFIG;
+      if (!c || typeof c.SUPABASE_URL !== 'string' || !c.SUPABASE_URL.startsWith('https://') || c.SUPABASE_URL.includes('PASTE_') || !c.SUPABASE_ANON_KEY) {
+        info.textContent = 'This service is not configured yet.';
+        return;
+      }
+      if (!itemId) {
+        info.textContent = 'Invalid sticker link.';
+        return;
+      }
+      sb = window.supabase.createClient(c.SUPABASE_URL, c.SUPABASE_ANON_KEY);
+      try {
+        const { data, error } = await sb.functions.invoke('public-item', { body: { id: itemId } });
+        if (error || !data?.item) {
+          info.textContent = 'Sticker not found or inactive.';
+          return;
+        }
+        info.textContent = `Registered item: ${data.item.child_name}'s ${data.item.item_name}. Thank you for helping!`;
+        itemReady = true;
+        setButtonsDisabled(false);
+      } catch (_) {
+        info.textContent = 'Could not load the sticker. Please try again later.';
+      }
+    }
+
+    async function submitReport(coords) {
+      if (!sb || !itemId || completed) return;
+      try {
+        const { data, error } = await sb.functions.invoke('submit-scan', {
+          body: {
+            item_id: itemId,
+            finder_name: document.getElementById('name').value.trim(),
+            message: document.getElementById('message').value.trim(),
+            location_shared: Boolean(coords),
+            consent_location: Boolean(coords),
+            latitude: coords?.latitude ?? null,
+            longitude: coords?.longitude ?? null,
+            accuracy: coords?.accuracy ?? null
+          }
+        });
+        if (error || data?.ok !== true) {
+          resetAfterFailure('Report could not be sent. Please try again.');
+          return;
+        }
+        showThankYou();
+      } catch (_) {
+        resetAfterFailure('Report could not be sent. Check your connection and try again.');
+      }
+    }
+
+    function send(wantLocation) {
+      if (sending || completed || !itemReady || !sb || !itemId) return;
+      sending = true;
+      setButtonsDisabled(true);
+      if (!wantLocation) {
+        setStatus('Sending your report…');
+        void submitReport(null);
+        return;
+      }
+      if (!navigator.geolocation) {
+        resetAfterFailure('Location is unavailable. Please choose “Send report without location”.');
+        return;
+      }
+      setStatus('Your browser will ask for permission to share location…');
+      navigator.geolocation.getCurrentPosition(
+        p => {
+          setStatus('Sending your report…');
+          void submitReport({ latitude: p.coords.latitude, longitude: p.coords.longitude, accuracy: p.coords.accuracy });
+        },
+        () => resetAfterFailure('Location was not shared. Please choose “Send report without location”.'),
+        { enableHighAccuracy: true, timeout: 12000, maximumAge: 0 }
+      );
+    }
+
+    document.getElementById('withLocation').addEventListener('click', () => send(true));
+    document.getElementById('withoutLocation').addEventListener('click', () => send(false));
+    void init();
+  </script>
+</body>
+</html>
