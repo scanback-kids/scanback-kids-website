@@ -32,6 +32,7 @@
     <input id="name" maxlength="100" placeholder="e.g. school staff" autocomplete="name">
     <label for="message">Message (optional)</label>
     <textarea id="message" rows="3" maxlength="1200" placeholder="I found this item near…"></textarea>
+    <div id="reportCaptcha" style="margin-top:16px"></div>
     <button id="withLocation" type="button">Share location &amp; send report</button>
     <button id="withoutLocation" type="button" class="secondary">Send report without location</button>
     <p id="status" class="muted" role="status" aria-live="polite"></p>
@@ -51,6 +52,7 @@
       <label for="contactValue">Your phone or email</label>
       <input id="contactValue" maxlength="254" required placeholder="Phone number or email address">
       <label style="font-weight:normal;text-align:left"><input id="contactConsent" type="checkbox" required style="width:auto"> I agree to share these contact details with the registered parent only to arrange return of this item.</label>
+      <div id="contactCaptcha" style="margin-top:16px"></div>
       <button id="contactSend" type="submit">Share My Contact Details</button>
       <p id="contactStatus" class="muted" role="status" aria-live="polite"></p>
     </form>
@@ -64,6 +66,46 @@
     const info = document.getElementById('info');
     const status = document.getElementById('status');
     const sendButtons = [document.getElementById('withLocation'), document.getElementById('withoutLocation')];
+    // Replace this placeholder with the PUBLIC Site Key shown in Cloudflare Turnstile.
+    const TURNSTILE_SITE_KEY = '0x4AAAAAAFTtegS3-cVncSW6';
+    let reportWidgetId = null;
+    let contactWidgetId = null;
+    let turnstileLoaded = false;
+    function captchaToken(widgetId) {
+      if (!turnstileLoaded || widgetId === null) return '';
+      return window.turnstile.getResponse(widgetId) || '';
+    }
+    function resetCaptcha(widgetId) {
+      if (turnstileLoaded && widgetId !== null) window.turnstile.reset(widgetId);
+    }
+    window.onScanbackTurnstileLoad = function () {
+      turnstileLoaded = true;
+      reportWidgetId = window.turnstile.render('#reportCaptcha', {
+        sitekey: TURNSTILE_SITE_KEY, action: 'scan_report',
+        callback: () => { if (itemReady && !sending && !completed) setButtonsDisabled(false); },
+        'expired-callback': () => setButtonsDisabled(true),
+        'error-callback': () => setButtonsDisabled(true)
+      });
+      if (completed) renderContactCaptcha();
+      if (itemReady && captchaToken(reportWidgetId)) setButtonsDisabled(false);
+    };
+    function renderContactCaptcha() {
+      if (turnstileLoaded && contactWidgetId === null) {
+        contactWidgetId = window.turnstile.render('#contactCaptcha', {
+          sitekey: TURNSTILE_SITE_KEY, action: 'share_contact'
+        });
+      }
+    }
+    function loadCaptcha() {
+      if (TURNSTILE_SITE_KEY === 'PASTE_YOUR_TURNSTILE_SITE_KEY_HERE') {
+        info.textContent = 'Turnstile site key has not been configured.'; return false;
+      }
+      const script = document.createElement('script');
+      script.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js?onload=onScanbackTurnstileLoad&render=explicit';
+      script.async = true; script.defer = true;
+      document.head.appendChild(script);
+      return true;
+    }
     let sb = null;
     let sending = false;
     let itemReady = false;
@@ -104,7 +146,8 @@
     }
     function resetAfterFailure(message) {
       sending = false;
-      setButtonsDisabled(!itemReady || completed);
+      resetCaptcha(reportWidgetId);
+      setButtonsDisabled(true);
       setStatus(message, true);
     }
 
@@ -120,6 +163,7 @@
         return;
       }
       sb = window.supabase.createClient(c.SUPABASE_URL, c.SUPABASE_ANON_KEY);
+      if (!loadCaptcha()) return;
       if (completed) { showThankYou(); return; }
       try {
         const { data, error } = await sb.functions.invoke('public-item', { body: { id: itemId } });
@@ -129,7 +173,7 @@
         }
         info.textContent = `Registered item: ${data.item.child_name}'s ${data.item.item_name}. Thank you for helping!`;
         itemReady = true;
-        setButtonsDisabled(false);
+        setButtonsDisabled(!captchaToken(reportWidgetId));
       } catch (_) {
         info.textContent = 'Could not load the sticker. Please try again later.';
       }
@@ -142,6 +186,7 @@
           body: {
             item_id: itemId,
             request_id: requestId,
+            turnstile_token: captchaToken(reportWidgetId),
             finder_name: document.getElementById('name').value.trim(),
             message: document.getElementById('message').value.trim(),
             location_shared: Boolean(coords),
@@ -164,6 +209,7 @@
 
     function send(wantLocation) {
       if (sending || completed || !itemReady || !sb || !itemId) return;
+      if (!captchaToken(reportWidgetId)) { setStatus("Complete the security check first.", true); return; }
       sending = true;
       setButtonsDisabled(true);
       if (!wantLocation) {
@@ -195,19 +241,25 @@
         result.textContent = 'Please enter your contact information and agree to share it.';
         return;
       }
+      if (!captchaToken(contactWidgetId)) {
+        result.textContent = 'Complete the security check before sharing your details.';
+        return;
+      }
       btn.disabled = true;
       result.textContent = 'Sending your details…';
       try {
         const {data, error} = await sb.functions.invoke('submit-contact', {
           body: {item_id:itemId, contact_token:contactToken,
-            name:document.getElementById('contactName').value.trim(), contact, consent:true}
+            name:document.getElementById('contactName').value.trim(), contact, consent:true,
+            turnstile_token:captchaToken(contactWidgetId)}
         });
         if (error || data?.ok !== true) throw new Error(data?.error || 'Send failed');
         result.textContent = 'Thank you! Your contact details have been saved and will be shared privately with the parent.';
         document.getElementById('contactForm').querySelectorAll('input').forEach(input=>input.disabled=true);
       } catch (_) {
         btn.disabled = false;
-        result.textContent = 'Could not send contact details. Please try again.';
+        resetCaptcha(contactWidgetId);
+        result.textContent = 'Could not send contact details. Complete the security check again and retry.';
       }
     });
     document.getElementById('withLocation').addEventListener('click', () => send(true));
