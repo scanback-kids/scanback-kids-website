@@ -1,23 +1,480 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#192b52"><title>Design Your QR Sticker Pack | ScanBack Kids</title>
-<style>
-:root{--ink:#192b52;--muted:#65718b;--line:#dce4f1;--blue:#315be8;--bg:#f6f8ff;--white:#fff}*{box-sizing:border-box}body{margin:0;background:var(--bg);font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Arial,sans-serif;color:var(--ink)}header{background:#fff;border-bottom:1px solid var(--line);padding:17px max(18px,calc((100vw - 1120px)/2));display:flex;align-items:center;justify-content:space-between;gap:12px}.brand{font-size:23px;font-weight:900;letter-spacing:-.7px}.tag{font-size:12px;padding:7px 10px;background:#edf3ff;border-radius:999px;color:#3451a2;font-weight:800}main{max-width:1120px;margin:0 auto;padding:30px 18px 70px}h1{font-size:clamp(28px,4vw,43px);letter-spacing:-1.4px;margin:0 0 8px}h2{margin:0 0 8px;font-size:22px}p{line-height:1.55}.sub{color:var(--muted);margin:0 0 23px}.layout{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(310px,.8fr);gap:24px;align-items:start}.panel{background:white;border:1px solid var(--line);box-shadow:0 12px 40px #3048770d;border-radius:20px;padding:23px;margin-bottom:18px}.panel small{color:var(--muted)}label{display:block;font-weight:750;font-size:14px;margin:14px 0 7px}input,select{width:100%;border:1px solid #c9d4e6;background:white;border-radius:11px;padding:12px;color:var(--ink);font:inherit}input:focus,select:focus{outline:3px solid #d7e6ff;border-color:#406be8}.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}.items{display:grid;gap:12px}.itemrow{background:#f8faff;border:1px solid #e1e9f6;border-radius:15px;padding:14px}.itemtop{display:flex;align-items:center;justify-content:space-between;font-weight:800}.number{background:#e5ecff;color:#2949a5;border-radius:8px;padding:5px 9px;font-size:12px}.picker{display:grid;grid-template-columns:1fr 1fr;gap:10px}.hint{margin:8px 0 0;font-size:12px;color:var(--muted)}.summary{position:sticky;top:16px}.sticker{min-height:175px;background:white;border:2px solid #cedbee;border-radius:17px;display:grid;grid-template-columns:1fr 86px;align-items:center;gap:10px;padding:17px;margin-top:13px;overflow:hidden}.sticker.space{background:#e8edff;border-color:#98afff}.sticker.dino{background:#e9fae7;border-color:#8ccf8f}.sticker.rainbow{background:#fff0f7;border-color:#f7b2d6}.sticker.sports{background:#fff6e7;border-color:#f1c274}.sticker .theme{font-size:31px}.sticker .name{font-weight:900;font-size:20px;line-height:1.15;overflow-wrap:anywhere}.sticker .itemname{font-weight:750;font-size:13px;margin:5px 0 10px}.sticker .foot{font-size:10px;color:#52627d;font-weight:750}.qr{background:white;border:2px solid #243252;border-radius:9px;width:86px;height:86px;display:grid;place-items:center;text-align:center;font-size:11px;font-weight:900;color:#53617a;padding:6px;line-height:1.2}.qr::before{content:'▦';display:block;font-size:31px;color:#22304e}.previewctrl{display:flex;align-items:center;justify-content:space-between;gap:9px;margin:12px 0}.previewctrl select{max-width:190px}.price{display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid var(--line)}.total{font-size:21px;font-weight:900}.btn{display:inline-flex;justify-content:center;align-items:center;border:none;border-radius:12px;background:var(--blue);color:white;padding:14px 18px;font-size:15px;font-weight:800;cursor:pointer}.btn:disabled{background:#b8c2d5;cursor:not-allowed}.btn2{background:#edf2fb;color:#223d79}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}.disclaimer{margin-top:14px;padding:12px 14px;background:#fff8e8;border:1px solid #f3dba5;border-radius:12px;font-size:13px;line-height:1.5}.footnote{color:var(--muted);font-size:12px}.error{color:#b42318;font-size:13px}.success{color:#027a48;font-size:13px}footer{text-align:center;color:var(--muted);font-size:12px;margin-top:28px}@media(max-width:780px){.layout{grid-template-columns:1fr}.summary{position:static}.panel{padding:17px}.grid2{grid-template-columns:1fr}main{padding-top:22px}}
-</style></head>
-<body><header><div class="brand">🎒 ScanBack <span style="color:#4169e5">Kids</span></div><span class="tag">DESIGN STUDIO · PREVIEW</span></header><main><h1>Create their perfect sticker pack ✨</h1><p class="sub">Choose a different illustration and item name for every sticker. One pack, a whole world of belongings.</p><div class="layout"><div>
-<section class="panel"><h2>1. Choose your pack</h2><p class="sub">Illustrative pricing only. Final prices will be set before launch.</p><label for="qty">Number of stickers</label><select id="qty"><option value="6">6 personalized stickers — ₹299</option><option value="12">12 personalized stickers — ₹499</option></select><label for="child">Child's first name or nickname</label><input id="child" maxlength="24" autocomplete="off" value="Aarav" placeholder="e.g. Aarav"><p class="hint">Use a nickname or first name only. Avoid putting addresses, phone numbers or school names on the sticker.</p></section>
-<section class="panel"><h2>2. Personalize every sticker</h2><p class="sub">Each sticker gets its own unique QR code when the order is securely processed.</p><div id="items" class="items"></div><div class="actions"><button id="copy" type="button" class="btn btn2">Use first design for all</button><button id="defaults" type="button" class="btn btn2">Fill sample item names</button></div></section>
-<section class="panel"><h2>3. Review your design</h2><p class="sub">The digital preview shows the printed text and layout. Final print artwork will include a real, unique QR code for each sticker.</p><p class="footnote">All stickers are personalized at checkout, before printing. Future dashboard changes cannot alter text already printed on a sticker.</p><div class="actions"><button class="btn btn2" type="button" id="save">Download my design choices</button></div><p id="saveStatus" aria-live="polite"></p></section>
-</div><aside class="summary"><section class="panel"><h2>Live sticker preview</h2><div class="previewctrl"><label for="preview" style="margin:0">Sticker</label><select id="preview" aria-label="Choose sticker preview"></select></div><div id="sticker" class="sticker space" aria-live="polite"><div><div class="theme">🚀</div><div class="name">Aarav's</div><div class="itemname">School Bag</div><div class="foot">SCAN TO HELP RETURN</div></div><div class="qr">QR ADDED AFTER PAYMENT</div></div><p class="footnote">Design mockup, not a real scannable sticker.</p><div class="price"><span>Sticker pack</span><b id="subtotal">₹299</b></div><div class="price"><span>Shipping</span><span>Calculated at checkout</span></div><div class="price total"><span>Subtotal</span><span id="total">₹299</span></div><button class="btn" disabled style="width:100%;margin-top:20px">Checkout — coming soon</button><div class="disclaimer"><b>Prototype only.</b> No payment or order is collected here. We'll connect secure checkout, verified payment, order assignment and printing before taking customer orders.</div></section></aside></div><footer>ScanBack Kids · Customer personalization prototype · No order is placed on this page</footer></main>
-<script>
-'use strict';
-const $=id=>document.getElementById(id);
-const themes={space:{label:'🚀 Space Adventure',icon:'🚀'},dino:{label:'🦕 Dinosaur World',icon:'🦕'},rainbow:{label:'🌈 Rainbow Magic',icon:'🌈'},sports:{label:'🏏 Sports Champions',icon:'🏏'}};
-const sampleItems=['School Bag','Water Bottle','Lunch Box','Pencil Box','Notebook','Sports Kit','Library Book','Jacket','Art Kit','Shoes','Geometry Box','Lunch Bag'];
-let models=[];
-const safe=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-function resize(){const n=Number($('qty').value);models=Array.from({length:n},(_,i)=>models[i]||{item:sampleItems[i],theme:['space','dino','rainbow','sports'][i%4]});renderRows();renderPreview();$('subtotal').textContent=n===6?'₹299':'₹499';$('total').textContent=n===6?'₹299':'₹499'}
-function renderRows(){const holder=$('items');holder.replaceChildren();models.forEach((m,i)=>{const box=document.createElement('div');box.className='itemrow';const top=document.createElement('div');top.className='itemtop';top.innerHTML='<span>Sticker '+(i+1)+'</span><span class="number">UNIQUE QR</span>';const grid=document.createElement('div');grid.className='picker';const itemwrap=document.createElement('div');const l1=document.createElement('label');l1.textContent='Item name';const inp=document.createElement('input');inp.maxLength=32;inp.value=m.item;inp.placeholder='e.g. Lunch Box';inp.addEventListener('input',()=>{m.item=inp.value;renderPreview()});itemwrap.append(l1,inp);const twrap=document.createElement('div');const l2=document.createElement('label');l2.textContent='Sticker theme';const sel=document.createElement('select');Object.entries(themes).forEach(([key,t])=>{const opt=document.createElement('option');opt.value=key;opt.textContent=t.label;sel.appendChild(opt)});sel.value=m.theme;sel.addEventListener('change',()=>{m.theme=sel.value;renderPreview()});twrap.append(l2,sel);grid.append(itemwrap,twrap);box.append(top,grid);holder.appendChild(box)});const prev=$('preview');const prevIndex=Math.min(Math.max(Number(prev.value)||0,0),models.length-1);prev.replaceChildren();models.forEach((_,i)=>{const opt=document.createElement('option');opt.value=i;opt.textContent='Sticker '+(i+1);prev.appendChild(opt)});prev.value=prevIndex}
-function renderPreview(){const i=Math.min(Math.max(Number($('preview').value)||0,0),models.length-1);const m=models[i];if(!m)return;const child=$('child').value.trim()||'Your child';const el=$('sticker');el.className='sticker '+m.theme;el.querySelector('.theme').textContent=themes[m.theme].icon;el.querySelector('.name').textContent=child+"'s";el.querySelector('.itemname').textContent=m.item.trim()||'Belonging'}
-$('qty').addEventListener('change',resize);$('child').addEventListener('input',renderPreview);$('preview').addEventListener('change',renderPreview);$('copy').addEventListener('click',()=>{const t=models[0].theme;models.forEach(x=>x.theme=t);renderRows();renderPreview()});$('defaults').addEventListener('click',()=>{models.forEach((m,i)=>m.item=sampleItems[i]);renderRows();renderPreview()});
-$('save').addEventListener('click',()=>{const child=$('child').value.trim();if(!child){$('saveStatus').className='error';$('saveStatus').textContent='Please enter a child display name.';return}if(models.some(x=>!x.item.trim())){$('saveStatus').className='error';$('saveStatus').textContent='Please fill in the item name on every sticker.';return}const draft={version:1,kind:'scanback-kids-design-draft',pack_size:models.length,child_display_name:child,stickers:models.map((m,i)=>({number:i+1,item_name:m.item.trim(),theme:m.theme})),note:'Not an order. QR codes and ownership are assigned only through verified checkout.'};const blob=new Blob([JSON.stringify(draft,null,2)],{type:'application/json'});const url=URL.createObjectURL(blob);const link=document.createElement('a');link.href=url;link.download='scanback-design-draft.json';document.body.appendChild(link);link.click();link.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);$('saveStatus').className='success';$('saveStatus').textContent='Design choices downloaded. No order has been placed.'});resize();
-</script></body></html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ScanBack Kids – Sticker Builder</title>
+  <style>
+    :root{
+      --bg:#f6f8ff;
+      --ink:#182230;
+      --muted:#667085;
+      --card:#ffffff;
+      --line:#d7def2;
+      --brand:#175cd3;
+      --brand2:#ff5ca8;
+      --brand3:#ffd54d;
+      --ok:#10b981;
+      --danger:#ef4444;
+      --shadow:0 10px 30px rgba(24,34,48,.08);
+      --r:22px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Arial, Helvetica, sans-serif;
+      color:var(--ink);
+      background:linear-gradient(180deg,#e9f4ff 0%, #f7f7ff 35%, #fff 100%);
+    }
+    header{
+      padding:22px 5%;
+      background:#fff;
+      box-shadow:0 4px 20px rgba(0,0,0,.05);
+      position:sticky;top:0;z-index:20;
+    }
+    .logo{font-size:32px;font-weight:900;letter-spacing:.2px}
+    .logo .kids{background:linear-gradient(90deg,#ff6a95,#ffb31a,#25c06d,#2b7fff);-webkit-background-clip:text;background-clip:text;color:transparent}
+    .tag{color:var(--muted);font-size:14px;margin-top:4px}
+    main{max-width:1280px;margin:0 auto;padding:24px 16px 60px}
+    .hero{
+      background:linear-gradient(135deg,#ffffff 0%,#eef6ff 45%,#fff7fd 100%);
+      border:1px solid #edf1fb;
+      border-radius:30px;
+      box-shadow:var(--shadow);
+      padding:28px;
+      display:grid;
+      grid-template-columns:1.2fr .8fr;
+      gap:24px;
+      margin-bottom:20px;
+    }
+    .hero h1{font-size:46px;line-height:1.05;margin:0 0 10px}
+    .hero p{font-size:18px;color:#4b5565;margin:0 0 14px;line-height:1.55}
+    .pillrow{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+    .pill{padding:10px 14px;border-radius:999px;background:#fff;border:1px solid #e7ebf4;font-weight:700}
+    .hero-art{
+      min-height:260px;border-radius:28px;padding:16px;display:grid;grid-template-columns:1fr 1fr;gap:14px;
+      background:linear-gradient(135deg,#dff2ff,#ffe7f7);
+    }
+    .mini-card{
+      border-radius:24px;padding:16px;color:#fff;display:flex;flex-direction:column;justify-content:space-between;min-height:120px;
+      box-shadow:0 10px 25px rgba(0,0,0,.08);
+    }
+    .mini-card .big{font-size:56px;line-height:1;text-align:right}
+    .space{background:linear-gradient(135deg,#2240d8,#70d6ff)}
+    .dino{background:linear-gradient(135deg,#1c9f56,#a8ec6c)}
+    .rainbow{background:linear-gradient(135deg,#ff6ea9,#7b61ff 45%,#54d2ff)}
+    .sports{background:linear-gradient(135deg,#ff9933,#ffc837 35%,#59c25f)}
+
+    .layout{display:grid;grid-template-columns:420px 1fr;gap:20px;align-items:start}
+    .panel{background:var(--card);border-radius:24px;padding:20px;border:1px solid #edf1fb;box-shadow:var(--shadow)}
+    h2{margin:0 0 12px}
+    h3{margin:0 0 10px}
+    .sub{color:var(--muted);font-size:14px;line-height:1.5}
+    label{display:block;font-weight:700;margin:14px 0 6px}
+    input,select,button,textarea{font:inherit}
+    input,select{
+      width:100%;padding:12px 14px;border-radius:14px;border:1px solid #cfd8eb;background:#fff;
+    }
+    button{
+      border:0;border-radius:14px;padding:14px 18px;font-weight:800;cursor:pointer;
+      background:var(--brand);color:#fff;box-shadow:0 8px 18px rgba(23,92,211,.22);
+    }
+    button.secondary{background:#eef4ff;color:var(--ink);box-shadow:none}
+    button.alt{background:#fff0f7;color:#a81f66;box-shadow:none}
+    button:disabled{opacity:.55;cursor:not-allowed}
+    .row2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .stickers-list{display:grid;gap:12px;margin-top:14px}
+    .sticker-editor{border:1px solid var(--line);border-radius:18px;padding:14px;background:#fbfcff}
+    .sticker-editor-title{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;font-weight:800}
+    .theme-legend{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+    .legend-chip{display:flex;align-items:center;gap:8px;background:#f7f9fc;border:1px solid #e6ebf5;padding:8px 10px;border-radius:999px;font-size:13px;font-weight:700}
+
+    .preview-panel{position:sticky;top:104px}
+    .toolbar{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:12px}
+    .note{font-size:13px;color:#8b6f00;background:#fff9dd;border:1px solid #f3e29b;border-radius:14px;padding:12px 14px;line-height:1.5}
+    .sheet-wrap{background:#eef3ff;border-radius:24px;padding:16px;border:1px solid #e0e9f8}
+    .sheet{
+      width:100%;background:#fff;border-radius:22px;padding:18px;box-shadow:0 8px 20px rgba(0,0,0,.08);
+    }
+    .sheet-header{
+      border-radius:20px;padding:18px;color:#fff;display:flex;justify-content:space-between;gap:10px;align-items:center;margin-bottom:14px;
+      background:linear-gradient(135deg,#2934e0,#4ab8ff 60%,#9be7ff);
+    }
+    .sheet-header.rainbow{background:linear-gradient(135deg,#ff5ca8,#7b61ff 45%,#59d8ff)}
+    .sheet-header.dino{background:linear-gradient(135deg,#1a9d52,#7fd644)}
+    .sheet-header.sports{background:linear-gradient(135deg,#2458ff,#3dc96f 58%,#ffba3a)}
+    .sheet-title{font-size:32px;font-weight:900;line-height:1}
+    .sheet-sub{font-size:15px;opacity:.95;margin-top:6px}
+    .sheet-badge{font-size:64px;line-height:1}
+    .sheet-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    .sticker-card{
+      position:relative;border-radius:22px;overflow:hidden;min-height:190px;padding:14px;color:#fff;
+      box-shadow:0 8px 18px rgba(0,0,0,.08);display:grid;grid-template-columns:1.05fr .95fr;gap:8px;
+    }
+    .sticker-card.space{background:linear-gradient(135deg,#2934e0,#4ab8ff)}
+    .sticker-card.dino{background:linear-gradient(135deg,#1ca055,#96e23f)}
+    .sticker-card.rainbow{background:linear-gradient(135deg,#ff5fa6,#8b63ff 52%,#63d8ff)}
+    .sticker-card.sports{background:linear-gradient(135deg,#ff9636,#3dc96f 65%,#53b9ff)}
+    .sticker-bg-shape{position:absolute;inset:auto -16px -20px auto;width:145px;height:145px;border-radius:50%;background:rgba(255,255,255,.14)}
+    .mascot{font-size:88px;line-height:.95;align-self:center;text-align:center;filter:drop-shadow(0 6px 8px rgba(0,0,0,.15))}
+    .card-right{display:flex;flex-direction:column;justify-content:space-between;position:relative;z-index:2}
+    .belong{font-size:15px;font-weight:800;color:#fff}
+    .name{font-size:34px;font-weight:900;letter-spacing:.5px;line-height:.95;margin:4px 0 6px;color:#fff;text-shadow:0 2px 8px rgba(0,0,0,.18)}
+    .item-pill{align-self:flex-start;background:rgba(255,255,255,.92);color:#1f2a37;padding:8px 12px;border-radius:999px;font-weight:800;display:flex;align-items:center;gap:8px;max-width:100%}
+    .item-pill span:last-child{display:inline-block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:145px}
+    .qr-wrap{display:flex;justify-content:space-between;align-items:flex-end;margin-top:8px;gap:8px}
+    .qr{
+      width:68px;height:68px;background:
+        linear-gradient(90deg,#000 10px,transparent 10px) 0 0/22px 22px,
+        linear-gradient(#000 10px,transparent 10px) 0 0/22px 22px,
+        linear-gradient(90deg,#000 10px,transparent 10px) 11px 11px/22px 22px,
+        linear-gradient(#000 10px,transparent 10px) 11px 11px/22px 22px,
+        #fff;
+      border-radius:8px;border:6px solid #fff;box-shadow:0 4px 10px rgba(0,0,0,.12)
+    }
+    .brandmark{font-size:13px;font-weight:800;color:#fff;line-height:1.35;text-align:right}
+    .brandmark small{display:block;font-weight:700;opacity:.95}
+    .meta{margin-top:14px;font-size:13px;color:#5d6980}
+    .hidden{display:none !important}
+    .footer-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+
+    @media (max-width: 1100px){
+      .layout{grid-template-columns:1fr}
+      .preview-panel{position:static}
+      .hero{grid-template-columns:1fr}
+    }
+    @media (max-width: 720px){
+      .hero h1{font-size:34px}
+      .sheet-grid{grid-template-columns:1fr}
+      .row2{grid-template-columns:1fr}
+      .sticker-card{grid-template-columns:.95fr 1.05fr;min-height:176px}
+      .name{font-size:30px}
+      .logo{font-size:28px}
+      .sheet-title{font-size:28px}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">ScanBack <span class="kids">Kids</span></div>
+    <div class="tag">Small Stickers. Big Reunions. ❤</div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <h1>Build a sticker sheet kids will love.</h1>
+        <p>Create a colorful personalized preview for every sticker in the pack, then download a printable PDF draft for review or printing mockup.</p>
+        <div class="pillrow">
+          <div class="pill">Mix designs in one pack</div>
+          <div class="pill">Live sticker preview</div>
+          <div class="pill">Download A4 PDF draft</div>
+        </div>
+        <p class="sub" style="margin-top:14px">This version creates a <b>visual draft preview</b>. QR blocks are <b>preview placeholders only</b> and not live production QR codes yet.</p>
+      </div>
+      <div class="hero-art">
+        <div class="mini-card space"><div><strong>Space Adventure</strong><div class="sub" style="color:#eef5ff">Rockets, stars & bold blue colors</div></div><div class="big">🚀</div></div>
+        <div class="mini-card dino"><div><strong>Dinosaur World</strong><div class="sub" style="color:#f4fff7">Cute dinos & jungle vibes</div></div><div class="big">🦕</div></div>
+        <div class="mini-card rainbow"><div><strong>Rainbow Magic</strong><div class="sub" style="color:#fff8ff">Pastels, unicorns & sparkle</div></div><div class="big">🦄</div></div>
+        <div class="mini-card sports"><div><strong>Sports Champions</strong><div class="sub" style="color:#fffdf4">Energy, trophies & action</div></div><div class="big">⚽</div></div>
+      </div>
+    </section>
+
+    <section class="layout">
+      <div class="panel">
+        <h2>Sticker builder</h2>
+        <p class="sub">Choose the child name, pack size and a separate theme + item name for each sticker.</p>
+
+        <div class="row2">
+          <div>
+            <label for="childName">Child name / nickname</label>
+            <input id="childName" maxlength="18" placeholder="e.g. Aarav" value="Aarav" />
+          </div>
+          <div>
+            <label for="packSize">Pack size</label>
+            <select id="packSize">
+              <option value="6" selected>6 stickers</option>
+              <option value="12">12 stickers</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="theme-legend">
+          <div class="legend-chip"><span>🚀</span> Space Adventure</div>
+          <div class="legend-chip"><span>🦕</span> Dinosaur World</div>
+          <div class="legend-chip"><span>🦄</span> Rainbow Magic</div>
+          <div class="legend-chip"><span>⚽</span> Sports Champions</div>
+        </div>
+
+        <div id="stickersList" class="stickers-list"></div>
+
+        <div class="footer-actions">
+          <button id="updateBtn" type="button">Update preview</button>
+          <button id="jsonBtn" type="button" class="secondary">Download design draft JSON</button>
+          <button id="resetBtn" type="button" class="alt">Reset sample data</button>
+        </div>
+      </div>
+
+      <div class="panel preview-panel">
+        <h2>Live visual sticker preview</h2>
+        <p class="sub">This is the customer-facing visual sheet preview. Download it as a PDF draft for review or printing reference.</p>
+        <div class="toolbar">
+          <button id="pdfBtn" type="button">Download printable PDF draft</button>
+        </div>
+        <div class="note">Important: this PDF is a <b>design draft</b>. The QR blocks are placeholder visuals until production QR generation is connected.</div>
+        <div class="sheet-wrap" id="captureAreaWrap">
+          <div class="sheet" id="captureArea">
+            <div class="sheet-header" id="sheetHeader">
+              <div>
+                <div class="sheet-title" id="sheetTitle">Mix & Match Adventure Pack</div>
+                <div class="sheet-sub" id="sheetSubtitle">Personalized sticker preview for every adventure</div>
+              </div>
+              <div class="sheet-badge" id="sheetBadge">✨</div>
+            </div>
+            <div class="sheet-grid" id="previewGrid"></div>
+            <div class="meta">Draft preview generated from your current selections. Brand: ScanBack Kids.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
+  <script>
+    const themeDefs = {
+      space: {
+        label: 'Space Adventure', emoji:'🚀', className:'space',
+        iconMap: { 'School Bag':'🎒', 'Water Bottle':'🧴', 'Lunch Box':'🍱', 'Pencil Box':'✏️', 'Notebook':'📘', 'Sports Kit':'⚽' },
+        mascots:['👨‍🚀','🚀','⭐','🛰️','📘','⚽']
+      },
+      dino: {
+        label: 'Dinosaur World', emoji:'🦕', className:'dino',
+        iconMap: { 'School Bag':'🎒', 'Water Bottle':'🧴', 'Lunch Box':'🍱', 'Pencil Box':'✏️', 'Notebook':'📗', 'Sports Kit':'⚽' },
+        mascots:['🦖','🦕','🥚','🌋','🦖','🦕']
+      },
+      rainbow: {
+        label: 'Rainbow Magic', emoji:'🦄', className:'rainbow',
+        iconMap: { 'School Bag':'🎒', 'Water Bottle':'🧴', 'Lunch Box':'🍱', 'Pencil Box':'✏️', 'Notebook':'📓', 'Sports Kit':'⚽' },
+        mascots:['🦄','🌈','💖','✨','📒','⚽']
+      },
+      sports: {
+        label: 'Sports Champions', emoji:'⚽', className:'sports',
+        iconMap: { 'School Bag':'🎒', 'Water Bottle':'🧴', 'Lunch Box':'🍱', 'Pencil Box':'✏️', 'Notebook':'📙', 'Sports Kit':'🏆' },
+        mascots:['🏏','⚽','🏀','🏃','🏊','🏆']
+      }
+    };
+
+    const sampleBase = [
+      { itemName:'School Bag', theme:'space' },
+      { itemName:'Water Bottle', theme:'dino' },
+      { itemName:'Lunch Box', theme:'rainbow' },
+      { itemName:'Pencil Box', theme:'sports' },
+      { itemName:'Notebook', theme:'space' },
+      { itemName:'Sports Kit', theme:'rainbow' },
+      { itemName:'Art Kit', theme:'rainbow' },
+      { itemName:'Crayons', theme:'dino' },
+      { itemName:'Toy Box', theme:'space' },
+      { itemName:'Tiffin Bag', theme:'sports' },
+      { itemName:'Sipper', theme:'rainbow' },
+      { itemName:'Library Book', theme:'dino' }
+    ];
+
+    const stickersList = document.getElementById('stickersList');
+    const previewGrid = document.getElementById('previewGrid');
+    const packSizeEl = document.getElementById('packSize');
+    const childNameEl = document.getElementById('childName');
+
+    function makeEditors() {
+      const count = Number(packSizeEl.value || 6);
+      stickersList.innerHTML = '';
+      for (let i = 0; i < count; i++) {
+        const data = sampleBase[i] || { itemName:`Item ${i+1}`, theme:'space' };
+        const wrap = document.createElement('div');
+        wrap.className = 'sticker-editor';
+        wrap.innerHTML = `
+          <div class="sticker-editor-title">
+            <span>Sticker ${i+1}</span>
+            <span style="color:#667085;font-size:13px">Mix & match</span>
+          </div>
+          <div class="row2">
+            <div>
+              <label>Theme</label>
+              <select class="theme-select">
+                <option value="space" ${data.theme==='space'?'selected':''}>🚀 Space Adventure</option>
+                <option value="dino" ${data.theme==='dino'?'selected':''}>🦕 Dinosaur World</option>
+                <option value="rainbow" ${data.theme==='rainbow'?'selected':''}>🦄 Rainbow Magic</option>
+                <option value="sports" ${data.theme==='sports'?'selected':''}>⚽ Sports Champions</option>
+              </select>
+            </div>
+            <div>
+              <label>Item name</label>
+              <input class="item-input" maxlength="22" value="${escapeHtml(data.itemName)}" placeholder="e.g. School Bag" />
+            </div>
+          </div>
+        `;
+        stickersList.appendChild(wrap);
+      }
+    }
+
+    function getStickerData() {
+      const themes = [...document.querySelectorAll('.theme-select')].map(x => x.value);
+      const items = [...document.querySelectorAll('.item-input')].map(x => x.value.trim() || 'My Item');
+      return items.map((itemName, i) => ({ itemName, theme: themes[i] || 'space' }));
+    }
+
+    function buildCardHTML(item, index, childName) {
+      const def = themeDefs[item.theme] || themeDefs.space;
+      const mascot = def.mascots[index % def.mascots.length] || def.emoji;
+      const icon = def.iconMap[item.itemName] || guessIcon(item.itemName);
+      return `
+        <div class="sticker-card ${def.className}">
+          <div class="sticker-bg-shape"></div>
+          <div class="mascot">${mascot}</div>
+          <div class="card-right">
+            <div>
+              <div class="belong">This belongs to</div>
+              <div class="name">${escapeHtml((childName || 'Aarav').toUpperCase())}</div>
+              <div class="item-pill"><span>${icon}</span><span>${escapeHtml(item.itemName)}</span></div>
+            </div>
+            <div class="qr-wrap">
+              <div class="qr" aria-label="QR placeholder"></div>
+              <div class="brandmark">❤ ScanBack Kids<small>Preview draft</small></div>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    function updateHeaderMix(stickerData) {
+      const priority = priorityTheme(stickerData);
+      const header = document.getElementById('sheetHeader');
+      header.className = `sheet-header ${priority}`;
+      const titleMap = {
+        space:'Space Adventure Pack',
+        dino:'Dinosaur World Pack',
+        rainbow:'Rainbow Magic Pack',
+        sports:'Sports Champions Pack'
+      };
+      document.getElementById('sheetTitle').textContent = stickerData.every(s=>s.theme===priority) ? titleMap[priority] : 'Mix & Match Adventure Pack';
+      document.getElementById('sheetSubtitle').textContent = 'Personalized sticker preview for every adventure';
+      document.getElementById('sheetBadge').textContent = themeDefs[priority]?.emoji || '✨';
+    }
+
+    function priorityTheme(arr){
+      const count = {space:0,dino:0,rainbow:0,sports:0};
+      arr.forEach(x=>count[x.theme]=(count[x.theme]||0)+1);
+      return Object.entries(count).sort((a,b)=>b[1]-a[1])[0][0] || 'space';
+    }
+
+    function renderPreview() {
+      const childName = childNameEl.value.trim() || 'Aarav';
+      const data = getStickerData();
+      previewGrid.innerHTML = data.map((item, index) => buildCardHTML(item, index, childName)).join('');
+      updateHeaderMix(data);
+    }
+
+    function guessIcon(name){
+      const n = (name||'').toLowerCase();
+      if (n.includes('bag')) return '🎒';
+      if (n.includes('bottle') || n.includes('sipper')) return '🧴';
+      if (n.includes('lunch') || n.includes('tiffin')) return '🍱';
+      if (n.includes('pencil') || n.includes('crayon')) return '✏️';
+      if (n.includes('note') || n.includes('book') || n.includes('library')) return '📘';
+      if (n.includes('sport')) return '⚽';
+      if (n.includes('art')) return '🎨';
+      if (n.includes('toy')) return '🧸';
+      return '⭐';
+    }
+
+    function escapeHtml(s){
+      return String(s || '').replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m]));
+    }
+
+    function downloadJSON() {
+      const payload = {
+        childName: childNameEl.value.trim() || 'Aarav',
+        packSize: Number(packSizeEl.value || 6),
+        stickers: getStickerData(),
+        generatedAt: new Date().toISOString(),
+        note: 'This JSON stores the design draft selections only.'
+      };
+      const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = 'scanback-design-draft.json';
+      a.click();
+      URL.revokeObjectURL(a.href);
+    }
+
+    async function downloadPDF() {
+      renderPreview();
+      const btn = document.getElementById('pdfBtn');
+      btn.disabled = true;
+      btn.textContent = 'Preparing PDF...';
+      try {
+        const node = document.getElementById('captureArea');
+        const canvas = await html2canvas(node, { scale: 2, backgroundColor: '#ffffff', useCORS: true });
+        const imgData = canvas.toDataURL('image/png');
+        const { jsPDF } = window.jspdf;
+        const pdf = new jsPDF({ orientation: 'portrait', unit: 'mm', format: 'a4' });
+        const pageWidth = pdf.internal.pageSize.getWidth();
+        const pageHeight = pdf.internal.pageSize.getHeight();
+        const margin = 8;
+        const printableW = pageWidth - margin * 2;
+        const imgW = printableW;
+        const imgH = canvas.height * imgW / canvas.width;
+        let y = margin;
+        let remainingH = imgH;
+        let sourceY = 0;
+
+        if (imgH <= pageHeight - margin * 2) {
+          pdf.addImage(imgData, 'PNG', margin, margin, imgW, imgH);
+        } else {
+          const pageCanvas = document.createElement('canvas');
+          const pxPerMm = canvas.width / imgW;
+          const pageSlicePxH = Math.floor((pageHeight - margin * 2) * pxPerMm);
+          pageCanvas.width = canvas.width;
+          pageCanvas.height = pageSlicePxH;
+          const ctx = pageCanvas.getContext('2d');
+
+          while (sourceY < canvas.height) {
+            ctx.clearRect(0, 0, pageCanvas.width, pageCanvas.height);
+            ctx.drawImage(canvas, 0, sourceY, canvas.width, pageSlicePxH, 0, 0, canvas.width, pageSlicePxH);
+            const pageImg = pageCanvas.toDataURL('image/png');
+            const pageImgHeightMm = pageSlicePxH / pxPerMm;
+            pdf.addImage(pageImg, 'PNG', margin, margin, imgW, pageImgHeightMm);
+            sourceY += pageSlicePxH;
+            if (sourceY < canvas.height) pdf.addPage();
+          }
+        }
+
+        pdf.save('scanback-sticker-preview-draft.pdf');
+      } catch (err) {
+        alert('Could not create PDF. Please try again.');
+        console.error(err);
+      } finally {
+        btn.disabled = false;
+        btn.textContent = 'Download printable PDF draft';
+      }
+    }
+
+    function resetSample() {
+      childNameEl.value = 'Aarav';
+      packSizeEl.value = '6';
+      makeEditors();
+      renderPreview();
+    }
+
+    document.getElementById('updateBtn').addEventListener('click', renderPreview);
+    document.getElementById('jsonBtn').addEventListener('click', downloadJSON);
+    document.getElementById('pdfBtn').addEventListener('click', downloadPDF);
+    document.getElementById('resetBtn').addEventListener('click', resetSample);
+    packSizeEl.addEventListener('change', () => { makeEditors(); renderPreview(); });
+    childNameEl.addEventListener('input', renderPreview);
+
+    makeEditors();
+    renderPreview();
+  </script>
+</body>
+</html>
