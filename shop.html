@@ -3,296 +3,274 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>ScanBack Kids – Custom Sticker Storefront</title>
+  <title>ScanBack Kids – Dynamic Printable Sticker Generator</title>
   <style>
-    :root{--ink:#173766;--muted:#597493;--line:#dbe7f8;--card:#fff;--pink:#ff4fa0;--blue:#1e6bff;--bg:#f6fbff;--shadow:0 12px 35px rgba(23,55,102,.10);--radius:24px}
-    *{box-sizing:border-box} body{margin:0;font-family:Arial,Helvetica,sans-serif;background:linear-gradient(180deg,#eaf7ff 0,#f8fcff 28%,#fff 100%);color:var(--ink)}
-    main{max-width:1240px;margin:0 auto;padding:18px}
-    .hero img{width:100%;display:block;border-radius:28px;box-shadow:var(--shadow)}
-    .section-title{margin:22px 0 4px;text-align:center;font-size:52px;font-weight:900;color:#173d87;letter-spacing:-1px}
-    .section-sub{text-align:center;font-size:20px;font-weight:700;color:#4b6b94;margin-bottom:18px}
-    .themes-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
-    .theme-card{background:#fff;border:3px solid transparent;border-radius:22px;overflow:hidden;box-shadow:var(--shadow);cursor:pointer;transition:.18s transform,.18s border-color}
-    .theme-card:hover{transform:translateY(-3px)} .theme-card.active{border-color:#2f7fff}
-    .theme-card img{width:100%;height:250px;object-fit:cover;display:block;background:#eef6ff}
-    .theme-info{padding:12px 14px}.theme-name{font-size:18px;font-weight:900;margin-bottom:4px}.theme-desc{font-size:13px;color:#627b97;font-weight:700;line-height:1.4}
+    :root{
+      --ink:#173766;--muted:#6a8097;--line:#dbe7f8;--panel:#fff;--bg:#f5fbff;--blue:#2b73ff;
+      --shadow:0 10px 28px rgba(23,55,102,.10);--radius:22px;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Arial,Helvetica,sans-serif;background:linear-gradient(180deg,#eef8ff,#fff);color:var(--ink)}
+    .wrap{max-width:1280px;margin:auto;padding:18px}
+    .hero{background:linear-gradient(135deg,#dff4ff,#fff7fe);border-radius:28px;padding:24px;box-shadow:var(--shadow);display:grid;grid-template-columns:1.15fr .85fr;gap:18px;align-items:center}
+    .hero h1{font-size:54px;line-height:1.02;margin:0 0 10px;font-weight:900;color:#183d87}
+    .hero p{font-size:20px;line-height:1.5;color:#56708e;font-weight:700;margin:0 0 14px}
+    .hero-badges{display:flex;gap:10px;flex-wrap:wrap}
+    .hero-badges span{padding:10px 14px;border-radius:999px;background:#fff;border:1px solid #d8e7fb;font-weight:900;color:#315786}
+    .hero-card{background:#fff;border-radius:24px;padding:18px;box-shadow:var(--shadow)}
+    .hero-card h3{margin:0 0 10px;font-size:22px}
+    .hero-card ul{margin:0;padding-left:20px;color:#53708f;font-weight:700;line-height:1.6}
 
-    .layout{display:grid;grid-template-columns:1.05fr .95fr;gap:18px;margin-top:22px;align-items:start}
-    .panel{background:#fff;border-radius:26px;padding:22px;border:1px solid #e8effa;box-shadow:var(--shadow)}
-    .panel h3{margin:0 0 16px;font-size:24px}
-    .field{margin-bottom:14px} .field label{display:block;font-weight:900;margin-bottom:7px;font-size:16px}
-    .field input,.field select{width:100%;padding:14px 15px;border:2px solid var(--line);border-radius:16px;font-size:17px;color:#173766}
-    .hint{font-size:13px;color:#6e849d;font-weight:700;line-height:1.45;margin-top:6px}
-    .pack-choices{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:6px}
-    .pack-choice{border:2px solid var(--line);border-radius:18px;padding:16px 10px;text-align:center;cursor:pointer;position:relative}.pack-choice.active{border-color:#2f7fff;background:#eef5ff}
-    .pack-choice .size{font-size:18px;font-weight:900}.pack-choice .price{font-size:14px;color:#54718f;font-weight:700;margin-top:4px}.badge{position:absolute;top:-12px;right:12px;background:#ff4fa0;color:#fff;padding:6px 10px;border-radius:999px;font-size:12px;font-weight:900}
+    .title{text-align:center;font-size:44px;font-weight:900;color:#173d87;margin:28px 0 6px}
+    .sub{text-align:center;font-size:18px;color:#5a7493;font-weight:700;margin-bottom:20px}
+    .themes{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .theme{padding:16px;border-radius:22px;background:#fff;box-shadow:var(--shadow);border:3px solid transparent;cursor:pointer;transition:.16s transform,.16s border-color}
+    .theme:hover{transform:translateY(-2px)} .theme.active{border-color:#2c74ff}
+    .theme-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}.theme-emoji{font-size:34px}
+    .theme h4{margin:0 0 6px;font-size:24px}.theme p{margin:0;color:#627c98;font-weight:700;line-height:1.4}
+    .swatches{display:flex;gap:8px;margin-top:12px}.swatches span{display:block;width:22px;height:22px;border-radius:50%;border:2px solid #fff;box-shadow:0 0 0 1px #d0def2}
 
-    .quick-apply{margin:18px 0}.quick-apply h4{margin:0 0 6px;font-size:17px}.quick-apply p{margin:0 0 10px;font-size:13px;color:#6e849d;font-weight:700}
-    .apply-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
-    .apply-btn{display:flex;align-items:center;gap:10px;padding:12px;border-radius:16px;border:2px solid var(--line);background:#fff;cursor:pointer;font-weight:900;color:#173766}.apply-btn.active{border-color:#2f7fff;background:#eef5ff}.apply-thumb{width:48px;height:48px;object-fit:cover;border-radius:12px}
+    .layout{display:grid;grid-template-columns:1.03fr .97fr;gap:18px;margin-top:20px;align-items:start}
+    .panel{background:var(--panel);border-radius:28px;padding:22px;box-shadow:var(--shadow);border:1px solid #e6f0fb}
+    .panel h2{margin:0 0 14px;font-size:30px}
+    .field{margin-bottom:14px}.field label{display:block;font-weight:900;font-size:16px;margin-bottom:7px}
+    .field input,.field select{width:100%;padding:14px 15px;border-radius:16px;border:2px solid var(--line);font-size:17px;color:var(--ink)}
+    .hint{font-size:13px;color:var(--muted);font-weight:700;line-height:1.45;margin-top:6px}
+    .packs{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.pack{border:2px solid var(--line);border-radius:18px;padding:16px;text-align:center;cursor:pointer;position:relative}.pack.active{border-color:#2c74ff;background:#eef5ff}.pack strong{display:block;font-size:18px}.pack span{display:block;color:#597290;font-weight:700;margin-top:5px}.badge{position:absolute;top:-12px;right:12px;background:#ff4fa0;color:#fff;border-radius:999px;padding:6px 10px;font-weight:900;font-size:12px}
+    .actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}.actions button{border:none;border-radius:16px;padding:13px 16px;font-weight:900;cursor:pointer}.blue{background:#1e6bff;color:#fff}.soft{background:#edf5ff;color:#173d87}.pink{background:#fff0f7;color:#c12776}
 
-    .stickers-list{margin-top:14px;display:grid;gap:10px;max-height:490px;overflow:auto;padding-right:2px}.sticker-editor{border:1px solid #dfebfb;border-radius:18px;padding:12px;background:#fbfdff}.sticker-editor-head{display:flex;justify-content:space-between;align-items:center;font-weight:900;margin-bottom:10px}
-    .row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+    .apply-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:10px}.apply{display:flex;align-items:center;gap:12px;padding:13px;border-radius:18px;border:2px solid var(--line);cursor:pointer;background:#fff;font-weight:900}.apply.active{border-color:#2c74ff;background:#eef5ff}.apply .big{font-size:26px}
+    .list{display:grid;gap:10px;max-height:520px;overflow:auto;margin-top:12px;padding-right:2px}.item-row{border:1px solid #dfebfb;border-radius:18px;padding:12px;background:#fbfdff}.item-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;font-weight:900}.row2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 
-    .preview-box img{width:100%;display:block;border-radius:22px;border:1px solid #dce7f7;background:#f2f8ff}
-    .preview-caption{margin-top:12px;background:#f8fbff;border:1px solid #dfebfb;border-radius:18px;padding:14px}
-    .preview-caption h4{margin:0 0 10px;font-size:18px}.summary-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.summary-item{background:#fff;border:1px solid #e8effa;border-radius:14px;padding:10px 12px}.summary-item b{display:block;font-size:12px;color:#69809c;text-transform:uppercase;letter-spacing:.3px;margin-bottom:4px}.summary-item span{font-weight:900;color:#173766}
-    .preview-list{margin-top:10px;background:#fff;border:1px solid #e8effa;border-radius:14px;padding:12px}.preview-list h5{margin:0 0 8px;font-size:14px}.preview-list ol{margin:0;padding-left:18px;color:#496686;font-weight:700;font-size:14px;line-height:1.55}
-
-    .tools{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}.tools button{border:none;border-radius:16px;padding:13px 15px;font-weight:900;cursor:pointer}.btn-blue{background:#1e6bff;color:#fff}.btn-soft{background:#edf5ff;color:#173d87}.btn-pink{background:#fff0f7;color:#ba216f}
+    .preview-top{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-bottom:14px}.chip{padding:10px 13px;border-radius:999px;background:#eef5ff;color:#224f91;font-weight:900}
+    .preview-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+    .card{position:relative;border-radius:22px;overflow:hidden;min-height:260px;padding:16px;border:2px solid rgba(255,255,255,.7);box-shadow:0 8px 24px rgba(0,0,0,.10)}
+    .card .stars{position:absolute;inset:0;pointer-events:none;opacity:.35;background-image:radial-gradient(circle at 15% 20%, rgba(255,255,255,.9) 0 2px, transparent 3px),radial-gradient(circle at 78% 12%, rgba(255,255,255,.9) 0 2px, transparent 3px),radial-gradient(circle at 62% 74%, rgba(255,255,255,.9) 0 2px, transparent 3px),radial-gradient(circle at 25% 80%, rgba(255,255,255,.9) 0 2px, transparent 3px),radial-gradient(circle at 90% 65%, rgba(255,255,255,.9) 0 2px, transparent 3px)}
+    .card-inner{position:relative;z-index:1;display:grid;grid-template-columns:1.2fr .95fr;gap:10px;height:100%}
+    .mascot{display:flex;flex-direction:column;justify-content:space-between}
+    .mascot .emoji{font-size:78px;line-height:1}.mascot .title{font-size:22px;text-align:left;margin:0;color:#fff;text-shadow:0 2px 10px rgba(0,0,0,.18)}
+    .content{display:flex;flex-direction:column;justify-content:space-between;align-items:flex-end}
+    .belongs{background:rgba(255,255,255,.95);padding:12px 14px;border-radius:18px;max-width:100%;width:100%;text-align:left}
+    .belongs small{display:block;font-weight:900;color:#4b6584;text-transform:uppercase;font-size:12px;letter-spacing:.6px}
+    .belongs .name{font-size:28px;font-weight:900;line-height:1;color:#173d87;margin-top:4px;word-break:break-word}
+    .itempill{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.97);padding:11px 14px;border-radius:999px;font-weight:900;color:#173766;font-size:18px;max-width:100%}
+    .qrbox{background:#fff;border-radius:14px;padding:8px;display:flex;flex-direction:column;align-items:center;gap:5px}.qrcanvas{width:84px;height:84px}.qrlabel{font-size:10px;font-weight:900;color:#2e4464;line-height:1.1;text-align:center}
+    .brand{display:flex;align-items:center;gap:6px;font-weight:900;color:#fff;text-shadow:0 2px 8px rgba(0,0,0,.16);font-size:16px}
+    .brand .heart{font-size:15px}
+    .summary{margin-top:16px;border:1px solid #dfebfb;background:#f8fbff;border-radius:20px;padding:14px}.summary h4{margin:0 0 8px;font-size:18px}.summary ol{margin:0;padding-left:19px;color:#4e6988;font-weight:700;line-height:1.6}
     .note{margin-top:12px;background:#fff8de;border:1px solid #f0de9a;border-radius:16px;padding:12px 14px;font-size:13px;color:#6a5c1e;font-weight:700;line-height:1.5}
 
-    @media(max-width:1040px){.themes-grid{grid-template-columns:repeat(3,1fr)}.layout{grid-template-columns:1fr}} 
-    @media(max-width:720px){.themes-grid{grid-template-columns:repeat(2,1fr)}.section-title{font-size:38px}.section-sub{font-size:17px}.pack-choices{grid-template-columns:1fr}.apply-grid{grid-template-columns:1fr}.row{grid-template-columns:1fr}.summary-grid{grid-template-columns:1fr}}
+    /* print sheets hidden on screen */
+    #printArea{position:absolute;left:-99999px;top:0}
+    .sheet{width:794px;height:1123px;background:#fff;padding:26px 22px;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:repeat(3,1fr);gap:16px;page-break-after:always}
+    .sheet-card{transform:scale(1);transform-origin:top left;min-height:auto;height:100%}
+    .sheet-card .emoji{font-size:88px}.sheet-card .belongs .name{font-size:32px}.sheet-card .itempill{font-size:20px}.sheet-card .qrcanvas{width:100px;height:100px}
+    .footer-note{font-size:11px;color:#5f7896;font-weight:700;margin-top:6px}
+
+    @media(max-width:1080px){.themes{grid-template-columns:repeat(2,1fr)}.layout,.hero{grid-template-columns:1fr}.preview-grid{grid-template-columns:1fr}}
+    @media(max-width:700px){.packs,.apply-grid,.row2{grid-template-columns:1fr}.title{font-size:34px}.hero h1{font-size:42px}}
   </style>
 </head>
 <body>
-  <main>
-    <section class="hero">
-      <img src="assets/hero-storefront.png" alt="ScanBack Kids storefront hero" />
-    </section>
+<div class="wrap">
+  <section class="hero">
+    <div>
+      <h1>Dynamic Printable<br>Sticker Generator</h1>
+      <p>Build real personalized sticker cards with child name, item name, theme, and QR code — then export printable A4 PDF sheets.</p>
+      <div class="hero-badges"><span>Real QR on each sticker</span><span>Printable A4 sheets</span><span>Lightweight single file</span></div>
+    </div>
+    <div class="hero-card">
+      <h3>What this version solves</h3>
+      <ul>
+        <li>No heavy 25 MB image package required</li>
+        <li>True dynamic sticker card generation</li>
+        <li>Live visual preview updates instantly</li>
+        <li>PDF is generated from the real sticker cards</li>
+      </ul>
+    </div>
+  </section>
 
-    <section>
-      <div class="section-title">⭐ Choose a Sticker Theme</div>
-      <div class="section-sub">Pick a design your child will love!</div>
-      <div class="themes-grid" id="themesGrid"></div>
-    </section>
+  <div class="title">⭐ Choose a Sticker Theme</div>
+  <div class="sub">Pick one theme for all stickers or mix and match them below.</div>
+  <section class="themes" id="themesGrid"></section>
 
-    <section class="layout">
-      <div class="panel">
-        <h3>⚙️ Customize Your Stickers</h3>
-        <div class="field">
-          <label>Child's Name</label>
-          <input id="childName" value="Aarav" maxlength="18" />
-          <div class="hint">This name will appear in the design draft summary and on your final order details.</div>
-        </div>
-        <div class="field">
-          <label>Default Item Name</label>
-          <input id="mainItemName" value="School Bag" maxlength="22" />
-          <div class="hint">Use this as the first/default item. You can edit every sticker item name below.</div>
-        </div>
-        <div class="field">
-          <label>Pack Size</label>
-          <div class="pack-choices">
-            <div class="pack-choice" data-pack="6"><div class="size">6 Stickers</div><div class="price">$14.99</div></div>
-            <div class="pack-choice active" data-pack="12"><div class="badge">Most Popular</div><div class="size">12 Stickers</div><div class="price">$24.99</div></div>
-            <div class="pack-choice" data-pack="24"><div class="size">24 Stickers</div><div class="price">$39.99</div></div>
-          </div>
-        </div>
-        <div class="quick-apply">
-          <h4>Apply one theme to all stickers</h4>
-          <p>Click once and the entire pack will use the same theme. For mix-and-match, edit individual stickers below.</p>
-          <div class="apply-grid" id="applyGrid"></div>
-        </div>
-        <div class="quick-apply">
-          <h4>Mix & match individual stickers</h4>
-          <p>Adjust theme and item name for each sticker if needed.</p>
-          <div class="stickers-list" id="stickersList"></div>
-        </div>
-        <div class="tools">
-          <button class="btn-blue" id="updateBtn" type="button">Update Preview</button>
-          <button class="btn-soft" id="jsonBtn" type="button">Download JSON</button>
-          <button class="btn-pink" id="resetBtn" type="button">Reset Sample</button>
-        </div>
+  <section class="layout">
+    <div class="panel">
+      <h2>⚙️ Customize Your Stickers</h2>
+      <div class="field"><label>Child's Name</label><input id="childName" value="Aarav" maxlength="18"><div class="hint">This appears on every generated sticker.</div></div>
+      <div class="field"><label>Default first item</label><input id="firstItem" value="School Bag" maxlength="22"><div class="hint">Sticker 1 will use this item name. You can edit every sticker below.</div></div>
+      <div class="field"><label>Pack Size</label><div class="packs"><div class="pack" data-pack="6"><strong>6 Stickers</strong><span>$14.99</span></div><div class="pack active" data-pack="12"><div class="badge">Most Popular</div><strong>12 Stickers</strong><span>$24.99</span></div><div class="pack" data-pack="24"><strong>24 Stickers</strong><span>$39.99</span></div></div></div>
+      <div class="field">
+        <label>Apply one theme to all stickers</label>
+        <div class="apply-grid" id="applyGrid"></div>
       </div>
-
-      <div class="panel">
-        <h3>👁️ Updated Preview + Printable PDF</h3>
-        <div class="preview-box"><img id="previewImage" src="assets/mix-match-sheet.png" alt="Current sticker preview" /></div>
-        <div class="preview-caption">
-          <h4 id="previewTitle">Mix & Match Pack Preview</h4>
-          <div class="summary-grid">
-            <div class="summary-item"><b>Child</b><span id="sumChild">Aarav</span></div>
-            <div class="summary-item"><b>Pack Size</b><span id="sumPack">12 stickers</span></div>
-            <div class="summary-item"><b>Preview Mode</b><span id="sumMode">Mix & Match</span></div>
-            <div class="summary-item"><b>Primary Theme</b><span id="sumTheme">Mix & Match</span></div>
-          </div>
-          <div class="preview-list">
-            <h5>Sticker item list</h5>
-            <ol id="itemList"></ol>
-          </div>
-        </div>
-        <div class="tools">
-          <button class="btn-blue" id="pdfBtn" type="button">Download Printable PDF Draft</button>
-        </div>
-        <div class="note">Fixed behavior: the preview image now changes according to the selected theme(s), and the PDF uses the same selected preview image plus the current order details. The PDF is still a draft preview, not final production output.</div>
+      <div class="field">
+        <label>Mix & match individual stickers</label>
+        <div class="list" id="stickersList"></div>
       </div>
-    </section>
-  </main>
+      <div class="actions">
+        <button class="blue" id="previewBtn">Update Preview</button>
+        <button class="soft" id="jsonBtn">Download Order JSON</button>
+        <button class="pink" id="resetBtn">Reset Sample</button>
+      </div>
+    </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
-  <script>
-    const themeDefs = [
-      { id:'space', name:'Space Adventure', desc:'Space-themed personalized sticker sheet', image:'assets/space-adventure-sheet.png', quick:true },
-      { id:'dino', name:'Dinosaur World', desc:'Dinosaur-themed personalized sticker sheet', image:'assets/dinosaur-world-sheet.png', quick:true },
-      { id:'rainbow', name:'Rainbow Magic', desc:'Rainbow unicorn personalized sticker sheet', image:'assets/rainbow-magic-sheet.png', quick:true },
-      { id:'sports', name:'Sports Champions', desc:'Sports-themed personalized sticker sheet', image:'assets/sports-champions-sheet.png', quick:true },
-      { id:'mix', name:'Mix & Match Pack', desc:'Mixed-theme sticker sheet preview', image:'assets/mix-match-sheet.png', quick:false }
-    ];
-    const defaultItems = ['School Bag','Water Bottle','Lunch Box','Pencil Box','Notebook','Sports Kit','Art Kit','Story Book','Shoes Bag','Toy Box','Jacket','Music Folder','Snack Box','Travel Bag','Crayons','Sipper','Toy Pouch','Library Book','Raincoat','Sketch Book','Bottle Label','Activity Book','Cap','Shoes'];
-    let packSize = 12;
-    let selectedThemeForAll = 'mix';
-    let stickers = [];
+    <div class="panel">
+      <h2>👁️ Live Sticker Preview + PDF</h2>
+      <div class="preview-top"><div class="chip" id="packChip">12 stickers</div><div class="chip" id="modeChip">Mix & Match</div><div class="chip" id="themeChip">Mixed themes</div></div>
+      <div class="preview-grid" id="previewGrid"></div>
+      <div class="summary"><h4>Sticker item list</h4><ol id="itemList"></ol></div>
+      <div class="actions"><button class="blue" id="pdfBtn">Download Printable PDF</button></div>
+      <div class="note">This version creates the sticker design cards dynamically in HTML, so the same generated cards are used for the live preview and the PDF.</div>
+      <div class="footer-note">Later you can replace emoji mascots with real compressed character art or uploaded SVG/WebP theme assets.</div>
+    </div>
+  </section>
+</div>
+<div id="printArea"></div>
 
-    const byId = id => document.getElementById(id);
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
+<script>
+  const themeDefs = {
+    space:{name:'Space Adventure',emoji:'🚀',title:'Space Adventure',bg1:'#1733a8',bg2:'#63c8ff',bg3:'#8a4bff',accent:'#ffd54d',itemEmoji:'🛰️'},
+    dino:{name:'Dinosaur World',emoji:'🦖',title:'Dinosaur World',bg1:'#31a437',bg2:'#9be15d',bg3:'#ffb347',accent:'#2d7f2a',itemEmoji:'🥚'},
+    rainbow:{name:'Rainbow Magic',emoji:'🦄',title:'Rainbow Magic',bg1:'#ff64b3',bg2:'#7bdcff',bg3:'#ffe36d',accent:'#a24cff',itemEmoji:'🌈'},
+    sports:{name:'Sports Champions',emoji:'⚽',title:'Sports Champions',bg1:'#ff9f1a',bg2:'#ffd53d',bg3:'#4cc9f0',accent:'#173d87',itemEmoji:'🏆'}
+  };
+  const defaultItems=['School Bag','Water Bottle','Lunch Box','Pencil Box','Notebook','Sports Kit','Art Kit','Story Book','Shoes Bag','Toy Box','Jacket','Music Folder','Snack Box','Travel Bag','Crayons','Sipper','Toy Pouch','Library Book','Raincoat','Sketch Book','Bottle Label','Activity Book','Cap','Shoes'];
+  let packSize=12, selectedAll='mix', stickers=[];
+  const byId=id=>document.getElementById(id);
 
-    function init(){
-      renderThemeCards();
-      renderApplyGrid();
-      bindPackChoices();
-      byId('updateBtn').addEventListener('click', updatePreview);
-      byId('jsonBtn').addEventListener('click', downloadJSON);
-      byId('resetBtn').addEventListener('click', resetSample);
-      byId('pdfBtn').addEventListener('click', downloadPDF);
-      byId('childName').addEventListener('input', updateSummaryOnly);
-      byId('mainItemName').addEventListener('input', ()=>{ if(stickers[0]) stickers[0].itemName = byId('mainItemName').value.trim() || 'School Bag'; renderStickerEditors(); updateSummaryOnly(); });
-      resetSample();
-    }
+  function init(){
+    renderThemeCards(); renderApplyGrid(); bindPackChoices();
+    byId('previewBtn').onclick=updatePreview;
+    byId('jsonBtn').onclick=downloadJSON;
+    byId('resetBtn').onclick=resetSample;
+    byId('pdfBtn').onclick=downloadPDF;
+    byId('childName').addEventListener('input', updatePreview);
+    byId('firstItem').addEventListener('input', ()=>{ if(stickers[0]) stickers[0].itemName=byId('firstItem').value.trim()||'School Bag'; renderEditors(); updatePreview(); });
+    resetSample();
+  }
 
-    function renderThemeCards(){
-      byId('themesGrid').innerHTML = themeDefs.map(t=>`<div class="theme-card ${selectedThemeForAll===t.id?'active':''}" onclick="applyThemeToAll('${t.id}')"><img src="${t.image}" alt="${t.name}" /><div class="theme-info"><div class="theme-name">${t.name}</div><div class="theme-desc">${t.desc}</div></div></div>`).join('');
-    }
+  function renderThemeCards(){
+    const keys=['space','dino','rainbow','sports'];
+    byId('themesGrid').innerHTML = keys.map(k=>{
+      const t=themeDefs[k];
+      return `<div class="theme ${selectedAll===k?'active':''}" onclick="applyThemeToAll('${k}')" style="background:linear-gradient(135deg,${t.bg1},${t.bg2} 55%,${t.bg3})"><div class="theme-top"><div class="theme-emoji">${t.emoji}</div><div style="font-size:34px">✨</div></div><h4 style="color:white">${t.name}</h4><p style="color:rgba(255,255,255,.92)">Dynamic personalized sticker design with real child name, item name and QR code.</p><div class="swatches"><span style="background:${t.bg1}"></span><span style="background:${t.bg2}"></span><span style="background:${t.bg3}"></span></div></div>`;
+    }).join('');
+  }
 
-    function renderApplyGrid(){
-      byId('applyGrid').innerHTML = themeDefs.map(t=>`<button type="button" class="apply-btn ${selectedThemeForAll===t.id?'active':''}" onclick="applyThemeToAll('${t.id}')"><img class="apply-thumb" src="${t.image}" alt="${t.name}"><span>${t.name}</span></button>`).join('');
-    }
+  function renderApplyGrid(){
+    const options = [['space'],['dino'],['rainbow'],['sports'],['mix']];
+    byId('applyGrid').innerHTML = options.map(([k])=>{
+      if(k==='mix') return `<div class="apply ${selectedAll==='mix'?'active':''}" onclick="applyThemeToAll('mix')"><div class="big">🎨</div><div><div>Mix & Match</div><div style="font-size:12px;color:#5f7896;font-weight:700">Rotate themes across stickers</div></div></div>`;
+      const t=themeDefs[k];
+      return `<div class="apply ${selectedAll===k?'active':''}" onclick="applyThemeToAll('${k}')"><div class="big">${t.emoji}</div><div><div>${t.name}</div><div style="font-size:12px;color:#5f7896;font-weight:700">Apply to whole pack</div></div></div>`;
+    }).join('');
+  }
 
-    function bindPackChoices(){
-      document.querySelectorAll('.pack-choice').forEach(el=>{
-        el.addEventListener('click',()=>{
-          document.querySelectorAll('.pack-choice').forEach(x=>x.classList.remove('active'));
-          el.classList.add('active');
-          packSize = Number(el.dataset.pack || 12);
-          rebuildStickers();
-          renderStickerEditors();
-          updatePreview();
-        });
-      });
-    }
+  function bindPackChoices(){
+    document.querySelectorAll('.pack').forEach(el=>el.addEventListener('click',()=>{
+      document.querySelectorAll('.pack').forEach(x=>x.classList.remove('active'));
+      el.classList.add('active');
+      packSize=Number(el.dataset.pack||12); rebuildStickers(); renderEditors(); updatePreview();
+    }));
+  }
 
-    function resetSample(){
-      byId('childName').value = 'Aarav';
-      byId('mainItemName').value = 'School Bag';
-      packSize = 12;
-      document.querySelectorAll('.pack-choice').forEach(x=>x.classList.remove('active'));
-      document.querySelector('.pack-choice[data-pack="12"]').classList.add('active');
-      selectedThemeForAll = 'mix';
-      stickers = Array.from({length:packSize}, (_,i)=>({ theme: i<2?'space': i<4?'dino': i<6?'rainbow': i<8?'sports':'mix', itemName: defaultItems[i] }));
-      renderThemeCards();
-      renderApplyGrid();
-      renderStickerEditors();
-      updatePreview();
-    }
+  function mixedTheme(i){ return ['space','dino','rainbow','sports'][i%4]; }
+  function resetSample(){
+    byId('childName').value='Aarav'; byId('firstItem').value='School Bag'; packSize=12; selectedAll='mix';
+    document.querySelectorAll('.pack').forEach(x=>x.classList.remove('active')); document.querySelector('.pack[data-pack="12"]').classList.add('active');
+    stickers=Array.from({length:packSize},(_,i)=>({theme:mixedTheme(i),itemName:defaultItems[i]||`Item ${i+1}`}));
+    stickers[0].itemName='School Bag';
+    renderThemeCards(); renderApplyGrid(); renderEditors(); updatePreview();
+  }
 
-    function rebuildStickers(){
-      const current = [...stickers];
-      stickers = Array.from({length:packSize}, (_,i)=>({
-        theme: current[i]?.theme || (selectedThemeForAll==='mix' ? chooseMixedTheme(i) : selectedThemeForAll),
-        itemName: current[i]?.itemName || defaultItems[i] || `Item ${i+1}`
-      }));
-      if(stickers[0]) stickers[0].itemName = byId('mainItemName').value.trim() || 'School Bag';
-    }
+  function rebuildStickers(){
+    const cur=[...stickers];
+    stickers=Array.from({length:packSize},(_,i)=>({theme:cur[i]?.theme || (selectedAll==='mix'?mixedTheme(i):selectedAll), itemName:cur[i]?.itemName || defaultItems[i] || `Item ${i+1}`}));
+    if(stickers[0]) stickers[0].itemName=byId('firstItem').value.trim()||'School Bag';
+  }
 
-    function chooseMixedTheme(i){
-      return ['space','dino','rainbow','sports'][i % 4];
-    }
+  function applyThemeToAll(k){
+    selectedAll=k;
+    stickers=stickers.map((s,i)=>({...s, theme:k==='mix'?mixedTheme(i):k}));
+    renderThemeCards(); renderApplyGrid(); renderEditors(); updatePreview();
+  }
+  window.applyThemeToAll=applyThemeToAll;
 
-    function applyThemeToAll(themeId){
-      selectedThemeForAll = themeId;
-      if(themeId === 'mix'){
-        stickers = stickers.map((s,i)=>({...s, theme: chooseMixedTheme(i)}));
-      } else {
-        stickers = stickers.map((s)=>({...s, theme: themeId}));
+  function renderEditors(){
+    byId('stickersList').innerHTML = stickers.map((s,i)=>`<div class="item-row"><div class="item-head"><span>Sticker ${i+1}</span><span>${themeDefs[s.theme].name}</span></div><div class="row2"><div><label style="font-size:14px;font-weight:900;margin-bottom:6px;display:block">Theme</label><select data-i="${i}" class="theme-select"><option value="space" ${s.theme==='space'?'selected':''}>Space Adventure</option><option value="dino" ${s.theme==='dino'?'selected':''}>Dinosaur World</option><option value="rainbow" ${s.theme==='rainbow'?'selected':''}>Rainbow Magic</option><option value="sports" ${s.theme==='sports'?'selected':''}>Sports Champions</option></select></div><div><label style="font-size:14px;font-weight:900;margin-bottom:6px;display:block">Item Name</label><input data-i="${i}" class="item-input" value="${escapeHtml(s.itemName)}" maxlength="22"></div></div></div>`).join('');
+    document.querySelectorAll('.theme-select').forEach(el=>el.addEventListener('change',e=>{const i=Number(e.target.dataset.i); stickers[i].theme=e.target.value; selectedAll=detectMode(); renderThemeCards(); renderApplyGrid(); renderEditors(); updatePreview();}));
+    document.querySelectorAll('.item-input').forEach(el=>el.addEventListener('input',e=>{const i=Number(e.target.dataset.i); stickers[i].itemName=e.target.value.trim()||`Item ${i+1}`; if(i===0) byId('firstItem').value=stickers[0].itemName; updatePreview();}));
+  }
+
+  function detectMode(){ const first=stickers[0]?.theme; return stickers.every(s=>s.theme===first)?first:'mix'; }
+
+  function qrData(i){ return `https://scanback.in/find?id=SAMPLE-${i+1}`; }
+  function makeQRMarkup(data, size=84){
+    const qr = qrcode(0,'M'); qr.addData(data); qr.make();
+    return qr.createSvgTag({cellSize:2, margin:0, scalable:true});
+  }
+
+  function cardHtml(sticker, index, className=''){
+    const t=themeDefs[sticker.theme];
+    return `<div class="card ${className}" style="background:linear-gradient(135deg,${t.bg1},${t.bg2} 55%,${t.bg3})"><div class="stars"></div><div class="card-inner"><div class="mascot"><div class="emoji">${t.emoji}</div><div class="title">${t.title}</div><div class="brand"><span class="heart">💗</span><span>ScanBack Kids</span></div></div><div class="content"><div class="belongs"><small>This belongs to</small><div class="name">${escapeHtml(byId('childName').value.trim()||'Aarav')}</div></div><div class="itempill"><span>${t.itemEmoji}</span><span>${escapeHtml(sticker.itemName)}</span></div><div class="qrbox"><div class="qrcanvas">${makeQRMarkup(qrData(index),84)}</div><div class="qrlabel">SCAN TO HELP<br>ME HOME</div></div></div></div></div>`;
+  }
+
+  function updatePreview(){
+    byId('packChip').textContent=`${packSize} stickers`;
+    const mode=detectMode();
+    byId('modeChip').textContent=mode==='mix'?'Mix & Match':'Single theme';
+    byId('themeChip').textContent=mode==='mix'?'Mixed themes':themeDefs[mode].name;
+    byId('previewGrid').innerHTML = stickers.slice(0,Math.min(packSize,4)).map((s,i)=>cardHtml(s,i)).join('');
+    byId('itemList').innerHTML = stickers.slice(0,packSize).map((s,i)=>`<li>Sticker ${i+1}: ${escapeHtml(s.itemName)} (${themeDefs[s.theme].name})</li>`).join('');
+  }
+
+  function buildPrintSheets(){
+    const printArea=byId('printArea'); printArea.innerHTML='';
+    const perPage=6; const totalPages=Math.ceil(packSize/perPage);
+    for(let p=0;p<totalPages;p++){
+      const sheet=document.createElement('div'); sheet.className='sheet';
+      for(let i=p*perPage;i<Math.min((p+1)*perPage,packSize);i++){
+        sheet.insertAdjacentHTML('beforeend', cardHtml(stickers[i], i, 'sheet-card'));
       }
-      renderThemeCards();
-      renderApplyGrid();
-      renderStickerEditors();
-      updatePreview();
+      printArea.appendChild(sheet);
     }
-    window.applyThemeToAll = applyThemeToAll;
+  }
 
-    function renderStickerEditors(){
-      byId('stickersList').innerHTML = stickers.map((s,idx)=>`<div class="sticker-editor"><div class="sticker-editor-head"><span>Sticker ${idx+1}</span><span>${themeName(s.theme)}</span></div><div class="row"><div><label style="font-size:14px">Theme</label><select class="theme-select" data-index="${idx}">${themeDefs.filter(t=>t.id!=='mix').map(t=>`<option value="${t.id}" ${s.theme===t.id?'selected':''}>${t.name}</option>`).join('')}</select></div><div><label style="font-size:14px">Item name</label><input class="item-input" data-index="${idx}" maxlength="22" value="${escapeHtml(s.itemName)}"></div></div></div>`).join('');
-      document.querySelectorAll('.theme-select').forEach(el=>el.addEventListener('change', e=>{ stickers[Number(e.target.dataset.index)].theme = e.target.value; selectedThemeForAll = detectUniformTheme(); renderThemeCards(); renderApplyGrid(); updatePreview(); }));
-      document.querySelectorAll('.item-input').forEach(el=>el.addEventListener('input', e=>{ stickers[Number(e.target.dataset.index)].itemName = e.target.value.trim() || `Item ${Number(e.target.dataset.index)+1}`; if(Number(e.target.dataset.index)===0) byId('mainItemName').value = stickers[0].itemName; updateSummaryOnly(); }));
+  function downloadJSON(){
+    const blob=new Blob([JSON.stringify({childName:byId('childName').value.trim()||'Aarav',packSize,mode:detectMode(),stickers},null,2)],{type:'application/json'});
+    const a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download='scanback-order-draft.json'; a.click(); setTimeout(()=>URL.revokeObjectURL(a.href),500);
+  }
+
+  async function downloadPDF(){
+    const btn=byId('pdfBtn'); btn.disabled=true; btn.textContent='Preparing PDF...';
+    try{
+      buildPrintSheets();
+      await new Promise(r=>setTimeout(r,400));
+      const pages=[...document.querySelectorAll('#printArea .sheet')];
+      const { jsPDF } = window.jspdf;
+      const pdf=new jsPDF({orientation:'portrait',unit:'mm',format:'a4'});
+      for(let p=0;p<pages.length;p++){
+        const canvas = await html2canvas(pages[p], {scale:2, backgroundColor:'#ffffff', useCORS:true});
+        const img=canvas.toDataURL('image/png');
+        const pageW=pdf.internal.pageSize.getWidth();
+        const pageH=pdf.internal.pageSize.getHeight();
+        if(p>0) pdf.addPage();
+        pdf.addImage(img,'PNG',0,0,pageW,pageH,undefined,'FAST');
+      }
+      pdf.save('scanback-dynamic-stickers.pdf');
+    } catch(err){
+      console.error(err); alert('Could not generate PDF. Please refresh once and try again.');
+    } finally {
+      btn.disabled=false; btn.textContent='Download Printable PDF';
     }
+  }
 
-    function detectUniformTheme(){
-      const first = stickers[0]?.theme;
-      if(!first) return 'mix';
-      return stickers.every(s=>s.theme===first) ? first : 'mix';
-    }
-
-    function themeName(id){ return (themeDefs.find(t=>t.id===id) || {}).name || id; }
-    function imageForCurrentSelection(){
-      const mode = detectUniformTheme();
-      const themeId = mode === 'mix' ? 'mix' : mode;
-      return themeDefs.find(t=>t.id===themeId).image;
-    }
-
-    function updateSummaryOnly(){
-      const child = byId('childName').value.trim() || 'Aarav';
-      const mode = detectUniformTheme();
-      byId('sumChild').textContent = child;
-      byId('sumPack').textContent = `${packSize} stickers`;
-      byId('sumMode').textContent = mode === 'mix' ? 'Mix & Match' : 'Single Theme';
-      byId('sumTheme').textContent = mode === 'mix' ? 'Mix & Match' : themeName(mode);
-      byId('previewTitle').textContent = mode === 'mix' ? 'Mix & Match Pack Preview' : `${themeName(mode)} Preview`;
-      byId('itemList').innerHTML = stickers.slice(0,packSize).map((s,i)=>`<li>Sticker ${i+1}: ${escapeHtml(s.itemName)} (${themeName(s.theme)})</li>`).join('');
-    }
-
-    function updatePreview(){
-      byId('previewImage').src = imageForCurrentSelection();
-      updateSummaryOnly();
-    }
-
-    function downloadJSON(){
-      const data = { childName: byId('childName').value.trim() || 'Aarav', packSize, previewMode: detectUniformTheme(), stickers, note:'This draft stores storefront design selections and preview state.' };
-      const blob = new Blob([JSON.stringify(data,null,2)], {type:'application/json'});
-      const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'scanback-design-draft.json'; a.click(); URL.revokeObjectURL(a.href);
-    }
-
-    function loadImageAsDataURL(src){
-      return new Promise((resolve,reject)=>{
-        const img = new Image();
-        img.crossOrigin = 'anonymous';
-        img.onload = ()=>{ const c = document.createElement('canvas'); c.width = img.naturalWidth; c.height = img.naturalHeight; const ctx=c.getContext('2d'); ctx.drawImage(img,0,0); resolve(c.toDataURL('image/png')); };
-        img.onerror = reject; img.src = src;
-      });
-    }
-
-    async function downloadPDF(){
-      const btn = byId('pdfBtn'); btn.disabled = true; btn.textContent = 'Preparing PDF...';
-      try{
-        const src = imageForCurrentSelection();
-        const dataUrl = await loadImageAsDataURL(src);
-        const { jsPDF } = window.jspdf;
-        const pdf = new jsPDF({orientation:'portrait',unit:'mm',format:'a4'});
-        const pageW = pdf.internal.pageSize.getWidth();
-        const pageH = pdf.internal.pageSize.getHeight();
-        pdf.setFillColor(246,251,255); pdf.rect(0,0,pageW,pageH,'F');
-        pdf.setTextColor(23,55,102); pdf.setFont('helvetica','bold'); pdf.setFontSize(20); pdf.text('ScanBack Kids – Sticker Draft Preview', 12, 14);
-        pdf.setFontSize(11); pdf.setFont('helvetica','normal'); pdf.text(`Child: ${byId('childName').value.trim() || 'Aarav'}   |   Pack Size: ${packSize}   |   Preview Mode: ${detectUniformTheme()==='mix'?'Mix & Match':themeName(detectUniformTheme())}`, 12, 21);
-        const imgW = pageW - 24; const imgH = imgW * 1.25; // approx vertical sheet
-        pdf.addImage(dataUrl,'PNG',12,27,imgW,Math.min(imgH,150));
-        let y = 184;
-        pdf.setFont('helvetica','bold'); pdf.setFontSize(13); pdf.text('Sticker item list', 12, y); y += 6;
-        pdf.setFont('helvetica','normal'); pdf.setFontSize(10);
-        stickers.slice(0,packSize).forEach((s,i)=>{
-          const line = `${i+1}. ${s.itemName} — ${themeName(s.theme)}`;
-          pdf.text(line, 14 + (i>=12?92:0), y + ((i%12)*5));
-        });
-        const footerY = pageH - 12;
-        pdf.setFontSize(9); pdf.setTextColor(92,114,144); pdf.text('Draft preview only. Theme art is based on uploaded storefront reference images. QR codes in theme sheets are preview visuals, not final production assignment.', 12, footerY);
-        pdf.save('scanback-sticker-preview-draft.pdf');
-      }catch(err){
-        alert('Could not generate PDF. Please try again.'); console.error(err);
-      } finally { btn.disabled = false; btn.textContent = 'Download Printable PDF Draft'; }
-    }
-
-    function escapeHtml(s){ return String(s||'').replace(/[&<>"']/g, m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m])); }
-
-    init();
-  </script>
+  function escapeHtml(s){return String(s||'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m]));}
+  init();
+</script>
 </body>
 </html>
