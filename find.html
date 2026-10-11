@@ -44,8 +44,17 @@
     <p class="muted">Your kindness can help reunite a child with their belongings.</p>
     <hr style="border:0;border-top:1px solid #e4e7ec;margin:24px 0">
     <h2>Want the parent to contact you?</h2>
-    <p class="muted">Sharing contact information is entirely optional. This feature is being set up securely and is not available yet. Please do not enter phone numbers or email addresses in the report message.</p>
-    <p class="muted">You can close this page now.</p>
+    <p class="muted">Sharing your details is optional. The parent will receive them privately to arrange return of the item.</p>
+    <form id="contactForm" class="center">
+      <label for="contactName">Your name (optional)</label>
+      <input id="contactName" maxlength="100" autocomplete="name" placeholder="Your name">
+      <label for="contactValue">Your phone or email</label>
+      <input id="contactValue" maxlength="254" required placeholder="Phone number or email address">
+      <label style="font-weight:normal;text-align:left"><input id="contactConsent" type="checkbox" required style="width:auto"> I agree to share these contact details with the registered parent only to arrange return of this item.</label>
+      <button id="contactSend" type="submit">Share My Contact Details</button>
+      <p id="contactStatus" class="muted" role="status" aria-live="polite"></p>
+    </form>
+    <p class="muted">Or simply close this page. No contact details are required.</p>
   </section>
 
   <script>
@@ -58,6 +67,20 @@
     let sb = null;
     let sending = false;
     let itemReady = false;
+    const requestKey = 'scanback:request-id:' + itemId;
+    const tokenKey = 'scanback:contact-token:' + itemId;
+    let requestId;
+    let contactToken = null;
+    try {
+      requestId = sessionStorage.getItem(requestKey);
+      if (!requestId) { requestId = crypto.randomUUID(); sessionStorage.setItem(requestKey, requestId); }
+      contactToken = sessionStorage.getItem(tokenKey);
+    } catch (_) { requestId = crypto.randomUUID(); }
+    function setContactToken(token) {
+      if (typeof token !== 'string') return;
+      contactToken = token;
+      try { sessionStorage.setItem(tokenKey, token); } catch (_) {}
+    }
 
     // Local UI safeguard only. The server still needs a unique request ID + database
     // uniqueness constraint to prevent duplicate records/emails across devices.
@@ -73,6 +96,7 @@
       try { sessionStorage.setItem(storageKey, 'yes'); } catch (_) {}
       reportPage.classList.add('hidden');
       thankYouPage.classList.remove('hidden');
+      document.getElementById('contactForm').classList.toggle('hidden', !contactToken);
     }
     function setStatus(message, isError = false) {
       status.textContent = message;
@@ -86,7 +110,6 @@
 
     async function init() {
       setButtonsDisabled(true);
-      if (completed) { showThankYou(); return; }
       const c = window.SCANBACK_CONFIG;
       if (!c || typeof c.SUPABASE_URL !== 'string' || !c.SUPABASE_URL.startsWith('https://') || c.SUPABASE_URL.includes('PASTE_') || !c.SUPABASE_ANON_KEY) {
         info.textContent = 'This service is not configured yet.';
@@ -97,6 +120,7 @@
         return;
       }
       sb = window.supabase.createClient(c.SUPABASE_URL, c.SUPABASE_ANON_KEY);
+      if (completed) { showThankYou(); return; }
       try {
         const { data, error } = await sb.functions.invoke('public-item', { body: { id: itemId } });
         if (error || !data?.item) {
@@ -117,6 +141,7 @@
         const { data, error } = await sb.functions.invoke('submit-scan', {
           body: {
             item_id: itemId,
+            request_id: requestId,
             finder_name: document.getElementById('name').value.trim(),
             message: document.getElementById('message').value.trim(),
             location_shared: Boolean(coords),
@@ -130,6 +155,7 @@
           resetAfterFailure('Report could not be sent. Please try again.');
           return;
         }
+        setContactToken(data.contact_token);
         showThankYou();
       } catch (_) {
         resetAfterFailure('Report could not be sent. Check your connection and try again.');
@@ -160,6 +186,30 @@
       );
     }
 
+    document.getElementById('contactForm').addEventListener('submit', async event => {
+      event.preventDefault();
+      const btn = document.getElementById('contactSend');
+      const result = document.getElementById('contactStatus');
+      const contact = document.getElementById('contactValue').value.trim();
+      if (!contactToken || !sb || !document.getElementById('contactConsent').checked || contact.length < 5) {
+        result.textContent = 'Please enter your contact information and agree to share it.';
+        return;
+      }
+      btn.disabled = true;
+      result.textContent = 'Sending your details…';
+      try {
+        const {data, error} = await sb.functions.invoke('submit-contact', {
+          body: {item_id:itemId, contact_token:contactToken,
+            name:document.getElementById('contactName').value.trim(), contact, consent:true}
+        });
+        if (error || data?.ok !== true) throw new Error(data?.error || 'Send failed');
+        result.textContent = 'Thank you! Your contact details have been saved and will be shared privately with the parent.';
+        document.getElementById('contactForm').querySelectorAll('input').forEach(input=>input.disabled=true);
+      } catch (_) {
+        btn.disabled = false;
+        result.textContent = 'Could not send contact details. Please try again.';
+      }
+    });
     document.getElementById('withLocation').addEventListener('click', () => send(true));
     document.getElementById('withoutLocation').addEventListener('click', () => send(false));
     void init();
