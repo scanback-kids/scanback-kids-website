@@ -139,6 +139,8 @@
       reportPage.classList.add('hidden');
       thankYouPage.classList.remove('hidden');
       document.getElementById('contactForm').classList.toggle('hidden', !contactToken);
+      // Initialize CAPTCHA when contact form becomes visible
+      if (contactToken) renderContactCaptcha();
     }
     function setStatus(message, isError = false) {
       status.textContent = message;
