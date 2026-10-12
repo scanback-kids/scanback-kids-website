@@ -2,12 +2,47 @@
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>ScanBack Kids | Design Your Stickers</title>
 <style>
 :root{--navy:#12346c;--pink:#ff4a9b;--muted:#64748b;--line:#e0e9f6}*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;color:var(--navy);background:linear-gradient(#eaf7ff,#fff 32%)}main{max-width:1240px;margin:auto;padding:20px}h1,h2,h3{margin:0 0 12px}.hero{padding:32px;border-radius:30px;background:linear-gradient(115deg,#d5f2ff,#ffe7f3);display:flex;align-items:center;gap:22px;justify-content:space-between}.hero h1{font-size:clamp(32px,4vw,58px);line-height:1.04}.hero p{font-size:17px;line-height:1.5;max-width:620px}.hero-art{display:flex;gap:10px}.hero-art img{width:126px;height:155px;object-fit:cover;border-radius:20px;box-shadow:0 8px 20px #0002}.lead{text-align:center;margin:24px 0}.lead h2{font-size:35px}.lead p{color:var(--muted)}.themes{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.theme{background:white;border:3px solid transparent;border-radius:20px;overflow:hidden;cursor:pointer;box-shadow:0 7px 22px #18345a15}.theme.active{border-color:#2779ff}.theme img{width:100%;height:190px;object-fit:cover;display:block}.theme h3{padding:12px;margin:0}.layout{display:grid;grid-template-columns:.9fr 1.1fr;gap:18px;margin-top:22px;align-items:start}.panel{background:#fff;border-radius:24px;padding:20px;box-shadow:0 7px 24px #15335912}.field{margin-bottom:12px}label{display:block;font-weight:bold;margin:0 0 7px}input,select{font:inherit;border:1px solid #c9d6eb;border-radius:12px;padding:12px;width:100%}.packs,.bulk{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.bulk{grid-template-columns:repeat(2,1fr)}button{font:inherit;font-weight:bold;cursor:pointer;border:0;border-radius:12px;padding:12px 14px;background:#2475ff;color:#fff}.packs button,.bulk button{background:#f0f5ff;color:var(--navy);border:2px solid transparent}.packs button.active,.bulk button.active{border-color:#2475ff;background:#e7f1ff}.buttons{display:flex;gap:9px;flex-wrap:wrap;margin-top:16px}button.pink{background:#fc4c99}button.secondary{background:#f0f4fb;color:var(--navy)}button:disabled{opacity:.6}.editors{max-height:420px;overflow:auto;margin-top:12px;display:grid;gap:10px}.editor{border:1px solid var(--line);border-radius:14px;padding:11px;background:#fcfdff}.editor .row{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px}.editor b{font-size:14px}.sample-note{font-size:13px;color:#805d08;background:#fff7dc;padding:12px;border-radius:12px;line-height:1.5;margin:12px 0}.preview-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.sticker{min-height:235px;border-radius:20px;border:4px solid white;box-shadow:0 8px 18px #0002;position:relative;overflow:hidden;display:grid;grid-template-columns:52% 48%;background:linear-gradient(135deg,var(--start),var(--end))}.art{position:relative;overflow:hidden}.art img{width:100%;height:100%;object-fit:cover}.art .theme-label{position:absolute;bottom:9px;left:8px;background:#ffffffec;padding:5px 8px;border-radius:9px;color:#18366f;font-size:11px;font-weight:bold}.info{padding:12px 10px;display:flex;flex-direction:column;justify-content:space-between;gap:5px;align-items:center;text-align:center}.owned{background:#ffffffed;color:#21385e;border-radius:12px;padding:8px 5px;width:100%;font-size:12px;font-weight:bold}.owned strong{display:block;font-size:clamp(18px,2vw,27px);overflow-wrap:anywhere;margin-top:3px;color:#1542a0}.item-label{background:#ffed73;color:#173260;padding:7px 9px;border-radius:999px;font-weight:bold;font-size:13px;max-width:100%;overflow-wrap:anywhere}.qrgroup{background:white;border-radius:11px;padding:5px;display:flex;flex-direction:column;align-items:center}.qrgroup img{width:65px;height:65px;image-rendering:pixelated}.qrgroup small{font-size:9px;color:#173260;font-weight:bold}.logo{font-size:11px;font-weight:bold;color:white;text-shadow:0 2px 4px #0007}.summary{margin-top:15px;border:1px solid var(--line);border-radius:15px;padding:12px;color:#465e7d;font-size:13px}.summary p{margin:4px 0}.preview-label{color:#667b95;font-size:13px;margin-bottom:10px}.download-status{font-size:13px;color:#596d8c;margin-top:9px;min-height:16px}.more{margin-top:8px;color:#657b98;font-size:13px}.tip{background:#eaf4ff;border-radius:14px;padding:12px;font-size:13px;margin-top:13px} @media(max-width:1000px){.layout{grid-template-columns:1fr}.hero-art img{width:95px;height:120px}}@media(max-width:660px){.themes{grid-template-columns:repeat(2,1fr)}.hero{display:block}.hero-art{margin-top:15px}.packs{grid-template-columns:repeat(3,1fr)}.preview-grid{grid-template-columns:1fr}.sticker{min-height:255px}}
+
+.order-panel{margin-top:22px;border:2px solid #dbe8ff;background:linear-gradient(115deg,#f6faff,#fff);border-radius:24px;padding:22px;box-shadow:0 7px 24px #15335912}
+.order-panel h2{font-size:26px;margin:0 0 7px}.order-panel p{color:#516988;line-height:1.55;font-size:14px}
+.order-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}.order-panel input{max-width:460px}.order-panel button{margin:6px 6px 6px 0}.order-panel #orderStatus,.order-panel #loginStatus{white-space:pre-wrap;font-size:14px;line-height:1.5;margin:9px 0;color:#274e85;font-weight:bold}
+.order-panel .identity{background:#e9f8f0;color:#205e3e;padding:10px 12px;border-radius:12px;font-size:14px;font-weight:bold;display:none}
+.order-panel .help{font-size:12px;color:#6a7891;margin-top:8px}.order-panel .error{color:#bd2c44!important}.order-panel .success{color:#1d7951!important}
+.order-panel input[type=password]{min-width:200px}.order-panel button:disabled{cursor:wait}
+@media(max-width:750px){.order-grid{grid-template-columns:1fr}}
 </style></head><body><main>
 <section class="hero"><div><h1>Custom Stickers for a <span style="color:#ed2f89">Safer, Happier Childhood</span></h1><p>Choose colorful original cartoon designs, personalize each label and preview the complete pack before printing.</p><strong>🎨 Mix & match &nbsp; · &nbsp; 🛡️ Lost-and-found concept &nbsp; · &nbsp; 📄 A4 PDF draft</strong></div><div class="hero-art"><img src="assets/space.webp" alt="Space cartoon"><img src="assets/rainbow.webp" alt="Unicorn cartoon"><img src="assets/dino.webp" alt="Dinosaur cartoon"></div></section>
 <div class="lead"><h2>⭐ Choose a Sticker Theme</h2><p>Click one theme to apply it to every sticker, or customize each sticker below.</p></div><div id="themes" class="themes"></div>
 <section class="layout"><div class="panel"><h2>Customize Your Stickers</h2><div class="field"><label for="child">Child's name or nickname</label><input id="child" maxlength="18" value="Aarav"></div><div class="field"><label>Pack size</label><div class="packs" id="packs"></div></div><div class="field"><label>Apply one theme to all</label><div class="bulk" id="bulk"></div></div><h3 style="margin-top:20px">Mix & match individual stickers</h3><div class="editors" id="editors"></div><div class="buttons"><button id="update">Update preview</button><button class="secondary" id="reset">Reset</button><button class="secondary" id="json">Save design JSON</button></div></div>
 <div class="panel"><h2>Live sticker preview</h2><div class="preview-label" id="count"></div><div class="sample-note"><strong>Demo QR codes only.</strong> These codes do not belong to customer accounts and are not usable as sold lost-and-found stickers. Unique QR IDs must be created securely in Supabase after orders are verified.</div><div id="preview" class="preview-grid"></div><div class="more" id="more"></div><div class="buttons"><button class="pink" id="pdf">Download A4 PDF draft</button></div><div class="download-status" id="status"></div><div class="summary" id="summary"></div><div class="tip">For printing: this draft shows the correct child and item text with themed character illustrations. The final commercial file will need print-shop dimensions, bleed/cut lines, and a verified live QR for each paid sticker.</div></div></section>
+
+<section class="order-panel" aria-label="Save your sticker design order">
+<h2>🛒 Save a draft order</h2>
+<p>Sign in using your ScanBack Kids parent account, then save your selected sticker designs. <strong>This is a draft only: no payment, live QR code or shipment is created.</strong></p>
+<div id="shopConfigured" class="order-grid">
+  <div>
+    <h3>1. Parent sign-in</h3>
+    <div id="parentIdentity" class="identity"></div>
+    <div id="parentLoginForm">
+      <label for="shopEmail">Email</label><input id="shopEmail" type="email" autocomplete="email" placeholder="you@example.com">
+      <label for="shopPassword" style="margin-top:10px">Password</label><input id="shopPassword" type="password" autocomplete="current-password" placeholder="Your ScanBack Kids password">
+      <div><button id="shopSignin" type="button">Sign in</button><button id="shopSignup" class="secondary" type="button">Create account</button></div>
+    </div>
+    <button id="shopSignout" class="secondary" type="button" style="display:none">Sign out</button>
+    <div id="loginStatus" role="status"></div>
+  </div>
+  <div>
+    <h3>2. Save selected designs</h3>
+    <p>We will securely save the child name, pack size and each sticker's item name and theme to your Supabase order database.</p>
+    <button id="saveDraftOrder" type="button" disabled>Save Draft Order</button>
+    <div id="orderStatus" role="status"></div>
+    <div class="help">Only 5 new draft orders per signed-in account per hour. No payments are taken here.</div>
+  </div>
+</div>
+</section>
 </main>
+<script src="config.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
 <script>
 const T={space:{name:'Space Adventure',colors:['#102b9b','#69b9ff'],file:'assets/space.webp'},dino:{name:'Dinosaur World',colors:['#208847','#b9e85e'],file:'assets/dino.webp'},rainbow:{name:'Rainbow Magic',colors:['#f9489a','#8a69ff'],file:'assets/rainbow.webp'},sports:{name:'Sports Champions',colors:['#e96d1c','#38b5d4'],file:'assets/sports.webp'}};
@@ -34,4 +69,80 @@ const split=(pdf,s,max)=>pdf.splitTextToSize(String(s||'Item'),max);
 async function downloadPDF(){let b=$('pdf');b.disabled=true;$('status').textContent='Preparing printable PDF draft…';try{const {jsPDF}=window.jspdf;if(!jsPDF)throw Error('PDF library unavailable');for(let k of keys)await loadArt(k);let pdf=new jsPDF({orientation:'portrait',unit:'mm',format:'a4'});const w=89,h=79,marginX=12,marginY=18,gapX=8,gapY=8;const child=$('child').value.trim()||'Your Child';for(let i=0;i<items.length;i++){if(i>0&&i%6===0)pdf.addPage();let it=items[i],t=T[it.theme],p=i%6,x=marginX+(p%2)*(w+gapX),y=marginY+Math.floor(p/2)*(h+gapY);pdf.setFillColor(...hex(t.colors[0]));pdf.roundedRect(x,y,w,h,4,4,'F');pdf.addImage(artCache[it.theme],'PNG',x+1,y+1,47,h-2,undefined,'FAST');pdf.setFillColor(255,255,255);pdf.roundedRect(x+46,y+5,40,25,3,3,'F');pdf.setTextColor(45,62,91);pdf.setFontSize(8);pdf.setFont('helvetica','bold');pdf.text('THIS BELONGS TO',x+49,y+11);pdf.setTextColor(20,64,157);pdf.setFontSize(14);pdf.text(split(pdf,child,34).slice(0,2),x+49,y+19);pdf.setFillColor(255,229,109);pdf.roundedRect(x+48,y+32,38,12,5,5,'F');pdf.setTextColor(25,47,92);pdf.setFontSize(9);pdf.text(split(pdf,it.name||'Item',32).slice(0,2),x+52,y+37);let q=qrcode(0,'M');q.addData(qrData(i));q.make();pdf.addImage(q.createDataURL(5,4),'PNG',x+53,y+46,26,26,undefined,'FAST');pdf.setFontSize(6);pdf.setTextColor(255,255,255);pdf.text('DEMO QR - NOT ACTIVE',x+52,y+76);pdf.setFontSize(6);pdf.setTextColor(255,255,255);pdf.text('ScanBack Kids',x+3,y+76);}
 pdf.setTextColor(70,83,107);pdf.setFontSize(8);let pages=pdf.getNumberOfPages();for(let j=1;j<=pages;j++){pdf.setPage(j);pdf.text(`DESIGN DRAFT - NOT FOR CUSTOMER USE   |   Page ${j} of ${pages}`,12,12)}pdf.save('scanback-v2-premium-sticker-draft.pdf');$('status').textContent='PDF downloaded. The QR codes are test-only placeholders.';}catch(err){console.error(err);$('status').textContent='PDF failed. Check your internet connection and try again; if it still fails, send me a screenshot of the browser console.'}finally{b.disabled=false;}}
 function hex(s){return [1,3,5].map(i=>parseInt(s.slice(i,i+2),16));}init();
+
+// V3 draft integration. Supabase anon/publishable key only; never a service-role key.
+let shopSB=null;let shopCurrentUser=null;let savingDraft=false;
+const shopEl=id=>document.getElementById(id);
+const shopStatus=(id,msg,bad=false)=>{const el=shopEl(id);el.textContent=msg;el.classList.toggle('error',bad);el.classList.toggle('success',!bad&&!!msg)};
+function shopSetUser(u){
+  shopCurrentUser=u||null;
+  const signedIn=!!shopCurrentUser;
+  shopEl('parentIdentity').style.display=signedIn?'block':'none';
+  shopEl('parentIdentity').textContent=signedIn?'Signed in as '+(shopCurrentUser.email||'parent'):'';
+  shopEl('parentLoginForm').style.display=signedIn?'none':'block';
+  shopEl('shopSignout').style.display=signedIn?'inline-block':'none';
+  shopEl('saveDraftOrder').disabled=!signedIn||savingDraft;
+}
+async function shopInitAuth(){
+  const c=window.SCANBACK_CONFIG;
+  if(!c||typeof c.SUPABASE_URL!=='string'||!c.SUPABASE_URL.startsWith('https://')||!c.SUPABASE_ANON_KEY){
+    shopStatus('loginStatus','Configuration missing: use your existing public/config.js with SUPABASE_URL and SUPABASE_ANON_KEY.',true);
+    shopEl('shopSignin').disabled=true;shopEl('shopSignup').disabled=true;return;
+  }
+  if(!window.supabase?.createClient){shopStatus('loginStatus','Could not load Supabase library. Check your internet connection.',true);return;}
+  shopSB=window.supabase.createClient(c.SUPABASE_URL,c.SUPABASE_ANON_KEY);
+  const {data,error}=await shopSB.auth.getUser();
+  if(error&&error.name!=='AuthSessionMissingError') console.warn('Shop session check:',error.message);
+  shopSetUser(data?.user||null);
+  shopSB.auth.onAuthStateChange((_event,session)=>shopSetUser(session?.user||null));
+}
+async function shopSignIn(){
+  if(!shopSB)return;
+  const email=shopEl('shopEmail').value.trim();const password=shopEl('shopPassword').value;
+  if(!email||!password)return shopStatus('loginStatus','Enter email and password first.',true);
+  shopStatus('loginStatus','Signing in...');
+  const {data,error}=await shopSB.auth.signInWithPassword({email,password});
+  if(error)return shopStatus('loginStatus',error.message,true);
+  shopSetUser(data.user);shopStatus('loginStatus','Signed in. You can now save your draft.');
+  shopEl('shopPassword').value='';
+}
+async function shopSignUp(){
+  if(!shopSB)return;
+  const email=shopEl('shopEmail').value.trim();const password=shopEl('shopPassword').value;
+  if(!email||password.length<8)return shopStatus('loginStatus','Enter your email and password (at least 8 characters).',true);
+  shopStatus('loginStatus','Creating account...');
+  const {data,error}=await shopSB.auth.signUp({email,password});
+  if(error)return shopStatus('loginStatus',error.message,true);
+  shopStatus('loginStatus',data?.session?'Account created and signed in.':'Account requested. Check your email for confirmation, then sign in.');
+  shopEl('shopPassword').value='';
+}
+async function shopSignOut(){if(shopSB)await shopSB.auth.signOut();shopSetUser(null);shopStatus('loginStatus','Signed out.');}
+async function shopSaveDraft(){
+  if(!shopSB||savingDraft)return;
+  savingDraft=true;shopEl('saveDraftOrder').disabled=true;
+  try{
+    const {data:auth,error:authError}=await shopSB.auth.getUser();
+    if(authError||!auth?.user){shopSetUser(null);return shopStatus('orderStatus','Please sign in again.',true);}
+    const childName=$('child').value.trim();
+    if(!childName||childName.length>40)return shopStatus('orderStatus','Enter a child name or nickname (max 40 characters).',true);
+    if(items.length!==pack||![6,12,24].includes(pack))return shopStatus('orderStatus','Choose 6, 12, or 24 stickers.',true);
+    const stickers=items.map(x=>({theme_key:x.theme,item_name:(x.name||'').trim()}));
+    if(stickers.some(s=>!['space','dino','rainbow','sports'].includes(s.theme_key)||!s.item_name||s.item_name.length>60))return shopStatus('orderStatus','Every sticker needs a valid theme and item name.',true);
+    shopStatus('orderStatus','Saving draft order...');
+    const {data,error}=await shopSB.functions.invoke('create-order',{body:{child_name:childName,pack_size:pack,stickers}});
+    if(error){
+      let message=error.message||'Request failed';
+      try{if(error.context){const e=await error.context.json();message=e.error||e.message||message;}}catch{}
+      return shopStatus('orderStatus','Could not save draft: '+message,true);
+    }
+    if(!data?.ok||!data.order_id)return shopStatus('orderStatus','The server did not confirm a saved draft.',true);
+    shopStatus('orderStatus','Draft saved successfully! Order ID: '+data.order_id+'\nStatus: '+data.status+'\nStickers: '+data.sticker_count+'\nNo payment or live QR has been issued.');
+  }catch(e){console.error(e);shopStatus('orderStatus','Something went wrong saving the draft. Please try again.',true);}
+  finally{savingDraft=false;shopEl('saveDraftOrder').disabled=!shopCurrentUser;}
+}
+shopEl('shopSignin').addEventListener('click',shopSignIn);
+shopEl('shopSignup').addEventListener('click',shopSignUp);
+shopEl('shopSignout').addEventListener('click',shopSignOut);
+shopEl('saveDraftOrder').addEventListener('click',shopSaveDraft);
+shopInitAuth();
 </script></body></html>
