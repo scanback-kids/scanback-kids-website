@@ -97,9 +97,14 @@
     <div class="field"><label for="shipState">State</label><input id="shipState" autocomplete="address-level1" maxlength="80" placeholder="State"></div>
     <div class="field"><label for="shipPincode">PIN code</label><input id="shipPincode" inputmode="numeric" autocomplete="postal-code" maxlength="6" placeholder="6-digit PIN"></div>
   </div>
-  <div class="checkout-note"><strong>Testing only.</strong> This checkout uses Razorpay test keys and simulated payments. Your PDFs still show DEMO QR codes and cannot be used as paid customer stickers. Verified orders are not automatically shipped or activated.</div>
+  <div class="checkout-note"><strong>Testing only.</strong> This checkout uses Razorpay test keys and simulated payments. The design preview PDF above still shows DEMO QR codes. For securely allocated test-order QR proofs, use My Orders after payment. Verified orders are not automatically shipped or activated.</div>
   <button id="startRazorpayCheckout" type="button" disabled>Continue to Razorpay Test Checkout</button>
   <div id="checkoutStatus" role="status" aria-live="polite"></div>
+</section>
+<section style="background:#eef8ff;border:2px solid #d4e8ff;border-radius:22px;padding:22px;margin:18px 0 38px">
+  <h2 style="color:#15356f">🧾 Already paid? View your sticker order</h2>
+  <p style="color:#4b6685">Check your verified test purchases, create stable ScanBack QR records and download an A4 QR layout proof. Real QRs remain inactive until your order is marked shipped and you activate the stickers.</p>
+  <a href="my-orders.html" style="display:inline-block;padding:13px 21px;background:#166df5;color:white;border-radius:12px;text-decoration:none;font-weight:bold">Open My Orders & QR Proofs →</a>
 </section>
 </main>
 <script src="config.js"></script>
