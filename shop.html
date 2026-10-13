@@ -37,6 +37,21 @@
 .variant-scene.real-art{height:142px;background:#0c2a70}
 .variant-scene.real-art img{position:static;width:100%;height:100%;object-fit:cover;filter:none}
 @media(max-width:500px){.editor .edit-actions{flex-wrap:wrap}}
+
+/* V4: checkout form (Razorpay TEST mode until production approval) */
+.checkout-panel{margin:22px 0 38px;background:#fff;border:2px solid #dce9fb;border-radius:24px;padding:22px;box-shadow:0 7px 24px #15335912}
+.checkout-panel h2{font-size:27px;margin-bottom:8px}
+.checkout-panel p{font-size:14px;color:#546b89;line-height:1.55}
+.checkout-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}
+.checkout-grid .field{margin:0}.checkout-grid .wide{grid-column:span 2}
+.checkout-grid input{max-width:none}
+.checkout-note{background:#fff4d7;color:#6c4b00;border-radius:12px;padding:12px;margin:13px 0;font-size:13px;line-height:1.45}
+#checkoutStatus{margin-top:12px;min-height:18px;white-space:pre-wrap;font-weight:bold;font-size:14px;color:#1f5085}
+#checkoutStatus.error{color:#a52236}
+#checkoutStatus.success{color:#247048}
+.checkout-steps{font-size:13px;color:#4d6285;margin:8px 0 14px}
+.checkout-panel button:disabled{opacity:.45;cursor:not-allowed}
+@media(max-width:650px){.checkout-grid{grid-template-columns:1fr}.checkout-grid .wide{grid-column:span 1}}
 </style></head><body><main>
 <section class="hero"><div><h1>Custom Stickers for a <span style="color:#ed2f89">Safer, Happier Childhood</span></h1><p>Explore 96 individually selectable illustrated scenes across four themes. Customize every sticker, save drafts, and preview the full pack.</p><strong>🎨 Mix & match &nbsp; · &nbsp; 🛡️ Lost-and-found concept &nbsp; · &nbsp; 📄 A4 PDF draft</strong></div><div class="hero-art"><img src="assets/space.webp" alt="Space cartoon"><img src="assets/rainbow.webp" alt="Unicorn cartoon"><img src="assets/dino.webp" alt="Dinosaur cartoon"></div></section>
 <div class="lead"><h2>⭐ Choose a Sticker Theme</h2><p>Click one theme to apply it to every sticker, or customize each sticker below.</p></div><div id="themes" class="themes"></div>
@@ -69,8 +84,26 @@
   </div>
 </div>
 </section>
+
+<section class="checkout-panel" aria-label="Razorpay test checkout">
+  <h2>💳 Secure checkout — Test Mode</h2>
+  <p>First sign in and save your final sticker design above. Then enter a shipping address and continue to Razorpay's secure test checkout. Prices are calculated on the server in INR, not by your browser.</p>
+  <div class="checkout-steps"><strong>Save draft → Shipping → Test checkout → Verified payment → Production review</strong></div>
+  <div class="checkout-grid">
+    <div class="field"><label for="shipName">Parent / recipient name</label><input id="shipName" autocomplete="name" maxlength="70" placeholder="Full name"></div>
+    <div class="field"><label for="shipPhone">Indian mobile number</label><input id="shipPhone" inputmode="tel" maxlength="16" autocomplete="tel" placeholder="10-digit mobile number"></div>
+    <div class="field wide"><label for="shipAddress">Delivery address</label><input id="shipAddress" autocomplete="street-address" maxlength="250" placeholder="House, street, area, landmark"></div>
+    <div class="field"><label for="shipCity">City</label><input id="shipCity" autocomplete="address-level2" maxlength="80" placeholder="City"></div>
+    <div class="field"><label for="shipState">State</label><input id="shipState" autocomplete="address-level1" maxlength="80" placeholder="State"></div>
+    <div class="field"><label for="shipPincode">PIN code</label><input id="shipPincode" inputmode="numeric" autocomplete="postal-code" maxlength="6" placeholder="6-digit PIN"></div>
+  </div>
+  <div class="checkout-note"><strong>Testing only.</strong> This checkout uses Razorpay test keys and simulated payments. Your PDFs still show DEMO QR codes and cannot be used as paid customer stickers. Verified orders are not automatically shipped or activated.</div>
+  <button id="startRazorpayCheckout" type="button" disabled>Continue to Razorpay Test Checkout</button>
+  <div id="checkoutStatus" role="status" aria-live="polite"></div>
+</section>
 </main>
 <script src="config.js"></script>
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
 <script>
@@ -88,7 +121,7 @@ function reset(){pack=6;$('child').value='Aarav';items=Array.from({length:pack},
 function setPack(n){let prev=items.slice();pack=n;items=Array.from({length:n},(_,i)=>prev[i]??{theme:keys[i%4],name:defaults[i]||'',variant:(i%24)+1});drawControls();render();}
 function setAll(t){items.forEach(it=>it.theme=t);drawControls();render();}
 function drawControls(){let uniform=items.every(x=>x.theme===items[0].theme)?items[0].theme:null;
-$('packs').innerHTML=[6,12,24].map(n=>`<button type="button" class="${n===pack?'active':''}" data-n="${n}">${n} Stickers</button>`).join('');document.querySelectorAll('[data-n]').forEach(b=>b.onclick=()=>setPack(Number(b.dataset.n)));
+$('packs').innerHTML=[6,12,24].map(n=>`<button type="button" class="${n===pack?'active':''}" data-n="${n}">${n} Stickers · ₹${({6:249,12:449,24:699})[n]}</button>`).join('');document.querySelectorAll('[data-n]').forEach(b=>b.onclick=()=>setPack(Number(b.dataset.n)));
 $('themes').innerHTML=keys.map(k=>`<div class="theme ${uniform===k?'active':''}" data-theme="${k}"><img src="${T[k].file}" alt="${T[k].name}"><h3>${T[k].name}</h3></div>`).join('');document.querySelectorAll('[data-theme]').forEach(b=>b.onclick=()=>setAll(b.dataset.theme));
 $('bulk').innerHTML=keys.map(k=>`<button class="${uniform===k?'active':''}" type="button" data-all="${k}">${T[k].name}</button>`).join('');document.querySelectorAll('[data-all]').forEach(b=>b.onclick=()=>setAll(b.dataset.all));
 $('editors').innerHTML=items.map((it,i)=>`<div class="editor"><b>Sticker ${i+1}</b><div class="row"><select aria-label="Sticker ${i+1} theme" data-theme-index="${i}">${keys.map(k=>`<option value="${k}" ${k===it.theme?'selected':''}>${T[k].name}</option>`).join('')}</select><input aria-label="Sticker ${i+1} item name optional" data-item-index="${i}" maxlength="24" placeholder="Optional — leave blank" value="${escapeHtml(it.name)}"></div><div class="edit-actions"><button type="button" data-choose-art="${i}">🎨 Choose artwork</button><img class="selected-thumb" src="${artworkFile(it)}" alt="Selected artwork"><span class="art-marker">Design ${it.variant||1} of 24</span></div></div>`).join('');
@@ -126,6 +159,18 @@ function hex(s){return [1,3,5].map(i=>parseInt(s.slice(i,i+2),16));}init();
 
 // V3 draft integration. Supabase anon/publishable key only; never a service-role key.
 let shopSB=null;let shopCurrentUser=null;let savingDraft=false;
+let checkoutDraftId=null, checkoutDraftOwner=null, checkoutDraftFingerprint=null, checkoutPaidOrderId=null;
+const checkoutFingerprint=()=>JSON.stringify({child:$('child').value.trim(),pack,stickers:items.map(x=>({theme:x.theme,variant:x.variant,item:x.name.trim()}))});
+function checkoutRefresh(){
+  const ready=!!shopCurrentUser && !!checkoutDraftId && checkoutDraftOwner===shopCurrentUser.id && checkoutDraftId!==checkoutPaidOrderId && checkoutDraftFingerprint===checkoutFingerprint();
+  const btn=document.getElementById('startRazorpayCheckout'); if(btn)btn.disabled=!ready;
+}
+function checkoutMarkSaved(id){
+  checkoutDraftId=id; checkoutDraftOwner=shopCurrentUser?.id||null;
+  checkoutDraftFingerprint=checkoutFingerprint(); checkoutRefresh();
+  document.getElementById('checkoutStatus').textContent='Draft '+id+' is ready for test checkout. Complete shipping details below.';
+}
+
 const shopEl=id=>document.getElementById(id);
 const shopStatus=(id,msg,bad=false)=>{const el=shopEl(id);el.textContent=msg;el.classList.toggle('error',bad);el.classList.toggle('success',!bad&&!!msg)};
 function shopSetUser(u){
@@ -136,6 +181,8 @@ function shopSetUser(u){
   shopEl('parentLoginForm').style.display=signedIn?'none':'block';
   shopEl('shopSignout').style.display=signedIn?'inline-block':'none';
   shopEl('saveDraftOrder').disabled=!signedIn||savingDraft;
+  if(!signedIn || (checkoutDraftOwner && checkoutDraftOwner!==shopCurrentUser?.id)){checkoutDraftId=null;checkoutDraftFingerprint=null;}
+  checkoutRefresh();
 }
 async function shopInitAuth(){
   const c=window.SCANBACK_CONFIG;
@@ -190,6 +237,7 @@ async function shopSaveDraft(){
       return shopStatus('orderStatus','Could not save draft: '+message,true);
     }
     if(!data?.ok||!data.order_id)return shopStatus('orderStatus','The server did not confirm a saved draft.',true);
+    checkoutMarkSaved(data.order_id);
     shopStatus('orderStatus','Draft saved successfully! Order ID: '+data.order_id+'\nStatus: '+data.status+'\nStickers: '+data.sticker_count+'\nNo payment or live QR has been issued.');
   }catch(e){console.error(e);shopStatus('orderStatus','Something went wrong saving the draft. Please try again.',true);}
   finally{savingDraft=false;shopEl('saveDraftOrder').disabled=!shopCurrentUser;}
@@ -199,4 +247,73 @@ shopEl('shopSignup').addEventListener('click',shopSignUp);
 shopEl('shopSignout').addEventListener('click',shopSignOut);
 shopEl('saveDraftOrder').addEventListener('click',shopSaveDraft);
 shopInitAuth();
+
+// V4: Razorpay TEST checkout. Customer amounts always originate on the backend.
+const checkoutStatus=(text,bad=false)=>{
+  const el=document.getElementById('checkoutStatus');el.textContent=text;
+  el.classList.toggle('error',bad);el.classList.toggle('success',!bad && !!text);
+};
+function checkoutShipping(){
+  const ids=['shipName','shipPhone','shipAddress','shipCity','shipState','shipPincode'];
+  const s=Object.fromEntries(ids.map(id=>[id,document.getElementById(id).value.trim()]));
+  if(s.shipName.length<2 || s.shipAddress.length<12 || s.shipCity.length<2 || s.shipState.length<2 ||
+     !/^(?:\+?91[-\s]?)?[6-9]\d{9}$/.test(s.shipPhone.replace(/[\s-]/g,'')) || !/^\d{6}$/.test(s.shipPincode))return null;
+  return {customer_name:s.shipName,customer_phone:s.shipPhone,shipping_address:s.shipAddress,city:s.shipCity,state:s.shipState,pincode:s.shipPincode};
+}
+async function checkoutError(err){
+  let m=err?.message||'Request failed';
+  try{if(err?.context){const j=await err.context.json();m=j.error||j.message||m;}}catch{}
+  return m;
+}
+async function startTestCheckout(){
+  checkoutRefresh();
+  if(!checkoutDraftId || checkoutDraftFingerprint!==checkoutFingerprint())
+    return checkoutStatus('Save your latest sticker design as a fresh draft before checkout.',true);
+  if(!shopCurrentUser || !shopSB)return checkoutStatus('Sign in before checkout.',true);
+  const savedId=checkoutDraftId;
+  const shipping=checkoutShipping();
+  if(!shipping)return checkoutStatus('Please complete recipient name, Indian mobile, street address, city, state and 6-digit PIN.',true);
+  if(typeof window.Razorpay!=='function')return checkoutStatus('Razorpay checkout could not load; check internet connection.',true);
+  const btn=document.getElementById('startRazorpayCheckout');btn.disabled=true;
+  checkoutStatus('Creating a secure Razorpay TEST payment order…');
+  try{
+    const {data,error}=await shopSB.functions.invoke('checkout-start',{body:{order_id:savedId,shipping}});
+    if(error)throw error;
+    if(!data?.ok || !data.razorpay_order_id || !data.key_id?.startsWith('rzp_test_') || !Number.isInteger(data.amount))
+      throw new Error(data?.error||'Server did not return a valid test-mode checkout');
+    checkoutStatus('Opening Razorpay TEST checkout for ₹'+(data.amount/100).toFixed(2)+'…');
+    let didConfirm=false;
+    const options={
+      key:data.key_id,amount:data.amount,currency:'INR',order_id:data.razorpay_order_id,
+      name:'ScanBack Kids',description:'Personalized lost-and-found sticker pack — TEST',
+      prefill:{name:shipping.customer_name,email:shopCurrentUser.email||'',contact:shipping.customer_phone},
+      theme:{color:'#2475ff'},
+      handler:async function(response){
+        checkoutStatus('Verifying payment with Razorpay…');
+        try{
+          const {data:verified,error:verifyErr}=await shopSB.functions.invoke('verify-payment',{
+            body:{order_id:savedId,razorpay_payment_id:response.razorpay_payment_id,razorpay_signature:response.razorpay_signature}
+          });
+          if(verifyErr)throw verifyErr;
+          if(verified?.ok && verified.status==='paid'){
+            didConfirm=true;checkoutPaidOrderId=savedId;
+            checkoutStatus('TEST payment verified and captured! Order ID: '+savedId+'\nSticker activation and shipping are not yet enabled.');
+            btn.disabled=true;return;
+          }
+          checkoutStatus('Gateway returned payment information; capture still processing. Please check the order in Supabase before fulfilling.',true);
+        }catch(e){checkoutStatus('Payment result requires review: '+await checkoutError(e)+'\nDo not pay again until verified in Razorpay and Supabase.',true);}
+        finally{checkoutRefresh();}
+      },
+      modal:{ondismiss:()=>{if(!didConfirm)checkoutStatus('Checkout closed. No payment confirmation has been received.');checkoutRefresh();}},
+    };
+    const rz=new window.Razorpay(options);rz.on('payment.failed',()=>checkoutStatus('Test payment failed. You may retry after checking the order.',true));
+    rz.open();
+  }catch(e){checkoutStatus('Could not open checkout: '+await checkoutError(e),true);}
+  finally{checkoutRefresh();}
+}
+document.getElementById('startRazorpayCheckout').addEventListener('click',startTestCheckout);
+document.addEventListener('input',checkoutRefresh);
+document.addEventListener('change',checkoutRefresh);
+document.addEventListener('click',()=>setTimeout(checkoutRefresh,0));
+
 </script></body></html>
