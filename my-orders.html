@@ -1,144 +1,37 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>My Sticker Orders | ScanBack Kids — V5.2</title>
-<style>
-:root{--navy:#14346e;--ink:#203b62;--blue:#176bf4;--pink:#fd4c9f;--line:#dce7f8}*{box-sizing:border-box}
-[hidden]{display:none!important}body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Arial,sans-serif;color:var(--ink);background:linear-gradient(#e4f6ff,#fff 380px)}
-main{max-width:1120px;margin:auto;padding:20px}.nav{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}.logo{font-weight:900;color:#12346c;font-size:22px}.logo span{color:var(--pink)}a{color:#195ac8;text-decoration:none;font-weight:700}.hero{margin-top:20px;border-radius:26px;background:linear-gradient(110deg,#1553a5,#873cba,#ff559e);padding:28px 30px;color:white}.hero h1{font-size:clamp(27px,4vw,43px);margin:0 0 8px}.hero p{margin:0;line-height:1.55;max-width:680px}.notice{background:#fff6d9;border:1px solid #f6df91;border-radius:13px;padding:13px 16px;line-height:1.5;color:#75500b;margin:17px 0}.card{border:1px solid var(--line);border-radius:22px;background:white;box-shadow:0 8px 25px #1b478111;padding:20px;margin:18px 0}h2{color:var(--navy);margin:0 0 14px}.row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}.formrow{display:grid;grid-template-columns:minmax(190px,1fr) minmax(190px,1fr) auto;gap:11px;align-items:end}.field label{display:block;font-size:13px;font-weight:800;margin:0 0 6px}input{font:inherit;width:100%;padding:12px 13px;border-radius:10px;border:1px solid #bbc9df}button{background:var(--blue);color:white;border:0;border-radius:12px;padding:12px 17px;font:inherit;font-weight:800;cursor:pointer}button:hover{filter:brightness(.96)}button:disabled{opacity:.5;cursor:wait}.light{background:#eaf2ff;color:#17458b}.pink{background:var(--pink)}.danger{background:#ab3d5b} .small{padding:9px 12px;font-size:13px}.order{border:1px solid var(--line);border-radius:14px;padding:14px;display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:10px;flex-wrap:wrap}.order strong{display:block;color:var(--navy)}.muted,.hint{color:#60738c;font-size:13px;line-height:1.55}.status{white-space:pre-wrap;padding:11px;border-radius:10px;background:#edf6ff;color:#285486;min-height:20px;margin-top:11px}.status.error{background:#ffedf0;color:#9f2441}.status.success{background:#e9f9f0;color:#11633c}.artgrid{max-height:390px;overflow-y:auto;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:11px}.mini{border:1px solid #dbe8f8;border-radius:14px;padding:9px;background:#f9fcff;display:grid;grid-template-columns:76px minmax(0,1fr) 82px;gap:8px;align-items:center;min-width:0}.mini img{width:76px;height:85px;border-radius:10px;object-fit:cover}.mini .qrbox{display:flex;flex-direction:column;gap:4px;align-items:center;min-width:0}.mini .qrbox svg{display:block;width:80px;height:80px;max-width:100%;background:#fff;border:1px solid #d6e0ee;border-radius:6px}.mini .qrbox a{font-size:10px;font-weight:800;text-align:center;overflow-wrap:anywhere}.mini .qrbox .qrfail{display:flex;align-items:center;justify-content:center;background:#fff2d7;color:#825b16;border:1px dashed #e8cb92;border-radius:7px;width:80px;height:80px;font-size:10px;text-align:center;padding:4px}.mini .qrbox small{color:#657891;font-size:9px;text-align:center;line-height:1.2}.mini strong,.mini span{display:block;font-size:12px;overflow-wrap:anywhere}.mini span{color:#60738c}.pill{font-size:11px;font-weight:900;background:#def0ff;padding:5px 8px;border-radius:999px;display:inline-block}.gridmeta{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:13px 0}.gridmeta>div{padding:12px;background:#f2f7ff;border-radius:12px}.gridmeta small{display:block;color:#627795;margin-bottom:5px}.gridmeta strong{display:block;word-break:break-word}.foot{font-size:12px;color:#60738c;margin:25px 0 35px}@media(max-width:850px){.artgrid{grid-template-columns:repeat(2,minmax(0,1fr))}.formrow{grid-template-columns:1fr 1fr}.formrow button{grid-column:span 2}}@media(max-width:560px){.formrow{grid-template-columns:1fr}.formrow button{grid-column:auto}.artgrid{grid-template-columns:1fr}.gridmeta{grid-template-columns:1fr}}
-</style>
-</head><body><main>
-<header class="nav"><div class="logo">❤ ScanBack <span>Kids</span></div><nav><a href="shop.html">← Back to sticker shop</a></nav></header>
-<section class="hero"><h1>My Orders & QR Print Proofs</h1><p>See your verified purchases, prepare their permanent QR IDs, check all selected illustrations, and download an A4 print-layout proof. Parent activation is available after shipping.</p></section>
-<div class="notice"><strong>TEST MODE / NOT APPROVED FOR CUSTOMER PRINTING:</strong> This pilot generates genuine ScanBack <code>items.id</code> QR destinations, but stickers stay inactive before parent activation. Low-resolution artwork, material, trim, bleed, contrast and physical QR scanning must be approved before dispatch. Never ship these test orders.</div>
-<section class="card"><h2>1. Sign in as the purchasing parent</h2>
-<div id="who" class="hint">Checking your session…</div>
-<div id="authFields" class="formrow"><div class="field"><label for="email">Parent email</label><input id="email" type="email" autocomplete="email" placeholder="parent@example.com"></div><div class="field"><label for="password">Password</label><input id="password" type="password" autocomplete="current-password" placeholder="Your ScanBack password"></div><button id="signIn">Sign in</button></div>
-<div class="row" style="margin-top:12px"><button id="signOut" class="light" hidden>Sign out</button><button id="refresh" class="light" disabled>Refresh my orders</button></div><div id="authStatus" class="status"></div></section>
-<section class="card"><h2>2. Select a paid order</h2><p class="hint">Only orders associated with your account are listed. You must have a verified captured test payment before allocating QR IDs.</p><div id="orders" class="hint">Sign in to load your purchases.</div></section>
-<section class="card" id="detailPanel" hidden><h2>3. Prepare & inspect stickers</h2><div id="selectedMeta" class="gridmeta"></div><div id="detailsHint" class="hint"></div><div class="row" style="margin:15px 0"><button id="prepare" class="pink">Allocate real QR IDs</button><button id="download" class="light" disabled>Download A4 QR PDF proof</button></div><p class="hint">Once allocated, each sticker has an on-screen QR preview and permanent ID. The PDF uses exact 60 × 31 mm labels on A4 with vector QR graphics; it is a measured <strong>proof</strong>, not a certified production print master.</p><div id="selectedStickers" class="artgrid"></div><h3 style="color:#14346e;margin:20px 0 8px">Parent activation</h3><p class="hint">ScanBack finder pages will report these stickers as inactive until the order is shipped and you activate them. If a sticker is lost or compromised later, you can deactivate it.</p><label class="row" style="font-size:13px;margin-bottom:10px"><input type="checkbox" id="received" style="width:auto"/> I confirm I received this sticker pack.</label><div class="row"><button id="activate" disabled>Activate my stickers</button><button id="deactivate" class="danger" disabled>Deactivate all</button></div><div id="orderStatus" class="status"></div></section>
-<p class="foot">ScanBack Kids V5.2 engineering pilot. Payment status is verified server-side. Do not expose secret keys in this page or in GitHub.</p>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>My Orders & Sticker Preview · ScanBack Kids</title>
+<link rel="stylesheet" href="studio-assets/studio.css"><link rel="icon" href="data:,">
+</head><body>
+<header class="top customer-top"><div class="brand"><div><div class="brand-logo">✦ ScanBack <span class="kids">Kids</span></div><div class="brand-blurb">Small Stickers. Big Reunions. ♥</div></div><em>My Sticker Orders</em></div><div class="top-characters" aria-hidden="true"><img src="assets/themes/rainbow/01.webp" alt=""><img src="assets/themes/space/01.webp" alt=""><img src="assets/themes/dino/01.webp" alt=""></div><div class="top-actions"><a class="btn secondary" href="shop.html">← Sticker Shop</a></div></header>
+<main class="customer-shell">
+  <section class="customer-hero"><div><div class="mascot-chip">❤ My happy little stickers</div><h1>My Orders & Stickers</h1><p>See the designs you chose, track your order and activate your QR stickers once your pack arrives. Every sticker tells its own adventure!</p></div><img src="assets/themes/rainbow/01.webp" alt="Rainbow Magic unicorn artwork"></section>
+  <div class="notice" style="margin-top:14px"><strong>ScanBack Kids Test Mode:</strong> These are payment test orders. QR links are permanent but stickers stay inactive until shipment and parent activation. Print-production PDFs are available only to authorized administrators.</div>
+  <section class="panel customer-auth" id="customerAuth">
+    <div class="panel-h"><h2>🔐 Your ScanBack account</h2><span class="pill" id="signedInPill">Not signed in</span></div>
+    <div id="sessionText" class="small muted">Sign in with the same account that placed your sticker order.</div>
+    <form id="customerLogin" class="auth-inline" style="margin-top:12px"><label>Email<input id="customerEmail" type="email" required autocomplete="email" placeholder="parent@example.com"></label><label>Password<input id="customerPass" type="password" required autocomplete="current-password" placeholder="Account password"></label><button type="submit" class="btn pink">Sign in</button></form>
+    <div class="toolbar-actions" style="margin-top:10px"><button id="customerSignOut" class="btn outline" hidden>Sign out</button><button id="reloadMyOrders" class="btn secondary" disabled>↻ Refresh</button></div>
+    <div id="customerMessage" class="statusmsg" role="status"></div>
+  </section>
+  <div class="customer-grid">
+    <section class="panel" id="myOrdersPanel"><div class="panel-h"><h2>🛍️ My purchases</h2><span id="myOrderCount" class="pill">0 orders</span></div><div id="myOrderList" class="order-list"><p class="muted">Sign in to view your purchased sticker packs.</p></div><a class="btn pink full" href="shop.html" style="margin-top:12px">✨ Create another sticker pack</a></section>
+    <section class="panel" id="myPreviewPanel"><div class="panel-h"><h2>🌟 Your personalized sticker collection</h2><span class="pill" id="myOrderStage">Select an order</span></div>
+      <div id="emptyCustomerPreview" class="customer-empty"><div class="four-art"><img src="assets/themes/space/01.webp" alt="Space theme"><img src="assets/themes/dino/01.webp" alt="Dinosaur theme"><img src="assets/themes/rainbow/01.webp" alt="Rainbow theme"><img src="assets/themes/sports/01.webp" alt="Sports theme"></div><h3>Your sticker adventures appear here</h3><p>Select an order on the left to see your artwork choices and QR codes.</p></div>
+      <div id="customerDetails" hidden>
+        <div id="myMeta" class="detail-meta"></div>
+        <div id="customerSteps" class="cust-steps"></div>
+        <div class="parent-shape-panel"><div><h3>✂️ Your sticker shape</h3><p class="small muted">Choose either look before the proof is approved. Die-cut is a concept until the printing supplier confirms the cutting path.</p></div><div class="shape-choices"><button id="myRoundedBtn" class="shape-btn" type="button" data-shape="rounded"><span class="shape-icon">▭</span>Rounded rectangle</button><button id="myDiecutBtn" class="shape-btn" type="button" data-shape="diecut"><span class="shape-icon">✿</span>Die-cut style</button></div></div>
+        <div class="panel-h" style="margin-top:9px"><h3>My live sticker preview</h3><span class="pill">Digital preview only</span></div>
+        <div id="customerStickers" class="sticker-grid customer-stickers"></div>
+        <h3 style="margin:18px 0 8px">🔎 My QR stickers</h3>
+        <div id="myQRCodes" class="parent-qr"></div>
+        <div class="activation-box"><h3>💚 Activate after delivery</h3><p>Your ScanBack codes stay inactive until the pack is marked shipped and you confirm receipt.</p><label class="checkline"><input type="checkbox" id="confirmReceived"> I have received my physical sticker pack.</label><div class="toolbar-actions" style="margin-top:11px"><button id="customerActivate" class="btn green" disabled>✓ Activate my stickers</button><button id="customerDeactivate" class="btn outline" disabled>Deactivate all</button></div></div>
+        <div id="customerOrderMessage" class="statusmsg" role="status"></div>
+      </div>
+    </section>
+  </div>
+  <div class="bottom-cta"><h3>Lost an item? Let a little sticker bring it home. 💗</h3><p class="muted">A finder can scan your activated QR code without seeing your private contact details.</p><a href="shop.html" class="btn pink">Explore more designs →</a></div>
 </main>
-<script src="config.js"></script><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
-<script>
-'use strict';
-const $=id=>document.getElementById(id);
-const SUPPORTED=new Set(['space','dino','rainbow','sports']);
-const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const themeName={space:'Space Adventure',dino:'Dinosaur World',rainbow:'Rainbow Magic',sports:'Sports Champions'};
-let sb=null, user=null, selected=null, currentOrder=null, busy=false;
-function status(where,message,error=false){$(where).textContent=message;$(where).className='status'+(error?' error':message?' success':'');}
-function imgUrl(s){if(!SUPPORTED.has(s.theme_key)||!Number.isInteger(s.design_variant)||s.design_variant<1||s.design_variant>24)return '';return `assets/themes/${s.theme_key}/${String(s.design_variant).padStart(2,'0')}.webp`;}
-async function invoke(action,order_id){
-  if(!sb||!user)throw Error('Please sign in.');
-  const {data,error}=await sb.functions.invoke('order-stickers',{body:{action,order_id}});
-  if(error){let msg=error.message||'Server request failed';try{const d=await error.context?.json();msg=d?.error||msg;}catch{}throw Error(msg);}
-  if(!data?.ok)throw Error(data?.error||'Server did not confirm this request.');
-  return data;
-}
-function setUser(u){user=u||null;$('who').textContent=user?'Signed in: '+(user.email||'parent'):'Not signed in';$('authFields').hidden=!!user;$('signOut').hidden=!user;$('refresh').disabled=!user;
- if(!user){selected=null;currentOrder=null;$('detailPanel').hidden=true;$('orders').textContent='Sign in to load your purchases.';}}
-async function login(){status('authStatus','Signing in…');try{const email=$('email').value.trim(), password=$('password').value;
- const {data,error}=await sb.auth.signInWithPassword({email,password});if(error)throw error;setUser(data.user);$('password').value='';status('authStatus','Signed in.');await refresh();
- }catch(e){status('authStatus',e.message,true);}}
-async function refresh(){if(!user)return;status('authStatus','Loading your recent orders…');try{const d=await invoke('list');
-  $('orders').innerHTML=d.orders.length?d.orders.map(o=>`<div class="order"><div><strong>${esc(o.child_name)} · ${o.pack_size} stickers</strong><div class="muted">${new Date(o.created_at).toLocaleDateString('en-IN')} · ${o.payment_amount_paise? '₹'+(o.payment_amount_paise/100).toFixed(0):'Unpaid'} · ${esc(o.status)} · ${esc(o.fulfillment_status||'not_started')}</div><div class="muted">Order ${esc(o.id.slice(0,8))}…</div></div><button class="small light" data-id="${esc(o.id)}" ${o.status==='paid'?'':'disabled'}>${o.status==='paid'?'Open paid order':'Unpaid draft'}</button></div>`).join(''):'No orders found for this account.';
-  $('orders').querySelectorAll('[data-id]').forEach(btn=>btn.onclick=()=>openOrder(btn.dataset.id));status('authStatus','Orders refreshed.');
- }catch(e){status('authStatus',e.message,true);}}
-async function openOrder(id){selected=id;status('orderStatus','Loading order…');$('detailPanel').hidden=false;try{
- const d=await invoke('details',selected);display(d);$('detailPanel').scrollIntoView({behavior:'smooth',block:'start'});
- }catch(e){status('orderStatus',e.message,true);}}
-// Render the SAME permanent QR URL used for the PDF as a visible, scannable SVG.
-// Keep finder URLs from Supabase, never invent IDs in the browser.
-function qrPreviewSvg(value){
-  if(!value||typeof qrcode!== 'function')return '';
-  try{
-    const qr=qrcode(0,'M');qr.addData(String(value));qr.make();
-    const n=qr.getModuleCount(),quiet=4,total=n+quiet*2;
-    const commands=[];
-    for(let r=0;r<n;r++){
-      let start=-1;
-      for(let c=0;c<=n;c++){
-        const dark=c<n&&qr.isDark(r,c);
-        if(dark&&start<0)start=c;
-        if(!dark&&start>=0){commands.push(`M${start+quiet} ${r+quiet}h${c-start}v1h-${c-start}z`);start=-1;}
-      }
-    }
-    return `<svg role="img" aria-label="QR code for this sticker" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${total} ${total}" shape-rendering="crispEdges"><rect width="${total}" height="${total}" fill="#fff"/><path d="${commands.join('')}" fill="#000"/></svg>`;
-  }catch(error){console.error('Could not draw sticker QR preview:',error);return '';}
-}
-function qrPreview(s){
-  if(!s.qr_url||!s.item_id)return '<div class="qrbox"><div class="qrfail">QR not allocated yet</div><small>Prepare QR IDs first</small></div>';
-  const svg=qrPreviewSvg(s.qr_url);
-  if(!svg)return '<div class="qrbox"><div class="qrfail">QR library unavailable</div><small>Refresh the page</small></div>';
-  return `<div class="qrbox">${svg}<a href="${esc(s.qr_url)}" target="_blank" rel="noopener noreferrer" title="Open the sticker finder page">View QR link ↗</a><small>${s.active?'Active QR':'QR allocated · inactive'}</small></div>`;
-}
-function display(d){currentOrder=d;const o=d.order;
- $('selectedMeta').innerHTML=`<div><small>Pack</small><strong>${o.pack_size} stickers</strong></div><div><small>Payment</small><strong>${esc(o.payment_status)} · ₹${(o.payment_amount_paise/100).toFixed(0)}</strong></div><div><small>Fulfillment</small><strong>${esc(o.fulfillment_status)}</strong></div>`;
- const ready=d.stickers.length===o.pack_size&&d.stickers.every(s=>!!s.item_id&&!!s.qr_url);
- $('detailsHint').textContent=ready?'Permanent QR IDs allocated. Re-downloading will preserve them.':'Your order is paid. Select “Allocate real QR IDs” to create inactive items records.';
- $('prepare').disabled=ready;$('download').disabled=!ready;$('received').checked=false;
- $('activate').disabled=!ready||!['shipped','delivered'].includes(o.fulfillment_status);
- $('deactivate').disabled=!ready;
- $('selectedStickers').innerHTML=d.stickers.map(s=>`<div class="mini"><img loading="lazy" src="${imgUrl(s)}" alt="${esc(s.theme_key)} design ${s.design_variant}"><div><strong>#${s.sticker_no}: ${esc(s.item_name||'(no item name)')}</strong><span>${esc(themeName[s.theme_key]||s.theme_key)} · Design ${esc(s.design_variant)}</span><span class="pill">${s.active?'Active':'Inactive'}</span></div>${qrPreview(s)}</div>`).join('');
- status('orderStatus',ready?'This order has permanent QR identifiers. They remain inactive until activation.':'This order has not yet been allocated QR identifiers.');
-}
-async function runAction(action){if(!selected||busy)return;busy=true;const b=$(action==='prepare'?'prepare':action);b.disabled=true;status('orderStatus',action==='prepare'?'Securely creating sticker IDs…':'Updating sticker status…');
- try{const d=await invoke(action,selected);display(d);await refresh();}catch(e){status('orderStatus',e.message,true);}finally{busy=false;}}
-async function loadImage(url){return new Promise((resolve,reject)=>{const im=new Image();im.onload=()=>resolve(im);im.onerror=()=>reject(Error('Artwork failed to load: '+url));im.src=url;});}
-function asJpegData(im){const c=document.createElement('canvas');const w=540,h=740;c.width=w;c.height=h;const cx=c.getContext('2d');cx.fillStyle='#ffffff';cx.fillRect(0,0,w,h);
- const scale=Math.max(w/im.naturalWidth,h/im.naturalHeight),sw=w/scale,sh=h/scale,sx=(im.naturalWidth-sw)/2,sy=(im.naturalHeight-sh)/2;
- cx.drawImage(im,sx,sy,sw,sh,0,0,w,h);return c.toDataURL('image/jpeg',.88);}
-function drawVectorQr(pdf,value,x,y,size){const qr=qrcode(0,'M');qr.addData(value);qr.make();const modules=qr.getModuleCount();const quiet=4;const cell=size/(modules+quiet*2);
- pdf.setFillColor(255,255,255);pdf.rect(x,y,size,size,'F');pdf.setFillColor(0,0,0);
- // Join horizontal dark runs to keep PDF paths efficient and QR edges precise.
- for(let r=0;r<modules;r++){let begin=-1;for(let c=0;c<=modules;c++){
-   const isDark=c<modules&&qr.isDark(r,c);if(isDark&&begin<0)begin=c;
-   if((!isDark||c===modules)&&begin>=0){pdf.rect(x+(quiet+begin)*cell,y+(quiet+r)*cell,(c-begin)*cell,cell,'F');begin=-1;}
- }}
-}
-function textFit(pdf,text,maxW,initial=9){let font=initial;pdf.setFontSize(font);while(font>6 && pdf.getTextWidth(text)>maxW){font-=.25;pdf.setFontSize(font);}return font;}
-async function proof(){if(!currentOrder)return;const o=currentOrder.order;const stickers=currentOrder.stickers;
- if(!stickers.length||stickers.some(s=>!s.qr_url||!s.item_id))return status('orderStatus','First allocate the permanent QR IDs.',true);
- if(typeof qrcode!=='function'||!window.jspdf?.jsPDF)return status('orderStatus','PDF/QR libraries did not load. Check your connection.',true);
- $('download').disabled=true;status('orderStatus','Loading artwork and drawing vector QR stickers…');
- try{const unique=[...new Set(stickers.map(imgUrl))];if(unique.some(x=>!x))throw Error('Invalid selected design file.');
- const imgs=new Map();for(const url of unique){const im=await loadImage(url);imgs.set(url,im);}
- const tiny=unique.filter(url=>{const im=imgs.get(url);return im.naturalWidth<235||im.naturalHeight<325;});
- const {jsPDF}=window.jspdf;const pdf=new jsPDF({unit:'mm',format:'a4',orientation:'portrait',compress:true});
- const labelW=60,labelH=31,gapX=4,gapY=4,cols=3,rows=8,x0=11,y0=10.5;
- const perPage=cols*rows;
- for(let i=0;i<stickers.length;i++){
-   if(i>0&&i%perPage===0)pdf.addPage();const s=stickers[i],slot=i%perPage,c=slot%cols,r=Math.floor(slot/cols),x=x0+c*(labelW+gapX),y=y0+r*(labelH+gapY);
-   pdf.setFillColor(250,251,253);pdf.rect(x,y,labelW,labelH,'F');pdf.setDrawColor(205,215,231);pdf.setLineWidth(.18);pdf.rect(x,y,labelW,labelH);
-   const url=imgUrl(s);pdf.addImage(asJpegData(imgs.get(url)),'JPEG',x+.5,y+.5,21.5,30,undefined,'MEDIUM');
-   const accent={space:[27,79,154],dino:[41,128,94],rainbow:[200,72,145],sports:[31,112,180]}[s.theme_key]||[41,90,150];
-   pdf.setFillColor(...accent);pdf.rect(x+22.3,y+.8,16.7,3.2,'F');pdf.setFont('helvetica','bold');pdf.setTextColor(255,255,255);pdf.setFontSize(5.3);pdf.text('SCANBACK KIDS',x+22.9,y+3.05);
-   pdf.setTextColor(27,52,89);pdf.setFont('helvetica','bold');
-   const name=String(s.child_name||o.child_name||'CHILD').trim();const shortName=name.length>18?name.slice(0,16)+'..':name;
-   textFit(pdf,shortName,16.3,8.5);pdf.text(pdf.splitTextToSize(shortName,16.1).slice(0,3),x+22.7,y+8);
-   if(s.item_name){pdf.setFont('helvetica','normal');pdf.setFontSize(6.2);pdf.text(pdf.splitTextToSize(String(s.item_name),16).slice(0,3),x+22.7,y+19);}
-   else{pdf.setFont('helvetica','normal');pdf.setFontSize(5.8);pdf.text('My belonging',x+22.7,y+19);}
-   pdf.setTextColor(80,101,136);pdf.setFontSize(4.7);pdf.text('#'+s.sticker_no+' · '+s.theme_key,x+22.7,y+28.3);
-   drawVectorQr(pdf,s.qr_url,x+39.5,y+3.5,20);
-   pdf.setTextColor(25,56,99);pdf.setFontSize(5.1);pdf.text('SCAN TO RETURN',x+40.3,y+27);
- }
- const total=pdf.getNumberOfPages();for(let p=1;p<=total;p++){
-   pdf.setPage(p);pdf.setFont('helvetica','bold');pdf.setTextColor(134,66,50);pdf.setFontSize(7);
-   pdf.text(`TEST ORDER - PROOF ONLY / NOT FOR DISPATCH | ${p}/${total}`,11,7.3);
-   pdf.setFontSize(5.5);pdf.text(`Order ${o.id.slice(0,8)} / ${o.pack_size} stickers / PRINT AT 100%`,11,293);
- }
- pdf.save(`ScanBack_${o.id.slice(0,8)}_A4_QR_PROOF.pdf`);
- status('orderStatus',`A4 proof saved. ${stickers.length} permanent QR destinations, currently inactive. Print at actual size / 100%.${tiny.length?' WARNING: '+tiny.length+' selected artwork image(s) are below the proof quality threshold; replace them before commercial printing.':''}`);
- }catch(e){console.error(e);status('orderStatus','Could not generate proof: '+e.message,true);}finally{$('download').disabled=false;}
-}
-$('signIn').onclick=login;$('signOut').onclick=async()=>{await sb.auth.signOut();setUser(null);status('authStatus','Signed out.');};$('refresh').onclick=refresh;
-$('prepare').onclick=()=>runAction('prepare');$('download').onclick=proof;
-$('received').onchange=()=>{if(currentOrder)$('activate').disabled=!$('received').checked||!['shipped','delivered'].includes(currentOrder.order.fulfillment_status)};
-$('activate').onclick=()=>{if(!$('received').checked)return status('orderStatus','Confirm receipt first.',true);runAction('activate');};
-$('deactivate').onclick=()=>{if(confirm('Deactivate all stickers in this order? Finder pages will stop reporting these items until reactivated.'))runAction('deactivate');};
-async function init(){const cfg=window.SCANBACK_CONFIG;if(!cfg?.SUPABASE_URL||!cfg?.SUPABASE_ANON_KEY||!window.supabase){status('authStatus','Missing config.js or Supabase library.',true);return;}
- sb=window.supabase.createClient(cfg.SUPABASE_URL,cfg.SUPABASE_ANON_KEY);const {data}=await sb.auth.getUser();setUser(data?.user||null);
- sb.auth.onAuthStateChange((_event,session)=>{if(!session?.user){setUser(null);return;}if(!user||user.id!==session.user.id){setUser(session.user);refresh();}});
- if(user)await refresh();else status('authStatus','Use the same parent account that placed the paid test order.');}
-init();
-</script></body></html>
+<script src="config.js"></script><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.min.js"></script><script src="studio-assets/common.js"></script><script src="studio-assets/customer.js"></script>
+</body></html>
