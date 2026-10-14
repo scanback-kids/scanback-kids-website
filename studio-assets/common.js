@@ -23,7 +23,7 @@ window.ScanBackStudio={
     const item=this.esc(String(s.item_name||'').trim());
     const qr=s.qr_url&&s.item_id?this.qrSvg(s.qr_url):'';
     const artText=this.esc(this.themes[theme]||'Sticker artwork');
-    return `<div class="sticker ${shape==='diecut'?'cut':''}" data-theme="${t}" style="--accent:${this.color[theme]||'#2366cc'};--itembg:${this.pillColor[theme]||'#ffe653'}" title="${artText} • design ${this.esc(s.design_variant)}">
+    return `<div class="sticker v534 ${shape==='diecut'?'cut':''}" data-theme="${t}" style="--accent:${this.color[theme]||'#2366cc'};--itembg:${this.pillColor[theme]||'#ffe653'}" title="${artText} • design ${this.esc(s.design_variant)}">
       <div class="st-art-area">
         ${art?`<img class="st-art-bg" src="${art}" alt="" aria-hidden="true" loading="eager"><img class="st-art" src="${art}" alt="${artText}, design ${this.esc(s.design_variant)}" loading="eager">`:''}
         <div class="st-art-fallback">Artwork unavailable<small>Check /assets/themes/</small></div>
@@ -53,32 +53,30 @@ window.ScanBackStudio={
     return data;
   },
   async loadImage(url){return await new Promise((resolve,reject)=>{const img=new Image();img.crossOrigin='anonymous';img.onload=()=>resolve(img);img.onerror=()=>reject(new Error('Artwork missing: '+url));img.src=url;});},
-  // Sharp artwork-first composition at the true 60 x 31 mm label aspect ratio.
-  // Wide character illustrations use a controlled hero crop (NOT a blur strip).
-  // Portrait-only files are contained against a themed color background.
-  // All text and QR codes remain separate PDF vector objects.
+  // V5.3.4: COMPLETE illustration, themed non-photographic letterbox.
+  // Raster artwork uses all available safe area without cropping faces/limbs.
+  // Dynamic text/QR remain separate vector objects in PDF.
   imageData(img,theme='space'){
     const canvas=document.createElement('canvas');canvas.width=1200;canvas.height=620;
     const ctx=canvas.getContext('2d',{alpha:false});
-    const palette={space:['#154b9b','#071d54'],dino:['#22985b','#0d6b42'],rainbow:['#f391d5','#ab43b1'],sports:['#f2b64a','#ed622c']}[theme]||['#245fc6','#12387a'];
-    const gradient=ctx.createLinearGradient(0,0,720,620);
-    gradient.addColorStop(0,palette[0]);gradient.addColorStop(1,palette[1]);
-    ctx.fillStyle=gradient;ctx.fillRect(0,0,1200,620);
+    const palette={space:['#78c8ff','#1a6dc8'],dino:['#9fe4ba','#2cb878'],rainbow:['#ffd0ec','#db80ce'],sports:['#fff0a8','#faaf65']}[theme]||['#a7d5f8','#3f8bce'];
+    const artW=694,artH=620;
+    const bg=ctx.createLinearGradient(0,0,artW,artH);bg.addColorStop(0,palette[0]);bg.addColorStop(1,palette[1]);
+    ctx.fillStyle=bg;ctx.fillRect(0,0,artW,artH);
     const iw=img.naturalWidth||img.width,ih=img.naturalHeight||img.height;
     if(!(iw>0&&ih>0))throw Error('Selected artwork cannot be loaded');
-    const artWidth=705,artHeight=620;
-    ctx.save();ctx.beginPath();ctx.rect(0,0,artWidth,artHeight);ctx.clip();
-    const isTall=iw/ih<1.12;
-    const scale=isTall?Math.min(artWidth/iw,artHeight/ih):Math.max(artWidth/iw,artHeight/ih);
-    const w=iw*scale,h=ih*scale;
+    const scale=Math.min(artW/iw,artH/ih),w=iw*scale,h=ih*scale;
     ctx.imageSmoothingEnabled=true;ctx.imageSmoothingQuality='high';
-    ctx.drawImage(img,(artWidth-w)/2,(artHeight-h)/2,w,h);
-    ctx.restore();
-    // Soft WHITE fade into the dedicated right information area, not a blurred photo.
-    const fade=ctx.createLinearGradient(585,0,735,0);
-    fade.addColorStop(0,'rgba(255,255,255,0)');fade.addColorStop(1,'rgba(255,255,255,1)');
-    ctx.fillStyle=fade;ctx.fillRect(585,0,150,620);
-    ctx.fillStyle='#fff';ctx.fillRect(735,0,465,620);
+    ctx.drawImage(img,(artW-w)/2,(artH-h)/2,w,h);
+    // Faint decorative sparkle only in any spare room; never blur the art.
+    ctx.fillStyle='rgba(255,255,255,.40)';
+    [[46,45,9],[630,52,7],[90,576,6],[638,565,9]].forEach(([x,y,r])=>{
+      ctx.beginPath();ctx.moveTo(x,y-r);ctx.lineTo(x+r*.35,y-r*.35);
+      ctx.lineTo(x+r,y);ctx.lineTo(x+r*.35,y+r*.35);
+      ctx.lineTo(x,y+r);ctx.lineTo(x-r*.35,y+r*.35);
+      ctx.lineTo(x-r,y);ctx.lineTo(x-r*.35,y-r*.35);ctx.closePath();ctx.fill();
+    });
+    ctx.fillStyle='#fff';ctx.fillRect(artW,0,1200-artW,620);
     return canvas.toDataURL('image/jpeg',.95);
   },
   pdfQr(pdf,value,x,y,size){const qr=qrcode(0,'M');qr.addData(String(value));qr.make();const n=qr.getModuleCount(),q=4,cell=size/(n+8);pdf.setFillColor(255,255,255);pdf.rect(x,y,size,size,'F');pdf.setFillColor(0,0,0);
@@ -97,15 +95,34 @@ window.ScanBackStudio={
       const s=stickers[i],j=i%limit,x=x0+(j%cols)*(W+dx),y=y0+Math.floor(j/cols)*(H+dy),url=this.imgUrl(s);
       // Image art remains raster; name and QR are generated dynamically at crisp vector quality.
       pdf.addImage(this.imageData(images.get(url),s.theme_key),'JPEG',x+.5,y+.5,W-1,H-1,undefined,'MEDIUM');
-      pdf.setFillColor(255,255,255);pdf.roundedRect(x+32.5,y+1,26.2,29,2,2,'F');
+      // Information area is a separate protected panel (x+34.2 .. x+59).
+      pdf.setFillColor(255,255,255);pdf.rect(x+34.4,y+.5,25.0,30.0,'F');
       const rgba={space:[21,94,217],dino:[25,124,77],rainbow:[214,56,140],sports:[220,72,44]}[s.theme_key]||[25,90,177];
-      pdf.setTextColor(23,53,103);pdf.setFont('helvetica','bold');pdf.setFontSize(5.4);pdf.text('This belongs to',x+33.4,y+5.2);
-      pdf.setTextColor(...rgba);pdf.setFontSize(9);
-      const name=String(s.child_name||order.child_name||'CHILD').trim().slice(0,28).toUpperCase();
-      let fs=9;while(fs>5&&pdf.getTextWidth(name)>24){fs-=.35;pdf.setFontSize(fs);}pdf.text(name,x+33.4,y+10.7);
-      if(s.item_name){pdf.setFillColor(255,222,88);pdf.roundedRect(x+33,y+12.6,24.5,4.1,1.3,1.3,'F');pdf.setTextColor(21,52,99);pdf.setFontSize(5.1);pdf.text(String(s.item_name).slice(0,26),x+34,y+15.4,{maxWidth:22.5});}
-      this.pdfQr(pdf,s.qr_url,x+43.2,y+16.5,13.7);
-      pdf.setFont('helvetica','bold');pdf.setTextColor(22,61,123);pdf.setFontSize(3.9);pdf.text('ScanBack Kids',x+33.4,y+28.3);
+      pdf.setTextColor(23,53,103);pdf.setFont('helvetica','bold');pdf.setFontSize(5.0);
+      pdf.text('This item belongs to',x+35,y+5.1,{maxWidth:23.4});
+      const name=String(s.child_name||order.child_name||'CHILD').trim().toUpperCase();
+      let nameShown=name,nameFs=9.5;pdf.setFont('helvetica','bold');pdf.setFontSize(nameFs);
+      while(nameFs>4.3&&pdf.getTextWidth(nameShown)>23.0){nameFs-=.25;pdf.setFontSize(nameFs);}
+      while(nameShown.length>3&&pdf.getTextWidth(nameShown)>23.0)nameShown=nameShown.slice(0,-4)+'...';
+      pdf.setTextColor(...rgba);pdf.text(nameShown,x+35,y+10.65);
+      // One-line item badge above QR; never wrap text into the QR quiet zone.
+      const item=String(s.item_name||'').trim();
+      if(item){
+        pdf.setFillColor(...({space:[255,227,91],dino:[101,219,236],rainbow:[255,195,223],sports:[255,201,79]}[s.theme_key]||[255,227,91]));
+        pdf.roundedRect(x+35,y+12.4,23.2,3.9,1.5,1.5,'F');
+        pdf.setFont('helvetica','bold');pdf.setTextColor(21,52,99);
+        let itemFs=5.25;pdf.setFontSize(itemFs);
+        while(itemFs>3.6&&pdf.getTextWidth(item)>21.4){itemFs-=.2;pdf.setFontSize(itemFs);}
+        let shown=item;while(shown.length>3&&pdf.getTextWidth(shown)>21.4)shown=shown.slice(0,-4)+'...';
+        pdf.text(shown,x+46.6,y+15.12,{align:'center'});
+      }
+      // QR at x+44.1 .. x+58.3, y+16.65 .. y+30.85.
+      // Includes its own QUIET ZONE and never intersects item / brand.
+      this.pdfQr(pdf,s.qr_url,x+44.1,y+16.65,14.15);
+      // Branding sits over the artwork, not beneath the QR.
+      pdf.setFillColor(255,255,255);pdf.roundedRect(x+1.0,y+27.0,16.8,2.9,1,1,'F');
+      pdf.setFont('helvetica','bold');pdf.setTextColor(22,61,123);pdf.setFontSize(4.2);
+      pdf.text('ScanBack Kids',x+2,y+29.0);
       // Bleed/cut guides are indicative for proofing, not a printer-approved die-cut path.
       pdf.setLineWidth(.23);pdf.setDrawColor(shape==='diecut'?232:207,shape==='diecut'?62:218,shape==='diecut'?164:238);
       if(shape==='diecut'){
