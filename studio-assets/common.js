@@ -39,9 +39,11 @@ window.ScanBackStudio={
   bindArtworkErrors(container){
     if(!container)return;
     container.querySelectorAll('img.st-art').forEach(img=>{
-      const fail=()=>{img.closest('.sticker')?.classList.add('art-error');console.warn('[ScanBack] Selected artwork not found:',img.src);};
-      img.addEventListener('error',fail,{once:true});
-      if(img.complete&&!img.naturalWidth)fail();
+      const card=img.closest('.sticker');
+      const ready=()=>{if(!card)return;card.classList.toggle('art-tall',img.naturalWidth/img.naturalHeight<1.12);};
+      const fail=()=>{card?.classList.add('art-error');console.warn('[ScanBack] Selected artwork not found:',img.src);};
+      img.addEventListener('load',ready,{once:true});img.addEventListener('error',fail,{once:true});
+      if(img.complete){if(img.naturalWidth)ready();else fail();}
     });
   },
   async invoke(sb,functionName,action,order_id,extra={}){
@@ -51,36 +53,33 @@ window.ScanBackStudio={
     return data;
   },
   async loadImage(url){return await new Promise((resolve,reject)=>{const img=new Image();img.crossOrigin='anonymous';img.onload=()=>resolve(img);img.onerror=()=>reject(new Error('Artwork missing: '+url));img.src=url;});},
-  // Render a 60 x 31 mm wide sticker background without cropping the character artwork.
-  // Original sources may be portrait, square or landscape. The full image remains visible
-  // inside the LEFT artwork panel; the separate RIGHT panel is reserved for dynamic text/QR.
+  // Sharp artwork-first composition at the true 60 x 31 mm label aspect ratio.
+  // Wide character illustrations use a controlled hero crop (NOT a blur strip).
+  // Portrait-only files are contained against a themed color background.
+  // All text and QR codes remain separate PDF vector objects.
   imageData(img,theme='space'){
-    // 1200 x 620 px maps to 60 x 31 mm. Art sits at the left; the right has
-    // a protected white information area. Full artwork is not center-cropped.
     const canvas=document.createElement('canvas');canvas.width=1200;canvas.height=620;
     const ctx=canvas.getContext('2d',{alpha:false});
-    const palette={space:['#d9eaff','#0d58bb'],dino:['#d8f5e4','#319e67'],rainbow:['#ffddf5','#ef6ba8'],sports:['#ffeddf','#ee9259']}[theme]||['#f1f8ff','#5299ef'];
-    const g=ctx.createLinearGradient(0,0,665,620);g.addColorStop(0,palette[0]);g.addColorStop(1,palette[1]);ctx.fillStyle=g;ctx.fillRect(0,0,1200,620);
-    const aw=650, pad=13, iw=img.naturalWidth||img.width, ih=img.naturalHeight||img.height;
+    const palette={space:['#154b9b','#071d54'],dino:['#22985b','#0d6b42'],rainbow:['#f391d5','#ab43b1'],sports:['#f2b64a','#ed622c']}[theme]||['#245fc6','#12387a'];
+    const gradient=ctx.createLinearGradient(0,0,720,620);
+    gradient.addColorStop(0,palette[0]);gradient.addColorStop(1,palette[1]);
+    ctx.fillStyle=gradient;ctx.fillRect(0,0,1200,620);
+    const iw=img.naturalWidth||img.width,ih=img.naturalHeight||img.height;
     if(!(iw>0&&ih>0))throw Error('Selected artwork cannot be loaded');
-    ctx.save();ctx.beginPath();ctx.rect(0,0,aw,620);ctx.clip();
-    // Fill empty side strips with a SOFT version of the same illustration.
-    // These strips are background only, not a separate sticker image.
-    ctx.save();ctx.filter='blur(38px) brightness(1.12) saturate(1.2)';
-    const bgScale=Math.max((aw+90)/iw,710/ih),bgW=iw*bgScale,bgH=ih*bgScale;
-    ctx.drawImage(img,(aw-bgW)/2,(620-bgH)/2,bgW,bgH);ctx.restore();
-    // Uncropped foreground: full character and all original scene edges shown.
-    const fullScale=Math.min((aw-34)/iw,(620-36)/ih);
-    const fw=iw*fullScale,fh=ih*fullScale;
+    const artWidth=705,artHeight=620;
+    ctx.save();ctx.beginPath();ctx.rect(0,0,artWidth,artHeight);ctx.clip();
+    const isTall=iw/ih<1.12;
+    const scale=isTall?Math.min(artWidth/iw,artHeight/ih):Math.max(artWidth/iw,artHeight/ih);
+    const w=iw*scale,h=ih*scale;
     ctx.imageSmoothingEnabled=true;ctx.imageSmoothingQuality='high';
-    ctx.drawImage(img,(aw-fw)/2,(620-fh)/2,fw,fh);
-    // Soft tint on left and subtle transition to the right text area.
-    const edge=ctx.createLinearGradient(aw-110,0,aw+16,0);
-    edge.addColorStop(0,'rgba(255,255,255,0)');edge.addColorStop(1,'rgba(255,255,255,.98)');
-    ctx.fillStyle=edge;ctx.fillRect(aw-110,0,128,620);ctx.restore();
-    ctx.fillStyle='#ffffff';ctx.fillRect(650,0,550,620);
-    ctx.strokeStyle='#e6edf5';ctx.lineWidth=2;ctx.beginPath();ctx.moveTo(650,40);ctx.lineTo(650,580);ctx.stroke();
-    return canvas.toDataURL('image/jpeg',.94);
+    ctx.drawImage(img,(artWidth-w)/2,(artHeight-h)/2,w,h);
+    ctx.restore();
+    // Soft WHITE fade into the dedicated right information area, not a blurred photo.
+    const fade=ctx.createLinearGradient(585,0,735,0);
+    fade.addColorStop(0,'rgba(255,255,255,0)');fade.addColorStop(1,'rgba(255,255,255,1)');
+    ctx.fillStyle=fade;ctx.fillRect(585,0,150,620);
+    ctx.fillStyle='#fff';ctx.fillRect(735,0,465,620);
+    return canvas.toDataURL('image/jpeg',.95);
   },
   pdfQr(pdf,value,x,y,size){const qr=qrcode(0,'M');qr.addData(String(value));qr.make();const n=qr.getModuleCount(),q=4,cell=size/(n+8);pdf.setFillColor(255,255,255);pdf.rect(x,y,size,size,'F');pdf.setFillColor(0,0,0);
     for(let r=0;r<n;r++){let start=-1;for(let c=0;c<=n;c++){const d=c<n&&qr.isDark(r,c);if(d&&start<0)start=c;if(!d&&start>=0){pdf.rect(x+(start+q)*cell,y+(r+q)*cell,(c-start)*cell,cell,'F');start=-1;}}}},
@@ -90,7 +89,7 @@ window.ScanBackStudio={
     const links=[...new Set(stickers.map(s=>this.imgUrl(s)))];if(links.some(x=>!x))throw Error('Some selected art references are invalid');
     const images=new Map();for(const link of links){const img=await this.loadImage(link);images.set(link,img);}
     // At 300 dpi, art printed into the 27.25 x 28.2 mm safe panel needs roughly 322 x 333 px.
-    const lowRes=links.filter(url=>{const img=images.get(url);const mmPerPx=Math.min(30.8/img.naturalWidth,29.2/img.naturalHeight);return (25.4/mmPerPx)<300;});
+    const lowRes=links.filter(url=>{const img=images.get(url);const dpi=Math.min(img.naturalWidth/(36/25.4),img.naturalHeight/(31/25.4));return dpi<300;});
     const pdf=new window.jspdf.jsPDF({unit:'mm',format:'a4',compress:true,orientation:'portrait'});
     const W=60,H=31,cols=3,rows=8,dx=4,dy=4,x0=11,y0=10.5,limit=cols*rows;
     for(let i=0;i<stickers.length;i++){
