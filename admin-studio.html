@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Premium Print Studio · ScanBack Kids Admin</title>
+<link rel="stylesheet" href="studio-assets/studio.css">
+<link rel="icon" href="data:,">
+</head><body>
+<header class="top">
+  <div class="brand"><div><div class="brand-logo">✦ ScanBack <span class="kids">Kids</span></div><div class="brand-blurb">Small Stickers. Big Reunions. ♥</div></div><em>Premium Print Studio</em></div>
+  <div class="top-characters" aria-hidden="true"><img src="assets/themes/space/01.webp" alt=""><img src="assets/themes/dino/01.webp" alt=""><img src="assets/themes/rainbow/01.webp" alt=""><img src="assets/themes/sports/01.webp" alt=""></div>
+  <div class="top-actions"><input id="search" class="top-search" placeholder="Search orders or child names" aria-label="Search orders" disabled><span class="top-role">🔒 Admin · Test Mode</span></div>
+</header>
+<div class="layout">
+  <aside class="sidebar" aria-label="Studio navigation">
+    <a href="#orderQueue" class="active"><span class="i">▦</span> Orders</a>
+    <a href="#artwork"><span class="i">▣</span> Artwork Library</a>
+    <a href="#preview"><span class="i">▧</span> Print Studio</a>
+    <a href="#qrAllocation"><span class="i">▦</span> QR Allocation</a>
+    <a href="#production"><span class="i">▰</span> Production Queue</a>
+    <div class="sidebar-label">Quick links</div>
+    <a href="my-orders.html"><span class="i">♧</span> Customer View</a>
+    <a href="shop.html"><span class="i">◀</span> Storefront</a>
+    <div class="sidebar-spacer"></div>
+    <div class="side-promo"><img src="assets/themes/space/01.webp" alt="Space Adventure sticker artwork"><strong>Making every sticker special!</strong><small>Real artwork + dynamic names + secure QR</small></div>
+  </aside>
+  <main class="content">
+    <div class="bread"><span>Orders</span> › <strong>Premium Print Studio</strong> <span class="pill test">TEST MODE</span></div>
+    <div class="notice"><strong>Production pilot:</strong> Only authorized accounts can inspect paid orders or export QR proofs. This studio does not produce certified commercial die-cut paths and does not trigger shipping or customer notifications.</div>
+    <section id="adminLogin" class="panel studio-login">
+      <div class="login-copy"><div class="mascot-chip">🔒 Admin access</div><h1>Welcome to your Print Studio</h1><p>Sign in with the ScanBack Kids account that has been added to the <strong>admin allowlist</strong>. Customer accounts cannot access print controls.</p></div>
+      <form id="loginForm" class="auth-inline"><label>Admin email<input id="adminEmail" type="email" required autocomplete="email" placeholder="you@company.com"></label><label>Password<input id="adminPass" type="password" required autocomplete="current-password" placeholder="Your password"></label><button class="btn" type="submit">🔓 Sign in securely</button></form>
+      <p id="loginMessage" class="statusmsg" role="status"></p>
+    </section>
+    <div id="studioContent" hidden>
+      <div class="studio-toolbar"><div><h1>Premium 3D Print Studio <span class="spark">✦</span></h1><p>Review artwork, verify permanent QR codes, and create print-layout proofs for paid orders.</p></div><div class="toolbar-actions"><button id="refreshOrders" class="btn secondary" type="button">↻ Refresh</button><button id="adminLogout" class="btn outline" type="button">Sign out</button></div></div>
+      <div id="globalMessage" class="statusmsg" role="status"></div>
+      <section id="orderQueue" class="panel queue-panel">
+        <div class="panel-h"><h2>🧾 Verified Paid Orders</h2><span class="pill paid" id="queueCount">Loading…</span></div>
+        <div id="orderList" class="order-list"><p class="muted">Loading your order queue…</p></div>
+      </section>
+      <div id="orderDetail" hidden>
+        <section class="panel order-summary">
+          <div class="panel-h"><h2 id="orderTitle">Order</h2><span class="pill" id="fulfillmentBadge">Review required</span></div>
+          <div id="summary" class="summary-strip"></div>
+        </section>
+        <div class="pagegrid" style="margin-top:14px">
+          <div class="column">
+            <section id="artwork" class="panel">
+              <div class="panel-h"><h2>🎨 1. Product Configuration</h2><span class="pill">96 available designs</span></div>
+              <h3>Sticker shape</h3>
+              <div class="shape-choices"><button class="shape-btn active" id="roundedBtn" data-shape="rounded"><span class="shape-icon">▭</span>Rounded rectangle</button><button class="shape-btn" id="diecutBtn" data-shape="diecut"><span class="shape-icon">✿</span>Die-cut concept</button></div>
+              <p class="small muted" style="margin:9px 0 14px">Shape selection saves to the order. Die-cut lines in V5.3 are previews only; the print vendor must approve the final contour.</p>
+              <h3>Artwork from the customer's order</h3>
+              <div id="themeSummary" class="theme-choices"></div>
+              <p class="small muted" style="margin:8px 0 0">The customer's individual artwork choices are preserved. These cards summarize themes, not replace their selections.</p>
+            </section>
+            <section id="preview" class="panel">
+              <div class="panel-h"><h2>👁️ 2. Live Print Preview</h2><span class="pill test">Preview · not for dispatch</span></div>
+              <div id="previewGrid" class="sticker-grid" aria-live="polite"></div>
+              <div class="preview-foot"><span id="previewCount" class="small muted">—</span><span class="small muted">A4 · 60 × 31 mm positions · 100% scale</span></div>
+            </section>
+          </div>
+          <div class="column">
+            <section id="qrAllocation" class="panel">
+              <div class="panel-h"><h2>▦ 3. Permanent QR Allocation</h2><span id="qrBadge" class="pill warn">Not ready</span></div>
+              <div id="allocationCount" class="small strong" style="margin-bottom:6px">0 / 0 QR IDs allocated</div>
+              <div class="progress"><div id="qrProgress" style="width:0%"></div></div>
+              <div id="qrList" class="qr-list"></div>
+              <button id="allocateBtn" class="btn secondary full" style="margin-top:12px">Allocate secure QR IDs</button>
+            </section>
+            <section id="production" class="panel">
+              <div class="panel-h"><h2>🖨️ 4. Production Controls</h2><span class="pill test">Test orders only</span></div>
+              <div class="action-note" style="margin-bottom:10px">📏 The PDF has real database QR destinations but is watermarked <strong>TEST PROOF</strong>. Low-resolution artwork and die-cut contours require print validation.</div>
+              <div class="actions-grid"><button id="pdfBtn" class="btn red">📄 Export A4 proof PDF</button><button id="approveBtn" class="btn green">✓ Approve test proof</button><button id="printedBtn" class="btn">🖨 Mark printed (test)</button><button id="shippedBtn" class="btn purple">🚚 Mark shipped (test)</button><button id="deliveredBtn" class="btn outline" style="grid-column:1/-1">📦 Mark delivered (test)</button></div>
+              <label class="checkline" style="margin-top:12px"><input id="reviewChecked" type="checkbox"> I reviewed the artwork, names and QR preview. This is a <strong>test proof</strong>, not a commercial print approval.</label>
+              <div id="adminOrderMessage" class="statusmsg" role="status" style="margin-top:12px"></div>
+            </section>
+            <section class="panel">
+              <div class="panel-h"><h2>✅ 5. Production Progress</h2><span id="stagePill" class="pill warn">Awaiting proof</span></div>
+              <div id="progressSteps" class="production-steps"></div>
+              <p class="small muted" style="margin:12px 0 0">Marking a test order shipped unlocks the parent activation test. It does not book a courier or send notifications.</p>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+<script src="config.js"></script><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
+<script src="studio-assets/common.js"></script><script src="studio-assets/admin.js"></script>
+</body></html>
