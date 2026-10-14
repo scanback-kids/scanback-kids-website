@@ -40,6 +40,7 @@ function renderOrder(){const {order:o,stickers}=current,stage=o.fulfillment_stat
  $('themeSummary').innerHTML=Object.entries(counts).map(([t,n])=>`<div class="theme-btn" title="${n} chosen designs"><img src="assets/themes/${t}/01.webp" alt="${esc(UI.themes[t])}"><div><strong>${esc(UI.themes[t])}</strong><div class="tiny muted">${n} selected</div></div></div>`).join('');
  $('roundedBtn').classList.toggle('active',o.sticker_shape!=='diecut');$('diecutBtn').classList.toggle('active',o.sticker_shape==='diecut');
  $('previewGrid').innerHTML=stickers.map(s=>UI.sticker(s,o.sticker_shape)).join('');
+ UI.bindArtworkErrors($('previewGrid'));
  $('previewCount').textContent=`${stickers.length} of ${o.pack_size} stickers · ${o.sticker_shape==='diecut'?'Die-cut concept':'Rounded rectangle'}`;
  const count=stickers.filter(s=>s.item_id&&s.qr_url).length;const percentage=Math.round(100*count/o.pack_size);
  $('allocationCount').textContent=`${count} / ${o.pack_size} unique QR codes allocated`;$('qrProgress').style.width=`${percentage}%`;

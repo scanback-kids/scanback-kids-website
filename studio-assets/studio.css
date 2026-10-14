@@ -16,3 +16,25 @@ button,.btn{transition:filter .15s ease,transform .12s ease}button:not(:disabled
 
 .parent-shape-panel{background:#f5faff;border:1px solid #dceafb;border-radius:15px;padding:12px;margin:12px 0}.parent-shape-panel h3{margin:0 0 5px}.parent-shape-panel p{margin:0 0 10px}.parent-shape-panel .shape-choices{grid-template-columns:repeat(2,minmax(0,1fr))}.parent-shape-panel .shape-btn{min-height:62px}
 .brand-logo .kids{-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+
+/* ScanBack Kids V5.3.1 — explicit foreground artwork layer, original images not cropped */
+.sticker::before,.sticker::after{content:none!important;display:none!important}
+.sticker{background:#fff;isolation:isolate}
+.sticker .st-art-area{
+ position:absolute;z-index:1;inset:2.5% 48% 3% 2%;overflow:hidden;
+ border-radius:16px;
+ background:linear-gradient(135deg,color-mix(in srgb,var(--accent) 15%,white),color-mix(in srgb,var(--accent) 30%,white));
+ display:flex;align-items:center;justify-content:center;
+}
+.sticker.cut .st-art-area{inset:8% 49% 8% 6%;border-radius:14px}
+.sticker .st-art{display:block;width:100%;height:100%;object-fit:contain;object-position:center;position:relative;z-index:1}
+.sticker .st-art-fallback{display:none;position:absolute;inset:0;align-items:center;justify-content:center;text-align:center;flex-direction:column;color:#80522a;font-size:12px;font-weight:900;background:#fff3e5;z-index:2}
+.sticker.art-error .st-art-fallback{display:flex}
+.sticker.art-error .st-art{display:none}
+.sticker .st-title,.sticker .st-name,.sticker .st-item,.sticker .st-qr,.sticker .st-logo{z-index:3}
+.sticker .st-title{right:2%;width:47%}
+.sticker .st-name{right:2%;width:47%}
+.sticker .st-qr{right:2.5%}
+/* Avoid cutting into the QR zone when a concept die-cut preview is selected */
+.sticker.cut .st-qr{right:5.8%;bottom:17.5%}
+.sticker.cut .st-logo{right:9%;bottom:6%}

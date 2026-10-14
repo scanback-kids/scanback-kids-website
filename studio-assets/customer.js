@@ -27,6 +27,7 @@ function renderDetails(){const {order:o,stickers}=current,shape=o.sticker_shape|
  const names=['Payment verified','QR created','Printed','Shipped'];const complete=[o.status==='paid'&&o.payment_status==='captured',ready,['printed','shipped','delivered'].includes(o.fulfillment_status),shipped];
  $('customerSteps').innerHTML=names.map((name,i)=>`<span class="step ${complete[i]?'done':''}">${complete[i]?'✓ ':''}${esc(name)}</span>`).join('');
  $('customerStickers').innerHTML=stickers.map(s=>UI.sticker(s,shape)).join('');
+ UI.bindArtworkErrors($('customerStickers'));
  $('myQRCodes').innerHTML=stickers.map(s=>{
  const svg=s.item_id&&s.qr_url?UI.qrSvg(s.qr_url):'';
  const url=s.qr_url&&/^https:\/\/(?:scanback\.in|www\.scanback\.in|scanback-kids-website\.vercel\.app)\/find\.html\?id=[0-9a-f-]{36}$/i.test(s.qr_url)?s.qr_url:'';
