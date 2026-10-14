@@ -38,3 +38,53 @@ button,.btn{transition:filter .15s ease,transform .12s ease}button:not(:disabled
 /* Avoid cutting into the QR zone when a concept die-cut preview is selected */
 .sticker.cut .st-qr{right:5.8%;bottom:17.5%}
 .sticker.cut .st-logo{right:9%;bottom:6%}
+
+
+/* V5.3.2 – one premium layout for BOTH parent and admin pages.
+   Blurred ambient background fills unused space; the sharp main illustration is UNcropped.
+   All user text and real QR symbols are separate foreground layers. */
+.sticker { background:#f5faff!important; border:3px solid #fff; border-radius:19px; }
+.sticker .st-art-area,.sticker.cut .st-art-area{
+  position:absolute!important;inset:0 45% 0 0!important;width:auto!important;height:auto!important;
+  background:linear-gradient(135deg,color-mix(in srgb,var(--accent) 17%,white),color-mix(in srgb,var(--accent) 35%,white))!important;
+  border-radius:0!important;overflow:hidden!important;z-index:1!important;display:block!important;
+}
+.sticker .st-art-bg{
+  position:absolute!important;inset:-15%!important;width:130%!important;height:130%!important;
+  object-fit:cover!important;filter:blur(14px) brightness(1.12) saturate(1.20)!important;
+  opacity:.85;z-index:0!important;
+}
+.sticker .st-art{
+  position:absolute!important;inset:0!important;width:100%!important;height:100%!important;
+  display:block!important;object-fit:contain!important;object-position:center!important;
+  z-index:1!important;filter:none!important;
+}
+.sticker .st-info-panel{
+  position:absolute;z-index:2;top:0;right:0;height:100%;width:47%;
+  background:linear-gradient(145deg,#fff 35%,#fafdff 100%);
+  border-left:1px solid #ecf2fa;box-shadow:-4px 0 12px #fff8;
+}
+.sticker .st-title,.sticker.cut .st-title{top:7%;right:2%;width:43%;font-size:clamp(7px,.65vw,10px);}
+.sticker .st-name,.sticker.cut .st-name{
+  top:26%;right:2%;width:43%;font-size:clamp(12px,1.45vw,23px);
+  text-align:center;max-height:24%;text-shadow:none;
+}
+.sticker .st-item,.sticker.cut .st-item{
+  bottom:42%;right:4.5%;width:40%;font-size:clamp(8px,.78vw,12px);
+  padding:5px 3px;box-shadow:0 2px 4px #d7deef8a;
+}
+.sticker .st-qr,.sticker.cut .st-qr{
+  bottom:7%;right:10%;width:21.5%;padding:3px;border:1px solid #e1e9f2;
+  border-radius:6px;box-shadow:0 2px 5px #1c386720;
+}
+.sticker .st-logo,.sticker.cut .st-logo{bottom:3%;right:31%;font-size:clamp(6px,.59vw,9px);}
+.sticker.cut{clip-path:polygon(3% 0%,15% 2%,30% 0%,42% 2%,56% 0%,68% 2%,83% 0%,96% 5%,100% 19%,98% 36%,100% 55%,97% 75%,95% 97%,80% 100%,62% 98%,50% 100%,33% 97%,17% 100%,2% 95%,0% 80%,2% 64%,0% 46%,2% 30%,0% 13%)!important;}
+.sticker .st-art-fallback{z-index:5!important;background:#fff0ee!important;}
+.sticker.art-error .st-art-bg{display:none!important;}
+/* The admin layout is denser than the customer page: both still share the exact renderer. */
+#previewGrid .sticker .st-title,#customerStickers .sticker .st-title{font-size:clamp(7px,.7vw,11px)}
+@media(max-width:650px){
+ .sticker .st-name,.sticker.cut .st-name{font-size:clamp(12px,3vw,20px)}
+ .sticker .st-item,.sticker.cut .st-item{font-size:clamp(7px,2.2vw,11px)}
+ .sticker .st-logo,.sticker.cut .st-logo{font-size:7px}
+}

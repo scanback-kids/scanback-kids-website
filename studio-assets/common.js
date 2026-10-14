@@ -18,10 +18,23 @@ window.ScanBackStudio={
    }catch(e){console.warn('Cannot render QR',e);return '';}
   },
   sticker(s,shape='rounded'){
-    const t=this.esc(s.theme_key||'space'),art=this.imgUrl(s), name=this.esc(s.child_name||'CHILD');
-    const item=this.esc((s.item_name||'').trim());
+    const theme=String(s?.theme_key||'space');
+    const t=this.esc(theme),art=this.imgUrl(s),name=this.esc(s.child_name||'CHILD');
+    const item=this.esc(String(s.item_name||'').trim());
     const qr=s.qr_url&&s.item_id?this.qrSvg(s.qr_url):'';
-    return `<div class="sticker ${shape==='diecut'?'cut':''}" data-theme="${t}" style="--accent:${this.color[s.theme_key]||'#2366cc'};--itembg:${this.pillColor[s.theme_key]||'#ffe653'}" title="${this.esc(this.themes[s.theme_key])} • design ${this.esc(s.design_variant)}"><div class="st-art-area">${art?`<img class="st-art" src="${art}" alt="${this.esc(this.themes[s.theme_key])} artwork design ${this.esc(s.design_variant)}" loading="lazy">`:''}<span class="st-art-fallback">Art unavailable<br><small>Check /assets/themes/</small></span></div><div class="st-title">This belongs to</div><div class="st-name">${name}</div>${item?`<div class="st-item">${item}</div>`:''}<div class="st-qr">${qr||'<div class="st-unallocated">QR pending</div>'}</div><div class="st-logo">♥ ScanBack <b>Kids</b></div></div>`;
+    const artText=this.esc(this.themes[theme]||'Sticker artwork');
+    return `<div class="sticker ${shape==='diecut'?'cut':''}" data-theme="${t}" style="--accent:${this.color[theme]||'#2366cc'};--itembg:${this.pillColor[theme]||'#ffe653'}" title="${artText} • design ${this.esc(s.design_variant)}">
+      <div class="st-art-area">
+        ${art?`<img class="st-art-bg" src="${art}" alt="" aria-hidden="true" loading="eager"><img class="st-art" src="${art}" alt="${artText}, design ${this.esc(s.design_variant)}" loading="eager">`:''}
+        <div class="st-art-fallback">Artwork unavailable<small>Check /assets/themes/</small></div>
+      </div>
+      <div class="st-info-panel"></div>
+      <div class="st-title">This item belongs to</div>
+      <div class="st-name">${name}</div>
+      ${item?`<div class="st-item">${item}</div>`:''}
+      <div class="st-qr">${qr||'<div class="st-unallocated">QR pending</div>'}</div>
+      <div class="st-logo">♥ ScanBack <b>Kids</b></div>
+    </div>`;
   },
   bindArtworkErrors(container){
     if(!container)return;
@@ -42,20 +55,32 @@ window.ScanBackStudio={
   // Original sources may be portrait, square or landscape. The full image remains visible
   // inside the LEFT artwork panel; the separate RIGHT panel is reserved for dynamic text/QR.
   imageData(img,theme='space'){
+    // 1200 x 620 px maps to 60 x 31 mm. Art sits at the left; the right has
+    // a protected white information area. Full artwork is not center-cropped.
     const canvas=document.createElement('canvas');canvas.width=1200;canvas.height=620;
     const ctx=canvas.getContext('2d',{alpha:false});
-    const palette={space:['#d9f0ff','#1165bc'],dino:['#effdde','#58b88d'],rainbow:['#fff0fc','#ff9fcf'],sports:['#ffefde','#ffac65']}[theme]||['#f6fbff','#a5d5ff'];
-    const g=ctx.createLinearGradient(0,0,620,620);g.addColorStop(0,palette[0]);g.addColorStop(1,palette[1]);ctx.fillStyle=g;ctx.fillRect(0,0,1200,620);
-    // Safe image panel: never trim the source to its center; preserve 100% of the composition.
-    const bx=28,by=26,bw=545,bh=564;
-    const iw=img.naturalWidth,ih=img.naturalHeight;
-    const scale=Math.min(bw/iw,bh/ih);
-    const w=iw*scale,h=ih*scale;
+    const palette={space:['#d9eaff','#0d58bb'],dino:['#d8f5e4','#319e67'],rainbow:['#ffddf5','#ef6ba8'],sports:['#ffeddf','#ee9259']}[theme]||['#f1f8ff','#5299ef'];
+    const g=ctx.createLinearGradient(0,0,665,620);g.addColorStop(0,palette[0]);g.addColorStop(1,palette[1]);ctx.fillStyle=g;ctx.fillRect(0,0,1200,620);
+    const aw=650, pad=13, iw=img.naturalWidth||img.width, ih=img.naturalHeight||img.height;
+    if(!(iw>0&&ih>0))throw Error('Selected artwork cannot be loaded');
+    ctx.save();ctx.beginPath();ctx.rect(0,0,aw,620);ctx.clip();
+    // Fill empty side strips with a SOFT version of the same illustration.
+    // These strips are background only, not a separate sticker image.
+    ctx.save();ctx.filter='blur(38px) brightness(1.12) saturate(1.2)';
+    const bgScale=Math.max((aw+90)/iw,710/ih),bgW=iw*bgScale,bgH=ih*bgScale;
+    ctx.drawImage(img,(aw-bgW)/2,(620-bgH)/2,bgW,bgH);ctx.restore();
+    // Uncropped foreground: full character and all original scene edges shown.
+    const fullScale=Math.min((aw-34)/iw,(620-36)/ih);
+    const fw=iw*fullScale,fh=ih*fullScale;
     ctx.imageSmoothingEnabled=true;ctx.imageSmoothingQuality='high';
-    ctx.drawImage(img,bx+(bw-w)/2,by+(bh-h)/2,w,h);
-    // A clean text/QR area. All information stays vector in the final PDF.
-    ctx.fillStyle='#fff';ctx.fillRect(610,0,590,620);
-    return canvas.toDataURL('image/jpeg',.96);
+    ctx.drawImage(img,(aw-fw)/2,(620-fh)/2,fw,fh);
+    // Soft tint on left and subtle transition to the right text area.
+    const edge=ctx.createLinearGradient(aw-110,0,aw+16,0);
+    edge.addColorStop(0,'rgba(255,255,255,0)');edge.addColorStop(1,'rgba(255,255,255,.98)');
+    ctx.fillStyle=edge;ctx.fillRect(aw-110,0,128,620);ctx.restore();
+    ctx.fillStyle='#ffffff';ctx.fillRect(650,0,550,620);
+    ctx.strokeStyle='#e6edf5';ctx.lineWidth=2;ctx.beginPath();ctx.moveTo(650,40);ctx.lineTo(650,580);ctx.stroke();
+    return canvas.toDataURL('image/jpeg',.94);
   },
   pdfQr(pdf,value,x,y,size){const qr=qrcode(0,'M');qr.addData(String(value));qr.make();const n=qr.getModuleCount(),q=4,cell=size/(n+8);pdf.setFillColor(255,255,255);pdf.rect(x,y,size,size,'F');pdf.setFillColor(0,0,0);
     for(let r=0;r<n;r++){let start=-1;for(let c=0;c<=n;c++){const d=c<n&&qr.isDark(r,c);if(d&&start<0)start=c;if(!d&&start>=0){pdf.rect(x+(start+q)*cell,y+(r+q)*cell,(c-start)*cell,cell,'F');start=-1;}}}},
@@ -65,7 +90,7 @@ window.ScanBackStudio={
     const links=[...new Set(stickers.map(s=>this.imgUrl(s)))];if(links.some(x=>!x))throw Error('Some selected art references are invalid');
     const images=new Map();for(const link of links){const img=await this.loadImage(link);images.set(link,img);}
     // At 300 dpi, art printed into the 27.25 x 28.2 mm safe panel needs roughly 322 x 333 px.
-    const lowRes=links.filter(url=>{const img=images.get(url);const mmPerPx=Math.min(27.25/img.naturalWidth,28.2/img.naturalHeight);const printWidth=img.naturalWidth*mmPerPx,printHeight=img.naturalHeight*mmPerPx;return img.naturalWidth/(printWidth/25.4)<300||img.naturalHeight/(printHeight/25.4)<300;});
+    const lowRes=links.filter(url=>{const img=images.get(url);const mmPerPx=Math.min(30.8/img.naturalWidth,29.2/img.naturalHeight);return (25.4/mmPerPx)<300;});
     const pdf=new window.jspdf.jsPDF({unit:'mm',format:'a4',compress:true,orientation:'portrait'});
     const W=60,H=31,cols=3,rows=8,dx=4,dy=4,x0=11,y0=10.5,limit=cols*rows;
     for(let i=0;i<stickers.length;i++){
@@ -73,15 +98,15 @@ window.ScanBackStudio={
       const s=stickers[i],j=i%limit,x=x0+(j%cols)*(W+dx),y=y0+Math.floor(j/cols)*(H+dy),url=this.imgUrl(s);
       // Image art remains raster; name and QR are generated dynamically at crisp vector quality.
       pdf.addImage(this.imageData(images.get(url),s.theme_key),'JPEG',x+.5,y+.5,W-1,H-1,undefined,'MEDIUM');
-      pdf.setFillColor(255,255,255);pdf.roundedRect(x+31,y+1,28,29,2,2,'F');
+      pdf.setFillColor(255,255,255);pdf.roundedRect(x+32.5,y+1,26.2,29,2,2,'F');
       const rgba={space:[21,94,217],dino:[25,124,77],rainbow:[214,56,140],sports:[220,72,44]}[s.theme_key]||[25,90,177];
-      pdf.setTextColor(23,53,103);pdf.setFont('helvetica','bold');pdf.setFontSize(5.4);pdf.text('This belongs to',x+32.2,y+5.1);
+      pdf.setTextColor(23,53,103);pdf.setFont('helvetica','bold');pdf.setFontSize(5.4);pdf.text('This belongs to',x+33.4,y+5.2);
       pdf.setTextColor(...rgba);pdf.setFontSize(9);
       const name=String(s.child_name||order.child_name||'CHILD').trim().slice(0,28).toUpperCase();
-      let fs=9;while(fs>5&&pdf.getTextWidth(name)>25){fs-=.35;pdf.setFontSize(fs);}pdf.text(name,x+32.2,y+10);
-      if(s.item_name){pdf.setFillColor(255,222,88);pdf.roundedRect(x+32,y+12,25.6,4.1,1.3,1.3,'F');pdf.setTextColor(21,52,99);pdf.setFontSize(5.1);pdf.text(String(s.item_name).slice(0,26),x+33,y+14.9,{maxWidth:23.6});}
-      this.pdfQr(pdf,s.qr_url,x+43.1,y+16.1,14);
-      pdf.setFont('helvetica','bold');pdf.setTextColor(22,61,123);pdf.setFontSize(4.8);pdf.text('ScanBack Kids',x+32,y+28.4);
+      let fs=9;while(fs>5&&pdf.getTextWidth(name)>24){fs-=.35;pdf.setFontSize(fs);}pdf.text(name,x+33.4,y+10.7);
+      if(s.item_name){pdf.setFillColor(255,222,88);pdf.roundedRect(x+33,y+12.6,24.5,4.1,1.3,1.3,'F');pdf.setTextColor(21,52,99);pdf.setFontSize(5.1);pdf.text(String(s.item_name).slice(0,26),x+34,y+15.4,{maxWidth:22.5});}
+      this.pdfQr(pdf,s.qr_url,x+43.2,y+16.5,13.7);
+      pdf.setFont('helvetica','bold');pdf.setTextColor(22,61,123);pdf.setFontSize(3.9);pdf.text('ScanBack Kids',x+33.4,y+28.3);
       // Bleed/cut guides are indicative for proofing, not a printer-approved die-cut path.
       pdf.setLineWidth(.23);pdf.setDrawColor(shape==='diecut'?232:207,shape==='diecut'?62:218,shape==='diecut'?164:238);
       if(shape==='diecut'){
