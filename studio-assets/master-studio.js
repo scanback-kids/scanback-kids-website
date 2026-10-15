@@ -13,15 +13,18 @@ const PALETTE={
  sports:{accent:'#ed6330',shade:'#ffe0a4',pill:'#ffda60',rgb:[237,99,48],bg:[255,224,164],pillrgb:[255,218,96]}
 };
 // millimetres. The SVG cut-only companion uses this same geometry.
-const LABEL={W:60,H:31,BLEED:2.5,GAP:3,PERPAGE:21,COLS:3,ROWS:7,LEFT:4.5,TOP:15.4};
+const SHAPES={rounded:{W:60,H:31,BLEED:2.5,GAP:3,PERPAGE:21,COLS:3,LEFT:4.5,TOP:15.4},diecut:{W:55,H:58,BLEED:2.5,GAP:4,PERPAGE:9,COLS:3,LEFT:11,TOP:15.4}};
+function geometry(shape){return SHAPES[shape==='diecut'?'diecut':'rounded'];}
+function activeGeometry(){return geometry(current?.order?.sticker_shape);}
+const LABEL=SHAPES.rounded;
 const DEMO_ALLOWED_HOSTS=new Set(['scanback.in','www.scanback.in','scanback-kids-website.vercel.app']);
 const UID_RE=/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
 let sb=null,orders=[],current=null,assetCache=new Map(),assetState=[],authReady=false,loading=false;
 function show(text,error=false,id='exportMsg'){UI.showMessage(id,text,error);}
 function label(o){return `${o.child_name||'Child'} · ${o.pack_size} stickers · #${String(o.id).slice(0,8).toUpperCase()}`;}
-function pageNumberOf(i){return Math.floor(i/LABEL.PERPAGE)+1;}
-function gridOrigin(i){const j=i%LABEL.PERPAGE,bw=LABEL.W+2*LABEL.BLEED,bh=LABEL.H+2*LABEL.BLEED;
- return {x:LABEL.LEFT+(j%LABEL.COLS)*(bw+LABEL.GAP),y:LABEL.TOP+Math.floor(j/LABEL.COLS)*(bh+LABEL.GAP)};}
+function pageNumberOf(i,shape){const g=geometry(shape||current?.order?.sticker_shape);return Math.floor(i/g.PERPAGE)+1;}
+function gridOrigin(i,shape){const g=geometry(shape||current?.order?.sticker_shape);const j=i%g.PERPAGE,bw=g.W+2*g.BLEED,bh=g.H+2*g.BLEED;
+ return {x:g.LEFT+(j%g.COLS)*(bw+g.GAP),y:g.TOP+Math.floor(j/g.COLS)*(bh+g.GAP)};}
 function theme(s){return PALETTE[s.theme_key]||PALETTE.space;}
 function imgUrl(s,hi=true){const t=String(s.theme_key||'');const v=+s.design_variant;
  if(!(t in PALETTE)||!Number.isInteger(v)||v<1||v>24)return '';
@@ -82,7 +85,7 @@ async function updateOrder(){if(!current)return;const o=current.order,ss=current
  const locked=['printed','shipped','delivered'].includes(o.fulfillment_status);$('shapeRounded').disabled=locked;$('shapeCut').disabled=locked;
  await render();}
 function drawCard(s,a,shape){const pal=theme(s),item=String(s.item_name||'').trim(),art=a?.url||'',name=UI.esc(String(s.child_name||current.order.child_name||'CHILD').toUpperCase());
- return `<div class="master-card ${shape==='diecut'?'cut':''}" style="--accent:${pal.accent};--shade:${pal.shade};--pill:${pal.pill}" title="${UI.esc(UI.themes[s.theme_key]||'')} #${UI.esc(s.design_variant)}">
+ return `<div class="master-card premium ${shape==='diecut'?'cut':'rounded'}" style="--accent:${pal.accent};--shade:${pal.shade};--pill:${pal.pill}" title="${UI.esc(UI.themes[s.theme_key]||'')} #${UI.esc(s.design_variant)}">
  <div class="master-art">${art?`<img src="${UI.esc(art)}" alt="${UI.esc(UI.themes[s.theme_key]||'Cartoon')} design ${UI.esc(s.design_variant)}">`:'<span>Artwork missing</span>'}${!a?.master?'<span class="art-label">Preview only</span>':''}</div>
  <div class="info"><div class="belongs">This item belongs to</div><div class="child">${name}</div>${item?`<div class="item">${UI.esc(item)}</div>`:''}</div>
  <div class="qr-box">${qrValid(s)?UI.qrSvg(s.qr_url):'<span class="pending">QR pending</span>'}</div>
@@ -122,46 +125,50 @@ function pdfQR(pdf,value,x,y,sz){const qr=window.qrcode(0,'M');qr.addData(value)
  pdf.setFillColor(255,255,255);pdf.rect(x,y,sz,sz,'F');pdf.setFillColor(0,0,0);
  for(let r=0;r<n;r++){let start=-1;for(let c=0;c<=n;c++){let dark=c<n&&qr.isDark(r,c);if(dark&&start<0)start=c;if(!dark&&start>=0){pdf.rect(x+(q+start)*cell,y+(q+r)*cell,(c-start)*cell,cell,'F');start=-1;}}}
 }
-function contourPoints(shape){if(shape==='rounded'){
-  const points=[];const r=3.4;const corners=[[60-r,r,-90,0],[60-r,31-r,0,90],[r,31-r,90,180],[r,r,180,270]];
-  for(let i=0;i<4;i++){const [cx,cy,start,end]=corners[i];for(let k=0;k<=7;k++){const t=(start+(end-start)*k/7)*Math.PI/180;points.push([cx+r*Math.cos(t),cy+r*Math.sin(t)]);}}return points;
+function contourPoints(shape){
+ const g=geometry(shape),W=g.W,H=g.H,pts=[];
+ if(shape==='diecut'){
+ // Prototype scalloped character-top / rounded nameplate lower silhouette. Not image tracing.
+ const coords=[[7,2],[13,1],[19,2.5],[26,0.7],[33,2],[42,1.5],[49,3],[53,8],[54,15],[54.2,25],[53,34],[54,41],[52,51],[48,56],[7,56],[3,53],[1,46],[2,36],[.8,27],[1,19],[2,12],[4,6]];
+ return coords;
  }
- // A designed, closed die-cut silhouette (not a bitmap crop). Its fit is guaranteed
- // by the 60x31 label bounds; the final vendor may adjust contour for their tooling.
- return [[4,0.5],[10,1.0],[16,.2],[22,1.2],[29,.3],[36,1.1],[43,.4],[50,1.0],[56,1.5],[59,4.8],[59.3,9.5],[58.8,15.5],[59.4,21.8],[57,28.7],[51,30.3],[45,29.8],[37,30.6],[29,29.9],[21,30.5],[14,29.8],[7,30.3],[1.6,27],[.7,22],[1.2,17],[.4,11],[1.4,6],[4,.5]];
+ const r=3.4;const corners=[[W-r,r,-90,0],[W-r,H-r,0,90],[r,H-r,90,180],[r,r,180,270]];
+ for(const [cx,cy,start,end] of corners){for(let k=0;k<=9;k++){const t=(start+(end-start)*k/9)*Math.PI/180;pts.push([cx+r*Math.cos(t),cy+r*Math.sin(t)]);}}return pts;
 }
-function pdfContour(pdf,x,y,shape){const pts=contourPoints(shape);pdf.setDrawColor(225,29,170);pdf.setLineWidth(.20);
+function pdfContour(pdf,x,y,shape){const pts=contourPoints(shape);pdf.setDrawColor(225,29,170);pdf.setLineWidth(.18);
  for(let i=0;i<pts.length;i++){const a=pts[i],b=pts[(i+1)%pts.length];pdf.line(x+a[0],y+a[1],x+b[0],y+b[1]);}}
-function composeOne(pdf,s,a,trimX,trimY,shape,assetJpeg){const pal=theme(s);const x=trimX,y=trimY;
- // Full bleed: theme extends at least 2.5 mm outside actual 60x31 trim.
- rgb(pdf,cardPalette[s.theme_key]||[205,235,255]);pdf.rect(x-LABEL.BLEED,y-LABEL.BLEED,LABEL.W+2*LABEL.BLEED,LABEL.H+2*LABEL.BLEED,'F');
- // Artwork is art-only, placed contain within left 35x31 mm. No AI-embedded text or QR.
- const ax=x+.55,ay=y+.35,aw=35.1,ah=30.3;
- pdf.addImage(assetJpeg,'JPEG',ax,ay,aw,ah,undefined,'FAST'); // art file is a precomposed CONTAIN raster over its theme panel
- // Rounded white nameplate; RGB illustrator master is separate from the composition.
- pdf.setFillColor(255,255,255);pdf.roundedRect(x+33.7,y+.4,25.7,30.2,3,3,'F');
- pdf.setTextColor(20,47,102);pdf.setFont('helvetica','bold');pdf.setFontSize(5.15);
- pdf.text('This item belongs to',x+46.5,y+5.2,{align:'center'});
- const name=String(s.child_name||current.order.child_name||'CHILD').toUpperCase();
- pdf.setTextColor(...pal.rgb);pdf.setFont('helvetica','bold');
- const shown=textFit(pdf,name,22.0,10,4.3);pdf.text(shown,x+46.5,y+10.65,{align:'center'});
+function pictureCanvas(img,w=1200,h=800){const c=document.createElement('canvas');c.width=w;c.height=h;const cx=c.getContext('2d');cx.imageSmoothingEnabled=true;cx.imageSmoothingQuality='high';const ratio=Math.max(w/img.naturalWidth,h/img.naturalHeight);const dw=img.naturalWidth*ratio,dh=img.naturalHeight*ratio;cx.drawImage(img,(w-dw)/2,(h-dh)/2,dw,dh);return c.toDataURL('image/jpeg',.94);}
+function composeOne(pdf,s,a,x,y,shape,assetJpeg){const g=geometry(shape),pal=theme(s),isCut=shape==='diecut',W=g.W,H=g.H;
+ // Reference-style composition: vibrant illustration ABOVE an integral white nameplate,
+ // with a QR at the LOWER RIGHT. QR/text are vector, NEVER painted by an AI source image.
+ rgb(pdf,cardPalette[s.theme_key]||[205,235,255]);pdf.rect(x-g.BLEED,y-g.BLEED,W+g.BLEED*2,H+g.BLEED*2,'F');
+ pdf.addImage(assetJpeg,'JPEG',x+.8,y+.8,W-1.6,isCut?H-14.6:H-10.2,undefined,'FAST');
+ const bandY=y+(isCut?H-20.6:H-16.2);const bandH=H-(bandY-y)-1.2;
+ pdf.setFillColor(255,255,255);pdf.roundedRect(x+1.25,bandY,W-2.5,bandH,3.0,3.0,'F');
+ const qrSz=isCut?13.5:11.3,qrX=x+W-qrSz-2.65,qrY=y+H-qrSz-2.65;
+ const labelLeft=x+3,labelMaxW=qrX-labelLeft-2.2;
+ pdf.setFont('helvetica','bold');pdf.setTextColor(15,41,98);pdf.setFontSize(isCut?6.1:4.7);
+ pdf.text('This item belongs to',labelLeft,bandY+(isCut?4.7:3.7));
+ pdf.setTextColor(...pal.rgb);const name=String(s.child_name||current.order.child_name||'CHILD').toUpperCase();
+ const shown=textFit(pdf,name,labelMaxW,isCut?12.2:8.8,isCut?5.2:4.4);
+ pdf.text(shown,labelLeft,bandY+(isCut?11.6:9.2));
  const item=String(s.item_name||'').trim();
- if(item){rgb(pdf,pal.pillrgb);pdf.roundedRect(x+35.0,y+11.7,23.0,3.6,1.8,1.8,'F');
-  pdf.setFont('helvetica','bold');pdf.setTextColor(18,47,91);const v=textFit(pdf,item,20.6,5.5,3.5);pdf.text(v,x+46.5,y+14.32,{align:'center'});}
- // QR is QRCODE-GENERATOR vector modules, with 4-module white quiet zone.
- pdfQR(pdf,s.qr_url,x+43.5,y+15.75,13.5);
- pdf.setFillColor(255,255,255);pdf.roundedRect(x+1.2,y+27.1,19.2,2.6,1.25,1.25,'F');
- pdf.setFont('helvetica','bold');pdf.setFontSize(4.15);pdf.setTextColor(24,74,149);pdf.text('ScanBack Kids',x+2.5,y+29.0);
+ if(item){rgb(pdf,pal.pillrgb);const pillY=bandY+(isCut?12.7:10.0);const pillH=isCut?4.9:3.4;
+ pdf.roundedRect(labelLeft-0.3,pillY,labelMaxW+.6,pillH,pillH/2,pillH/2,'F');
+ pdf.setTextColor(19,42,86);const itemText=textFit(pdf,item,labelMaxW-1.1,isCut?6.3:4.6,3.2);
+ pdf.text(itemText,labelLeft+labelMaxW/2,pillY+pillH*.72,{align:'center'});}
+ pdfQR(pdf,s.qr_url,qrX,qrY,qrSz);
+ pdf.setFillColor(255,255,255);pdf.roundedRect(x+2.0,y+H-2.55,isCut?21.2:17.5,2.0,1.0,1.0,'F');
+ pdf.setFont('helvetica','bold');pdf.setFontSize(isCut?3.5:3.0);pdf.setTextColor(28,78,156);pdf.text('♥ ScanBack Kids',x+3.0,y+H-1.05);
  pdfContour(pdf,x,y,shape);
 }
-function svgCut(shape,num){const w=210,h=297,pages=Math.ceil(num/LABEL.PERPAGE),files=[];
+function svgCut(shape,num){const w=210,h=297,g=geometry(shape),pages=Math.ceil(num/g.PERPAGE),files=[];
  const list=contourPoints(shape),path=list.map((p,i)=>`${i?'L':'M'} ${p[0].toFixed(3)} ${p[1].toFixed(3)}`).join(' ')+' Z';
  for(let page=0;page<pages;page++){
-  let paths=[];for(let i=page*LABEL.PERPAGE;i<Math.min(num,(page+1)*LABEL.PERPAGE);i++){
-   const pos=gridOrigin(i);paths.push(`<path id="sticker-${i+1}" d="${path}" transform="translate(${(pos.x+LABEL.BLEED).toFixed(2)} ${(pos.y+LABEL.BLEED).toFixed(2)})"/>`);}
-  files.push(`<?xml version="1.0" encoding="UTF-8"?>\n<svg xmlns="http://www.w3.org/2000/svg" width="210mm" height="297mm" viewBox="0 0 ${w} ${h}">\n<title>ScanBack Kids ${shape} cut contour, page ${page+1}</title>\n<desc>Trim is 60 x 31 mm; 2.5 mm bleed is supplied in matching proof PDF. Printer must confirm spot-color and tooling.</desc>\n<g id="CUTCONTOUR" fill="none" stroke="#FF00FF" stroke-width="0.2" stroke-linejoin="round">${paths.join('')}</g>\n</svg>`);
- }
- return files;
+  const paths=[];for(let i=page*g.PERPAGE;i<Math.min(num,(page+1)*g.PERPAGE);i++){
+   const pos=gridOrigin(i,shape);paths.push(`<path id="sticker-${i+1}" d="${path}" transform="translate(${(pos.x+g.BLEED).toFixed(2)} ${(pos.y+g.BLEED).toFixed(2)})"/>`);}
+  files.push(`<?xml version="1.0" encoding="UTF-8"?>\n<svg xmlns="http://www.w3.org/2000/svg" width="210mm" height="297mm" viewBox="0 0 ${w} ${h}"><title>ScanBack Kids ${shape} CONCEPT cutter contour</title><desc>${g.W}x${g.H}mm trim; supplier approval required.</desc><g id="CUTCONTOUR" fill="none" stroke="#FF00FF" stroke-width="0.18" stroke-linejoin="round">${paths.join('')}</g></svg>`);
+ }return files;
 }
 function saveFile(name,content,mimetype){const blob=new Blob([content],{type:mimetype});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),30000);}
 async function pdfProof(){if(loading||!current)return;
@@ -169,18 +176,18 @@ async function pdfProof(){if(loading||!current)return;
  if(!window.jspdf?.jsPDF||typeof window.qrcode!=='function')return show('The PDF/QR code libraries failed to load. Check your internet connection.',true);
  const st=safety(assetState);if(!st.qs||!st.hasCount||!st.allAssets)return show('Resolve QR allocation and missing artwork first.',true);
  lockUi(true);show('Rendering artwork-only scenes and vector QR codes…');try{
- const ss=current.stickers,o=current.order,shape=o.sticker_shape||'rounded',pdf=new window.jspdf.jsPDF({format:'a4',unit:'mm',orientation:'portrait',compress:true});
+ const ss=current.stickers,o=current.order,shape=o.sticker_shape||'rounded',g=geometry(shape),pdf=new window.jspdf.jsPDF({format:'a4',unit:'mm',orientation:'portrait',compress:true});
  const assets=new Map();for(let i=0;i<ss.length;i++){const url=assetState[i].url;if(!assets.has(url)){
-  assets.set(url,layerCanvas(assetState[i].image,assetState[i],{shade:theme(ss[i]).shade}));}}
+  assets.set(url,pictureCanvas(assetState[i].image,1400,Math.round(1400/((g.W-1.6)/(shape==='diecut'?g.H-14.6:g.H-10.2)))));}}
  for(let i=0;i<ss.length;i++){
-  if(i>0&&i%LABEL.PERPAGE===0)pdf.addPage();const p=gridOrigin(i);
-  composeOne(pdf,ss[i],assetState[i],p.x+LABEL.BLEED,p.y+LABEL.BLEED,shape,assets.get(assetState[i].url));
+  if(i>0&&i%g.PERPAGE===0)pdf.addPage();const p=gridOrigin(i,shape);
+  composeOne(pdf,ss[i],assetState[i],p.x+g.BLEED,p.y+g.BLEED,shape,assets.get(assetState[i].url));
  }
  const pages=pdf.getNumberOfPages();for(let k=1;k<=pages;k++){
   pdf.setPage(k);pdf.setFont('helvetica','bold');pdf.setTextColor(162,45,89);pdf.setFontSize(7.5);
   pdf.text(`RAZORPAY TEST MODE · PRINT SAMPLE ONLY · NOT FOR CUSTOMER DISPATCH ${k}/${pages}`,5,8);
   pdf.setFont('helvetica','normal');pdf.setTextColor(104,122,152);pdf.setFontSize(5.9);
-  pdf.text(`ORDER ${o.id.slice(0,8).toUpperCase()} · ${shape.toUpperCase()} · 60x31mm TRIM · 2.5mm BLEED · PRINT 100%`,5,293);
+  pdf.text(`ORDER ${o.id.slice(0,8).toUpperCase()} · ${shape.toUpperCase()} · ${g.W}x${g.H}mm TRIM · 2.5mm BLEED · PRINT 100%`,5,293);
  }
  const name=`ScanBack_${o.id.slice(0,8)}_${shape}_PRINT_SAMPLE.pdf`;
  pdf.save(name);
@@ -208,7 +215,7 @@ window.ScanBackMasterQA={
  // No authentication bypass: QA helpers expose only pure geometry and rendering,
  // and never make the protected print-studio API return data.
  contourPoints,svgCut,gridOrigin,qrValid,drawCard,
- getLayout:()=>({...LABEL})
+ getLayout:()=>({...activeGeometry()})
 };
 initialize();
 })();
