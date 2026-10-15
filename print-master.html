@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Print Master Studio · ScanBack Kids</title>
-<link rel="stylesheet" href="studio-assets/studio.css?v=534"><link rel="stylesheet" href="studio-assets/master.css?v=540">
+<link rel="stylesheet" href="studio-assets/studio.css?v=534"><link rel="stylesheet" href="studio-assets/master.css?v=560">
 </head><body>
 <header class="top"><div class="brand"><div><div class="brand-logo">ScanBack <span class="kids">Kids</span></div><div class="brand-blurb">Small stickers. Big reunions. · <strong>Print Master Studio</strong></div></div></div><div class="master-top-info">🛡️ Admin-only production tooling <span class="testflag">RAZORPAY TEST MODE</span></div></header>
 <div class="layout"><nav class="sidebar"><div class="sidebar-label">Production</div><a href="admin-studio.html">🗂 Admin orders</a><a href="print-master.html" class="active">🎨 Print Master Studio</a><a href="shop.html">🛍 Storefront</a><a href="my-orders.html">👨‍👩‍👦 Customer My Orders</a><div class="sidebar-spacer"></div><div class="side-promo"><strong>Premium sticker masters</strong><small>High-resolution art + live names + permanent QR, composed separately</small></div></nav>
@@ -16,7 +16,7 @@
   <div id="orderHead" class="master-orderhead"></div>
   <div class="master-columns">
     <section class="panel"><div class="panel-h"><h2>🎨 Select print shape</h2><span class="pill">Order-level</span></div>
-     <div class="shape-choices"><button id="shapeRounded" class="shape-btn"><span class="shape-icon">▭</span>Rounded rectangle<br><small>60 × 31 mm</small></button><button id="shapeCut" class="shape-btn"><span class="shape-icon">✿</span>Die-cut contour<br><small>Vector cut guide</small></button></div>
+     <div class="shape-choices"><button id="shapeRounded" class="shape-btn"><span class="shape-icon">▭</span>Rounded rectangle<br><small>60 × 31 mm</small></button><button id="shapeCut" class="shape-btn"><span class="shape-icon">✿</span>Premium die-cut<br><small>55 × 58 mm concept</small></button></div>
      <h2 style="margin:20px 0 9px">🖼️ Artwork master status</h2><div id="artworkSummary" class="master-artwork-summary"></div>
      <div class="master-hint">Your approved illustration sheets are <b>visual references</b>; their baked-in names and QR codes are never copied into customer stickers. Artwork must come from <code>/assets/print-masters/THEME/NN.webp</code>. Storefront previews are a temporary fallback and fail the production art check.</div>
     </section>
@@ -26,7 +26,7 @@
     </section>
   </div>
   <section class="panel"><div class="panel-h"><h2>👀 Actual-proportion live preview</h2><span class="pill test">Dynamic name + QR</span></div><div id="masterGrid" class="master-grid"></div><div class="master-note">Artwork is art-only. Names, item labels and QR codes above are generated at runtime from the order's actual saved information.</div></section>
-  <section class="panel export-panel"><div><h2 style="margin:0 0 7px">🖨️ A4 Press-Proof Export</h2><p class="small muted">3 columns × up to 7 rows per page · 60 × 31 mm trim · 2.5 mm bleed · 3 mm gutters · vector QR · editable separate cut-guide SVG.</p></div>
+  <section class="panel export-panel"><div><h2 style="margin:0 0 7px">🖨️ A4 Press-Proof Export</h2><p class="small muted">Rounded: 60 × 31 mm / 21 per page. Premium die-cut: 55 × 58 mm / 9 per page. Both have 2.5 mm bleed and vector QR; cutting paths require vendor approval.</p></div>
     <div class="export-actions"><button id="proofBtn" class="btn red">📄 Export A4 test PDF</button><button id="cutBtn" class="btn purple">✂ Export vector cut paths (SVG)</button></div>
     <label class="checkline"><input type="checkbox" id="confirmed"> I understand this is a <b>Test Mode production sample</b>, not a file approved for customer dispatch.</label>
     <div id="exportMsg" class="statusmsg" role="status"></div>
@@ -35,4 +35,4 @@
  </div>
 </main></div>
 <script src="config.js"></script><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
-<script src="studio-assets/common.js?v=534"></script><script src="studio-assets/master-studio.js?v=540"></script></body></html>
+<script src="studio-assets/common.js?v=534"></script><script src="studio-assets/master-studio.js?v=560"></script></body></html>
