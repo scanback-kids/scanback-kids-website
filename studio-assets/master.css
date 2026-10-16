@@ -20,18 +20,3 @@
 .master-card.premium.cut .qr-box{width:25%;right:7%;bottom:5.5%}
 .master-grid:has(.master-card.cut){grid-template-columns:repeat(2,minmax(0,1fr))}
 @media(max-width:760px){.master-grid:has(.master-card.cut){grid-template-columns:repeat(2,minmax(0,1fr))}}
-
-/* V5.7 integrated reference-style illustration and floating cloud/name panel */
-.master-card.premium{border:3px solid white;isolation:isolate;}
-.master-card.premium .master-art,.master-card.premium.cut .master-art{inset:0;width:100%;height:100%;background:var(--shade);}
-.master-card.premium .master-art img{object-fit:cover;object-position:45% center;}
-.master-card.premium .info{inset:auto 3% 3% 3%;width:94%;height:43%;padding:2.2% 29% 2% 4.8%;border:2px solid var(--accent);border-radius:22px;box-shadow:0 3px 12px #17366a30;z-index:2;}
-.master-card.premium .belongs{font-size:clamp(7px,.70vw,10px);}
-.master-card.premium .child{font-size:clamp(17px,1.8vw,28px);}
-.master-card.premium .item{margin-top:3%;}
-.master-card.premium .qr-box{right:6%;bottom:7%;width:20%;z-index:4;background:white;padding:3px;}
-.master-card.premium .branding{bottom:4%;left:7%;max-width:32%;z-index:4;font-size:8px;}
-.master-card.premium.cut .info{inset:auto 3.5% 3% 3.5%;width:93%;height:39%;padding:3% 29% 2% 6%;border-radius:32px;}
-.master-card.premium.cut .qr-box{width:22%;right:7%;bottom:6.5%}
-.master-card.premium.cut .child{font-size:clamp(18px,2vw,30px)}
-.master-card.premium.cut .branding{bottom:4%;}
