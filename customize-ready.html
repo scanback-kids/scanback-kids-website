@@ -17,13 +17,24 @@ h1{font-size:clamp(29px,4vw,51px);letter-spacing:-1px;line-height:1.16;margin:12
 .primary,.outline{display:inline-block;border-radius:13px;padding:12px 16px;font:inherit;font-weight:800;cursor:pointer;text-align:center}.primary{background:#236af0;color:white;border:0}.outline{border:1px solid #b2caf0;background:#fff;color:#1749b3}.primary:hover{background:#1852c2}.sub-actions{margin-top:15px;display:flex;gap:9px;flex-wrap:wrap}
 .design-section{margin-top:20px}.filterrow{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}.filterrow button{font-size:12px}.designgrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:9px;max-height:480px;overflow:auto;scrollbar-width:thin;padding:3px}.design-button{border:2px solid transparent;background:#f7f9ff;border-radius:13px;padding:5px;cursor:pointer;font:inherit;min-width:0;color:var(--navy)}.design-button.selected{border-color:var(--pink);background:#ffe8f4}.design-thumb{display:block;aspect-ratio:24/25;width:100%;background:url('assets/ready-20-v615.webp') var(--x) var(--y)/400% 500% no-repeat;border-radius:8px}.design-label{font-weight:900;font-size:11px;display:block;text-align:center;line-height:1.3;margin-top:3px}
 .selected{position:relative}.selected p{color:var(--text-muted)}.preview-holder{max-width:420px;margin:12px auto 3px}.sticker-surface{container-type:inline-size;aspect-ratio:24/25;width:100%;position:relative;isolation:isolate;background-image:url('assets/ready-20-v615.webp');background-position:var(--x) var(--y);background-size:400% 500%;background-repeat:no-repeat;background-color:#fff;border-radius:14px}
-.sticker-label{position:absolute;font-family:Arial,Helvetica,sans-serif;font-weight:900;display:flex;justify-content:center;align-items:center;overflow:hidden;white-space:nowrap;line-height:1.05;letter-spacing:-.01em;user-select:none}.sticker-ink{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;display:block;z-index:1}.sticker-qr{z-index:2}.sticker-ink{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;display:block;z-index:1}.sticker-qr{z-index:2}.sticker-ink{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;display:block;z-index:1}.sticker-qr{z-index:2}
+.sticker-label{position:absolute;font-family:Arial,Helvetica,sans-serif;font-weight:900;display:flex;justify-content:center;align-items:center;overflow:hidden;white-space:nowrap;line-height:1.05;letter-spacing:-.01em;user-select:none}.sticker-ink{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;display:block;z-index:1}.sticker-qr{z-index:2}
 .sticker-name{text-transform:uppercase}.sticker-item{color:#173870}.sticker-qr{position:absolute;display:flex;align-items:center;justify-content:center;overflow:hidden;background:#fff;border-radius:2px;box-shadow:0 0 0 1px #fff}.sticker-qr img{display:block;width:100%;height:100%;object-fit:contain;image-rendering:pixelated}.sticker-qr .fallback{font-weight:900;color:#5c6d85;font-size:9px;line-height:1.1;text-align:center}
 .hint{color:#5b7392;font-size:12px;margin:6px 0 2px}.badge-note{font-size:13px;background:#eef5ff;padding:10px 12px;border-radius:12px;color:#27518f;text-align:center}
 .pack-section{margin:24px 0 50px}.pack-top{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:9px}.pack-top h2{margin:0}.pack-top span{color:var(--text-muted);font-size:14px}.pack-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:15px}.pack-slot{background:#fff;border:2px solid transparent;border-radius:20px;padding:10px;color:var(--navy);text-align:center;cursor:pointer;box-shadow:0 7px 18px #1c377915;font:inherit}.pack-slot.active{border-color:#f250a3;background:#fff5fb}.pack-slot .sticker-surface{border-radius:10px}.pack-slot strong{display:block;font-size:13px;margin-top:6px}.pack-slot small{display:block;color:#6a7890;font-size:11px}
 .status{color:#235fa7;font-size:13px;min-height:18px;margin-top:8px}footer{background:#152d66;color:#fff;padding:26px 0;font-size:14px}footer a{color:#fff}footer .foot{display:flex;gap:18px;justify-content:space-between;flex-wrap:wrap}
 @media(max-width:950px){.layout{grid-template-columns:1fr}.pack-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.designgrid{max-height:380px}}
 @media(max-width:580px){.wrapper{width:min(100% - 24px,1240px)}.panel{padding:16px;border-radius:17px}.controls{grid-template-columns:1fr}.pack-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.nav{align-items:start}.designgrid{grid-template-columns:repeat(4,minmax(0,1fr));gap:5px}.design-label{font-size:10px}.sub-actions .primary,.sub-actions .outline{flex:1 1 100%}}
+
+/* Design 07–10 use their original square 1254px production masters.
+   The old 24:25 montage flattened transparent die-cut margins to black. */
+.sticker-surface.dino-original,.design-thumb.dino-original{
+ background-image:url('assets/dino-07-10-original-preview.webp');
+ background-color:#fff;
+ background-size:100% 400%;
+ background-repeat:no-repeat;
+ background-position:0 var(--by);
+ aspect-ratio:1 / 1;
+}
 </style>
 
 </head><body>
@@ -59,59 +70,10 @@ function start(){state.items=Array.from({length:state.pack},(_,i)=>({design:i%de
 function setStatus(text){$('status').textContent=text;}
 function pos(style,box){style.left=box[0]+'%';style.top=box[1]+'%';style.width=box[2]+'%';style.height=box[3]+'%';}
 function imageUrl(index){return DEMO_QR;}
-function centeredSquareQrBox(box){
-  const surfaceHeightPerWidth=25/24;
+function centeredSquareQrBox(box,surfaceHeightPerWidth=25/24){
   const side=Math.min(box[2],box[3]*surfaceHeightPerWidth)*0.90;
   const height=side/surfaceHeightPerWidth;
   return [box[0]+(box[2]-side)/2,box[1]+(box[3]-height)/2,side,height];
-}
-// V6.15 preview: calibrations are taken from the ORIGINAL print-master JSON,
-// including the safely inset name/item rectangles and true QR frame bounds.
-// Canvas renders glyph pixels around their real ink center (not the CSS baseline).
-function drawCenteredInk(ctx, text, box, color, width, height, kind){
- if(!text)return;
- const x=box[0]*width/100, y=box[1]*height/100, w=box[2]*width/100, h=box[3]*height/100;
- const actual=text.trim();if(!actual)return;
- let fontSize=Math.min(h*1.05, width*0.09);
- const goalHeight=h*(kind==='header'?.72:.78);
- // Measure actual glyph ascent and descent; do not center a CSS line box.
- for(let i=0;i<60;i++){
-  ctx.font='900 '+fontSize.toFixed(3)+'px Arial, Helvetica, sans-serif';
-  const m=ctx.measureText(actual);
-  const glyphHeight=m.actualBoundingBoxAscent+m.actualBoundingBoxDescent;
-  if((m.width<=w*.92&&glyphHeight<=goalHeight)||fontSize<=1)break;
-  fontSize*=.955;
- }
- ctx.font='900 '+fontSize.toFixed(3)+'px Arial, Helvetica, sans-serif';
- const metrics=ctx.measureText(actual);
- ctx.textAlign='center';ctx.textBaseline='alphabetic';ctx.fillStyle=color;
- // This baseline centers the *actual visible ink*, independent of font ascent padding.
- const baseline=y+h/2+(metrics.actualBoundingBoxAscent-metrics.actualBoundingBoxDescent)/2;
- ctx.fillText(actual,x+w/2,baseline,w*.94);
-}
-// V6.15 preview: calibrations are taken from the ORIGINAL print-master JSON,
-// including the safely inset name/item rectangles and true QR frame bounds.
-// Canvas renders glyph pixels around their real ink center (not the CSS baseline).
-function drawCenteredInk(ctx, text, box, color, width, height, kind){
- if(!text)return;
- const x=box[0]*width/100, y=box[1]*height/100, w=box[2]*width/100, h=box[3]*height/100;
- const actual=text.trim();if(!actual)return;
- let fontSize=Math.min(h*1.05, width*0.09);
- const goalHeight=h*(kind==='header'?.95:.78);
- // Measure actual glyph ascent and descent; do not center a CSS line box.
- for(let i=0;i<60;i++){
-  ctx.font='900 '+fontSize.toFixed(3)+'px Arial, Helvetica, sans-serif';
-  const m=ctx.measureText(actual);
-  const glyphHeight=m.actualBoundingBoxAscent+m.actualBoundingBoxDescent;
-  if((m.width<=w*.92&&glyphHeight<=goalHeight)||fontSize<=1)break;
-  fontSize*=.955;
- }
- ctx.font='900 '+fontSize.toFixed(3)+'px Arial, Helvetica, sans-serif';
- const metrics=ctx.measureText(actual);
- ctx.textAlign='center';ctx.textBaseline='alphabetic';ctx.fillStyle=color;
- // This baseline centers the *actual visible ink*, independent of font ascent padding.
- const baseline=y+h/2+(metrics.actualBoundingBoxAscent-metrics.actualBoundingBoxDescent)/2;
- ctx.fillText(actual,x+w/2,baseline,w*.94);
 }
 // V6.15 preview: calibrations are taken from the ORIGINAL print-master JSON,
 // including the safely inset name/item rectangles and true QR frame bounds.
@@ -154,10 +116,11 @@ function textFit(root){
 function buildSticker(index,child,item){
  const d=designs[index],surface=document.createElement('div');surface.className='sticker-surface';
  surface.style.setProperty('--x',((index%4)*100/3)+'%');surface.style.setProperty('--y',(Math.floor(index/4)*25)+'%');
+ if(index>=6&&index<=9){surface.classList.add('dino-original');surface.style.setProperty('--by',((index-6)*100/3)+'%');}
  surface.dataset.designIndex=String(index);surface.dataset.child=child||'';surface.dataset.item=item||'';
  surface.setAttribute('role','img');surface.setAttribute('aria-label',d.name+' sticker with child name '+(child||'blank')+', item name '+(item||'blank')+' and demonstration QR');
  const ink=document.createElement('canvas');ink.className='sticker-ink';ink.setAttribute('aria-hidden','true');surface.append(ink);
- const qr=document.createElement('div');qr.className='sticker-qr';pos(qr.style,centeredSquareQrBox(d.qrBox));
+ const qr=document.createElement('div');qr.className='sticker-qr';pos(qr.style,centeredSquareQrBox(d.qrBox,index>=6&&index<=9?1:25/24));
  const img=document.createElement('img');img.src=imageUrl(index);img.alt='';img.draggable=false;qr.append(img);surface.append(qr);
  return surface;
 }
@@ -166,6 +129,7 @@ function drawDesigns(){const grid=$('designGrid');grid.replaceChildren();designs
 const button=makeButton('',()=>{state.items[state.slot].design=i;render();setStatus('Applied '+d.name+' to sticker '+(state.slot+1)+'.');},'design-button');
 button.setAttribute('aria-label','Choose '+d.name+' for sticker '+(state.slot+1));button.classList.toggle('selected',state.items[state.slot].design===i);button.setAttribute('aria-pressed',String(state.items[state.slot].design===i));
 const thumb=document.createElement('span');thumb.className='design-thumb';thumb.style.setProperty('--x',((i%4)*100/3)+'%');thumb.style.setProperty('--y',(Math.floor(i/4)*25)+'%');
+ if(i>=6&&i<=9){thumb.classList.add('dino-original');thumb.style.setProperty('--by',((i-6)*100/3)+'%');}
 const title=document.createElement('span');title.className='design-label';title.textContent=String(i+1).padStart(2,'0')+' · '+d.name;
 button.append(thumb,title);grid.append(button);});}
 function drawFilters(){const f=$('themeFilters');f.replaceChildren();filters.forEach(([value,label])=>{const b=makeButton(label,()=>{state.filter=value;drawFilters();drawDesigns();},'theme-button');b.setAttribute('aria-pressed',String(value===state.filter));f.append(b);});}
