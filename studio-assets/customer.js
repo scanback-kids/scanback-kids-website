@@ -10,8 +10,14 @@ async function signIn(e){e.preventDefault();message('customerMessage','Signing i
  try{const {data,error}=await sb.auth.signInWithPassword({email:$('customerEmail').value.trim(),password:$('customerPass').value});if(error)throw error;showUser(data.user);$('customerPass').value='';await refresh();}
  catch(err){message('customerMessage',err.message,true);}}
 async function refresh(){if(!user)return;message('customerMessage','Loading your orders…');
+ $('myOrderCount').textContent='Loading…';
+ $('myOrderList').innerHTML='<p class="muted">Checking your saved sticker orders…</p>';
  try{const d=await UI.invoke(sb,'order-stickers','list');orders=d.orders||[];renderList();message('customerMessage','Orders loaded.');}
- catch(e){message('customerMessage',e.message,true);}}
+ catch(e){
+   $('myOrderCount').textContent='Unavailable';
+   $('myOrderList').innerHTML='<p class="muted">Your orders could not be loaded right now. This does not mean they were deleted. Please check the error above and try Refresh.</p>';
+   message('customerMessage',e.message,true);
+ }}
 function renderList(){const list=orders.slice(0,75);$('myOrderCount').textContent=list.length+' orders';
  $('myOrderList').innerHTML=list.length?list.map(o=>`<div class="order-entry ${o.id===selectedId?'selected':''}"><div class="info"><strong>🎁 ${esc(o.child_name)} · ${o.pack_size} stickers</strong><small>${UI.date(o.created_at)} · ${UI.money(o.payment_amount_paise)}</small><small>${esc(o.status==='paid'?(o.fulfillment_status||'Preparing your stickers'):'Draft — payment not completed')}</small></div><button class="btn sm secondary" data-order="${esc(o.id)}" ${o.status!=='paid'?'disabled':''}>${o.status==='paid'?'View →':'Unpaid'}</button></div>`).join(''):'<p class="muted">No orders found yet. Your first sticker adventure is waiting!</p>';
  $('myOrderList').querySelectorAll('[data-order]').forEach(btn=>btn.onclick=()=>openOrder(btn.dataset.order));}
