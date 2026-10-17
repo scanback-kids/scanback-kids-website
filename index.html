@@ -1,163 +1,109 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>ScanBack Kids</title>
-<style>
-body{font-family:Arial;margin:0;background:#f5f7fb;color:#182230}
-header{background:#182230;color:white;padding:18px 5%;font-size:22px;font-weight:bold}
-main{max-width:900px;margin:25px auto;padding:0 16px}
-.card{background:white;border-radius:16px;padding:22px;margin:16px 0;box-shadow:0 5px 20px #0001}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:16px}
-label{display:block;font-weight:bold;margin:12px 0 6px}
-input{width:100%;box-sizing:border-box;padding:12px;border:1px solid #ccd2dc;border-radius:9px;font-size:16px}
-button{border:0;border-radius:9px;padding:12px 15px;margin:10px 8px 0 0;background:#175cd3;color:white;font-weight:bold;cursor:pointer}
-button:disabled{opacity:.55;cursor:not-allowed}
-.secondary{background:#eef2f6;color:#182230}
-.danger{background:#b42318}
-.muted{font-size:14px;color:#667085}
-.hidden{display:none}
-.item{border:1px solid #ddd;padding:12px;border-radius:12px;margin:12px 0}
-.item.inactive{background:#f9fafb;border-color:#d0d5dd}
-.item img{display:block;margin-top:10px}
-.event{padding:12px;background:#f8fafc;margin:10px 0;border-left:3px solid #175cd3}
-.status{white-space:pre-wrap}
-.pill{display:inline-block;border-radius:20px;padding:4px 9px;font-size:12px;font-weight:bold;background:#dcfae6;color:#067647}
-.pill.off{background:#f2f4f7;color:#475467}
-.notice{font-size:13px;color:#475467;margin:10px 0 0}
-</style>
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-<script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
-<script src="config.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#122b72">
+  <meta name="description" content="ScanBack Kids makes colorful, personalized QR lost-and-found stickers for children's everyday belongings. Explore 96 designs across four fun themes.">
+  <title>ScanBack Kids | Personalized QR Lost & Found Stickers</title>
+  <style>
+    :root{--ink:#15285c;--blue:#285cf4;--pink:#f4428f;--light:#f1f7ff;--mint:#dcfff5;--line:#dbe6fa}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:Arial,Helvetica,sans-serif;margin:0;color:var(--ink);background:linear-gradient(180deg,#edf7ff 0,#fff 60%)}a{color:inherit}
+    .wrap{max-width:1160px;margin:auto;padding:0 24px}
+    .skip{position:absolute;left:-10000px;top:8px;background:#fff;padding:12px;z-index:99}.skip:focus{left:12px}
+    header{position:sticky;top:0;z-index:20;background:#fffdfdf2;backdrop-filter:blur(12px);border-bottom:1px solid #dce8f7}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:18px;min-height:72px}
+    .brand{font-weight:900;font-size:22px;letter-spacing:-.7px;text-decoration:none;white-space:nowrap}
+    .brand span{color:var(--pink)}nav{display:flex;align-items:center;gap:22px}nav a{text-decoration:none;font-weight:700;font-size:14px}nav a:hover{text-decoration:underline}
+    .nav-pill{padding:12px 16px;border-radius:999px;background:#edf2ff;color:#254dba}
+    .notice{background:#122d72;color:#fff;text-align:center;padding:12px 20px;font-size:13px;line-height:1.5}
+    .hero{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:36px;padding-top:76px;padding-bottom:73px}
+    .eyebrow{display:inline-block;background:#fff0f8;color:#ba2267;padding:10px 14px;border-radius:50px;font-size:13px;font-weight:800;letter-spacing:.2px}
+    h1{font-size:clamp(40px,5.3vw,72px);line-height:1.04;letter-spacing:-2.7px;margin:20px 0}h1 em{font-style:normal;color:var(--pink)}
+    .hero p{font-size:18px;line-height:1.65;color:#45597f;max-width:510px}
+    .actions{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin:30px 0}
+    .btn{display:inline-block;padding:16px 22px;background:var(--blue);color:#fff;border-radius:14px;text-decoration:none;font-weight:900;box-shadow:0 8px 25px #1c56ed26}
+    .btn.alt{background:#fff;color:#234cb5;box-shadow:none;border:1px solid #b9cdef}
+    .small{color:#67799b;font-size:13px;line-height:1.6}
+    .hero-art{display:grid;grid-template-columns:1fr 1fr;gap:16px;transform:rotate(-1deg)}
+    .hero-card{position:relative;background:white;padding:9px;border-radius:28px;box-shadow:0 16px 40px #184b9d22;overflow:hidden;aspect-ratio:1/.98}
+    .hero-card:nth-child(even){transform:translateY(25px)}.hero-card img{width:100%;height:100%;border-radius:21px;object-fit:cover;display:block}
+    .hero-card span{position:absolute;left:17px;bottom:17px;background:#fffef4ed;border-radius:14px;padding:8px 12px;font-weight:900;font-size:13px}
+    section{scroll-margin-top:92px}.section{padding:64px 0}h2{font-size:clamp(28px,3vw,40px);letter-spacing:-1px;margin:0 0 12px} .section-intro{color:#587092;line-height:1.6;margin:0 0 26px}
+    .theme-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+    .theme{display:block;background:#fff;border:1px solid var(--line);border-radius:23px;overflow:hidden;text-decoration:none;box-shadow:0 9px 26px #16468912;transition:transform .2s}
+    .theme:hover,.theme:focus-visible{transform:translateY(-5px)}.theme img{width:100%;aspect-ratio:1/1.05;object-fit:cover;display:block}
+    .theme .copy{padding:16px}.theme b{display:block;font-size:17px;margin-bottom:5px}.theme small{color:#5f7295;font-size:12px}
+    .steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+    .step{background:#fff;border:1px solid var(--line);border-radius:22px;padding:25px}.step .num{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:#e7edff;color:#2154b2;font-weight:900;margin-bottom:18px}.step h3{margin:0 0 9px}.step p{margin:0;color:#5c7190;line-height:1.65}
+    .pricing{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}.pack{background:#fff;border:1px solid var(--line);border-radius:22px;padding:26px}.pack strong{font-size:19px}.pack .price{font-size:42px;font-weight:900;margin:15px 0}.pack p{color:#65789a;line-height:1.55}.pack.featured{border:2px solid #f18bc1;background:#fff7fb}
+    .cta{border-radius:30px;background:linear-gradient(110deg,#e3ebff,#ffe4f3);padding:38px;display:flex;justify-content:space-between;align-items:center;gap:24px}.cta p{color:#506487;line-height:1.6}
+    footer{background:#142759;color:#e4edff;padding:34px 0;margin-top:65px}footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:22px;flex-wrap:wrap}footer a{color:#fff;margin-right:18px;text-decoration:none;font-size:14px}
+    @media(max-width:920px){.hero{grid-template-columns:1fr;padding-top:45px}.hero-art{max-width:560px}.theme-grid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:650px){.wrap{padding:0 17px}.nav{flex-wrap:wrap;padding:15px 0}.brand{font-size:20px}nav{gap:12px;flex-wrap:wrap}nav a{font-size:12px}.nav-pill{padding:9px 11px}h1{letter-spacing:-1.6px}.hero{gap:14px}.hero-art{gap:10px}.hero-card{border-radius:17px;padding:5px}.hero-card img{border-radius:13px}.hero-card span{font-size:10px;left:10px;bottom:10px}.steps,.pricing{grid-template-columns:1fr}.section{padding:42px 0}.cta{padding:26px;display:block}.theme .copy{padding:12px}.theme b{font-size:15px}}
+  </style>
 </head>
 <body>
-<header>🎒 ScanBack Kids</header>
-<main>
-<h1>Parent dashboard</h1>
-<p class="muted">Register belongings, print unique QR stickers and review scan reports.</p>
-<section class="card">
-<h2>Parent account</h2>
-<label for="email">Email</label><input id="email" type="email" placeholder="you@example.com">
-<label for="password">Password (8+ characters)</label><input id="password" type="password">
-<button onclick="signup()">Create account</button>
-<button class="secondary" onclick="signin()">Sign in</button>
-<button class="secondary" onclick="signout()">Sign out</button>
-<div id="authStatus" class="status muted" role="status"></div>
-</section>
-<div id="app" class="hidden">
-<div class="grid">
-<section class="card">
-<h2>Register an item</h2>
-<label for="parent">Parent / guardian name</label><input id="parent" placeholder="Parent name">
-<label for="child">Child display name (first name/nickname)</label><input id="child" placeholder="Aarav">
-<label for="item">Item</label><input id="item" placeholder="School bag">
-<label for="notifyEmail">Notification email</label><input id="notifyEmail" type="email">
-<label for="phone">WhatsApp number with country code (optional)</label><input id="phone" placeholder="9198...">
-<button onclick="addItem()">Create QR sticker</button>
-<div id="itemStatus" class="status muted" role="status"></div>
-</section>
-<section class="card"><h2>Your items</h2><p class="muted">You can turn any sticker off or on. Deactivation stops new finder reports without removing its scan history.</p><div id="items">Sign in to load items.</div><p id="itemsStatus" class="status muted" role="status"></p></section>
-</div>
-<section class="card"><h2>Scan history</h2><div id="history" class="muted">Choose an item to see scan reports.</div></section>
-</div>
-</main>
-<script>
-let sb,user;
-function ready(){
-  const c=window.SCANBACK_CONFIG;
-  if(!c||!c.SUPABASE_URL?.startsWith("https://")||c.SUPABASE_URL.includes("PASTE_")){
-    status("authStatus","Setup needed: fill in public/config.js with your Supabase URL and anon key.");return;
-  }
-  sb=window.supabase.createClient(c.SUPABASE_URL,c.SUPABASE_ANON_KEY);
-  sb.auth.getSession().then(({data})=>{if(data.session){user=data.session.user;showApp()}});
-}
-function status(id,t){document.getElementById(id).textContent=t}
-function val(id){return document.getElementById(id).value.trim()}
-async function signup(){
-  if(!sb)return;
-  let email=val("email"),password=val("password");
-  if(password.length<8)return status("authStatus","Password must be at least 8 characters.");
-  let {error}=await sb.auth.signUp({email,password});
-  status("authStatus",error?error.message:"Account created. Check your email if confirmation is enabled, then sign in.");
-}
-async function signin(){
-  if(!sb)return;
-  let {data,error}=await sb.auth.signInWithPassword({email:val("email"),password:val("password")});
-  if(error)return status("authStatus",error.message);
-  user=data.user;showApp();
-}
-async function signout(){if(sb)await sb.auth.signOut();location.reload()}
-function showApp(){
-  document.getElementById("app").classList.remove("hidden");
-  status("authStatus","Signed in as "+user.email);
-  document.getElementById("notifyEmail").value=user.email;
-  loadItems();
-}
-async function addItem(){
-  if(!user)return status("itemStatus","Please sign in first.");
-  let o={owner_id:user.id,parent_name:val("parent"),child_name:val("child"),item_name:val("item"),notification_email:val("notifyEmail"),notification_phone:val("phone")||null};
-  if(!o.parent_name||!o.child_name||!o.item_name||!o.notification_email)return status("itemStatus","Complete parent name, child display name, item and email.");
-  let {data,error}=await sb.from("items").insert(o).select().single();
-  if(error)return status("itemStatus","Could not create item: "+error.message);
-  status("itemStatus","Created unique sticker ID: "+data.id);
-  loadItems();
-}
-async function loadItems(){
-  if(!user)return;
-  const {data,error}=await sb.from("items").select("id,child_name,item_name,created_at,active").eq("owner_id",user.id).order("created_at",{ascending:false});
-  const box=document.getElementById("items");
-  if(error){box.textContent="Could not load items: "+error.message;return}
-  box.replaceChildren();
-  if(!data.length){box.textContent="No items registered yet.";return}
-  data.forEach(it=>{
-    const active=it.active===true;
-    const url=window.SCANBACK_CONFIG.SITE_URL.replace(/\/$/,"")+"/find.html?id="+encodeURIComponent(it.id);
-    const el=document.createElement("div");
-    el.className="item"+(active?"":" inactive");
-    const title=document.createElement("b");title.textContent=it.child_name+" — "+it.item_name;
-    const badge=document.createElement("span");badge.className="pill"+(active?"":" off");badge.textContent=active?"Active":"Inactive";badge.style.marginLeft="8px";
-    const idInfo=document.createElement("p");idInfo.className="muted";idInfo.textContent="Sticker ID: "+it.id;
-    el.append(title,badge,idInfo);
-    if(active){
-      const qr=document.createElement("div");el.appendChild(qr);
-      new QRCode(qr,{text:url,width:150,height:150});
-    }else{
-      const note=document.createElement("p");note.className="notice";
-      note.textContent="This sticker is deactivated. Its QR code will not accept new finder reports.";
-      el.appendChild(note);
-    }
-    const history=document.createElement("button");history.textContent="Scan history";history.addEventListener("click",()=>historyFor(it.id));el.appendChild(history);
-    if(active){
-      const test=document.createElement("button");test.className="secondary";test.textContent="Test finder page";test.addEventListener("click",()=>window.open(url,"_blank","noopener,noreferrer"));el.appendChild(test);
-    }
-    const toggle=document.createElement("button");toggle.className=active?"danger":"secondary";
-    toggle.textContent=active?"Deactivate sticker":"Reactivate sticker";
-    toggle.addEventListener("click",()=>setItemActive(it,toggle));el.appendChild(toggle);
-    box.appendChild(el);
-  });
-}
-async function setItemActive(item,button){
-  if(!sb||!user)return;
-  const next=item.active!==true;
-  const action=next?"reactivate":"deactivate";
-  const ok=confirm("Are you sure you want to "+action+" the sticker for "+item.child_name+"'s "+item.item_name+"?"+(next?"":"\n\nIts QR code will stop accepting new finder reports and emails until reactivated."));
-  if(!ok)return;
-  button.disabled=true;
-  status("itemsStatus","Updating sticker…");
-  const {data,error}=await sb.from("items").update({active:next}).eq("id",item.id).eq("owner_id",user.id).select("id,active").maybeSingle();
-  if(error||!data){status("itemsStatus","Update failed: "+(error?.message||"Sticker not found or permission denied."));button.disabled=false;return}
-  status("itemsStatus",data.active?"Sticker reactivated.":"Sticker deactivated. New finder reports are blocked.");
-  await loadItems();
-}
-async function historyFor(id){
-  let {data,error}=await sb.from("scan_events").select("created_at,finder_name,message,location_shared,location_lat,location_lng,location_accuracy").eq("item_id",id).order("created_at",{ascending:false});
-  let box=document.getElementById("history");
-  if(error)return box.textContent=error.message;
-  if(!data.length)return box.textContent="No scans yet.";
-  box.innerHTML=data.map(e=>"<div class='event'><b>"+new Date(e.created_at).toLocaleString()+"</b><br>"+(e.finder_name?"Finder: "+esc(e.finder_name)+"<br>":"")+(e.message?"Message: "+esc(e.message)+"<br>":"")+(e.location_shared&&e.location_lat!==null?"<a target='_blank' rel='noopener noreferrer' href='https://maps.google.com/?q="+encodeURIComponent(e.location_lat+","+e.location_lng)+"'>View shared location</a> (accuracy ~"+Math.round(e.location_accuracy||0)+" m)":"Location not shared")+"</div>").join("");
-}
-function esc(s){return String(s||"").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[m]))}
-ready();
-</script>
-</body></html>
+  <a href="#main" class="skip">Skip to content</a>
+  <div class="notice"><strong>We're getting ready!</strong> Explore our sticker designs now. Online orders and shipping are not yet open.</div>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="index.html" aria-label="ScanBack Kids home">🎒 ScanBack <span>Kids</span></a>
+      <nav aria-label="Main navigation">
+        <a href="#themes">Our designs</a><a href="#how">How it works</a><a href="#packs">Packs</a>
+        <a class="nav-pill" href="dashboard.html">Parent sign in</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <div class="wrap hero">
+      <div>
+        <span class="eyebrow">✨ Colorful stickers. A smarter way to return lost things.</span>
+        <h1>Little stickers.<br><em>Big peace of mind.</em></h1>
+        <p>Personalized QR lost-and-found stickers for the bags, bottles, lunch boxes and everyday essentials kids love. Choose your favorite character and preview it with your child's name.</p>
+        <div class="actions"><a class="btn" href="shop.html">Explore all 96 designs →</a><a class="btn alt" href="#how">How it works</a></div>
+        <div class="small">Four playful themes · Personal name and optional item label · Demo previews only until ordering opens</div>
+      </div>
+      <div class="hero-art" aria-label="Examples of our four sticker themes">
+        <div class="hero-card"><img src="assets/space.webp" alt="Space Adventure sticker theme"><span>🚀 Space Adventure</span></div>
+        <div class="hero-card"><img src="assets/dino.webp" alt="Dinosaur World sticker theme"><span>🦕 Dinosaur World</span></div>
+        <div class="hero-card"><img src="assets/rainbow.webp" alt="Rainbow Magic sticker theme"><span>🌈 Rainbow Magic</span></div>
+        <div class="hero-card"><img src="assets/sports.webp" alt="Sports Champions sticker theme"><span>🏆 Sports Champions</span></div>
+      </div>
+    </div>
+    <section class="section" id="themes"><div class="wrap">
+      <h2>Pick their favorite world</h2>
+      <p class="section-intro">Four fun collections, each with 24 designs to explore. Actual production availability will be confirmed when ordering opens.</p>
+      <div class="theme-grid">
+        <a class="theme" href="shop.html"><img loading="lazy" src="assets/space.webp" alt="Space adventure design preview"><div class="copy"><b>🚀 Space Adventure</b><small>24 designs · Explore collection →</small></div></a>
+        <a class="theme" href="shop.html"><img loading="lazy" src="assets/dino.webp" alt="Dinosaur design preview"><div class="copy"><b>🦕 Dinosaur World</b><small>24 designs · Explore collection →</small></div></a>
+        <a class="theme" href="shop.html"><img loading="lazy" src="assets/rainbow.webp" alt="Rainbow design preview"><div class="copy"><b>🌈 Rainbow Magic</b><small>24 designs · Explore collection →</small></div></a>
+        <a class="theme" href="shop.html"><img loading="lazy" src="assets/sports.webp" alt="Sports design preview"><div class="copy"><b>🏆 Sports Champions</b><small>24 designs · Explore collection →</small></div></a>
+      </div>
+    </div></section>
+    <section class="section" id="how" style="background:#f2f8ff"><div class="wrap">
+      <h2>Designed to help lost things find their way home</h2>
+      <p class="section-intro">The full lost-and-found service activates when a purchased sticker is registered and enabled.</p>
+      <div class="steps">
+        <div class="step"><div class="num">1</div><h3>Choose and personalize</h3><p>Choose an illustration and add your child's display name and an optional label such as “Water Bottle”.</p></div>
+        <div class="step"><div class="num">2</div><h3>Attach the registered QR sticker</h3><p>Each issued sticker links to an individual item record. The parent manages its activation and reports.</p></div>
+        <div class="step"><div class="num">3</div><h3>A finder scans to help</h3><p>A finder can send a message, optionally share a location, and help the parent arrange a return through the service.</p></div>
+      </div>
+    </div></section>
+    <section class="section" id="packs"><div class="wrap">
+      <h2>Sticker packs for everyday adventures</h2>
+      <p class="section-intro">Planned pack prices shown for reference. Checkout is not yet open, and final availability will be confirmed before launch.</p>
+      <div class="pricing">
+        <div class="pack"><strong>Starter Pack</strong><div class="price">₹249</div><p>6 personalized stickers · A little help for daily essentials.</p></div>
+        <div class="pack featured"><strong>Everyday Pack ✨</strong><div class="price">₹449</div><p>12 personalized stickers · More room for school and play.</p></div>
+        <div class="pack"><strong>Explorer Pack</strong><div class="price">₹699</div><p>24 personalized stickers · The whole world of little belongings.</p></div>
+      </div>
+    </div></section>
+    <section class="section"><div class="wrap"><div class="cta">
+      <div><h2>Ready to choose a favorite?</h2><p>Try the customization preview today. Real payments and printed orders will open only after production checks are complete.</p></div>
+      <a class="btn" href="shop.html">Design a preview →</a>
+    </div></div></section>
+  </main>
+  <footer><div class="wrap"><div><strong>🎒 ScanBack Kids</strong><p class="small" style="color:#d2def5;margin:10px 0 0">Made for little adventures and the things they carry.</p></div><div><a href="shop.html">Design gallery</a><a href="dashboard.html">Parent dashboard</a><a href="my-orders.html">My Orders</a></div></div></footer>
+</body>
+</html>
