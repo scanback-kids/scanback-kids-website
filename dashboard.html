@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Parent Dashboard | ScanBack Kids</title>
+<style>
+body{font-family:Arial;margin:0;background:#f5f7fb;color:#182230}
+header{background:#182230;color:white;padding:18px 5%;font-size:22px;font-weight:bold}
+main{max-width:900px;margin:25px auto;padding:0 16px}
+.card{background:white;border-radius:16px;padding:22px;margin:16px 0;box-shadow:0 5px 20px #0001}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:16px}
+label{display:block;font-weight:bold;margin:12px 0 6px}
+input{width:100%;box-sizing:border-box;padding:12px;border:1px solid #ccd2dc;border-radius:9px;font-size:16px}
+button{border:0;border-radius:9px;padding:12px 15px;margin:10px 8px 0 0;background:#175cd3;color:white;font-weight:bold;cursor:pointer}
+button:disabled{opacity:.55;cursor:not-allowed}
+.secondary{background:#eef2f6;color:#182230}
+.danger{background:#b42318}
+.muted{font-size:14px;color:#667085}
+.hidden{display:none}
+.item{border:1px solid #ddd;padding:12px;border-radius:12px;margin:12px 0}
+.item.inactive{background:#f9fafb;border-color:#d0d5dd}
+.item img{display:block;margin-top:10px}
+.event{padding:12px;background:#f8fafc;margin:10px 0;border-left:3px solid #175cd3}
+.status{white-space:pre-wrap}
+.pill{display:inline-block;border-radius:20px;padding:4px 9px;font-size:12px;font-weight:bold;background:#dcfae6;color:#067647}
+.pill.off{background:#f2f4f7;color:#475467}
+.notice{font-size:13px;color:#475467;margin:10px 0 0}
+</style>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+<script src="config.js"></script>
+</head>
+<body>
+<header>🎒 ScanBack Kids <nav aria-label="Site navigation" style="float:right;font-size:14px;font-weight:normal"><a style="color:white;margin-left:12px" href="index.html">Home</a><a style="color:white;margin-left:12px" href="shop.html">Design stickers</a><a style="color:white;margin-left:12px" href="my-orders.html">My Orders</a></nav></header>
+<main>
+<h1>Parent dashboard</h1>
+<p class="muted">Register belongings, print unique QR stickers and review scan reports.</p>
+<section class="card">
+<h2>Parent account</h2>
+<label for="email">Email</label><input id="email" type="email" placeholder="you@example.com">
+<label for="password">Password (8+ characters)</label><input id="password" type="password">
+<button onclick="signup()">Create account</button>
+<button class="secondary" onclick="signin()">Sign in</button>
+<button class="secondary" onclick="signout()">Sign out</button>
+<div id="authStatus" class="status muted" role="status"></div>
+</section>
+<div id="app" class="hidden">
+<div class="grid">
+<section class="card">
+<h2>Register an item</h2>
+<label for="parent">Parent / guardian name</label><input id="parent" placeholder="Parent name">
+<label for="child">Child display name (first name/nickname)</label><input id="child" placeholder="Aarav">
+<label for="item">Item</label><input id="item" placeholder="School bag">
+<label for="notifyEmail">Notification email</label><input id="notifyEmail" type="email">
+<label for="phone">WhatsApp number with country code (optional)</label><input id="phone" placeholder="9198...">
+<button onclick="addItem()">Create QR sticker</button>
+<div id="itemStatus" class="status muted" role="status"></div>
+</section>
+<section class="card"><h2>Your items</h2><p class="muted">You can turn any sticker off or on. Deactivation stops new finder reports without removing its scan history.</p><div id="items">Sign in to load items.</div><p id="itemsStatus" class="status muted" role="status"></p></section>
+</div>
+<section class="card"><h2>Scan history</h2><div id="history" class="muted">Choose an item to see scan reports.</div></section>
+</div>
+</main>
+<script>
+let sb,user;
+function ready(){
+  const c=window.SCANBACK_CONFIG;
+  if(!c||!c.SUPABASE_URL?.startsWith("https://")||c.SUPABASE_URL.includes("PASTE_")){
+    status("authStatus","Setup needed: fill in public/config.js with your Supabase URL and anon key.");return;
+  }
+  sb=window.supabase.createClient(c.SUPABASE_URL,c.SUPABASE_ANON_KEY);
+  sb.auth.getSession().then(({data})=>{if(data.session){user=data.session.user;showApp()}});
+}
+function status(id,t){document.getElementById(id).textContent=t}
+function val(id){return document.getElementById(id).value.trim()}
+async function signup(){
+  if(!sb)return;
+  let email=val("email"),password=val("password");
+  if(password.length<8)return status("authStatus","Password must be at least 8 characters.");
+  let {error}=await sb.auth.signUp({email,password});
+  status("authStatus",error?error.message:"Account created. Check your email if confirmation is enabled, then sign in.");
+}
+async function signin(){
+  if(!sb)return;
+  let {data,error}=await sb.auth.signInWithPassword({email:val("email"),password:val("password")});
+  if(error)return status("authStatus",error.message);
+  user=data.user;showApp();
+}
+async function signout(){if(sb)await sb.auth.signOut();location.reload()}
+function showApp(){
+  document.getElementById("app").classList.remove("hidden");
+  status("authStatus","Signed in as "+user.email);
+  document.getElementById("notifyEmail").value=user.email;
+  loadItems();
+}
+async function addItem(){
+  if(!user)return status("itemStatus","Please sign in first.");
+  let o={owner_id:user.id,parent_name:val("parent"),child_name:val("child"),item_name:val("item"),notification_email:val("notifyEmail"),notification_phone:val("phone")||null};
+  if(!o.parent_name||!o.child_name||!o.item_name||!o.notification_email)return status("itemStatus","Complete parent name, child display name, item and email.");
+  let {data,error}=await sb.from("items").insert(o).select().single();
+  if(error)return status("itemStatus","Could not create item: "+error.message);
+  status("itemStatus","Created unique sticker ID: "+data.id);
+  loadItems();
+}
+async function loadItems(){
+  if(!user)return;
+  const {data,error}=await sb.from("items").select("id,child_name,item_name,created_at,active").eq("owner_id",user.id).order("created_at",{ascending:false});
+  const box=document.getElementById("items");
+  if(error){box.textContent="Could not load items: "+error.message;return}
+  box.replaceChildren();
+  if(!data.length){box.textContent="No items registered yet.";return}
+  data.forEach(it=>{
+    const active=it.active===true;
+    const url=window.SCANBACK_CONFIG.SITE_URL.replace(/\/$/,"")+"/find.html?id="+encodeURIComponent(it.id);
+    const el=document.createElement("div");
+    el.className="item"+(active?"":" inactive");
+    const title=document.createElement("b");title.textContent=it.child_name+" — "+it.item_name;
+    const badge=document.createElement("span");badge.className="pill"+(active?"":" off");badge.textContent=active?"Active":"Inactive";badge.style.marginLeft="8px";
+    const idInfo=document.createElement("p");idInfo.className="muted";idInfo.textContent="Sticker ID: "+it.id;
+    el.append(title,badge,idInfo);
+    if(active){
+      const qr=document.createElement("div");el.appendChild(qr);
+      new QRCode(qr,{text:url,width:150,height:150});
+    }else{
+      const note=document.createElement("p");note.className="notice";
+      note.textContent="This sticker is deactivated. Its QR code will not accept new finder reports.";
+      el.appendChild(note);
+    }
+    const history=document.createElement("button");history.textContent="Scan history";history.addEventListener("click",()=>historyFor(it.id));el.appendChild(history);
+    if(active){
+      const test=document.createElement("button");test.className="secondary";test.textContent="Test finder page";test.addEventListener("click",()=>window.open(url,"_blank","noopener,noreferrer"));el.appendChild(test);
+    }
+    const toggle=document.createElement("button");toggle.className=active?"danger":"secondary";
+    toggle.textContent=active?"Deactivate sticker":"Reactivate sticker";
+    toggle.addEventListener("click",()=>setItemActive(it,toggle));el.appendChild(toggle);
+    box.appendChild(el);
+  });
+}
+async function setItemActive(item,button){
+  if(!sb||!user)return;
+  const next=item.active!==true;
+  const action=next?"reactivate":"deactivate";
+  const ok=confirm("Are you sure you want to "+action+" the sticker for "+item.child_name+"'s "+item.item_name+"?"+(next?"":"\n\nIts QR code will stop accepting new finder reports and emails until reactivated."));
+  if(!ok)return;
+  button.disabled=true;
+  status("itemsStatus","Updating sticker…");
+  const {data,error}=await sb.from("items").update({active:next}).eq("id",item.id).eq("owner_id",user.id).select("id,active").maybeSingle();
+  if(error||!data){status("itemsStatus","Update failed: "+(error?.message||"Sticker not found or permission denied."));button.disabled=false;return}
+  status("itemsStatus",data.active?"Sticker reactivated.":"Sticker deactivated. New finder reports are blocked.");
+  await loadItems();
+}
+async function historyFor(id){
+  let {data,error}=await sb.from("scan_events").select("created_at,finder_name,message,location_shared,location_lat,location_lng,location_accuracy").eq("item_id",id).order("created_at",{ascending:false});
+  let box=document.getElementById("history");
+  if(error)return box.textContent=error.message;
+  if(!data.length)return box.textContent="No scans yet.";
+  box.innerHTML=data.map(e=>"<div class='event'><b>"+new Date(e.created_at).toLocaleString()+"</b><br>"+(e.finder_name?"Finder: "+esc(e.finder_name)+"<br>":"")+(e.message?"Message: "+esc(e.message)+"<br>":"")+(e.location_shared&&e.location_lat!==null?"<a target='_blank' rel='noopener noreferrer' href='https://maps.google.com/?q="+encodeURIComponent(e.location_lat+","+e.location_lng)+"'>View shared location</a> (accuracy ~"+Math.round(e.location_accuracy||0)+" m)":"Location not shared")+"</div>").join("");
+}
+function esc(s){return String(s||"").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[m]))}
+ready();
+</script>
+</body></html>

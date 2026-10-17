@@ -48,7 +48,15 @@ window.ScanBackStudio={
   },
   async invoke(sb,functionName,action,order_id,extra={}){
     const {data,error}=await sb.functions.invoke(functionName,{body:{action,order_id,...extra}});
-    if(error){let m=error.message||'Request failed';try{const info=await error.context?.json();m=info?.error||m;}catch{}throw new Error(m);}
+    if(error){
+      if(error.name==='FunctionsFetchError'||error.name==='FunctionsRelayError'){
+        throw new Error('Could not reach the '+functionName+' service. The issue may be a missing Edge Function, a network problem, or a browser CORS restriction on this preview domain. No order data was changed.');
+      }
+      let m=error.message||'Request failed';
+      try{const info=await error.context?.json();m=info?.error||info?.message||m;}catch{}
+      if(error.context?.status===404)m='The '+functionName+' Edge Function was not found (HTTP 404). Check its exact deployment name.';
+      throw new Error(m);
+    }
     if(!data?.ok)throw new Error(data?.error||'Server did not confirm the request');
     return data;
   },
