@@ -56,3 +56,12 @@ In the **Shiprocket panel**, open **Settings → Pickup Address → Manage Picku
 
 Shiprocket source: https://www.shiprocket.in/features/multiple-pick-up-locations/ (Settings → Pickup Address → Manage Pickup Addresses).
 API User confirmed != API connected. The quote-only adapter remains staged, disabled and undeployed.
+
+
+### Step S2.2 confirmed and next S2.3 check
+
+Operator confirmed the Shiprocket pickup location is **active** (20 October 2026). The full pickup address, PIN code, and phone remain private and were not requested.
+
+**Next operator task:** Check Shiprocket KYC status using the account dashboard, either the homepage KYC prompt or Settings → KYC. Report only Verified / Pending / Not Started / Can't find it. Do not share identity numbers, documentation, or screenshots with personal details. Do not perform live booking, credential setup, or payment activity at this stage.
+
+Source: https://support.shiprocket.in/support/solutions/articles/43000659830-how-do-i-get-kyc-verified-
