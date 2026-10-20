@@ -65,3 +65,12 @@ Operator confirmed the Shiprocket pickup location is **active** (20 October 2026
 **Next operator task:** Check Shiprocket KYC status using the account dashboard, either the homepage KYC prompt or Settings → KYC. Report only Verified / Pending / Not Started / Can't find it. Do not share identity numbers, documentation, or screenshots with personal details. Do not perform live booking, credential setup, or payment activity at this stage.
 
 Source: https://support.shiprocket.in/support/solutions/articles/43000659830-how-do-i-get-kyc-verified-
+
+
+### Step S2.3 confirmed — KYC verified; next S2.4 wallet availability (20 October 2026)
+
+Operator confirms Shiprocket account KYC **verified**. Do not request or store identity documents, tax IDs, credentials, pickup address, or wallet balance.
+
+**Next read-only operator action:** Sign in to Shiprocket and check that the account displays an active wallet under Wallet/Wallet Balance/Billing & Recharge (menu labels vary). Report only `wallet visible`, `wallet not found`, or `wallet blocked/pending`. **Do not recharge, transfer, pay, generate an AWB, or book a shipment.**
+
+Next engineering task, once setup is confirmed: accurately measure the packed sticker envelope weight/dimensions and update the development serviceability adapter to use billable courier weight and dimensions. Shiprocket states the package includes product+packaging and may be subject to a minimum 0.5 kg charge: https://support.shiprocket.in/support/solutions/articles/152000000695-how-to-create-an-order-in-shiprocket-
