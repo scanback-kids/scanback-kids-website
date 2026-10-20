@@ -63,3 +63,20 @@ Status: **IN PROGRESS / NOT DEPLOYED**. This work must not be merged into PR #1,
 
 ## Safety
 Only prepare source-controlled development work. Do not merge PR #1/#2, deploy the production website, change Supabase data/QR targets, activate Razorpay, collect real payments, or delete records without explicit approval.
+
+
+## Shipping integration step S1 — 20 October 2026 (development, no deploy)
+
+**Initial selected aggregator adapter:** Shiprocket, subject to merchant enrollment and final approval.
+
+Added staged code:
+- \`shipping/shiprocket-serviceability.mjs\`: pure postcode validation and sanitized courier quotes; no network or side effects.
+- \`shipping/shiprocket-serviceability.test.mjs\`: Node tests for valid/invalid quotes and origin checks.
+- \`functions/shipping-quote/index.ts\`: disabled-by-default Supabase Edge Function. It checks a signed-in user's ownership of an existing order and *only* calls Shiprocket serviceability. It cannot create, cancel or ship an order. It does not update Supabase.
+- \`migrations/20261020_shipping_shipments_DRAFT.sql\`: un-applied, server-only shipment state table with unique order link, AWB and tracking status; no customer access policy or deletion.
+
+**Deployment prerequisites, NOT YET FULFILLED:** verify Shiprocket API account, stored server secrets \`SHIPROCKET_API_EMAIL\` and \`SHIPROCKET_API_PASSWORD\`, named pickup location, pickup PIN, weighed and measured final parcel, negotiated prices. For a later dry-run quote enable server-side \`SHIPPING_QUOTES_ENABLED=true\` only with explicit operator approval.
+
+**External API reference:** \`https://apidocs-test.shiprocket.in/guides/order-lifecycle/\`, \`https://apidocs.shiprocket.in/\`. Real booking later requires captured payment, approved physical print proof, one-to-one idempotent order mapping, courier serviceability, AWB, label, pickup, tracking and exception/RTO handling. A postage charge may occur on the provider side. Never attempt it without explicit permission.
+
+**Readiness now:** adapter code staged only. No courier registration, account verification, credentials, live rates, order booking, real tracking or deploy has happened.
