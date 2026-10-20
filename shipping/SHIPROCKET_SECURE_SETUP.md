@@ -38,3 +38,21 @@ The current quote adapter uses the documented API-user email + password login to
 
 ## Safety status
 No new API user was created by ChatGPT, no secrets were stored, no shipping account linked, no quotes run and no pickup booked. No merge, production deployment, database migrations, paid checkout or 90-day deletion.
+
+
+## Status update — operator reported API user created
+
+On 20 October 2026, the operator confirmed completion of API user creation (S2.1). No email, API key, password or token was provided or stored.
+
+### Step S2.2a — Pickup location (NEXT OPERATOR ACTION)
+
+In the **Shiprocket panel**, open **Settings → Pickup Address → Manage Pickup Addresses**.
+
+- Check at least one pickup location exists and is active/verified.
+- If absent, select **Add New Pickup Address**, enter the correct dispatch location and real handover contact *privately in Shiprocket*, verify the location and save.
+- Ensure the pickup PIN, contact phone, collection schedule and return/RTO address are accurate.
+- Do **not** create a test order, generate an AWB, request a pickup or recharge the wallet as part of this step.
+- Respond to the assistant only **“pickup address ready”** or **“need help with pickup address”**; no private address or telephone number is needed.
+
+Shiprocket source: https://www.shiprocket.in/features/multiple-pick-up-locations/ (Settings → Pickup Address → Manage Pickup Addresses).
+API User confirmed != API connected. The quote-only adapter remains staged, disabled and undeployed.
