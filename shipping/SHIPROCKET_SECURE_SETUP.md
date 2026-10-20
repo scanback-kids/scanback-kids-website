@@ -74,3 +74,17 @@ Operator confirms Shiprocket account KYC **verified**. Do not request or store i
 **Next read-only operator action:** Sign in to Shiprocket and check that the account displays an active wallet under Wallet/Wallet Balance/Billing & Recharge (menu labels vary). Report only `wallet visible`, `wallet not found`, or `wallet blocked/pending`. **Do not recharge, transfer, pay, generate an AWB, or book a shipment.**
 
 Next engineering task, once setup is confirmed: accurately measure the packed sticker envelope weight/dimensions and update the development serviceability adapter to use billable courier weight and dimensions. Shiprocket states the package includes product+packaging and may be subject to a minimum 0.5 kg charge: https://support.shiprocket.in/support/solutions/articles/152000000695-how-to-create-an-order-in-shiprocket-
+
+
+### Step S2.4 confirmed — Wallet visible; next S2.5 package readiness
+
+The operator confirms that the Shiprocket wallet is visible and active (no wallet amount or financial data collected).
+
+**S2.5 single check:** Is a fully packed 6-sticker *physical sample parcel* available to measure? Do not invent parcel dimensions/weights from artwork, sticker weight, or paper alone. Only weigh/measure AFTER selecting protective packaging and preparing a real packed sample. If no sample exists, do not enable courier pricing yet: complete printer sample / packaging approval first.
+
+Rationale: Shiprocket's official rate calculator uses **actual packed weight (product + packaging)** and **length, width, height** for volumetric pricing; applicable carrier may charge based on higher weight and use a minimum billable slab. See:
+- https://support.shiprocket.in/support/solutions/articles/43000664182-how-to-calculate-my-shipping-rate-
+- https://support.shiprocket.in/support/solutions/articles/43000664201-explain-the-different-types-of-weight-terminology-used-in-the-platform-
+- https://support.shiprocket.in/support/solutions/articles/43000661611-how-to-add-an-order-
+
+**Safety:** No shipment booking, wallet recharge, online quote, API-key setup, Supabase deployment/migration, payment activation, or production change performed.
