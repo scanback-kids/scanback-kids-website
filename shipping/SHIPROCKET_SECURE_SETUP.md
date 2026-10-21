@@ -88,3 +88,17 @@ Rationale: Shiprocket's official rate calculator uses **actual packed weight (pr
 - https://support.shiprocket.in/support/solutions/articles/43000661611-how-to-add-an-order-
 
 **Safety:** No shipment booking, wallet recharge, online quote, API-key setup, Supabase deployment/migration, payment activation, or production change performed.
+
+
+### Step S2.5 — Physical print sample NOT YET AVAILABLE
+
+Operator confirms stickers have **not** been physically printed as of 21 October 2026. Therefore sample packed weight and dimensions remain unknown; shipping-rate quoting should stay disabled. Do not guess weights or enable courier booking.
+
+Existing source audit: `print-master.html` and `studio-assets/master-studio.js` provide test-only A4 engineering proof concepts (rounded: 60 × 31 mm, die-cut: 55 × 58 mm), but their own safeguards explicitly state vendor approval, bleed/cutting paths, high-resolution art masters and physical QR scans are outstanding. Do not represent these as approved commercial press files.
+
+**Next single operator choice (S2.6):** Has a label/sticker print vendor been selected for physically sampling ScanBack Kids designs?
+- Yes: gather that vendor's technical print requirements directly, without sharing private contact details.
+- No: first select a print vendor capable of waterproof/laminated, durable QR label samples and accurate die-cut/rounded finishes; don't order paid samples without owner consent.
+- Undecided: compare local print shop vs commercial label specialist.
+
+Once a vendor is available, confirm real printer specifications before generating the physical proof, then measure a packed sample for Shiprocket rate quotes. All changes remain on a development branch; no production deploy, record deletion, live payment, courier booking, or cost charged.
