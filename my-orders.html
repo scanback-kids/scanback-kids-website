@@ -14,6 +14,7 @@
     <div class="toolbar-actions" style="margin-top:10px"><button id="customerSignOut" class="btn outline" hidden>Sign out</button><button id="reloadMyOrders" class="btn secondary" disabled>↻ Refresh</button></div>
     <div id="customerMessage" class="statusmsg" role="status"></div>
   </section>
+<section id="v615Account" hidden style="padding:18px;margin:14px 0;background:white;border-radius:15px;border:1px solid #c9dcf7"><h2>🎨 My saved original designs — development only</h2><p>Separate sandbox account. No paid order or live QR.</p><form id="v615Login"><label>Development email <input id="v615Email" type="email" autocomplete="username" required></label><label>Password <input id="v615Password" type="password" autocomplete="current-password" required></label><button>Sign in</button></form><div style="display:flex;flex-wrap:wrap;gap:8px"><button type="button" id="v615Refresh" hidden>Refresh designs</button><button type="button" id="v615SignOut" hidden>Sign out</button></div><p id="v615AccountStatus" role="status"></p><div id="v615DraftList"></div></section>
   <div class="customer-grid">
     <section class="panel" id="myOrdersPanel"><div class="panel-h"><h2>🛍️ My purchases</h2><span id="myOrderCount" class="pill">0 orders</span></div><div id="myOrderList" class="order-list"><p class="muted">Sign in to view your purchased sticker packs.</p></div><a class="btn pink full" href="shop.html" style="margin-top:12px">✨ Create another sticker pack</a></section>
     <section class="panel" id="myPreviewPanel"><div class="panel-h"><h2>🌟 Your personalized sticker collection</h2><span class="pill" id="myOrderStage">Select an order</span></div>
@@ -33,5 +34,5 @@
   </div>
   <div class="bottom-cta"><h3>Lost an item? Let a little sticker bring it home. 💗</h3><p class="muted">A finder can scan your activated QR code without seeing your private contact details.</p><a href="shop.html" class="btn pink">Explore more designs →</a></div>
 </main>
-<script src="config.js"></script><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.min.js"></script><script src="studio-assets/common.js?v=534"></script><script src="studio-assets/customer.js?v=533"></script>
+<script src="config.js"></script><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.min.js"></script><script src="studio-assets/common.js?v=534"></script><script src="studio-assets/customer.js?v=533"></script><script src="commerce/v615-dev-config.js"></script><script src="commerce/v615-account-ui.js"></script><script>window.ScanBackV615AccountUI?.mount(null,null);</script>
 </body></html>

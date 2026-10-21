@@ -1,0 +1,1 @@
+window.SCANBACK_V615_DEV_CONFIG=Object.freeze({ENABLED:false,SUPABASE_URL:'',SUPABASE_ANON_KEY:'',EDGE_FUNCTION:'v615-design-drafts'});
