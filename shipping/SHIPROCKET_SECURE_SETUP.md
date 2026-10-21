@@ -102,3 +102,10 @@ Existing source audit: `print-master.html` and `studio-assets/master-studio.js` 
 - Undecided: compare local print shop vs commercial label specialist.
 
 Once a vendor is available, confirm real printer specifications before generating the physical proof, then measure a packed sample for Shiprocket rate quotes. All changes remain on a development branch; no production deploy, record deletion, live payment, courier booking, or cost charged.
+
+
+### Packaging choice — 21 October 2026
+
+Owner selected **six stickers on ONE COMPLETE A4 backing sheet, shipped flat in an A4-compatible rigid mailer**. No trimming or folding. Do not assume internal mailer clearance from nominal outer C4 size. Real packed weight/dimensions cannot be known until physically printed and packed.
+
+Prototype six-up A4 geometry, kiss-cut liner-preservation criteria, sample/vendor checklist and test code are documented in `printing/A4_SIX_PACK_PRINT_AND_PACKAGING_SPEC.md`. Existing 12/24-pack page layouts remain unchanged. No print order or shipment has been booked.

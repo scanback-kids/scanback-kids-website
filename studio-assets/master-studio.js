@@ -14,7 +14,14 @@ const PALETTE={
 };
 // millimetres. The SVG cut-only companion uses this same geometry.
 const SHAPES={rounded:{W:60,H:31,BLEED:2.5,GAP:3,PERPAGE:21,COLS:3,LEFT:4.5,TOP:15.4},diecut:{W:55,H:58,BLEED:2.5,GAP:4,PERPAGE:9,COLS:3,LEFT:11,TOP:15.4}};
-function geometry(shape){return SHAPES[shape==='diecut'?'diecut':'rounded'];}
+function geometry(shape){
+  const key=shape==='diecut'?'diecut':'rounded';
+  if(Number(current?.order?.pack_size)===6){
+    if(!window.ScanBackA4SixPack?.geometry)throw Error('Six-up A4 layout missing; cannot export six-pack proof.');
+    return window.ScanBackA4SixPack.geometry(key);
+  }
+  return SHAPES[key];
+}
 function activeGeometry(){return geometry(current?.order?.sticker_shape);}
 const LABEL=SHAPES.rounded;
 const DEMO_ALLOWED_HOSTS=new Set(['scanback.in','www.scanback.in','scanback-kids-website.vercel.app']);
@@ -24,7 +31,7 @@ function show(text,error=false,id='exportMsg'){UI.showMessage(id,text,error);}
 function label(o){return `${o.child_name||'Child'} · ${o.pack_size} stickers · #${String(o.id).slice(0,8).toUpperCase()}`;}
 function pageNumberOf(i,shape){const g=geometry(shape||current?.order?.sticker_shape);return Math.floor(i/g.PERPAGE)+1;}
 function gridOrigin(i,shape){const g=geometry(shape||current?.order?.sticker_shape);const j=i%g.PERPAGE,bw=g.W+2*g.BLEED,bh=g.H+2*g.BLEED;
- return {x:g.LEFT+(j%g.COLS)*(bw+g.GAP),y:g.TOP+Math.floor(j/g.COLS)*(bh+g.GAP)};}
+ return {x:g.LEFT+(j%g.COLS)*(bw+g.GAP),y:g.TOP+Math.floor(j/g.COLS)*(bh+(g.ROW_GAP??g.GAP))};}
 function theme(s){return PALETTE[s.theme_key]||PALETTE.space;}
 function imgUrl(s,hi=true){const t=String(s.theme_key||'');const v=+s.design_variant;
  if(!(t in PALETTE)||!Number.isInteger(v)||v<1||v>24)return '';
