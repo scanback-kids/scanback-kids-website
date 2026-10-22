@@ -1,8 +1,21 @@
 (function(root){'use strict';const $=id=>document.getElementById(id);
 function mount(read,restore){const section=$('v615Account');if(!section)return;const config=root.SCANBACK_V615_DEV_CONFIG;
-if(!config?.ENABLED)return;let host;
-try{host=new URL(config.SUPABASE_URL).hostname;if(host==='oliujepmidoensqhvanf.supabase.co'||['www.scanback.in','scanback.in'].includes(location.hostname)||!host.endsWith('.supabase.co')||!config.SUPABASE_ANON_KEY)throw Error('Isolated development project required');}catch{return;}
-if(!root.supabase?.createClient)return;
+if(!config?.ENABLED)return;
+// A deliberate allowlist is required in addition to the server-side CORS allowlist.
+const approvedSandbox='https://khaxvskqypmabqozpkel.supabase.co';
+let valid=false;
+try{
+  const url=new URL(config.SUPABASE_URL);
+  const site=new URL(root.location.href);
+  const banned=site.hostname==='scanback.in'||site.hostname.endsWith('.scanback.in')||
+    site.hostname==='scanback-kids-website.vercel.app';
+  valid=url.origin===approvedSandbox&&url.pathname==='/'&&!url.username&&!url.password&&
+    !banned&&Array.isArray(config.ALLOWED_SITE_ORIGINS)&&
+    config.ALLOWED_SITE_ORIGINS.includes(site.origin)&&
+    /^sb_publishable_[a-zA-Z0-9_-]+$/.test(config.SUPABASE_ANON_KEY||'')&&
+    config.EDGE_FUNCTION==='v615-design-drafts';
+}catch{}
+if(!valid||!root.supabase?.createClient)return;
 const sb=root.supabase.createClient(config.SUPABASE_URL,config.SUPABASE_ANON_KEY);
 section.hidden=false;let draftId=null;
 const status=t=>$('v615AccountStatus').textContent=t;
