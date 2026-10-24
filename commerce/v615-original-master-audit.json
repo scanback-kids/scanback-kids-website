@@ -25,7 +25,16 @@
       },
       "identity_is_verified_against_legacy_variant": false,
       "identity_is_verified_against_candidate_master": false,
-      "commercial_print_allowed": false
+      "commercial_print_allowed": false,
+      "proposed_candidate_master": {
+        "candidate_master_path": "assets/print-masters/space/01.webp",
+        "candidate_blob_sha": "15bf6d21a96eb0bd683fb16c73da4c62ef3e9f61",
+        "candidate_slot_id": "space-01",
+        "status": "PENDING_OWNER_VISUAL_CONFIRMATION",
+        "reviewer_type": "ASSISTANT_PRELIMINARY_IMAGE_COMPARISON",
+        "notes": "Studio original astronaut and master both show brown-haired smiling child in blue-and-white suit, open blue glove waving, yellow stars, planets and upper-right rocket. Close character and scene match; owner must verify full visual identity.",
+        "commercial_print_approval": false
+      }
     },
     {
       "artwork_id": "space-robot",
@@ -316,7 +325,12 @@
       "license_or_rights_verified": false,
       "printer_approved": false,
       "production_ready": false,
-      "reason": "Pixel count is only a resolution measurement; no visual comparison, rights review, art-only verification or physical proof has been approved."
+      "reason": "Pixel count is only a resolution measurement; no visual comparison, rights review, art-only verification or physical proof has been approved.",
+      "visual_match_proposal": {
+        "canonical_original_artwork_id": "space-astronaut",
+        "status": "PENDING_OWNER_VISUAL_CONFIRMATION",
+        "commercial_print_approval": false
+      }
     },
     {
       "slot_id": "space-05",
@@ -335,7 +349,11 @@
       "license_or_rights_verified": false,
       "printer_approved": false,
       "production_ready": false,
-      "reason": "Pixel count is only a resolution measurement; no visual comparison, rights review, art-only verification or physical proof has been approved."
+      "reason": "Pixel count is only a resolution measurement; no visual comparison, rights review, art-only verification or physical proof has been approved.",
+      "do_not_map_without_explicit_review": {
+        "artwork_id": "space-robot",
+        "reason": "Candidate shows green alien riding in UFO rather than the existing white-and-blue friendly robot Studio original."
+      }
     },
     {
       "slot_id": "dino-01",
