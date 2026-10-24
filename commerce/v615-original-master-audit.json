@@ -1,0 +1,470 @@
+{
+  "schema": "scanback-kids-candidate-master-measurements-v1",
+  "environment": "DEVELOPMENT_ONLY",
+  "production_print_release": false,
+  "source_commit": "209eb3bc11c3d00554bcd1aff4e07d5e326b67b5",
+  "assumptions": {
+    "artwork_zone_mm": {
+      "width": 35,
+      "height": 31
+    },
+    "scaling": "contain: min(boxWidth/pixelWidth,boxHeight/pixelHeight)",
+    "threshold_dpi": 300,
+    "disclaimer": "35 x 31 mm artwork zone is drawn from the existing legacy test master-studio compositor, not final approved sticker artwork geometry. Pixel DPI estimates do not imply artwork identity, actual usable detail, licensing or physical print approval."
+  },
+  "original_identity_map": [
+    {
+      "artwork_id": "space-astronaut",
+      "slot_id": "space-01",
+      "preview_sprite": {
+        "path": "assets/ready-mixed-01-06.webp",
+        "cols": 3,
+        "rows": 2,
+        "col": 0,
+        "row": 0
+      },
+      "identity_is_verified_against_legacy_variant": false,
+      "identity_is_verified_against_candidate_master": false,
+      "commercial_print_allowed": false
+    },
+    {
+      "artwork_id": "space-robot",
+      "slot_id": "space-02",
+      "preview_sprite": {
+        "path": "assets/ready-mixed-01-06.webp",
+        "cols": 3,
+        "rows": 2,
+        "col": 1,
+        "row": 0
+      },
+      "identity_is_verified_against_legacy_variant": false,
+      "identity_is_verified_against_candidate_master": false,
+      "commercial_print_allowed": false
+    },
+    {
+      "artwork_id": "dino-purple",
+      "slot_id": "dino-01",
+      "preview_sprite": {
+        "path": "assets/ready-mixed-01-06.webp",
+        "cols": 3,
+        "rows": 2,
+        "col": 2,
+        "row": 0
+      },
+      "identity_is_verified_against_legacy_variant": false,
+      "identity_is_verified_against_candidate_master": false,
+      "commercial_print_allowed": false
+    },
+    {
+      "artwork_id": "dino-07",
+      "slot_id": "dino-07",
+      "preview_sprite": {
+        "path": "assets/dino-07-10-original-preview.webp",
+        "cols": 1,
+        "rows": 4,
+        "col": 0,
+        "row": 0
+      },
+      "identity_is_verified_against_legacy_variant": false,
+      "identity_is_verified_against_candidate_master": false,
+      "commercial_print_allowed": false
+    },
+    {
+      "artwork_id": "dino-08",
+      "slot_id": "dino-08",
+      "preview_sprite": {
+        "path": "assets/dino-07-10-original-preview.webp",
+        "cols": 1,
+        "rows": 4,
+        "col": 0,
+        "row": 1
+      },
+      "identity_is_verified_against_legacy_variant": false,
+      "identity_is_verified_against_candidate_master": false,
+      "commercial_print_allowed": false
+    },
+    {
+      "artwork_id": "dino-09",
+      "slot_id": "dino-09",
+      "preview_sprite": {
+        "path": "assets/dino-07-10-original-preview.webp",
+        "cols": 1,
+        "rows": 4,
+        "col": 0,
+        "row": 2
+      },
+      "identity_is_verified_against_legacy_variant": false,
+      "identity_is_verified_against_candidate_master": false,
+      "commercial_print_allowed": false
+    },
+    {
+      "artwork_id": "dino-10",
+      "slot_id": "dino-10",
+      "preview_sprite": {
+        "path": "assets/dino-07-10-original-preview.webp",
+        "cols": 1,
+        "rows": 4,
+        "col": 0,
+        "row": 3
+      },
+      "identity_is_verified_against_legacy_variant": false,
+      "identity_is_verified_against_candidate_master": false,
+      "commercial_print_allowed": false
+    },
+    {
+      "artwork_id": "dino-11",
+      "slot_id": "dino-11",
+      "preview_sprite": {
+        "path": "assets/ready-dino-11-20.webp",
+        "cols": 5,
+        "rows": 2,
+        "col": 0,
+        "row": 0
+      },
+      "identity_is_verified_against_legacy_variant": false,
+      "identity_is_verified_against_candidate_master": false,
+      "commercial_print_allowed": false
+    },
+    {
+      "artwork_id": "dino-12",
+      "slot_id": "dino-12",
+      "preview_sprite": {
+        "path": "assets/ready-dino-11-20.webp",
+        "cols": 5,
+        "rows": 2,
+        "col": 1,
+        "row": 0
+      },
+      "identity_is_verified_against_legacy_variant": false,
+      "identity_is_verified_against_candidate_master": false,
+      "commercial_print_allowed": false
+    },
+    {
+      "artwork_id": "dino-13",
+      "slot_id": "dino-13",
+      "preview_sprite": {
+        "path": "assets/ready-dino-11-20.webp",
+        "cols": 5,
+        "rows": 2,
+        "col": 2,
+        "row": 0
+      },
+      "identity_is_verified_against_legacy_variant": false,
+      "identity_is_verified_against_candidate_master": false,
+      "commercial_print_allowed": false
+    },
+    {
+      "artwork_id": "dino-14",
+      "slot_id": "dino-14",
+      "preview_sprite": {
+        "path": "assets/ready-dino-11-20.webp",
+        "cols": 5,
+        "rows": 2,
+        "col": 3,
+        "row": 0
+      },
+      "identity_is_verified_against_legacy_variant": false,
+      "identity_is_verified_against_candidate_master": false,
+      "commercial_print_allowed": false
+    },
+    {
+      "artwork_id": "dino-15",
+      "slot_id": "dino-15",
+      "preview_sprite": {
+        "path": "assets/ready-dino-11-20.webp",
+        "cols": 5,
+        "rows": 2,
+        "col": 4,
+        "row": 0
+      },
+      "identity_is_verified_against_legacy_variant": false,
+      "identity_is_verified_against_candidate_master": false,
+      "commercial_print_allowed": false
+    },
+    {
+      "artwork_id": "dino-16",
+      "slot_id": "dino-16",
+      "preview_sprite": {
+        "path": "assets/ready-dino-11-20.webp",
+        "cols": 5,
+        "rows": 2,
+        "col": 0,
+        "row": 1
+      },
+      "identity_is_verified_against_legacy_variant": false,
+      "identity_is_verified_against_candidate_master": false,
+      "commercial_print_allowed": false
+    },
+    {
+      "artwork_id": "dino-17",
+      "slot_id": "dino-17",
+      "preview_sprite": {
+        "path": "assets/ready-dino-11-20.webp",
+        "cols": 5,
+        "rows": 2,
+        "col": 1,
+        "row": 1
+      },
+      "identity_is_verified_against_legacy_variant": false,
+      "identity_is_verified_against_candidate_master": false,
+      "commercial_print_allowed": false
+    },
+    {
+      "artwork_id": "dino-18",
+      "slot_id": "dino-18",
+      "preview_sprite": {
+        "path": "assets/ready-dino-11-20.webp",
+        "cols": 5,
+        "rows": 2,
+        "col": 2,
+        "row": 1
+      },
+      "identity_is_verified_against_legacy_variant": false,
+      "identity_is_verified_against_candidate_master": false,
+      "commercial_print_allowed": false
+    },
+    {
+      "artwork_id": "dino-19",
+      "slot_id": "dino-19",
+      "preview_sprite": {
+        "path": "assets/ready-dino-11-20.webp",
+        "cols": 5,
+        "rows": 2,
+        "col": 3,
+        "row": 1
+      },
+      "identity_is_verified_against_legacy_variant": false,
+      "identity_is_verified_against_candidate_master": false,
+      "commercial_print_allowed": false
+    },
+    {
+      "artwork_id": "dino-20",
+      "slot_id": "dino-20",
+      "preview_sprite": {
+        "path": "assets/ready-dino-11-20.webp",
+        "cols": 5,
+        "rows": 2,
+        "col": 4,
+        "row": 1
+      },
+      "identity_is_verified_against_legacy_variant": false,
+      "identity_is_verified_against_candidate_master": false,
+      "commercial_print_allowed": false
+    },
+    {
+      "artwork_id": "rainbow-unicorn",
+      "slot_id": "rainbow-01",
+      "preview_sprite": {
+        "path": "assets/ready-mixed-01-06.webp",
+        "cols": 3,
+        "rows": 2,
+        "col": 0,
+        "row": 1
+      },
+      "identity_is_verified_against_legacy_variant": false,
+      "identity_is_verified_against_candidate_master": false,
+      "commercial_print_allowed": false
+    },
+    {
+      "artwork_id": "sports-racer",
+      "slot_id": "sports-01",
+      "preview_sprite": {
+        "path": "assets/ready-mixed-01-06.webp",
+        "cols": 3,
+        "rows": 2,
+        "col": 1,
+        "row": 1
+      },
+      "identity_is_verified_against_legacy_variant": false,
+      "identity_is_verified_against_candidate_master": false,
+      "commercial_print_allowed": false
+    },
+    {
+      "artwork_id": "sports-swimmer",
+      "slot_id": "sports-02",
+      "preview_sprite": {
+        "path": "assets/ready-mixed-01-06.webp",
+        "cols": 3,
+        "rows": 2,
+        "col": 2,
+        "row": 1
+      },
+      "identity_is_verified_against_legacy_variant": false,
+      "identity_is_verified_against_candidate_master": false,
+      "commercial_print_allowed": false
+    }
+  ],
+  "candidates": [
+    {
+      "slot_id": "space-01",
+      "candidate_path": "assets/print-masters/space/01.webp",
+      "git_blob_sha": "15bf6d21a96eb0bd683fb16c73da4c62ef3e9f61",
+      "pixels": {
+        "width": 1672,
+        "height": 941
+      },
+      "measurement": "WEBP_HEADER_READ_FROM_REPOSITORY_BINARY",
+      "effective_dpi_at_35x31mm_contain": 1213,
+      "meets_numeric_300dpi_at_art_zone": true,
+      "linked_original_artwork_id": "space-astronaut",
+      "original_identity_verified": false,
+      "art_only_verified": false,
+      "license_or_rights_verified": false,
+      "printer_approved": false,
+      "production_ready": false,
+      "reason": "Pixel count is only a resolution measurement; no visual comparison, rights review, art-only verification or physical proof has been approved."
+    },
+    {
+      "slot_id": "space-05",
+      "candidate_path": "assets/print-masters/space/05.webp",
+      "git_blob_sha": "72fb0104e43d9c0d8cffd02f033e321590dd5b85",
+      "pixels": {
+        "width": 1672,
+        "height": 941
+      },
+      "measurement": "WEBP_HEADER_READ_FROM_REPOSITORY_BINARY",
+      "effective_dpi_at_35x31mm_contain": 1213,
+      "meets_numeric_300dpi_at_art_zone": true,
+      "linked_original_artwork_id": null,
+      "original_identity_verified": false,
+      "art_only_verified": false,
+      "license_or_rights_verified": false,
+      "printer_approved": false,
+      "production_ready": false,
+      "reason": "Pixel count is only a resolution measurement; no visual comparison, rights review, art-only verification or physical proof has been approved."
+    },
+    {
+      "slot_id": "dino-01",
+      "candidate_path": "assets/print-masters/dino/01.webp",
+      "git_blob_sha": "db4fd8dd0718c250b1735bd3ce3a0c03b11fa4f4",
+      "pixels": {
+        "width": 1448,
+        "height": 1086
+      },
+      "measurement": "WEBP_HEADER_READ_FROM_REPOSITORY_BINARY",
+      "effective_dpi_at_35x31mm_contain": 1051,
+      "meets_numeric_300dpi_at_art_zone": true,
+      "linked_original_artwork_id": "dino-purple",
+      "original_identity_verified": false,
+      "art_only_verified": false,
+      "license_or_rights_verified": false,
+      "printer_approved": false,
+      "production_ready": false,
+      "reason": "Pixel count is only a resolution measurement; no visual comparison, rights review, art-only verification or physical proof has been approved."
+    },
+    {
+      "slot_id": "dino-02",
+      "candidate_path": "assets/print-masters/dino/02.webp",
+      "git_blob_sha": "7753177735a5d536d55cfbb071832e1aac021d88",
+      "pixels": {
+        "width": 1448,
+        "height": 1086
+      },
+      "measurement": "WEBP_HEADER_READ_FROM_REPOSITORY_BINARY",
+      "effective_dpi_at_35x31mm_contain": 1051,
+      "meets_numeric_300dpi_at_art_zone": true,
+      "linked_original_artwork_id": null,
+      "original_identity_verified": false,
+      "art_only_verified": false,
+      "license_or_rights_verified": false,
+      "printer_approved": false,
+      "production_ready": false,
+      "reason": "Pixel count is only a resolution measurement; no visual comparison, rights review, art-only verification or physical proof has been approved."
+    },
+    {
+      "slot_id": "dino-06",
+      "candidate_path": "assets/print-masters/dino/06.webp",
+      "git_blob_sha": "0c59034a943e7889a784140d6860bd142527c654",
+      "pixels": {
+        "width": 1448,
+        "height": 1086
+      },
+      "measurement": "WEBP_HEADER_READ_FROM_REPOSITORY_BINARY",
+      "effective_dpi_at_35x31mm_contain": 1051,
+      "meets_numeric_300dpi_at_art_zone": true,
+      "linked_original_artwork_id": null,
+      "original_identity_verified": false,
+      "art_only_verified": false,
+      "license_or_rights_verified": false,
+      "printer_approved": false,
+      "production_ready": false,
+      "reason": "Pixel count is only a resolution measurement; no visual comparison, rights review, art-only verification or physical proof has been approved."
+    },
+    {
+      "slot_id": "rainbow-01",
+      "candidate_path": "assets/print-masters/rainbow/01.webp",
+      "git_blob_sha": "1a55a4de16bdda4f282e6bd14875b356876e5b61",
+      "pixels": {
+        "width": 1122,
+        "height": 1402
+      },
+      "measurement": "WEBP_HEADER_READ_FROM_REPOSITORY_BINARY",
+      "effective_dpi_at_35x31mm_contain": 1149,
+      "meets_numeric_300dpi_at_art_zone": true,
+      "linked_original_artwork_id": "rainbow-unicorn",
+      "original_identity_verified": false,
+      "art_only_verified": false,
+      "license_or_rights_verified": false,
+      "printer_approved": false,
+      "production_ready": false,
+      "reason": "Pixel count is only a resolution measurement; no visual comparison, rights review, art-only verification or physical proof has been approved."
+    },
+    {
+      "slot_id": "rainbow-02",
+      "candidate_path": "assets/print-masters/rainbow/02.webp",
+      "git_blob_sha": "d3876550cbd31a2e8646e3c7648dcef41d162317",
+      "pixels": {
+        "width": 1122,
+        "height": 1402
+      },
+      "measurement": "WEBP_HEADER_READ_FROM_REPOSITORY_BINARY",
+      "effective_dpi_at_35x31mm_contain": 1149,
+      "meets_numeric_300dpi_at_art_zone": true,
+      "linked_original_artwork_id": null,
+      "original_identity_verified": false,
+      "art_only_verified": false,
+      "license_or_rights_verified": false,
+      "printer_approved": false,
+      "production_ready": false,
+      "reason": "Pixel count is only a resolution measurement; no visual comparison, rights review, art-only verification or physical proof has been approved."
+    },
+    {
+      "slot_id": "rainbow-03",
+      "candidate_path": "assets/print-masters/rainbow/03.webp",
+      "git_blob_sha": "d72f8a660ac0ea309a3c7204d258bed21ee16ff1",
+      "pixels": {
+        "width": 1122,
+        "height": 992
+      },
+      "measurement": "WEBP_HEADER_READ_FROM_REPOSITORY_BINARY",
+      "effective_dpi_at_35x31mm_contain": 814,
+      "meets_numeric_300dpi_at_art_zone": true,
+      "linked_original_artwork_id": null,
+      "original_identity_verified": false,
+      "art_only_verified": false,
+      "license_or_rights_verified": false,
+      "printer_approved": false,
+      "production_ready": false,
+      "reason": "Pixel count is only a resolution measurement; no visual comparison, rights review, art-only verification or physical proof has been approved."
+    },
+    {
+      "slot_id": "sports-04",
+      "candidate_path": "assets/print-masters/sports/04.webp",
+      "git_blob_sha": "3f9e7e98c764b4c89b7f9c289c68cc9940595f33",
+      "pixels": {
+        "width": 1672,
+        "height": 941
+      },
+      "measurement": "WEBP_HEADER_READ_FROM_REPOSITORY_BINARY",
+      "effective_dpi_at_35x31mm_contain": 1213,
+      "meets_numeric_300dpi_at_art_zone": true,
+      "linked_original_artwork_id": null,
+      "original_identity_verified": false,
+      "art_only_verified": false,
+      "license_or_rights_verified": false,
+      "printer_approved": false,
+      "production_ready": false,
+      "reason": "Pixel count is only a resolution measurement; no visual comparison, rights review, art-only verification or physical proof has been approved."
+    }
+  ]
+}
