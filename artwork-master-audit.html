@@ -13,12 +13,12 @@ const lookup=new Map(a.original_identity_map.map(x=>[x.artwork_id,x]));
 const gallery=$('gallery');gallery.replaceChildren();
 for(const c of a.candidates){const slot=r.slots.find(x=>x.slot_id===c.slot_id);if(!slot||c.production_ready)throw Error('Unverified item or unsafe approval');
 const card=el(gallery,'article','','card');el(card,'h2',c.slot_id.toUpperCase());const imgs=el(card,'div','','images');
-preview(imgs,c.candidate_path,'Candidate master (NOT approved)');originalPreview(imgs,slot.existing_original?lookup.get(slot.existing_original.artwork_id):null);
+preview(imgs,c.candidate_path,'Candidate master (NOT approved)');originalPreview(imgs,c.linked_original_artwork_id?lookup.get(c.linked_original_artwork_id):null);
 const div=el(card,'div','','third');el(div,'div',c.pixels.width+' × '+c.pixels.height+' pixels','num');
 el(div,'div','Estimated effective resolution: '+c.effective_dpi_at_35x31mm_contain+' DPI at 35 × 31 mm contain','small');
 el(div,'div','Numerical ≥300 DPI: '+(c.meets_numeric_300dpi_at_art_zone?'YES':'NO')+' · does not imply usable printable artwork','small');
-el(div,'div','Visual identity: unverified · art-only: unverified · rights: unverified','small');
+el(div,'div',c.original_identity_verified?'Visual identity matched: '+c.linked_original_artwork_id+' · art-only, rights and printing UNVERIFIED':'Visual identity: unverified · art-only: unverified · rights: unverified','small');
 el(card,'div','PRINT BLOCKED — Requires manual original-artwork comparison and printer proof','flag');
 }
-$('summary').textContent=a.candidates.length+' candidates · '+a.original_identity_map.length+' preserved original IDs · 0 approved print masters';
+$('summary').textContent=a.candidates.length+' candidates · '+a.original_identity_map.length+' preserved original IDs · '+a.candidates.filter(x=>x.original_identity_verified).length+' visually matched · 0 approved print masters';
 }).catch(e=>{$('summary').textContent='Cannot open audit: '+e.message;});})();</script></body></html>
