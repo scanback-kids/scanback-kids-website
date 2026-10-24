@@ -718,7 +718,16 @@
         "print_rights_approved": false,
         "physical_vendor_proof_approved": false
       },
-      "commercial_print_status": "BLOCKED_UNVERIFIED"
+      "commercial_print_status": "BLOCKED_UNVERIFIED",
+      "reviewed_original_master_candidate": {
+        "original_artwork_id": "dino-purple",
+        "candidate_slot_id": "dino-02",
+        "candidate_path": "assets/print-masters/dino/02.webp",
+        "candidate_git_blob_sha": "7753177735a5d536d55cfbb071832e1aac021d88",
+        "review_scope": "VISUAL_CHARACTER_SCENE_MATCH_ONLY",
+        "review_date": "2026-10-24",
+        "commercial_print_approved": false
+      }
     },
     {
       "slot_id": "dino-02",
