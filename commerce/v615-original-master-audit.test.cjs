@@ -7,7 +7,8 @@ t('exact V6.15 mapping and blocked release for every existing original',()=>{
  assert.equal(audit.original_identity_map.length,20);
  assert.deepEqual(new Set(audit.original_identity_map.map(x=>x.artwork_id)),new Set(originals.list.map(x=>x.id)));
  assert.equal(new Set(audit.original_identity_map.map(x=>x.slot_id)).size,20);
- assert.ok(audit.original_identity_map.every(x=>x.commercial_print_allowed===false&&x.identity_is_verified_against_candidate_master===false));
+ assert.ok(audit.original_identity_map.every(x=>x.commercial_print_allowed===false));
+ assert.equal(audit.original_identity_map.filter(x=>x.identity_is_verified_against_candidate_master).length,1);
 });
 t('nine candidate paths and source IDs have never been silently replaced',()=>{
  assert.equal(audit.candidates.length,9);
@@ -19,11 +20,25 @@ t('nine candidate paths and source IDs have never been silently replaced',()=>{
  const dpi=Math.round(25.4/Math.min(35/c.pixels.width,31/c.pixels.height));
  assert.equal(c.effective_dpi_at_35x31mm_contain,dpi);
  assert.equal(c.meets_numeric_300dpi_at_art_zone,dpi>=300);
- assert.equal(c.original_identity_verified,false);assert.equal(c.production_ready,false);
+ assert.equal(c.original_identity_verified,c.slot_id==='dino-02');
+ assert.equal(c.linked_original_artwork_id,c.slot_id==='dino-02'?'dino-purple':null);
+ assert.equal(c.production_ready,false);
  }
 });
 t('no candidate may be mistaken for approved art or used as a commercial print master',()=>{
  assert.equal(audit.production_print_release,false);
  assert.equal(register.slots.filter(x=>x.commercial_print_status==='BLOCKED_UNVERIFIED').length,96);
  assert.ok(audit.candidates.every(x=>!x.art_only_verified&&!x.license_or_rights_verified&&!x.printer_approved));
+});
+
+t('Dino 01 original links visually to candidate dino/02, with print approval blocked',()=>{
+ const original=audit.original_identity_map.find(x=>x.artwork_id==='dino-purple');
+ const purple=audit.candidates.find(x=>x.slot_id==='dino-02');
+ const green=audit.candidates.find(x=>x.slot_id==='dino-01');
+ assert.equal(original.reviewed_candidate_master_path,purple.candidate_path);
+ assert.equal(original.reviewed_candidate_blob_sha,purple.git_blob_sha);
+ assert.equal(green.linked_original_artwork_id,null);
+ assert.equal(purple.production_ready,false);
+ assert.equal(purple.printer_approved,false);
+ assert.equal(register.slots.find(x=>x.slot_id==='dino-01').reviewed_original_master_candidate.candidate_path,purple.candidate_path);
 });
