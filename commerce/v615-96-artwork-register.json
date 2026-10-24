@@ -1,0 +1,2801 @@
+{
+  "schema": "scanback-kids-v615-artwork-master-register-v1",
+  "environment": "DEVELOPMENT_AUDIT_ONLY",
+  "production_release": "NOT_APPROVED",
+  "source_snapshot": {
+    "repository": "scanback-kids/scanback-kids-website",
+    "branch": "build/full-commerce-launch-20261020",
+    "source_commit": "3bdd898badfd124f2ba74ba46224544bf14d475e",
+    "canonical_original_catalog": "commerce/v615-catalog.js"
+  },
+  "notice": "There are 96 legacy theme thumbnail files, NOT 96 verified distinct original or print-ready artworks. Planned original links do not prove legacy thumbnail or candidate master identity. Existing saved draft original artwork IDs must never be silently replaced.",
+  "themes": [
+    {
+      "key": "space",
+      "name": "Space Adventure",
+      "target_slots": 24
+    },
+    {
+      "key": "dino",
+      "name": "Dinosaur World",
+      "target_slots": 24
+    },
+    {
+      "key": "rainbow",
+      "name": "Rainbow Magic",
+      "target_slots": 24
+    },
+    {
+      "key": "sports",
+      "name": "Sports Champions",
+      "target_slots": 24
+    }
+  ],
+  "slots": [
+    {
+      "slot_id": "space-01",
+      "theme_key": "space",
+      "theme_name": "Space Adventure",
+      "slot_number": 1,
+      "legacy_thumbnail": {
+        "path": "assets/themes/space/01.webp",
+        "git_blob_sha": "957cdee18a7afb149cbffb4c287ec0a1c803f6c5",
+        "bytes": 19330,
+        "role": "LEGACY_VARIANT_THUMBNAIL_NOT_VERIFIED_ORIGINAL"
+      },
+      "existing_original": {
+        "artwork_id": "space-astronaut",
+        "name": "Astronaut Explorer",
+        "preview_index": 0,
+        "sprite": {
+          "path": "assets/ready-mixed-01-06.webp",
+          "cols": 3,
+          "rows": 2,
+          "col": 0,
+          "row": 0
+        },
+        "source_pixel_size_as_catalogued": [
+          1254,
+          1254
+        ],
+        "association": "PLANNING_SLOT_ONLY_NO_LEGACY_MATCH_PROVEN"
+      },
+      "legacy_print_candidate": {
+        "path": "assets/print-masters/space/01.webp",
+        "git_blob_sha": "15bf6d21a96eb0bd683fb16c73da4c62ef3e9f61",
+        "bytes": 400582,
+        "association": "LEGACY_VARIANT_CANDIDATE_NO_ORIGINAL_MATCH_PROVEN"
+      },
+      "verified_original_art_only_master": null,
+      "effective_print_dpi": null,
+      "evidence": {
+        "original_identity_match_approved": false,
+        "art_only_approved": false,
+        "pixel_dimensions_checked": false,
+        "dpi_300_or_greater_approved": false,
+        "print_rights_approved": false,
+        "physical_vendor_proof_approved": false
+      },
+      "commercial_print_status": "BLOCKED_UNVERIFIED"
+    },
+    {
+      "slot_id": "space-02",
+      "theme_key": "space",
+      "theme_name": "Space Adventure",
+      "slot_number": 2,
+      "legacy_thumbnail": {
+        "path": "assets/themes/space/02.webp",
+        "git_blob_sha": "48532dcaedd416f8252a84119afe64092dcd4559",
+        "bytes": 17180,
+        "role": "LEGACY_VARIANT_THUMBNAIL_NOT_VERIFIED_ORIGINAL"
+      },
+      "existing_original": {
+        "artwork_id": "space-robot",
+        "name": "Friendly Space Robot",
+        "preview_index": 1,
+        "sprite": {
+          "path": "assets/ready-mixed-01-06.webp",
+          "cols": 3,
+          "rows": 2,
+          "col": 1,
+          "row": 0
+        },
+        "source_pixel_size_as_catalogued": [
+          1254,
+          1254
+        ],
+        "association": "PLANNING_SLOT_ONLY_NO_LEGACY_MATCH_PROVEN"
+      },
+      "legacy_print_candidate": null,
+      "verified_original_art_only_master": null,
+      "effective_print_dpi": null,
+      "evidence": {
+        "original_identity_match_approved": false,
+        "art_only_approved": false,
+        "pixel_dimensions_checked": false,
+        "dpi_300_or_greater_approved": false,
+        "print_rights_approved": false,
+        "physical_vendor_proof_approved": false
+      },
+      "commercial_print_status": "BLOCKED_UNVERIFIED"
+    },
+    {
+      "slot_id": "space-03",
+      "theme_key": "space",
+      "theme_name": "Space Adventure",
+      "slot_number": 3,
+      "legacy_thumbnail": {
+        "path": "assets/themes/space/03.webp",
+        "git_blob_sha": "2ac113ec4b076c9c30039fe06a13516c82170202",
+        "bytes": 16876,
+        "role": "LEGACY_VARIANT_THUMBNAIL_NOT_VERIFIED_ORIGINAL"
+      },
+      "existing_original": null,
+      "legacy_print_candidate": null,
+      "verified_original_art_only_master": null,
+      "effective_print_dpi": null,
+      "evidence": {
+        "original_identity_match_approved": false,
+        "art_only_approved": false,
+        "pixel_dimensions_checked": false,
+        "dpi_300_or_greater_approved": false,
+        "print_rights_approved": false,
+        "physical_vendor_proof_approved": false
+      },
+      "commercial_print_status": "BLOCKED_UNVERIFIED"
+    },
+    {
+      "slot_id": "space-04",
+      "theme_key": "space",
+      "theme_name": "Space Adventure",
+      "slot_number": 4,
+      "legacy_thumbnail": {
+        "path": "assets/themes/space/04.webp",
+        "git_blob_sha": "1ffcd3895ffd7a5e4e1772ff34034437a8864ed9",
+        "bytes": 13606,
+        "role": "LEGACY_VARIANT_THUMBNAIL_NOT_VERIFIED_ORIGINAL"
+      },
+      "existing_original": null,
+      "legacy_print_candidate": null,
+      "verified_original_art_only_master": null,
+      "effective_print_dpi": null,
+      "evidence": {
+        "original_identity_match_approved": false,
+        "art_only_approved": false,
+        "pixel_dimensions_checked": false,
+        "dpi_300_or_greater_approved": false,
+        "print_rights_approved": false,
+        "physical_vendor_proof_approved": false
+      },
+      "commercial_print_status": "BLOCKED_UNVERIFIED"
+    },
+    {
+      "slot_id": "space-05",
+      "theme_key": "space",
+      "theme_name": "Space Adventure",
+      "slot_number": 5,
+      "legacy_thumbnail": {
+        "path": "assets/themes/space/05.webp",
+        "git_blob_sha": "61e380fcaf40e633ec8af04ad8239a41c8da010c",
+        "bytes": 14212,
+        "role": "LEGACY_VARIANT_THUMBNAIL_NOT_VERIFIED_ORIGINAL"
+      },
+      "existing_original": null,
+      "legacy_print_candidate": {
+        "path": "assets/print-masters/space/05.webp",
+        "git_blob_sha": "72fb0104e43d9c0d8cffd02f033e321590dd5b85",
+        "bytes": 520264,
+        "association": "LEGACY_VARIANT_CANDIDATE_NO_ORIGINAL_MATCH_PROVEN"
+      },
+      "verified_original_art_only_master": null,
+      "effective_print_dpi": null,
+      "evidence": {
+        "original_identity_match_approved": false,
+        "art_only_approved": false,
+        "pixel_dimensions_checked": false,
+        "dpi_300_or_greater_approved": false,
+        "print_rights_approved": false,
+        "physical_vendor_proof_approved": false
+      },
+      "commercial_print_status": "BLOCKED_UNVERIFIED"
+    },
+    {
+      "slot_id": "space-06",
+      "theme_key": "space",
+      "theme_name": "Space Adventure",
+      "slot_number": 6,
+      "legacy_thumbnail": {
+        "path": "assets/themes/space/06.webp",
+        "git_blob_sha": "429fa415a83c88287d0ffbd991e672cccad303a1",
+        "bytes": 12804,
+        "role": "LEGACY_VARIANT_THUMBNAIL_NOT_VERIFIED_ORIGINAL"
+      },
+      "existing_original": null,
+      "legacy_print_candidate": null,
+      "verified_original_art_only_master": null,
+      "effective_print_dpi": null,
+      "evidence": {
+        "original_identity_match_approved": false,
+        "art_only_approved": false,
+        "pixel_dimensions_checked": false,
+        "dpi_300_or_greater_approved": false,
+        "print_rights_approved": false,
+        "physical_vendor_proof_approved": false
+      },
+      "commercial_print_status": "BLOCKED_UNVERIFIED"
+    },
+    {
+      "slot_id": "space-07",
+      "theme_key": "space",
+      "theme_name": "Space Adventure",
+      "slot_number": 7,
+      "legacy_thumbnail": {
+        "path": "assets/themes/space/07.webp",
+        "git_blob_sha": "3e15545e1a763c4583e84f9d1325d87c2dc0523e",
+        "bytes": 18982,
+        "role": "LEGACY_VARIANT_THUMBNAIL_NOT_VERIFIED_ORIGINAL"
+      },
+      "existing_original": null,
+      "legacy_print_candidate": null,
+      "verified_original_art_only_master": null,
+      "effective_print_dpi": null,
+      "evidence": {
+        "original_identity_match_approved": false,
+        "art_only_approved": false,
+        "pixel_dimensions_checked": false,
+        "dpi_300_or_greater_approved": false,
+        "print_rights_approved": false,
+        "physical_vendor_proof_approved": false
+      },
+      "commercial_print_status": "BLOCKED_UNVERIFIED"
+    },
+    {
+      "slot_id": "space-08",
+      "theme_key": "space",
+      "theme_name": "Space Adventure",
+      "slot_number": 8,
+      "legacy_thumbnail": {
+        "path": "assets/themes/space/08.webp",
+        "git_blob_sha": "d75c1652a578d8e1371863739ca99cdc8bf17eb4",
+        "bytes": 18240,
+        "role": "LEGACY_VARIANT_THUMBNAIL_NOT_VERIFIED_ORIGINAL"
+      },
+      "existing_original": null,
+      "legacy_print_candidate": null,
+      "verified_original_art_only_master": null,
+      "effective_print_dpi": null,
+      "evidence": {
+        "original_identity_match_approved": false,
+        "art_only_approved": false,
+        "pixel_dimensions_checked": false,
+        "dpi_300_or_greater_approved": false,
+        "print_rights_approved": false,
+        "physical_vendor_proof_approved": false
+      },
+      "commercial_print_status": "BLOCKED_UNVERIFIED"
+    },
+    {
+      "slot_id": "space-09",
+      "theme_key": "space",
+      "theme_name": "Space Adventure",
+      "slot_number": 9,
+      "legacy_thumbnail": {
+        "path": "assets/themes/space/09.webp",
+        "git_blob_sha": "4dbdf05ad1a446b153270c4815c119082de012af",
+        "bytes": 17320,
+        "role": "LEGACY_VARIANT_THUMBNAIL_NOT_VERIFIED_ORIGINAL"
+      },
+      "existing_original": null,
+      "legacy_print_candidate": null,
+      "verified_original_art_only_master": null,
+      "effective_print_dpi": null,
+      "evidence": {
+        "original_identity_match_approved": false,
+        "art_only_approved": false,
+        "pixel_dimensions_checked": false,
+        "dpi_300_or_greater_approved": false,
+        "print_rights_approved": false,
+        "physical_vendor_proof_approved": false
+      },
+      "commercial_print_status": "BLOCKED_UNVERIFIED"
+    },
+    {
+      "slot_id": "space-10",
+      "theme_key": "space",
+      "theme_name": "Space Adventure",
+      "slot_number": 10,
+      "legacy_thumbnail": {
+        "path": "assets/themes/space/10.webp",
+        "git_blob_sha": "e1898d1eb121daa71e958d6c0c117523c150079a",
+        "bytes": 19090,
+        "role": "LEGACY_VARIANT_THUMBNAIL_NOT_VERIFIED_ORIGINAL"
+      },
+      "existing_original": null,
+      "legacy_print_candidate": null,
+      "verified_original_art_only_master": null,
+      "effective_print_dpi": null,
+      "evidence": {
+        "original_identity_match_approved": false,
+        "art_only_approved": false,
+        "pixel_dimensions_checked": false,
+        "dpi_300_or_greater_approved": false,
+        "print_rights_approved": false,
+        "physical_vendor_proof_approved": false
+      },
+      "commercial_print_status": "BLOCKED_UNVERIFIED"
+    },
+    {
+      "slot_id": "space-11",
+      "theme_key": "space",
+      "theme_name": "Space Adventure",
+      "slot_number": 11,
+      "legacy_thumbnail": {
+        "path": "assets/themes/space/11.webp",
+        "git_blob_sha": "26d282c3aa042b8bf607b208b9dec8e62e89e24e",
+        "bytes": 15136,
+        "role": "LEGACY_VARIANT_THUMBNAIL_NOT_VERIFIED_ORIGINAL"
+      },
+      "existing_original": null,
+      "legacy_print_candidate": null,
+      "verified_original_art_only_master": null,
+      "effective_print_dpi": null,
+      "evidence": {
+        "original_identity_match_approved": false,
+        "art_only_approved": false,
+        "pixel_dimensions_checked": false,
+        "dpi_300_or_greater_approved": false,
+        "print_rights_approved": false,
+        "physical_vendor_proof_approved": false
+      },
+      "commercial_print_status": "BLOCKED_UNVERIFIED"
+    },
+    {
+      "slot_id": "space-12",
+      "theme_key": "space",
+      "theme_name": "Space Adventure",
+      "slot_number": 12,
+      "legacy_thumbnail": {
+        "path": "assets/themes/space/12.webp",
+        "git_blob_sha": "f7c424a58f636961b8abaea7622d96b84049c31d",
+        "bytes": 14600,
+        "role": "LEGACY_VARIANT_THUMBNAIL_NOT_VERIFIED_ORIGINAL"
+      },
+      "existing_original": null,
+      "legacy_print_candidate": null,
+      "verified_original_art_only_master": null,
+      "effective_print_dpi": null,
+      "evidence": {
+        "original_identity_match_approved": false,
+        "art_only_approved": false,
+        "pixel_dimensions_checked": false,
+        "dpi_300_or_greater_approved": false,
+        "print_rights_approved": false,
+        "physical_vendor_proof_approved": false
+      },
+      "commercial_print_status": "BLOCKED_UNVERIFIED"
+    },
+    {
+      "slot_id": "space-13",
+      "theme_key": "space",
+      "theme_name": "Space Adventure",
+      "slot_number": 13,
+      "legacy_thumbnail": {
+        "path": "assets/themes/space/13.webp",
+        "git_blob_sha": "a51338bf138d1239017407aae6cd617d92e3b339",
+        "bytes": 17550,
+        "role": "LEGACY_VARIANT_THUMBNAIL_NOT_VERIFIED_ORIGINAL"
+      },
+      "existing_original": null,
+      "legacy_print_candidate": null,
+      "verified_original_art_only_master": null,
+      "effective_print_dpi": null,
+      "evidence": {
+        "original_identity_match_approved": false,
+        "art_only_approved": false,
+        "pixel_dimensions_checked": false,
+        "dpi_300_or_greater_approved": false,
+        "print_rights_approved": false,
+        "physical_vendor_proof_approved": false
+      },
+      "commercial_print_status": "BLOCKED_UNVERIFIED"
+    },
+    {
+      "slot_id": "space-14",
+      "theme_key": "space",
+      "theme_name": "Space Adventure",
+      "slot_number": 14,
+      "legacy_thumbnail": {
+        "path": "assets/themes/space/14.webp",
+        "git_blob_sha": "4d6a66bedbb418356d60af635dccd89c4e93b4c4",
+        "bytes": 17694,
+        "role": "LEGACY_VARIANT_THUMBNAIL_NOT_VERIFIED_ORIGINAL"
+      },
+      "existing_original": null,
+      "legacy_print_candidate": null,
+      "verified_original_art_only_master": null,
+      "effective_print_dpi": null,
+      "evidence": {
+        "original_identity_match_approved": false,
+        "art_only_approved": false,
+        "pixel_dimensions_checked": false,
+        "dpi_300_or_greater_approved": false,
+        "print_rights_approved": false,
+        "physical_vendor_proof_approved": false
+      },
+      "commercial_print_status": "BLOCKED_UNVERIFIED"
+    },
+    {
+      "slot_id": "space-15",
+      "theme_key": "space",
+      "theme_name": "Space Adventure",
+      "slot_number": 15,
+      "legacy_thumbnail": {
+        "path": "assets/themes/space/15.webp",
+        "git_blob_sha": "4748963c83d82d25728b85ce8a65ea41dc128224",
+        "bytes": 17272,
+        "role": "LEGACY_VARIANT_THUMBNAIL_NOT_VERIFIED_ORIGINAL"
+      },
+      "existing_original": null,
+      "legacy_print_candidate": null,
+      "verified_original_art_only_master": null,
+      "effective_print_dpi": null,
+      "evidence": {
+        "original_identity_match_approved": false,
+        "art_only_approved": false,
+        "pixel_dimensions_checked": false,
+        "dpi_300_or_greater_approved": false,
+        "print_rights_approved": false,
+        "physical_vendor_proof_approved": false
+      },
+      "commercial_print_status": "BLOCKED_UNVERIFIED"
+    },
+    {
+      "slot_id": "space-16",
+      "theme_key": "space",
+      "theme_name": "Space Adventure",
+      "slot_number": 16,
+      "legacy_thumbnail": {
+        "path": "assets/themes/space/16.webp",
+        "git_blob_sha": "5c4a5349bb2b32a5bd8fb295cf7f1468bcb60bb5",
+        "bytes": 15620,
+        "role": "LEGACY_VARIANT_THUMBNAIL_NOT_VERIFIED_ORIGINAL"
+      },
+      "existing_original": null,
+      "legacy_print_candidate": null,
+      "verified_original_art_only_master": null,
+      "effective_print_dpi": null,
+      "evidence": {
+        "original_identity_match_approved": false,
+        "art_only_approved": false,
+        "pixel_dimensions_checked": false,
+        "dpi_300_or_greater_approved": false,
+        "print_rights_approved": false,
+        "physical_vendor_proof_approved": false
+      },
+      "commercial_print_status": "BLOCKED_UNVERIFIED"
+    },
+    {
+      "slot_id": "space-17",
+      "theme_key": "space",
+      "theme_name": "Space Adventure",
+      "slot_number": 17,
+      "legacy_thumbnail": {
+        "path": "assets/themes/space/17.webp",
+        "git_blob_sha": "cedbd73c8b8fd60f0ef7815c46cf577c8ebda7fb",
+        "bytes": 21620,
+        "role": "LEGACY_VARIANT_THUMBNAIL_NOT_VERIFIED_ORIGINAL"
+      },
+      "existing_original": null,
+      "legacy_print_candidate": null,
+      "verified_original_art_only_master": null,
+      "effective_print_dpi": null,
+      "evidence": {
+        "original_identity_match_approved": false,
+        "art_only_approved": false,
+        "pixel_dimensions_checked": false,
+        "dpi_300_or_greater_approved": false,
+        "print_rights_approved": false,
+        "physical_vendor_proof_approved": false
+      },
+      "commercial_print_status": "BLOCKED_UNVERIFIED"
+    },
+    {
+      "slot_id": "space-18",
+      "theme_key": "space",
+      "theme_name": "Space Adventure",
+      "slot_number": 18,
+      "legacy_thumbnail": {
+        "path": "assets/themes/space/18.webp",
+        "git_blob_sha": "a2d124d2900262324f179c9acced829695ea5220",
+        "bytes": 15906,
+        "role": "LEGACY_VARIANT_THUMBNAIL_NOT_VERIFIED_ORIGINAL"
+      },
+      "existing_original": null,
+      "legacy_print_candidate": null,
+      "verified_original_art_only_master": null,
+      "effective_print_dpi": null,
+      "evidence": {
+        "original_identity_match_approved": false,
+        "art_only_approved": false,
+        "pixel_dimensions_checked": false,
+        "dpi_300_or_greater_approved": false,
+        "print_rights_approved": false,
+        "physical_vendor_proof_approved": false
+      },
+      "commercial_print_status": "BLOCKED_UNVERIFIED"
+    },
+    {
+      "slot_id": "space-19",
+      "theme_key": "space",
+      "theme_name": "Space Adventure",
+      "slot_number": 19,
+      "legacy_thumbnail": {
+        "path": "assets/themes/space/19.webp",
+        "git_blob_sha": "eeca2da5b2be5f24b86b5b907d28e7688c222f28",
+        "bytes": 15480,
+        "role": "LEGACY_VARIANT_THUMBNAIL_NOT_VERIFIED_ORIGINAL"
+      },
+      "existing_original": null,
+      "legacy_print_candidate": null,
+      "verified_original_art_only_master": null,
+      "effective_print_dpi": null,
+      "evidence": {
+        "original_identity_match_approved": false,
+        "art_only_approved": false,
+        "pixel_dimensions_checked": false,
+        "dpi_300_or_greater_approved": false,
+        "print_rights_approved": false,
+        "physical_vendor_proof_approved": false
+      },
+      "commercial_print_status": "BLOCKED_UNVERIFIED"
+    },
+    {
+      "slot_id": "space-20",
+      "theme_key": "space",
+      "theme_name": "Space Adventure",
+      "slot_number": 20,
+      "legacy_thumbnail": {
+        "path": "assets/themes/space/20.webp",
+        "git_blob_sha": "e0807e3331aee2e7841cb26076ef7d455a870bad",
+        "bytes": 17190,
+        "role": "LEGACY_VARIANT_THUMBNAIL_NOT_VERIFIED_ORIGINAL"
+      },
+      "existing_original": null,
+      "legacy_print_candidate": null,
+      "verified_original_art_only_master": null,
+      "effective_print_dpi": null,
+      "evidence": {
+        "original_identity_match_approved": false,
+        "art_only_approved": false,
+        "pixel_dimensions_checked": false,
+        "dpi_300_or_greater_approved": false,
+        "print_rights_approved": false,
+        "physical_vendor_proof_approved": false
+      },
+      "commercial_print_status": "BLOCKED_UNVERIFIED"
+    },
+    {
+      "slot_id": "space-21",
+      "theme_key": "space",
+      "theme_name": "Space Adventure",
+      "slot_number": 21,
+      "legacy_thumbnail": {
+        "path": "assets/themes/space/21.webp",
+        "git_blob_sha": "8267eb34ef3c95c75612400349853f4e662ebad9",
+        "bytes": 18200,
+        "role": "LEGACY_VARIANT_THUMBNAIL_NOT_VERIFIED_ORIGINAL"
+      },
+      "existing_original": null,
+      "legacy_print_candidate": null,
+      "verified_original_art_only_master": null,
+      "effective_print_dpi": null,
+      "evidence": {
+        "original_identity_match_approved": false,
+        "art_only_approved": false,
+        "pixel_dimensions_checked": false,
+        "dpi_300_or_greater_approved": false,
+        "print_rights_approved": false,
+        "physical_vendor_proof_approved": false
+      },
+      "commercial_print_status": "BLOCKED_UNVERIFIED"
+    },
+    {
+      "slot_id": "space-22",
+      "theme_key": "space",
+      "theme_name": "Space Adventure",
+      "slot_number": 22,
+      "legacy_thumbnail": {
+        "path": "assets/themes/space/22.webp",
+        "git_blob_sha": "67cb504da8a4d6fef4bfb2d98ff11e27977e7f54",
+        "bytes": 18820,
+        "role": "LEGACY_VARIANT_THUMBNAIL_NOT_VERIFIED_ORIGINAL"
+      },
+      "existing_original": null,
+      "legacy_print_candidate": null,
+      "verified_original_art_only_master": null,
+      "effective_print_dpi": null,
+      "evidence": {
+        "original_identity_match_approved": false,
+        "art_only_approved": false,
+        "pixel_dimensions_checked": false,
+        "dpi_300_or_greater_approved": false,
+        "print_rights_approved": false,
+        "physical_vendor_proof_approved": false
+      },
+      "commercial_print_status": "BLOCKED_UNVERIFIED"
+    },
+    {
+      "slot_id": "space-23",
+      "theme_key": "space",
+      "theme_name": "Space Adventure",
+      "slot_number": 23,
+      "legacy_thumbnail": {
+        "path": "assets/themes/space/23.webp",
+        "git_blob_sha": "b8c89a6539be26ef53fdfe8497f36203610a64a1",
+        "bytes": 18788,
+        "role": "LEGACY_VARIANT_THUMBNAIL_NOT_VERIFIED_ORIGINAL"
+      },
+      "existing_original": null,
+      "legacy_print_candidate": null,
+      "verified_original_art_only_master": null,
+      "effective_print_dpi": null,
+      "evidence": {
+        "original_identity_match_approved": false,
+        "art_only_approved": false,
+        "pixel_dimensions_checked": false,
+        "dpi_300_or_greater_approved": false,
+        "print_rights_approved": false,
+        "physical_vendor_proof_approved": false
+      },
+      "commercial_print_status": "BLOCKED_UNVERIFIED"
+    },
+    {
+      "slot_id": "space-24",
+      "theme_key": "space",
+      "theme_name": "Space Adventure",
+      "slot_number": 24,
+      "legacy_thumbnail": {
+        "path": "assets/themes/space/24.webp",
+        "git_blob_sha": "34e027007b203a10ffae7d26c1253df5a2d646b6",
+        "bytes": 17950,
+        "role": "LEGACY_VARIANT_THUMBNAIL_NOT_VERIFIED_ORIGINAL"
+      },
+      "existing_original": null,
+      "legacy_print_candidate": null,
+      "verified_original_art_only_master": null,
+      "effective_print_dpi": null,
+      "evidence": {
+        "original_identity_match_approved": false,
+        "art_only_approved": false,
+        "pixel_dimensions_checked": false,
+        "dpi_300_or_greater_approved": false,
+        "print_rights_approved": false,
+        "physical_vendor_proof_approved": false
+      },
+      "commercial_print_status": "BLOCKED_UNVERIFIED"
+    },
+    {
+      "slot_id": "dino-01",
+      "theme_key": "dino",
+      "theme_name": "Dinosaur World",
+      "slot_number": 1,
+      "legacy_thumbnail": {
+        "path": "assets/themes/dino/01.webp",
+        "git_blob_sha": "e980a7bb65d9adfc4a48514a271733f80de2a2d1",
+        "bytes": 172114,
+        "role": "LEGACY_VARIANT_THUMBNAIL_NOT_VERIFIED_ORIGINAL"
+      },
+      "existing_original": {
+        "artwork_id": "dino-purple",
+        "name": "Purple Baby Triceratops",
+        "preview_index": 2,
+        "sprite": {
+          "path": "assets/ready-mixed-01-06.webp",
+          "cols": 3,
+          "rows": 2,
+          "col": 2,
+          "row": 0
+        },
+        "source_pixel_size_as_catalogued": [
+          1254,
+          1254
+        ],
+        "association": "PLANNING_SLOT_ONLY_NO_LEGACY_MATCH_PROVEN"
+      },
+      "legacy_print_candidate": {
+        "path": "assets/print-masters/dino/01.webp",
+        "git_blob_sha": "db4fd8dd0718c250b1735bd3ce3a0c03b11fa4f4",
+        "bytes": 408342,
+        "association": "LEGACY_VARIANT_CANDIDATE_NO_ORIGINAL_MATCH_PROVEN"
+      },
+      "verified_original_art_only_master": null,
+      "effective_print_dpi": null,
+      "evidence": {
+        "original_identity_match_approved": false,
+        "art_only_approved": false,
+        "pixel_dimensions_checked": false,
+        "dpi_300_or_greater_approved": false,
+        "print_rights_approved": false,
+        "physical_vendor_proof_approved": false
+      },
+      "commercial_print_status": "BLOCKED_UNVERIFIED"
+    },
+    {
+      "slot_id": "dino-02",
+      "theme_key": "dino",
+      "theme_name": "Dinosaur World",
+      "slot_number": 2,
+      "legacy_thumbnail": {
+        "path": "assets/themes/dino/02.webp",
+        "git_blob_sha": "b424c0346844e8cec43c3d1e4c5896560a0a1779",
+        "bytes": 224448,
+        "role": "LEGACY_VARIANT_THUMBNAIL_NOT_VERIFIED_ORIGINAL"
+      },
+      "existing_original": null,
+      "legacy_print_candidate": {
+        "path": "assets/print-masters/dino/02.webp",
+        "git_blob_sha": "7753177735a5d536d55cfbb071832e1aac021d88",
+        "bytes": 593490,
+        "association": "LEGACY_VARIANT_CANDIDATE_NO_ORIGINAL_MATCH_PROVEN"
+      },
+      "verified_original_art_only_master": null,
+      "effective_print_dpi": null,
+      "evidence": {
+        "original_identity_match_approved": false,
+        "art_only_approved": false,
+        "pixel_dimensions_checked": false,
+        "dpi_300_or_greater_approved": false,
+        "print_rights_approved": false,
+        "physical_vendor_proof_approved": false
+      },
+      "commercial_print_status": "BLOCKED_UNVERIFIED"
+    },
+    {
+      "slot_id": "dino-03",
+      "theme_key": "dino",
+      "theme_name": "Dinosaur World",
+      "slot_number": 3,
+      "legacy_thumbnail": {
+        "path": "assets/themes/dino/03.webp",
+        "git_blob_sha": "7061abbda1895a45143ecbfb9680e680baf9470f",
+        "bytes": 202826,
+        "role": "LEGACY_VARIANT_THUMBNAIL_NOT_VERIFIED_ORIGINAL"
+      },
+      "existing_original": null,
+      "legacy_print_candidate": null,
+      "verified_original_art_only_master": null,
+      "effective_print_dpi": null,
+      "evidence": {
+        "original_identity_match_approved": false,
+        "art_only_approved": false,
+        "pixel_dimensions_checked": false,
+        "dpi_300_or_greater_approved": false,
+        "print_rights_approved": false,
+        "physical_vendor_proof_approved": false
+      },
+      "commercial_print_status": "BLOCKED_UNVERIFIED"
+    },
+    {
+      "slot_id": "dino-04",
+      "theme_key": "dino",
+      "theme_name": "Dinosaur World",
+      "slot_number": 4,
+      "legacy_thumbnail": {
+        "path": "assets/themes/dino/04.webp",
+        "git_blob_sha": "4d3bc9011abed6ef17624a86fb15af59e6ffc458",
+        "bytes": 214096,
+        "role": "LEGACY_VARIANT_THUMBNAIL_NOT_VERIFIED_ORIGINAL"
+      },
+      "existing_original": null,
+      "legacy_print_candidate": null,
+      "verified_original_art_only_master": null,
+      "effective_print_dpi": null,
+      "evidence": {
+        "original_identity_match_approved": false,
+        "art_only_approved": false,
+        "pixel_dimensions_checked": false,
+        "dpi_300_or_greater_approved": false,
+        "print_rights_approved": false,
+        "physical_vendor_proof_approved": false
+      },
+      "commercial_print_status": "BLOCKED_UNVERIFIED"
+    },
+    {
+      "slot_id": "dino-05",
+      "theme_key": "dino",
+      "theme_name": "Dinosaur World",
+      "slot_number": 5,
+      "legacy_thumbnail": {
+        "path": "assets/themes/dino/05.webp",
+        "git_blob_sha": "42f8af5e0ab61ff1d60e62e0aba74a97cea8fcb9",
+        "bytes": 166712,
+        "role": "LEGACY_VARIANT_THUMBNAIL_NOT_VERIFIED_ORIGINAL"
+      },
+      "existing_original": null,
+      "legacy_print_candidate": null,
+      "verified_original_art_only_master": null,
+      "effective_print_dpi": null,
+      "evidence": {
+        "original_identity_match_approved": false,
+        "art_only_approved": false,
+        "pixel_dimensions_checked": false,
+        "dpi_300_or_greater_approved": false,
+        "print_rights_approved": false,
+        "physical_vendor_proof_approved": false
+      },
+      "commercial_print_status": "BLOCKED_UNVERIFIED"
+    },
+    {
+      "slot_id": "dino-06",
+      "theme_key": "dino",
+      "theme_name": "Dinosaur World",
+      "slot_number": 6,
+      "legacy_thumbnail": {
+        "path": "assets/themes/dino/06.webp",
+        "git_blob_sha": "de01c12bf301dbe04180301b70a9953ea12b18d9",
+        "bytes": 217954,
+        "role": "LEGACY_VARIANT_THUMBNAIL_NOT_VERIFIED_ORIGINAL"
+      },
+      "existing_original": null,
+      "legacy_print_candidate": {
+        "path": "assets/print-masters/dino/06.webp",
+        "git_blob_sha": "0c59034a943e7889a784140d6860bd142527c654",
+        "bytes": 556228,
+        "association": "LEGACY_VARIANT_CANDIDATE_NO_ORIGINAL_MATCH_PROVEN"
+      },
+      "verified_original_art_only_master": null,
+      "effective_print_dpi": null,
+      "evidence": {
+        "original_identity_match_approved": false,
+        "art_only_approved": false,
+        "pixel_dimensions_checked": false,
+        "dpi_300_or_greater_approved": false,
+        "print_rights_approved": false,
+        "physical_vendor_proof_approved": false
+      },
+      "commercial_print_status": "BLOCKED_UNVERIFIED"
+    },
+    {
+      "slot_id": "dino-07",
+      "theme_key": "dino",
+      "theme_name": "Dinosaur World",
+      "slot_number": 7,
+      "legacy_thumbnail": {
+        "path": "assets/themes/dino/07.webp",
+        "git_blob_sha": "bf317c222c7eab9a3ca5866fbe103931ff165f1f",
+        "bytes": 173230,
+        "role": "LEGACY_VARIANT_THUMBNAIL_NOT_VERIFIED_ORIGINAL"
+      },
+      "existing_original": {
+        "artwork_id": "dino-07",
+        "name": "Pink Dinosaur & Eggs",
+        "preview_index": 6,
+        "sprite": {
+          "path": "assets/dino-07-10-original-preview.webp",
+          "cols": 1,
+          "rows": 4,
+          "col": 0,
+          "row": 0
+        },
+        "source_pixel_size_as_catalogued": [
+          1254,
+          1254
+        ],
+        "association": "PLANNING_SLOT_ONLY_NO_LEGACY_MATCH_PROVEN"
+      },
+      "legacy_print_candidate": null,
+      "verified_original_art_only_master": null,
+      "effective_print_dpi": null,
+      "evidence": {
+        "original_identity_match_approved": false,
+        "art_only_approved": false,
+        "pixel_dimensions_checked": false,
+        "dpi_300_or_greater_approved": false,
+        "print_rights_approved": false,
+        "physical_vendor_proof_approved": false
+      },
+      "commercial_print_status": "BLOCKED_UNVERIFIED"
+    },
+    {
+      "slot_id": "dino-08",
+      "theme_key": "dino",
+      "theme_name": "Dinosaur World",
+      "slot_number": 8,
+      "legacy_thumbnail": {
+        "path": "assets/themes/dino/08.webp",
+        "git_blob_sha": "5eba5931daeffa0daa4d5f104fb1b0cbcbb9755b",
+        "bytes": 185338,
+        "role": "LEGACY_VARIANT_THUMBNAIL_NOT_VERIFIED_ORIGINAL"
+      },
+      "existing_original": {
+        "artwork_id": "dino-08",
+        "name": "Orange Dinosaur Splash",
+        "preview_index": 7,
+        "sprite": {
+          "path": "assets/dino-07-10-original-preview.webp",
+          "cols": 1,
+          "rows": 4,
+          "col": 0,
+          "row": 1
+        },
+        "source_pixel_size_as_catalogued": [
+          1254,
+          1254
+        ],
+        "association": "PLANNING_SLOT_ONLY_NO_LEGACY_MATCH_PROVEN"
+      },
+      "legacy_print_candidate": null,
+      "verified_original_art_only_master": null,
+      "effective_print_dpi": null,
+      "evidence": {
+        "original_identity_match_approved": false,
+        "art_only_approved": false,
+        "pixel_dimensions_checked": false,
+        "dpi_300_or_greater_approved": false,
+        "print_rights_approved": false,
+        "physical_vendor_proof_approved": false
+      },
+      "commercial_print_status": "BLOCKED_UNVERIFIED"
+    },
+    {
+      "slot_id": "dino-09",
+      "theme_key": "dino",
+      "theme_name": "Dinosaur World",
+      "slot_number": 9,
+      "legacy_thumbnail": {
+        "path": "assets/themes/dino/09.webp",
+        "git_blob_sha": "ade966e23d8a7fb1995216423ba346030f2a9836",
+        "bytes": 167342,
+        "role": "LEGACY_VARIANT_THUMBNAIL_NOT_VERIFIED_ORIGINAL"
+      },
+      "existing_original": {
+        "artwork_id": "dino-09",
+        "name": "Teal Baby Dinosaur",
+        "preview_index": 8,
+        "sprite": {
+          "path": "assets/dino-07-10-original-preview.webp",
+          "cols": 1,
+          "rows": 4,
+          "col": 0,
+          "row": 2
+        },
+        "source_pixel_size_as_catalogued": [
+          1254,
+          1254
+        ],
+        "association": "PLANNING_SLOT_ONLY_NO_LEGACY_MATCH_PROVEN"
+      },
+      "legacy_print_candidate": null,
+      "verified_original_art_only_master": null,
+      "effective_print_dpi": null,
+      "evidence": {
+        "original_identity_match_approved": false,
+        "art_only_approved": false,
+        "pixel_dimensions_checked": false,
+        "dpi_300_or_greater_approved": false,
+        "print_rights_approved": false,
+        "physical_vendor_proof_approved": false
+      },
+      "commercial_print_status": "BLOCKED_UNVERIFIED"
+    },
+    {
+      "slot_id": "dino-10",
+      "theme_key": "dino",
+      "theme_name": "Dinosaur World",
+      "slot_number": 10,
+      "legacy_thumbnail": {
+        "path": "assets/themes/dino/10.webp",
+        "git_blob_sha": "05de1c6893daa959c30c8f5ea8f984847862ba1d",
+        "bytes": 191964,
+        "role": "LEGACY_VARIANT_THUMBNAIL_NOT_VERIFIED_ORIGINAL"
+      },
+      "existing_original": {
+        "artwork_id": "dino-10",
+        "name": "Three Dinosaur Friends",
+        "preview_index": 9,
+        "sprite": {
+          "path": "assets/dino-07-10-original-preview.webp",
+          "cols": 1,
+          "rows": 4,
+          "col": 0,
+          "row": 3
+        },
+        "source_pixel_size_as_catalogued": [
+          1254,
+          1254
+        ],
+        "association": "PLANNING_SLOT_ONLY_NO_LEGACY_MATCH_PROVEN"
+      },
+      "legacy_print_candidate": null,
+      "verified_original_art_only_master": null,
+      "effective_print_dpi": null,
+      "evidence": {
+        "original_identity_match_approved": false,
+        "art_only_approved": false,
+        "pixel_dimensions_checked": false,
+        "dpi_300_or_greater_approved": false,
+        "print_rights_approved": false,
+        "physical_vendor_proof_approved": false
+      },
+      "commercial_print_status": "BLOCKED_UNVERIFIED"
+    },
+    {
+      "slot_id": "dino-11",
+      "theme_key": "dino",
+      "theme_name": "Dinosaur World",
+      "slot_number": 11,
+      "legacy_thumbnail": {
+        "path": "assets/themes/dino/11.webp",
+        "git_blob_sha": "d091f5bd63befc2c7e9479b96eaf0f04b63b7ef5",
+        "bytes": 76466,
+        "role": "LEGACY_VARIANT_THUMBNAIL_NOT_VERIFIED_ORIGINAL"
+      },
+      "existing_original": {
+        "artwork_id": "dino-11",
+        "name": "Blue Ankylosaurus",
+        "preview_index": 10,
+        "sprite": {
+          "path": "assets/ready-dino-11-20.webp",
+          "cols": 5,
+          "rows": 2,
+          "col": 0,
+          "row": 0
+        },
+        "source_pixel_size_as_catalogued": [
+          1122,
+          1402
+        ],
+        "association": "PLANNING_SLOT_ONLY_NO_LEGACY_MATCH_PROVEN"
+      },
+      "legacy_print_candidate": null,
+      "verified_original_art_only_master": null,
+      "effective_print_dpi": null,
+      "evidence": {
+        "original_identity_match_approved": false,
+        "art_only_approved": false,
+        "pixel_dimensions_checked": false,
+        "dpi_300_or_greater_approved": false,
+        "print_rights_approved": false,
+        "physical_vendor_proof_approved": false
+      },
+      "commercial_print_status": "BLOCKED_UNVERIFIED"
+    },
+    {
+      "slot_id": "dino-12",
+      "theme_key": "dino",
+      "theme_name": "Dinosaur World",
+      "slot_number": 12,
+      "legacy_thumbnail": {
+        "path": "assets/themes/dino/12.webp",
+        "git_blob_sha": "d39c473dde23965254fc1224379f408773cc0358",
+        "bytes": 90328,
+        "role": "LEGACY_VARIANT_THUMBNAIL_NOT_VERIFIED_ORIGINAL"
+      },
+      "existing_original": {
+        "artwork_id": "dino-12",
+        "name": "Orange Crested Dinosaur",
+        "preview_index": 11,
+        "sprite": {
+          "path": "assets/ready-dino-11-20.webp",
+          "cols": 5,
+          "rows": 2,
+          "col": 1,
+          "row": 0
+        },
+        "source_pixel_size_as_catalogued": [
+          1122,
+          1402
+        ],
+        "association": "PLANNING_SLOT_ONLY_NO_LEGACY_MATCH_PROVEN"
+      },
+      "legacy_print_candidate": null,
+      "verified_original_art_only_master": null,
+      "effective_print_dpi": null,
+      "evidence": {
+        "original_identity_match_approved": false,
+        "art_only_approved": false,
+        "pixel_dimensions_checked": false,
+        "dpi_300_or_greater_approved": false,
+        "print_rights_approved": false,
+        "physical_vendor_proof_approved": false
+      },
+      "commercial_print_status": "BLOCKED_UNVERIFIED"
+    },
+    {
+      "slot_id": "dino-13",
+      "theme_key": "dino",
+      "theme_name": "Dinosaur World",
+      "slot_number": 13,
+      "legacy_thumbnail": {
+        "path": "assets/themes/dino/13.webp",
+        "git_blob_sha": "c9a95f1994151022615cccf21d032960f543d00e",
+        "bytes": 94376,
+        "role": "LEGACY_VARIANT_THUMBNAIL_NOT_VERIFIED_ORIGINAL"
+      },
+      "existing_original": {
+        "artwork_id": "dino-13",
+        "name": "Pteranodon",
+        "preview_index": 12,
+        "sprite": {
+          "path": "assets/ready-dino-11-20.webp",
+          "cols": 5,
+          "rows": 2,
+          "col": 2,
+          "row": 0
+        },
+        "source_pixel_size_as_catalogued": [
+          1122,
+          1402
+        ],
+        "association": "PLANNING_SLOT_ONLY_NO_LEGACY_MATCH_PROVEN"
+      },
+      "legacy_print_candidate": null,
+      "verified_original_art_only_master": null,
+      "effective_print_dpi": null,
+      "evidence": {
+        "original_identity_match_approved": false,
+        "art_only_approved": false,
+        "pixel_dimensions_checked": false,
+        "dpi_300_or_greater_approved": false,
+        "print_rights_approved": false,
+        "physical_vendor_proof_approved": false
+      },
+      "commercial_print_status": "BLOCKED_UNVERIFIED"
+    },
+    {
+      "slot_id": "dino-14",
+      "theme_key": "dino",
+      "theme_name": "Dinosaur World",
+      "slot_number": 14,
+      "legacy_thumbnail": {
+        "path": "assets/themes/dino/14.webp",
+        "git_blob_sha": "c778c15f8030ceae19667045d75a0dab44140154",
+        "bytes": 93636,
+        "role": "LEGACY_VARIANT_THUMBNAIL_NOT_VERIFIED_ORIGINAL"
+      },
+      "existing_original": {
+        "artwork_id": "dino-14",
+        "name": "Rainbow Stegosaurus",
+        "preview_index": 13,
+        "sprite": {
+          "path": "assets/ready-dino-11-20.webp",
+          "cols": 5,
+          "rows": 2,
+          "col": 3,
+          "row": 0
+        },
+        "source_pixel_size_as_catalogued": [
+          1122,
+          1402
+        ],
+        "association": "PLANNING_SLOT_ONLY_NO_LEGACY_MATCH_PROVEN"
+      },
+      "legacy_print_candidate": null,
+      "verified_original_art_only_master": null,
+      "effective_print_dpi": null,
+      "evidence": {
+        "original_identity_match_approved": false,
+        "art_only_approved": false,
+        "pixel_dimensions_checked": false,
+        "dpi_300_or_greater_approved": false,
+        "print_rights_approved": false,
+        "physical_vendor_proof_approved": false
+      },
+      "commercial_print_status": "BLOCKED_UNVERIFIED"
+    },
+    {
+      "slot_id": "dino-15",
+      "theme_key": "dino",
+      "theme_name": "Dinosaur World",
+      "slot_number": 15,
+      "legacy_thumbnail": {
+        "path": "assets/themes/dino/15.webp",
+        "git_blob_sha": "5b17c0ba7c81f49ce31c0150dda7e8ddc30f958e",
+        "bytes": 64070,
+        "role": "LEGACY_VARIANT_THUMBNAIL_NOT_VERIFIED_ORIGINAL"
+      },
+      "existing_original": {
+        "artwork_id": "dino-15",
+        "name": "Blue Long-Neck Dinosaur",
+        "preview_index": 14,
+        "sprite": {
+          "path": "assets/ready-dino-11-20.webp",
+          "cols": 5,
+          "rows": 2,
+          "col": 4,
+          "row": 0
+        },
+        "source_pixel_size_as_catalogued": [
+          1122,
+          1402
+        ],
+        "association": "PLANNING_SLOT_ONLY_NO_LEGACY_MATCH_PROVEN"
+      },
+      "legacy_print_candidate": null,
+      "verified_original_art_only_master": null,
+      "effective_print_dpi": null,
+      "evidence": {
+        "original_identity_match_approved": false,
+        "art_only_approved": false,
+        "pixel_dimensions_checked": false,
+        "dpi_300_or_greater_approved": false,
+        "print_rights_approved": false,
+        "physical_vendor_proof_approved": false
+      },
+      "commercial_print_status": "BLOCKED_UNVERIFIED"
+    },
+    {
+      "slot_id": "dino-16",
+      "theme_key": "dino",
+      "theme_name": "Dinosaur World",
+      "slot_number": 16,
+      "legacy_thumbnail": {
+        "path": "assets/themes/dino/16.webp",
+        "git_blob_sha": "20b2f9740297d7766ad95b5060b2476bad8a9f6f",
+        "bytes": 78512,
+        "role": "LEGACY_VARIANT_THUMBNAIL_NOT_VERIFIED_ORIGINAL"
+      },
+      "existing_original": {
+        "artwork_id": "dino-16",
+        "name": "Blue Spinosaurus",
+        "preview_index": 15,
+        "sprite": {
+          "path": "assets/ready-dino-11-20.webp",
+          "cols": 5,
+          "rows": 2,
+          "col": 0,
+          "row": 1
+        },
+        "source_pixel_size_as_catalogued": [
+          1122,
+          1402
+        ],
+        "association": "PLANNING_SLOT_ONLY_NO_LEGACY_MATCH_PROVEN"
+      },
+      "legacy_print_candidate": null,
+      "verified_original_art_only_master": null,
+      "effective_print_dpi": null,
+      "evidence": {
+        "original_identity_match_approved": false,
+        "art_only_approved": false,
+        "pixel_dimensions_checked": false,
+        "dpi_300_or_greater_approved": false,
+        "print_rights_approved": false,
+        "physical_vendor_proof_approved": false
+      },
+      "commercial_print_status": "BLOCKED_UNVERIFIED"
+    },
+    {
+      "slot_id": "dino-17",
+      "theme_key": "dino",
+      "theme_name": "Dinosaur World",
+      "slot_number": 17,
+      "legacy_thumbnail": {
+        "path": "assets/themes/dino/17.webp",
+        "git_blob_sha": "7d402d6beee7ab3d978b269432dd9c3b89aa6281",
+        "bytes": 99332,
+        "role": "LEGACY_VARIANT_THUMBNAIL_NOT_VERIFIED_ORIGINAL"
+      },
+      "existing_original": {
+        "artwork_id": "dino-17",
+        "name": "Green Leaf Dinosaur",
+        "preview_index": 16,
+        "sprite": {
+          "path": "assets/ready-dino-11-20.webp",
+          "cols": 5,
+          "rows": 2,
+          "col": 1,
+          "row": 1
+        },
+        "source_pixel_size_as_catalogued": [
+          1122,
+          1402
+        ],
+        "association": "PLANNING_SLOT_ONLY_NO_LEGACY_MATCH_PROVEN"
+      },
+      "legacy_print_candidate": null,
+      "verified_original_art_only_master": null,
+      "effective_print_dpi": null,
+      "evidence": {
+        "original_identity_match_approved": false,
+        "art_only_approved": false,
+        "pixel_dimensions_checked": false,
+        "dpi_300_or_greater_approved": false,
+        "print_rights_approved": false,
+        "physical_vendor_proof_approved": false
+      },
+      "commercial_print_status": "BLOCKED_UNVERIFIED"
+    },
+    {
+      "slot_id": "dino-18",
+      "theme_key": "dino",
+      "theme_name": "Dinosaur World",
+      "slot_number": 18,
+      "legacy_thumbnail": {
+        "path": "assets/themes/dino/18.webp",
+        "git_blob_sha": "d423ddca9118d390db6e765aeddedf7793cccd26",
+        "bytes": 96612,
+        "role": "LEGACY_VARIANT_THUMBNAIL_NOT_VERIFIED_ORIGINAL"
+      },
+      "existing_original": {
+        "artwork_id": "dino-18",
+        "name": "Orange T-Rex",
+        "preview_index": 17,
+        "sprite": {
+          "path": "assets/ready-dino-11-20.webp",
+          "cols": 5,
+          "rows": 2,
+          "col": 2,
+          "row": 1
+        },
+        "source_pixel_size_as_catalogued": [
+          1122,
+          1402
+        ],
+        "association": "PLANNING_SLOT_ONLY_NO_LEGACY_MATCH_PROVEN"
+      },
+      "legacy_print_candidate": null,
+      "verified_original_art_only_master": null,
+      "effective_print_dpi": null,
+      "evidence": {
+        "original_identity_match_approved": false,
+        "art_only_approved": false,
+        "pixel_dimensions_checked": false,
+        "dpi_300_or_greater_approved": false,
+        "print_rights_approved": false,
+        "physical_vendor_proof_approved": false
+      },
+      "commercial_print_status": "BLOCKED_UNVERIFIED"
+    },
+    {
+      "slot_id": "dino-19",
+      "theme_key": "dino",
+      "theme_name": "Dinosaur World",
+      "slot_number": 19,
+      "legacy_thumbnail": {
+        "path": "assets/themes/dino/19.webp",
+        "git_blob_sha": "68c1db5fb7760f7758a419d07f244fcc569dd7cb",
+        "bytes": 69280,
+        "role": "LEGACY_VARIANT_THUMBNAIL_NOT_VERIFIED_ORIGINAL"
+      },
+      "existing_original": {
+        "artwork_id": "dino-19",
+        "name": "Orange Pachycephalosaurus",
+        "preview_index": 18,
+        "sprite": {
+          "path": "assets/ready-dino-11-20.webp",
+          "cols": 5,
+          "rows": 2,
+          "col": 3,
+          "row": 1
+        },
+        "source_pixel_size_as_catalogued": [
+          1122,
+          1402
+        ],
+        "association": "PLANNING_SLOT_ONLY_NO_LEGACY_MATCH_PROVEN"
+      },
+      "legacy_print_candidate": null,
+      "verified_original_art_only_master": null,
+      "effective_print_dpi": null,
+      "evidence": {
+        "original_identity_match_approved": false,
+        "art_only_approved": false,
+        "pixel_dimensions_checked": false,
+        "dpi_300_or_greater_approved": false,
+        "print_rights_approved": false,
+        "physical_vendor_proof_approved": false
+      },
+      "commercial_print_status": "BLOCKED_UNVERIFIED"
+    },
+    {
+      "slot_id": "dino-20",
+      "theme_key": "dino",
+      "theme_name": "Dinosaur World",
+      "slot_number": 20,
+      "legacy_thumbnail": {
+        "path": "assets/themes/dino/20.webp",
+        "git_blob_sha": "267a1397059f5afb5d25c1c5720086b21976b9c5",
+        "bytes": 82766,
+        "role": "LEGACY_VARIANT_THUMBNAIL_NOT_VERIFIED_ORIGINAL"
+      },
+      "existing_original": {
+        "artwork_id": "dino-20",
+        "name": "Sunset Styracosaurus",
+        "preview_index": 19,
+        "sprite": {
+          "path": "assets/ready-dino-11-20.webp",
+          "cols": 5,
+          "rows": 2,
+          "col": 4,
+          "row": 1
+        },
+        "source_pixel_size_as_catalogued": [
+          1122,
+          1402
+        ],
+        "association": "PLANNING_SLOT_ONLY_NO_LEGACY_MATCH_PROVEN"
+      },
+      "legacy_print_candidate": null,
+      "verified_original_art_only_master": null,
+      "effective_print_dpi": null,
+      "evidence": {
+        "original_identity_match_approved": false,
+        "art_only_approved": false,
+        "pixel_dimensions_checked": false,
+        "dpi_300_or_greater_approved": false,
+        "print_rights_approved": false,
+        "physical_vendor_proof_approved": false
+      },
+      "commercial_print_status": "BLOCKED_UNVERIFIED"
+    },
+    {
+      "slot_id": "dino-21",
+      "theme_key": "dino",
+      "theme_name": "Dinosaur World",
+      "slot_number": 21,
+      "legacy_thumbnail": {
+        "path": "assets/themes/dino/21.webp",
+        "git_blob_sha": "b0ec9047142d024cd83e4561180b2b0ca6cfb436",
+        "bytes": 167118,
+        "role": "LEGACY_VARIANT_THUMBNAIL_NOT_VERIFIED_ORIGINAL"
+      },
+      "existing_original": null,
+      "legacy_print_candidate": null,
+      "verified_original_art_only_master": null,
+      "effective_print_dpi": null,
+      "evidence": {
+        "original_identity_match_approved": false,
+        "art_only_approved": false,
+        "pixel_dimensions_checked": false,
+        "dpi_300_or_greater_approved": false,
+        "print_rights_approved": false,
+        "physical_vendor_proof_approved": false
+      },
+      "commercial_print_status": "BLOCKED_UNVERIFIED"
+    },
+    {
+      "slot_id": "dino-22",
+      "theme_key": "dino",
+      "theme_name": "Dinosaur World",
+      "slot_number": 22,
+      "legacy_thumbnail": {
+        "path": "assets/themes/dino/22.webp",
+        "git_blob_sha": "bc2a754ae89f895df74654687b69887e450518c7",
+        "bytes": 215090,
+        "role": "LEGACY_VARIANT_THUMBNAIL_NOT_VERIFIED_ORIGINAL"
+      },
+      "existing_original": null,
+      "legacy_print_candidate": null,
+      "verified_original_art_only_master": null,
+      "effective_print_dpi": null,
+      "evidence": {
+        "original_identity_match_approved": false,
+        "art_only_approved": false,
+        "pixel_dimensions_checked": false,
+        "dpi_300_or_greater_approved": false,
+        "print_rights_approved": false,
+        "physical_vendor_proof_approved": false
+      },
+      "commercial_print_status": "BLOCKED_UNVERIFIED"
+    },
+    {
+      "slot_id": "dino-23",
+      "theme_key": "dino",
+      "theme_name": "Dinosaur World",
+      "slot_number": 23,
+      "legacy_thumbnail": {
+        "path": "assets/themes/dino/23.webp",
+        "git_blob_sha": "308d746d55dea70dcc644daa7bb122204ee51df1",
+        "bytes": 237580,
+        "role": "LEGACY_VARIANT_THUMBNAIL_NOT_VERIFIED_ORIGINAL"
+      },
+      "existing_original": null,
+      "legacy_print_candidate": null,
+      "verified_original_art_only_master": null,
+      "effective_print_dpi": null,
+      "evidence": {
+        "original_identity_match_approved": false,
+        "art_only_approved": false,
+        "pixel_dimensions_checked": false,
+        "dpi_300_or_greater_approved": false,
+        "print_rights_approved": false,
+        "physical_vendor_proof_approved": false
+      },
+      "commercial_print_status": "BLOCKED_UNVERIFIED"
+    },
+    {
+      "slot_id": "dino-24",
+      "theme_key": "dino",
+      "theme_name": "Dinosaur World",
+      "slot_number": 24,
+      "legacy_thumbnail": {
+        "path": "assets/themes/dino/24.webp",
+        "git_blob_sha": "4aa5780b8e44f62c49f283a32128d7b8a54e4cd6",
+        "bytes": 174818,
+        "role": "LEGACY_VARIANT_THUMBNAIL_NOT_VERIFIED_ORIGINAL"
+      },
+      "existing_original": null,
+      "legacy_print_candidate": null,
+      "verified_original_art_only_master": null,
+      "effective_print_dpi": null,
+      "evidence": {
+        "original_identity_match_approved": false,
+        "art_only_approved": false,
+        "pixel_dimensions_checked": false,
+        "dpi_300_or_greater_approved": false,
+        "print_rights_approved": false,
+        "physical_vendor_proof_approved": false
+      },
+      "commercial_print_status": "BLOCKED_UNVERIFIED"
+    },
+    {
+      "slot_id": "rainbow-01",
+      "theme_key": "rainbow",
+      "theme_name": "Rainbow Magic",
+      "slot_number": 1,
+      "legacy_thumbnail": {
+        "path": "assets/themes/rainbow/01.webp",
+        "git_blob_sha": "360d01c66bcc66fa561afbb06124309e9838b860",
+        "bytes": 104144,
+        "role": "LEGACY_VARIANT_THUMBNAIL_NOT_VERIFIED_ORIGINAL"
+      },
+      "existing_original": {
+        "artwork_id": "rainbow-unicorn",
+        "name": "Rainbow Unicorn",
+        "preview_index": 3,
+        "sprite": {
+          "path": "assets/ready-mixed-01-06.webp",
+          "cols": 3,
+          "rows": 2,
+          "col": 0,
+          "row": 1
+        },
+        "source_pixel_size_as_catalogued": [
+          1254,
+          1254
+        ],
+        "association": "PLANNING_SLOT_ONLY_NO_LEGACY_MATCH_PROVEN"
+      },
+      "legacy_print_candidate": {
+        "path": "assets/print-masters/rainbow/01.webp",
+        "git_blob_sha": "1a55a4de16bdda4f282e6bd14875b356876e5b61",
+        "bytes": 319842,
+        "association": "LEGACY_VARIANT_CANDIDATE_NO_ORIGINAL_MATCH_PROVEN"
+      },
+      "verified_original_art_only_master": null,
+      "effective_print_dpi": null,
+      "evidence": {
+        "original_identity_match_approved": false,
+        "art_only_approved": false,
+        "pixel_dimensions_checked": false,
+        "dpi_300_or_greater_approved": false,
+        "print_rights_approved": false,
+        "physical_vendor_proof_approved": false
+      },
+      "commercial_print_status": "BLOCKED_UNVERIFIED"
+    },
+    {
+      "slot_id": "rainbow-02",
+      "theme_key": "rainbow",
+      "theme_name": "Rainbow Magic",
+      "slot_number": 2,
+      "legacy_thumbnail": {
+        "path": "assets/themes/rainbow/02.webp",
+        "git_blob_sha": "34b1979c8c0deaf179c3106e942d98ae9de27d95",
+        "bytes": 118728,
+        "role": "LEGACY_VARIANT_THUMBNAIL_NOT_VERIFIED_ORIGINAL"
+      },
+      "existing_original": null,
+      "legacy_print_candidate": {
+        "path": "assets/print-masters/rainbow/02.webp",
+        "git_blob_sha": "d3876550cbd31a2e8646e3c7648dcef41d162317",
+        "bytes": 357442,
+        "association": "LEGACY_VARIANT_CANDIDATE_NO_ORIGINAL_MATCH_PROVEN"
+      },
+      "verified_original_art_only_master": null,
+      "effective_print_dpi": null,
+      "evidence": {
+        "original_identity_match_approved": false,
+        "art_only_approved": false,
+        "pixel_dimensions_checked": false,
+        "dpi_300_or_greater_approved": false,
+        "print_rights_approved": false,
+        "physical_vendor_proof_approved": false
+      },
+      "commercial_print_status": "BLOCKED_UNVERIFIED"
+    },
+    {
+      "slot_id": "rainbow-03",
+      "theme_key": "rainbow",
+      "theme_name": "Rainbow Magic",
+      "slot_number": 3,
+      "legacy_thumbnail": {
+        "path": "assets/themes/rainbow/03.webp",
+        "git_blob_sha": "64d631868bc8033ebec8c9d4a9cdf4caea57a25f",
+        "bytes": 164896,
+        "role": "LEGACY_VARIANT_THUMBNAIL_NOT_VERIFIED_ORIGINAL"
+      },
+      "existing_original": null,
+      "legacy_print_candidate": {
+        "path": "assets/print-masters/rainbow/03.webp",
+        "git_blob_sha": "d72f8a660ac0ea309a3c7204d258bed21ee16ff1",
+        "bytes": 394600,
+        "association": "LEGACY_VARIANT_CANDIDATE_NO_ORIGINAL_MATCH_PROVEN"
+      },
+      "verified_original_art_only_master": null,
+      "effective_print_dpi": null,
+      "evidence": {
+        "original_identity_match_approved": false,
+        "art_only_approved": false,
+        "pixel_dimensions_checked": false,
+        "dpi_300_or_greater_approved": false,
+        "print_rights_approved": false,
+        "physical_vendor_proof_approved": false
+      },
+      "commercial_print_status": "BLOCKED_UNVERIFIED"
+    },
+    {
+      "slot_id": "rainbow-04",
+      "theme_key": "rainbow",
+      "theme_name": "Rainbow Magic",
+      "slot_number": 4,
+      "legacy_thumbnail": {
+        "path": "assets/themes/rainbow/04.webp",
+        "git_blob_sha": "217d00e36d845281ba668884353d3f322de042f0",
+        "bytes": 162484,
+        "role": "LEGACY_VARIANT_THUMBNAIL_NOT_VERIFIED_ORIGINAL"
+      },
+      "existing_original": null,
+      "legacy_print_candidate": null,
+      "verified_original_art_only_master": null,
+      "effective_print_dpi": null,
+      "evidence": {
+        "original_identity_match_approved": false,
+        "art_only_approved": false,
+        "pixel_dimensions_checked": false,
+        "dpi_300_or_greater_approved": false,
+        "print_rights_approved": false,
+        "physical_vendor_proof_approved": false
+      },
+      "commercial_print_status": "BLOCKED_UNVERIFIED"
+    },
+    {
+      "slot_id": "rainbow-05",
+      "theme_key": "rainbow",
+      "theme_name": "Rainbow Magic",
+      "slot_number": 5,
+      "legacy_thumbnail": {
+        "path": "assets/themes/rainbow/05.webp",
+        "git_blob_sha": "dd4a8da7e52fd0fbfd9613c4fe41cde587c3ae0e",
+        "bytes": 176892,
+        "role": "LEGACY_VARIANT_THUMBNAIL_NOT_VERIFIED_ORIGINAL"
+      },
+      "existing_original": null,
+      "legacy_print_candidate": null,
+      "verified_original_art_only_master": null,
+      "effective_print_dpi": null,
+      "evidence": {
+        "original_identity_match_approved": false,
+        "art_only_approved": false,
+        "pixel_dimensions_checked": false,
+        "dpi_300_or_greater_approved": false,
+        "print_rights_approved": false,
+        "physical_vendor_proof_approved": false
+      },
+      "commercial_print_status": "BLOCKED_UNVERIFIED"
+    },
+    {
+      "slot_id": "rainbow-06",
+      "theme_key": "rainbow",
+      "theme_name": "Rainbow Magic",
+      "slot_number": 6,
+      "legacy_thumbnail": {
+        "path": "assets/themes/rainbow/06.webp",
+        "git_blob_sha": "0a96f1bbc5fe515f6aa4747b3e3c1c3820ee3794",
+        "bytes": 167580,
+        "role": "LEGACY_VARIANT_THUMBNAIL_NOT_VERIFIED_ORIGINAL"
+      },
+      "existing_original": null,
+      "legacy_print_candidate": null,
+      "verified_original_art_only_master": null,
+      "effective_print_dpi": null,
+      "evidence": {
+        "original_identity_match_approved": false,
+        "art_only_approved": false,
+        "pixel_dimensions_checked": false,
+        "dpi_300_or_greater_approved": false,
+        "print_rights_approved": false,
+        "physical_vendor_proof_approved": false
+      },
+      "commercial_print_status": "BLOCKED_UNVERIFIED"
+    },
+    {
+      "slot_id": "rainbow-07",
+      "theme_key": "rainbow",
+      "theme_name": "Rainbow Magic",
+      "slot_number": 7,
+      "legacy_thumbnail": {
+        "path": "assets/themes/rainbow/07.webp",
+        "git_blob_sha": "9801a72006740d84625fd771c66f0162e1bc20b3",
+        "bytes": 109214,
+        "role": "LEGACY_VARIANT_THUMBNAIL_NOT_VERIFIED_ORIGINAL"
+      },
+      "existing_original": null,
+      "legacy_print_candidate": null,
+      "verified_original_art_only_master": null,
+      "effective_print_dpi": null,
+      "evidence": {
+        "original_identity_match_approved": false,
+        "art_only_approved": false,
+        "pixel_dimensions_checked": false,
+        "dpi_300_or_greater_approved": false,
+        "print_rights_approved": false,
+        "physical_vendor_proof_approved": false
+      },
+      "commercial_print_status": "BLOCKED_UNVERIFIED"
+    },
+    {
+      "slot_id": "rainbow-08",
+      "theme_key": "rainbow",
+      "theme_name": "Rainbow Magic",
+      "slot_number": 8,
+      "legacy_thumbnail": {
+        "path": "assets/themes/rainbow/08.webp",
+        "git_blob_sha": "9668b0c7f2526fe89269aec2e312803c099440da",
+        "bytes": 150858,
+        "role": "LEGACY_VARIANT_THUMBNAIL_NOT_VERIFIED_ORIGINAL"
+      },
+      "existing_original": null,
+      "legacy_print_candidate": null,
+      "verified_original_art_only_master": null,
+      "effective_print_dpi": null,
+      "evidence": {
+        "original_identity_match_approved": false,
+        "art_only_approved": false,
+        "pixel_dimensions_checked": false,
+        "dpi_300_or_greater_approved": false,
+        "print_rights_approved": false,
+        "physical_vendor_proof_approved": false
+      },
+      "commercial_print_status": "BLOCKED_UNVERIFIED"
+    },
+    {
+      "slot_id": "rainbow-09",
+      "theme_key": "rainbow",
+      "theme_name": "Rainbow Magic",
+      "slot_number": 9,
+      "legacy_thumbnail": {
+        "path": "assets/themes/rainbow/09.webp",
+        "git_blob_sha": "ee25996f73ab9e5cd37b08155d24cbb074a0eda6",
+        "bytes": 148596,
+        "role": "LEGACY_VARIANT_THUMBNAIL_NOT_VERIFIED_ORIGINAL"
+      },
+      "existing_original": null,
+      "legacy_print_candidate": null,
+      "verified_original_art_only_master": null,
+      "effective_print_dpi": null,
+      "evidence": {
+        "original_identity_match_approved": false,
+        "art_only_approved": false,
+        "pixel_dimensions_checked": false,
+        "dpi_300_or_greater_approved": false,
+        "print_rights_approved": false,
+        "physical_vendor_proof_approved": false
+      },
+      "commercial_print_status": "BLOCKED_UNVERIFIED"
+    },
+    {
+      "slot_id": "rainbow-10",
+      "theme_key": "rainbow",
+      "theme_name": "Rainbow Magic",
+      "slot_number": 10,
+      "legacy_thumbnail": {
+        "path": "assets/themes/rainbow/10.webp",
+        "git_blob_sha": "2c1a7876c56470744fdcf38a6a268f3c4b391c9b",
+        "bytes": 157874,
+        "role": "LEGACY_VARIANT_THUMBNAIL_NOT_VERIFIED_ORIGINAL"
+      },
+      "existing_original": null,
+      "legacy_print_candidate": null,
+      "verified_original_art_only_master": null,
+      "effective_print_dpi": null,
+      "evidence": {
+        "original_identity_match_approved": false,
+        "art_only_approved": false,
+        "pixel_dimensions_checked": false,
+        "dpi_300_or_greater_approved": false,
+        "print_rights_approved": false,
+        "physical_vendor_proof_approved": false
+      },
+      "commercial_print_status": "BLOCKED_UNVERIFIED"
+    },
+    {
+      "slot_id": "rainbow-11",
+      "theme_key": "rainbow",
+      "theme_name": "Rainbow Magic",
+      "slot_number": 11,
+      "legacy_thumbnail": {
+        "path": "assets/themes/rainbow/11.webp",
+        "git_blob_sha": "82b7fec4b97e8714b44d771fe3155e5793f27237",
+        "bytes": 21886,
+        "role": "LEGACY_VARIANT_THUMBNAIL_NOT_VERIFIED_ORIGINAL"
+      },
+      "existing_original": null,
+      "legacy_print_candidate": null,
+      "verified_original_art_only_master": null,
+      "effective_print_dpi": null,
+      "evidence": {
+        "original_identity_match_approved": false,
+        "art_only_approved": false,
+        "pixel_dimensions_checked": false,
+        "dpi_300_or_greater_approved": false,
+        "print_rights_approved": false,
+        "physical_vendor_proof_approved": false
+      },
+      "commercial_print_status": "BLOCKED_UNVERIFIED"
+    },
+    {
+      "slot_id": "rainbow-12",
+      "theme_key": "rainbow",
+      "theme_name": "Rainbow Magic",
+      "slot_number": 12,
+      "legacy_thumbnail": {
+        "path": "assets/themes/rainbow/12.webp",
+        "git_blob_sha": "12661f93378d9ddb5b4f4cd4bd79b05ba141f807",
+        "bytes": 20846,
+        "role": "LEGACY_VARIANT_THUMBNAIL_NOT_VERIFIED_ORIGINAL"
+      },
+      "existing_original": null,
+      "legacy_print_candidate": null,
+      "verified_original_art_only_master": null,
+      "effective_print_dpi": null,
+      "evidence": {
+        "original_identity_match_approved": false,
+        "art_only_approved": false,
+        "pixel_dimensions_checked": false,
+        "dpi_300_or_greater_approved": false,
+        "print_rights_approved": false,
+        "physical_vendor_proof_approved": false
+      },
+      "commercial_print_status": "BLOCKED_UNVERIFIED"
+    },
+    {
+      "slot_id": "rainbow-13",
+      "theme_key": "rainbow",
+      "theme_name": "Rainbow Magic",
+      "slot_number": 13,
+      "legacy_thumbnail": {
+        "path": "assets/themes/rainbow/13.webp",
+        "git_blob_sha": "78b5e94ab267752b6d334c9292af5bb2660638b1",
+        "bytes": 19074,
+        "role": "LEGACY_VARIANT_THUMBNAIL_NOT_VERIFIED_ORIGINAL"
+      },
+      "existing_original": null,
+      "legacy_print_candidate": null,
+      "verified_original_art_only_master": null,
+      "effective_print_dpi": null,
+      "evidence": {
+        "original_identity_match_approved": false,
+        "art_only_approved": false,
+        "pixel_dimensions_checked": false,
+        "dpi_300_or_greater_approved": false,
+        "print_rights_approved": false,
+        "physical_vendor_proof_approved": false
+      },
+      "commercial_print_status": "BLOCKED_UNVERIFIED"
+    },
+    {
+      "slot_id": "rainbow-14",
+      "theme_key": "rainbow",
+      "theme_name": "Rainbow Magic",
+      "slot_number": 14,
+      "legacy_thumbnail": {
+        "path": "assets/themes/rainbow/14.webp",
+        "git_blob_sha": "cf0043d0c3dfa81846aca70069e99d312ca34813",
+        "bytes": 21870,
+        "role": "LEGACY_VARIANT_THUMBNAIL_NOT_VERIFIED_ORIGINAL"
+      },
+      "existing_original": null,
+      "legacy_print_candidate": null,
+      "verified_original_art_only_master": null,
+      "effective_print_dpi": null,
+      "evidence": {
+        "original_identity_match_approved": false,
+        "art_only_approved": false,
+        "pixel_dimensions_checked": false,
+        "dpi_300_or_greater_approved": false,
+        "print_rights_approved": false,
+        "physical_vendor_proof_approved": false
+      },
+      "commercial_print_status": "BLOCKED_UNVERIFIED"
+    },
+    {
+      "slot_id": "rainbow-15",
+      "theme_key": "rainbow",
+      "theme_name": "Rainbow Magic",
+      "slot_number": 15,
+      "legacy_thumbnail": {
+        "path": "assets/themes/rainbow/15.webp",
+        "git_blob_sha": "e385c4ffe7563bff028aa89a52aec20f7d8685d6",
+        "bytes": 18230,
+        "role": "LEGACY_VARIANT_THUMBNAIL_NOT_VERIFIED_ORIGINAL"
+      },
+      "existing_original": null,
+      "legacy_print_candidate": null,
+      "verified_original_art_only_master": null,
+      "effective_print_dpi": null,
+      "evidence": {
+        "original_identity_match_approved": false,
+        "art_only_approved": false,
+        "pixel_dimensions_checked": false,
+        "dpi_300_or_greater_approved": false,
+        "print_rights_approved": false,
+        "physical_vendor_proof_approved": false
+      },
+      "commercial_print_status": "BLOCKED_UNVERIFIED"
+    },
+    {
+      "slot_id": "rainbow-16",
+      "theme_key": "rainbow",
+      "theme_name": "Rainbow Magic",
+      "slot_number": 16,
+      "legacy_thumbnail": {
+        "path": "assets/themes/rainbow/16.webp",
+        "git_blob_sha": "d6593ca29de5e441bacbd5de33484eaa795815bd",
+        "bytes": 21550,
+        "role": "LEGACY_VARIANT_THUMBNAIL_NOT_VERIFIED_ORIGINAL"
+      },
+      "existing_original": null,
+      "legacy_print_candidate": null,
+      "verified_original_art_only_master": null,
+      "effective_print_dpi": null,
+      "evidence": {
+        "original_identity_match_approved": false,
+        "art_only_approved": false,
+        "pixel_dimensions_checked": false,
+        "dpi_300_or_greater_approved": false,
+        "print_rights_approved": false,
+        "physical_vendor_proof_approved": false
+      },
+      "commercial_print_status": "BLOCKED_UNVERIFIED"
+    },
+    {
+      "slot_id": "rainbow-17",
+      "theme_key": "rainbow",
+      "theme_name": "Rainbow Magic",
+      "slot_number": 17,
+      "legacy_thumbnail": {
+        "path": "assets/themes/rainbow/17.webp",
+        "git_blob_sha": "0e2e87f9586b1fc85b2344c6cc4d71810b3b6fca",
+        "bytes": 22750,
+        "role": "LEGACY_VARIANT_THUMBNAIL_NOT_VERIFIED_ORIGINAL"
+      },
+      "existing_original": null,
+      "legacy_print_candidate": null,
+      "verified_original_art_only_master": null,
+      "effective_print_dpi": null,
+      "evidence": {
+        "original_identity_match_approved": false,
+        "art_only_approved": false,
+        "pixel_dimensions_checked": false,
+        "dpi_300_or_greater_approved": false,
+        "print_rights_approved": false,
+        "physical_vendor_proof_approved": false
+      },
+      "commercial_print_status": "BLOCKED_UNVERIFIED"
+    },
+    {
+      "slot_id": "rainbow-18",
+      "theme_key": "rainbow",
+      "theme_name": "Rainbow Magic",
+      "slot_number": 18,
+      "legacy_thumbnail": {
+        "path": "assets/themes/rainbow/18.webp",
+        "git_blob_sha": "ea05e84deac874c324d28db89f6a8f3f7a978011",
+        "bytes": 22240,
+        "role": "LEGACY_VARIANT_THUMBNAIL_NOT_VERIFIED_ORIGINAL"
+      },
+      "existing_original": null,
+      "legacy_print_candidate": null,
+      "verified_original_art_only_master": null,
+      "effective_print_dpi": null,
+      "evidence": {
+        "original_identity_match_approved": false,
+        "art_only_approved": false,
+        "pixel_dimensions_checked": false,
+        "dpi_300_or_greater_approved": false,
+        "print_rights_approved": false,
+        "physical_vendor_proof_approved": false
+      },
+      "commercial_print_status": "BLOCKED_UNVERIFIED"
+    },
+    {
+      "slot_id": "rainbow-19",
+      "theme_key": "rainbow",
+      "theme_name": "Rainbow Magic",
+      "slot_number": 19,
+      "legacy_thumbnail": {
+        "path": "assets/themes/rainbow/19.webp",
+        "git_blob_sha": "989a74d72aa70ec72d1a171aed2e850b752de40a",
+        "bytes": 13828,
+        "role": "LEGACY_VARIANT_THUMBNAIL_NOT_VERIFIED_ORIGINAL"
+      },
+      "existing_original": null,
+      "legacy_print_candidate": null,
+      "verified_original_art_only_master": null,
+      "effective_print_dpi": null,
+      "evidence": {
+        "original_identity_match_approved": false,
+        "art_only_approved": false,
+        "pixel_dimensions_checked": false,
+        "dpi_300_or_greater_approved": false,
+        "print_rights_approved": false,
+        "physical_vendor_proof_approved": false
+      },
+      "commercial_print_status": "BLOCKED_UNVERIFIED"
+    },
+    {
+      "slot_id": "rainbow-20",
+      "theme_key": "rainbow",
+      "theme_name": "Rainbow Magic",
+      "slot_number": 20,
+      "legacy_thumbnail": {
+        "path": "assets/themes/rainbow/20.webp",
+        "git_blob_sha": "8a6f15f4b268a99fc8d40f00cc497001d81935c4",
+        "bytes": 22360,
+        "role": "LEGACY_VARIANT_THUMBNAIL_NOT_VERIFIED_ORIGINAL"
+      },
+      "existing_original": null,
+      "legacy_print_candidate": null,
+      "verified_original_art_only_master": null,
+      "effective_print_dpi": null,
+      "evidence": {
+        "original_identity_match_approved": false,
+        "art_only_approved": false,
+        "pixel_dimensions_checked": false,
+        "dpi_300_or_greater_approved": false,
+        "print_rights_approved": false,
+        "physical_vendor_proof_approved": false
+      },
+      "commercial_print_status": "BLOCKED_UNVERIFIED"
+    },
+    {
+      "slot_id": "rainbow-21",
+      "theme_key": "rainbow",
+      "theme_name": "Rainbow Magic",
+      "slot_number": 21,
+      "legacy_thumbnail": {
+        "path": "assets/themes/rainbow/21.webp",
+        "git_blob_sha": "25adbf3da8230e375c50d2f213b5b19089973556",
+        "bytes": 16794,
+        "role": "LEGACY_VARIANT_THUMBNAIL_NOT_VERIFIED_ORIGINAL"
+      },
+      "existing_original": null,
+      "legacy_print_candidate": null,
+      "verified_original_art_only_master": null,
+      "effective_print_dpi": null,
+      "evidence": {
+        "original_identity_match_approved": false,
+        "art_only_approved": false,
+        "pixel_dimensions_checked": false,
+        "dpi_300_or_greater_approved": false,
+        "print_rights_approved": false,
+        "physical_vendor_proof_approved": false
+      },
+      "commercial_print_status": "BLOCKED_UNVERIFIED"
+    },
+    {
+      "slot_id": "rainbow-22",
+      "theme_key": "rainbow",
+      "theme_name": "Rainbow Magic",
+      "slot_number": 22,
+      "legacy_thumbnail": {
+        "path": "assets/themes/rainbow/22.webp",
+        "git_blob_sha": "923f01d44241f7d21ee3022e6188e652984085d5",
+        "bytes": 20740,
+        "role": "LEGACY_VARIANT_THUMBNAIL_NOT_VERIFIED_ORIGINAL"
+      },
+      "existing_original": null,
+      "legacy_print_candidate": null,
+      "verified_original_art_only_master": null,
+      "effective_print_dpi": null,
+      "evidence": {
+        "original_identity_match_approved": false,
+        "art_only_approved": false,
+        "pixel_dimensions_checked": false,
+        "dpi_300_or_greater_approved": false,
+        "print_rights_approved": false,
+        "physical_vendor_proof_approved": false
+      },
+      "commercial_print_status": "BLOCKED_UNVERIFIED"
+    },
+    {
+      "slot_id": "rainbow-23",
+      "theme_key": "rainbow",
+      "theme_name": "Rainbow Magic",
+      "slot_number": 23,
+      "legacy_thumbnail": {
+        "path": "assets/themes/rainbow/23.webp",
+        "git_blob_sha": "0c52bc94b1752c89bd938d1cfb99d141cc64c070",
+        "bytes": 23648,
+        "role": "LEGACY_VARIANT_THUMBNAIL_NOT_VERIFIED_ORIGINAL"
+      },
+      "existing_original": null,
+      "legacy_print_candidate": null,
+      "verified_original_art_only_master": null,
+      "effective_print_dpi": null,
+      "evidence": {
+        "original_identity_match_approved": false,
+        "art_only_approved": false,
+        "pixel_dimensions_checked": false,
+        "dpi_300_or_greater_approved": false,
+        "print_rights_approved": false,
+        "physical_vendor_proof_approved": false
+      },
+      "commercial_print_status": "BLOCKED_UNVERIFIED"
+    },
+    {
+      "slot_id": "rainbow-24",
+      "theme_key": "rainbow",
+      "theme_name": "Rainbow Magic",
+      "slot_number": 24,
+      "legacy_thumbnail": {
+        "path": "assets/themes/rainbow/24.webp",
+        "git_blob_sha": "123c619f62232ea2c621f267b309ff5415e75547",
+        "bytes": 19322,
+        "role": "LEGACY_VARIANT_THUMBNAIL_NOT_VERIFIED_ORIGINAL"
+      },
+      "existing_original": null,
+      "legacy_print_candidate": null,
+      "verified_original_art_only_master": null,
+      "effective_print_dpi": null,
+      "evidence": {
+        "original_identity_match_approved": false,
+        "art_only_approved": false,
+        "pixel_dimensions_checked": false,
+        "dpi_300_or_greater_approved": false,
+        "print_rights_approved": false,
+        "physical_vendor_proof_approved": false
+      },
+      "commercial_print_status": "BLOCKED_UNVERIFIED"
+    },
+    {
+      "slot_id": "sports-01",
+      "theme_key": "sports",
+      "theme_name": "Sports Champions",
+      "slot_number": 1,
+      "legacy_thumbnail": {
+        "path": "assets/themes/sports/01.webp",
+        "git_blob_sha": "28744179cb6591b7437b38cfec7c00fba1ec73b1",
+        "bytes": 23200,
+        "role": "LEGACY_VARIANT_THUMBNAIL_NOT_VERIFIED_ORIGINAL"
+      },
+      "existing_original": {
+        "artwork_id": "sports-racer",
+        "name": "Kart Racing Champion",
+        "preview_index": 4,
+        "sprite": {
+          "path": "assets/ready-mixed-01-06.webp",
+          "cols": 3,
+          "rows": 2,
+          "col": 1,
+          "row": 1
+        },
+        "source_pixel_size_as_catalogued": [
+          1254,
+          1254
+        ],
+        "association": "PLANNING_SLOT_ONLY_NO_LEGACY_MATCH_PROVEN"
+      },
+      "legacy_print_candidate": null,
+      "verified_original_art_only_master": null,
+      "effective_print_dpi": null,
+      "evidence": {
+        "original_identity_match_approved": false,
+        "art_only_approved": false,
+        "pixel_dimensions_checked": false,
+        "dpi_300_or_greater_approved": false,
+        "print_rights_approved": false,
+        "physical_vendor_proof_approved": false
+      },
+      "commercial_print_status": "BLOCKED_UNVERIFIED"
+    },
+    {
+      "slot_id": "sports-02",
+      "theme_key": "sports",
+      "theme_name": "Sports Champions",
+      "slot_number": 2,
+      "legacy_thumbnail": {
+        "path": "assets/themes/sports/02.webp",
+        "git_blob_sha": "cacbe757e0d6b24fdea8f9b3a0f917f9d2a1b2d1",
+        "bytes": 23856,
+        "role": "LEGACY_VARIANT_THUMBNAIL_NOT_VERIFIED_ORIGINAL"
+      },
+      "existing_original": {
+        "artwork_id": "sports-swimmer",
+        "name": "Swimming Champion",
+        "preview_index": 5,
+        "sprite": {
+          "path": "assets/ready-mixed-01-06.webp",
+          "cols": 3,
+          "rows": 2,
+          "col": 2,
+          "row": 1
+        },
+        "source_pixel_size_as_catalogued": [
+          1254,
+          1254
+        ],
+        "association": "PLANNING_SLOT_ONLY_NO_LEGACY_MATCH_PROVEN"
+      },
+      "legacy_print_candidate": null,
+      "verified_original_art_only_master": null,
+      "effective_print_dpi": null,
+      "evidence": {
+        "original_identity_match_approved": false,
+        "art_only_approved": false,
+        "pixel_dimensions_checked": false,
+        "dpi_300_or_greater_approved": false,
+        "print_rights_approved": false,
+        "physical_vendor_proof_approved": false
+      },
+      "commercial_print_status": "BLOCKED_UNVERIFIED"
+    },
+    {
+      "slot_id": "sports-03",
+      "theme_key": "sports",
+      "theme_name": "Sports Champions",
+      "slot_number": 3,
+      "legacy_thumbnail": {
+        "path": "assets/themes/sports/03.webp",
+        "git_blob_sha": "6944bfe9b1965d6ff66bc48d0637586479f55326",
+        "bytes": 21912,
+        "role": "LEGACY_VARIANT_THUMBNAIL_NOT_VERIFIED_ORIGINAL"
+      },
+      "existing_original": null,
+      "legacy_print_candidate": null,
+      "verified_original_art_only_master": null,
+      "effective_print_dpi": null,
+      "evidence": {
+        "original_identity_match_approved": false,
+        "art_only_approved": false,
+        "pixel_dimensions_checked": false,
+        "dpi_300_or_greater_approved": false,
+        "print_rights_approved": false,
+        "physical_vendor_proof_approved": false
+      },
+      "commercial_print_status": "BLOCKED_UNVERIFIED"
+    },
+    {
+      "slot_id": "sports-04",
+      "theme_key": "sports",
+      "theme_name": "Sports Champions",
+      "slot_number": 4,
+      "legacy_thumbnail": {
+        "path": "assets/themes/sports/04.webp",
+        "git_blob_sha": "1b1c4081ed9fbcf8351a7212a4f6faefcfd86fd7",
+        "bytes": 24202,
+        "role": "LEGACY_VARIANT_THUMBNAIL_NOT_VERIFIED_ORIGINAL"
+      },
+      "existing_original": null,
+      "legacy_print_candidate": {
+        "path": "assets/print-masters/sports/04.webp",
+        "git_blob_sha": "3f9e7e98c764b4c89b7f9c289c68cc9940595f33",
+        "bytes": 383894,
+        "association": "LEGACY_VARIANT_CANDIDATE_NO_ORIGINAL_MATCH_PROVEN"
+      },
+      "verified_original_art_only_master": null,
+      "effective_print_dpi": null,
+      "evidence": {
+        "original_identity_match_approved": false,
+        "art_only_approved": false,
+        "pixel_dimensions_checked": false,
+        "dpi_300_or_greater_approved": false,
+        "print_rights_approved": false,
+        "physical_vendor_proof_approved": false
+      },
+      "commercial_print_status": "BLOCKED_UNVERIFIED"
+    },
+    {
+      "slot_id": "sports-05",
+      "theme_key": "sports",
+      "theme_name": "Sports Champions",
+      "slot_number": 5,
+      "legacy_thumbnail": {
+        "path": "assets/themes/sports/05.webp",
+        "git_blob_sha": "4e196808710109003bf045970da3e5e1410dcde1",
+        "bytes": 22774,
+        "role": "LEGACY_VARIANT_THUMBNAIL_NOT_VERIFIED_ORIGINAL"
+      },
+      "existing_original": null,
+      "legacy_print_candidate": null,
+      "verified_original_art_only_master": null,
+      "effective_print_dpi": null,
+      "evidence": {
+        "original_identity_match_approved": false,
+        "art_only_approved": false,
+        "pixel_dimensions_checked": false,
+        "dpi_300_or_greater_approved": false,
+        "print_rights_approved": false,
+        "physical_vendor_proof_approved": false
+      },
+      "commercial_print_status": "BLOCKED_UNVERIFIED"
+    },
+    {
+      "slot_id": "sports-06",
+      "theme_key": "sports",
+      "theme_name": "Sports Champions",
+      "slot_number": 6,
+      "legacy_thumbnail": {
+        "path": "assets/themes/sports/06.webp",
+        "git_blob_sha": "a5a16c50d9e5bb414c3b0f2f37c6362c69adc5ab",
+        "bytes": 19752,
+        "role": "LEGACY_VARIANT_THUMBNAIL_NOT_VERIFIED_ORIGINAL"
+      },
+      "existing_original": null,
+      "legacy_print_candidate": null,
+      "verified_original_art_only_master": null,
+      "effective_print_dpi": null,
+      "evidence": {
+        "original_identity_match_approved": false,
+        "art_only_approved": false,
+        "pixel_dimensions_checked": false,
+        "dpi_300_or_greater_approved": false,
+        "print_rights_approved": false,
+        "physical_vendor_proof_approved": false
+      },
+      "commercial_print_status": "BLOCKED_UNVERIFIED"
+    },
+    {
+      "slot_id": "sports-07",
+      "theme_key": "sports",
+      "theme_name": "Sports Champions",
+      "slot_number": 7,
+      "legacy_thumbnail": {
+        "path": "assets/themes/sports/07.webp",
+        "git_blob_sha": "f060e536c806b3ce67a2e20b5752f00427ef1b28",
+        "bytes": 19366,
+        "role": "LEGACY_VARIANT_THUMBNAIL_NOT_VERIFIED_ORIGINAL"
+      },
+      "existing_original": null,
+      "legacy_print_candidate": null,
+      "verified_original_art_only_master": null,
+      "effective_print_dpi": null,
+      "evidence": {
+        "original_identity_match_approved": false,
+        "art_only_approved": false,
+        "pixel_dimensions_checked": false,
+        "dpi_300_or_greater_approved": false,
+        "print_rights_approved": false,
+        "physical_vendor_proof_approved": false
+      },
+      "commercial_print_status": "BLOCKED_UNVERIFIED"
+    },
+    {
+      "slot_id": "sports-08",
+      "theme_key": "sports",
+      "theme_name": "Sports Champions",
+      "slot_number": 8,
+      "legacy_thumbnail": {
+        "path": "assets/themes/sports/08.webp",
+        "git_blob_sha": "c27fe44a7663145bdbf2e7b89938bf1c7f31e255",
+        "bytes": 19718,
+        "role": "LEGACY_VARIANT_THUMBNAIL_NOT_VERIFIED_ORIGINAL"
+      },
+      "existing_original": null,
+      "legacy_print_candidate": null,
+      "verified_original_art_only_master": null,
+      "effective_print_dpi": null,
+      "evidence": {
+        "original_identity_match_approved": false,
+        "art_only_approved": false,
+        "pixel_dimensions_checked": false,
+        "dpi_300_or_greater_approved": false,
+        "print_rights_approved": false,
+        "physical_vendor_proof_approved": false
+      },
+      "commercial_print_status": "BLOCKED_UNVERIFIED"
+    },
+    {
+      "slot_id": "sports-09",
+      "theme_key": "sports",
+      "theme_name": "Sports Champions",
+      "slot_number": 9,
+      "legacy_thumbnail": {
+        "path": "assets/themes/sports/09.webp",
+        "git_blob_sha": "0783a7456704726c2c28615b7c34ba8f0eed5d0f",
+        "bytes": 19170,
+        "role": "LEGACY_VARIANT_THUMBNAIL_NOT_VERIFIED_ORIGINAL"
+      },
+      "existing_original": null,
+      "legacy_print_candidate": null,
+      "verified_original_art_only_master": null,
+      "effective_print_dpi": null,
+      "evidence": {
+        "original_identity_match_approved": false,
+        "art_only_approved": false,
+        "pixel_dimensions_checked": false,
+        "dpi_300_or_greater_approved": false,
+        "print_rights_approved": false,
+        "physical_vendor_proof_approved": false
+      },
+      "commercial_print_status": "BLOCKED_UNVERIFIED"
+    },
+    {
+      "slot_id": "sports-10",
+      "theme_key": "sports",
+      "theme_name": "Sports Champions",
+      "slot_number": 10,
+      "legacy_thumbnail": {
+        "path": "assets/themes/sports/10.webp",
+        "git_blob_sha": "9e02e1430538fe9d924277cd8a7a65f4319a5e6f",
+        "bytes": 17982,
+        "role": "LEGACY_VARIANT_THUMBNAIL_NOT_VERIFIED_ORIGINAL"
+      },
+      "existing_original": null,
+      "legacy_print_candidate": null,
+      "verified_original_art_only_master": null,
+      "effective_print_dpi": null,
+      "evidence": {
+        "original_identity_match_approved": false,
+        "art_only_approved": false,
+        "pixel_dimensions_checked": false,
+        "dpi_300_or_greater_approved": false,
+        "print_rights_approved": false,
+        "physical_vendor_proof_approved": false
+      },
+      "commercial_print_status": "BLOCKED_UNVERIFIED"
+    },
+    {
+      "slot_id": "sports-11",
+      "theme_key": "sports",
+      "theme_name": "Sports Champions",
+      "slot_number": 11,
+      "legacy_thumbnail": {
+        "path": "assets/themes/sports/11.webp",
+        "git_blob_sha": "70222f26521b3cc41fa294062215ebfde9fe4cb0",
+        "bytes": 17636,
+        "role": "LEGACY_VARIANT_THUMBNAIL_NOT_VERIFIED_ORIGINAL"
+      },
+      "existing_original": null,
+      "legacy_print_candidate": null,
+      "verified_original_art_only_master": null,
+      "effective_print_dpi": null,
+      "evidence": {
+        "original_identity_match_approved": false,
+        "art_only_approved": false,
+        "pixel_dimensions_checked": false,
+        "dpi_300_or_greater_approved": false,
+        "print_rights_approved": false,
+        "physical_vendor_proof_approved": false
+      },
+      "commercial_print_status": "BLOCKED_UNVERIFIED"
+    },
+    {
+      "slot_id": "sports-12",
+      "theme_key": "sports",
+      "theme_name": "Sports Champions",
+      "slot_number": 12,
+      "legacy_thumbnail": {
+        "path": "assets/themes/sports/12.webp",
+        "git_blob_sha": "d546b298b1b6592194bc5c7c85edfbfbcdebc877",
+        "bytes": 17134,
+        "role": "LEGACY_VARIANT_THUMBNAIL_NOT_VERIFIED_ORIGINAL"
+      },
+      "existing_original": null,
+      "legacy_print_candidate": null,
+      "verified_original_art_only_master": null,
+      "effective_print_dpi": null,
+      "evidence": {
+        "original_identity_match_approved": false,
+        "art_only_approved": false,
+        "pixel_dimensions_checked": false,
+        "dpi_300_or_greater_approved": false,
+        "print_rights_approved": false,
+        "physical_vendor_proof_approved": false
+      },
+      "commercial_print_status": "BLOCKED_UNVERIFIED"
+    },
+    {
+      "slot_id": "sports-13",
+      "theme_key": "sports",
+      "theme_name": "Sports Champions",
+      "slot_number": 13,
+      "legacy_thumbnail": {
+        "path": "assets/themes/sports/13.webp",
+        "git_blob_sha": "7a9d8772681b2dacecb8b3597b1386003f57ebec",
+        "bytes": 18258,
+        "role": "LEGACY_VARIANT_THUMBNAIL_NOT_VERIFIED_ORIGINAL"
+      },
+      "existing_original": null,
+      "legacy_print_candidate": null,
+      "verified_original_art_only_master": null,
+      "effective_print_dpi": null,
+      "evidence": {
+        "original_identity_match_approved": false,
+        "art_only_approved": false,
+        "pixel_dimensions_checked": false,
+        "dpi_300_or_greater_approved": false,
+        "print_rights_approved": false,
+        "physical_vendor_proof_approved": false
+      },
+      "commercial_print_status": "BLOCKED_UNVERIFIED"
+    },
+    {
+      "slot_id": "sports-14",
+      "theme_key": "sports",
+      "theme_name": "Sports Champions",
+      "slot_number": 14,
+      "legacy_thumbnail": {
+        "path": "assets/themes/sports/14.webp",
+        "git_blob_sha": "2c5108623f30b022409ae8fa459d4373d4d96046",
+        "bytes": 19630,
+        "role": "LEGACY_VARIANT_THUMBNAIL_NOT_VERIFIED_ORIGINAL"
+      },
+      "existing_original": null,
+      "legacy_print_candidate": null,
+      "verified_original_art_only_master": null,
+      "effective_print_dpi": null,
+      "evidence": {
+        "original_identity_match_approved": false,
+        "art_only_approved": false,
+        "pixel_dimensions_checked": false,
+        "dpi_300_or_greater_approved": false,
+        "print_rights_approved": false,
+        "physical_vendor_proof_approved": false
+      },
+      "commercial_print_status": "BLOCKED_UNVERIFIED"
+    },
+    {
+      "slot_id": "sports-15",
+      "theme_key": "sports",
+      "theme_name": "Sports Champions",
+      "slot_number": 15,
+      "legacy_thumbnail": {
+        "path": "assets/themes/sports/15.webp",
+        "git_blob_sha": "86ce63853b072ee08a71baff97773292bed1c01c",
+        "bytes": 19462,
+        "role": "LEGACY_VARIANT_THUMBNAIL_NOT_VERIFIED_ORIGINAL"
+      },
+      "existing_original": null,
+      "legacy_print_candidate": null,
+      "verified_original_art_only_master": null,
+      "effective_print_dpi": null,
+      "evidence": {
+        "original_identity_match_approved": false,
+        "art_only_approved": false,
+        "pixel_dimensions_checked": false,
+        "dpi_300_or_greater_approved": false,
+        "print_rights_approved": false,
+        "physical_vendor_proof_approved": false
+      },
+      "commercial_print_status": "BLOCKED_UNVERIFIED"
+    },
+    {
+      "slot_id": "sports-16",
+      "theme_key": "sports",
+      "theme_name": "Sports Champions",
+      "slot_number": 16,
+      "legacy_thumbnail": {
+        "path": "assets/themes/sports/16.webp",
+        "git_blob_sha": "3176d4cd8646777f3364cedd24d903661d9eef17",
+        "bytes": 17234,
+        "role": "LEGACY_VARIANT_THUMBNAIL_NOT_VERIFIED_ORIGINAL"
+      },
+      "existing_original": null,
+      "legacy_print_candidate": null,
+      "verified_original_art_only_master": null,
+      "effective_print_dpi": null,
+      "evidence": {
+        "original_identity_match_approved": false,
+        "art_only_approved": false,
+        "pixel_dimensions_checked": false,
+        "dpi_300_or_greater_approved": false,
+        "print_rights_approved": false,
+        "physical_vendor_proof_approved": false
+      },
+      "commercial_print_status": "BLOCKED_UNVERIFIED"
+    },
+    {
+      "slot_id": "sports-17",
+      "theme_key": "sports",
+      "theme_name": "Sports Champions",
+      "slot_number": 17,
+      "legacy_thumbnail": {
+        "path": "assets/themes/sports/17.webp",
+        "git_blob_sha": "10ae2a625eb2bc84931dde1c081ff0546df9707e",
+        "bytes": 19160,
+        "role": "LEGACY_VARIANT_THUMBNAIL_NOT_VERIFIED_ORIGINAL"
+      },
+      "existing_original": null,
+      "legacy_print_candidate": null,
+      "verified_original_art_only_master": null,
+      "effective_print_dpi": null,
+      "evidence": {
+        "original_identity_match_approved": false,
+        "art_only_approved": false,
+        "pixel_dimensions_checked": false,
+        "dpi_300_or_greater_approved": false,
+        "print_rights_approved": false,
+        "physical_vendor_proof_approved": false
+      },
+      "commercial_print_status": "BLOCKED_UNVERIFIED"
+    },
+    {
+      "slot_id": "sports-18",
+      "theme_key": "sports",
+      "theme_name": "Sports Champions",
+      "slot_number": 18,
+      "legacy_thumbnail": {
+        "path": "assets/themes/sports/18.webp",
+        "git_blob_sha": "ae68375429b69ff585dcfeeab2db65d65bc6d6c1",
+        "bytes": 19602,
+        "role": "LEGACY_VARIANT_THUMBNAIL_NOT_VERIFIED_ORIGINAL"
+      },
+      "existing_original": null,
+      "legacy_print_candidate": null,
+      "verified_original_art_only_master": null,
+      "effective_print_dpi": null,
+      "evidence": {
+        "original_identity_match_approved": false,
+        "art_only_approved": false,
+        "pixel_dimensions_checked": false,
+        "dpi_300_or_greater_approved": false,
+        "print_rights_approved": false,
+        "physical_vendor_proof_approved": false
+      },
+      "commercial_print_status": "BLOCKED_UNVERIFIED"
+    },
+    {
+      "slot_id": "sports-19",
+      "theme_key": "sports",
+      "theme_name": "Sports Champions",
+      "slot_number": 19,
+      "legacy_thumbnail": {
+        "path": "assets/themes/sports/19.webp",
+        "git_blob_sha": "b9534f9aa912d9d459abb66157d7874c36a383c4",
+        "bytes": 21590,
+        "role": "LEGACY_VARIANT_THUMBNAIL_NOT_VERIFIED_ORIGINAL"
+      },
+      "existing_original": null,
+      "legacy_print_candidate": null,
+      "verified_original_art_only_master": null,
+      "effective_print_dpi": null,
+      "evidence": {
+        "original_identity_match_approved": false,
+        "art_only_approved": false,
+        "pixel_dimensions_checked": false,
+        "dpi_300_or_greater_approved": false,
+        "print_rights_approved": false,
+        "physical_vendor_proof_approved": false
+      },
+      "commercial_print_status": "BLOCKED_UNVERIFIED"
+    },
+    {
+      "slot_id": "sports-20",
+      "theme_key": "sports",
+      "theme_name": "Sports Champions",
+      "slot_number": 20,
+      "legacy_thumbnail": {
+        "path": "assets/themes/sports/20.webp",
+        "git_blob_sha": "c93fb41caf6f7e914d9f7b6f8eb7d99854faa33e",
+        "bytes": 17418,
+        "role": "LEGACY_VARIANT_THUMBNAIL_NOT_VERIFIED_ORIGINAL"
+      },
+      "existing_original": null,
+      "legacy_print_candidate": null,
+      "verified_original_art_only_master": null,
+      "effective_print_dpi": null,
+      "evidence": {
+        "original_identity_match_approved": false,
+        "art_only_approved": false,
+        "pixel_dimensions_checked": false,
+        "dpi_300_or_greater_approved": false,
+        "print_rights_approved": false,
+        "physical_vendor_proof_approved": false
+      },
+      "commercial_print_status": "BLOCKED_UNVERIFIED"
+    },
+    {
+      "slot_id": "sports-21",
+      "theme_key": "sports",
+      "theme_name": "Sports Champions",
+      "slot_number": 21,
+      "legacy_thumbnail": {
+        "path": "assets/themes/sports/21.webp",
+        "git_blob_sha": "940d1b142a80b9edffd1f6a65c486d946fe16dbd",
+        "bytes": 20284,
+        "role": "LEGACY_VARIANT_THUMBNAIL_NOT_VERIFIED_ORIGINAL"
+      },
+      "existing_original": null,
+      "legacy_print_candidate": null,
+      "verified_original_art_only_master": null,
+      "effective_print_dpi": null,
+      "evidence": {
+        "original_identity_match_approved": false,
+        "art_only_approved": false,
+        "pixel_dimensions_checked": false,
+        "dpi_300_or_greater_approved": false,
+        "print_rights_approved": false,
+        "physical_vendor_proof_approved": false
+      },
+      "commercial_print_status": "BLOCKED_UNVERIFIED"
+    },
+    {
+      "slot_id": "sports-22",
+      "theme_key": "sports",
+      "theme_name": "Sports Champions",
+      "slot_number": 22,
+      "legacy_thumbnail": {
+        "path": "assets/themes/sports/22.webp",
+        "git_blob_sha": "30a6e1b86419189f2d81eedad24864ea31a70717",
+        "bytes": 16960,
+        "role": "LEGACY_VARIANT_THUMBNAIL_NOT_VERIFIED_ORIGINAL"
+      },
+      "existing_original": null,
+      "legacy_print_candidate": null,
+      "verified_original_art_only_master": null,
+      "effective_print_dpi": null,
+      "evidence": {
+        "original_identity_match_approved": false,
+        "art_only_approved": false,
+        "pixel_dimensions_checked": false,
+        "dpi_300_or_greater_approved": false,
+        "print_rights_approved": false,
+        "physical_vendor_proof_approved": false
+      },
+      "commercial_print_status": "BLOCKED_UNVERIFIED"
+    },
+    {
+      "slot_id": "sports-23",
+      "theme_key": "sports",
+      "theme_name": "Sports Champions",
+      "slot_number": 23,
+      "legacy_thumbnail": {
+        "path": "assets/themes/sports/23.webp",
+        "git_blob_sha": "30e53c2fae434361d59d6a413ad4fb250ba3b792",
+        "bytes": 17858,
+        "role": "LEGACY_VARIANT_THUMBNAIL_NOT_VERIFIED_ORIGINAL"
+      },
+      "existing_original": null,
+      "legacy_print_candidate": null,
+      "verified_original_art_only_master": null,
+      "effective_print_dpi": null,
+      "evidence": {
+        "original_identity_match_approved": false,
+        "art_only_approved": false,
+        "pixel_dimensions_checked": false,
+        "dpi_300_or_greater_approved": false,
+        "print_rights_approved": false,
+        "physical_vendor_proof_approved": false
+      },
+      "commercial_print_status": "BLOCKED_UNVERIFIED"
+    },
+    {
+      "slot_id": "sports-24",
+      "theme_key": "sports",
+      "theme_name": "Sports Champions",
+      "slot_number": 24,
+      "legacy_thumbnail": {
+        "path": "assets/themes/sports/24.webp",
+        "git_blob_sha": "f1da9f2e809141285411a2c1234860e5b573f308",
+        "bytes": 23964,
+        "role": "LEGACY_VARIANT_THUMBNAIL_NOT_VERIFIED_ORIGINAL"
+      },
+      "existing_original": null,
+      "legacy_print_candidate": null,
+      "verified_original_art_only_master": null,
+      "effective_print_dpi": null,
+      "evidence": {
+        "original_identity_match_approved": false,
+        "art_only_approved": false,
+        "pixel_dimensions_checked": false,
+        "dpi_300_or_greater_approved": false,
+        "print_rights_approved": false,
+        "physical_vendor_proof_approved": false
+      },
+      "commercial_print_status": "BLOCKED_UNVERIFIED"
+    }
+  ]
+}

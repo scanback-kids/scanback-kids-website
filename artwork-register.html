@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow"><title>ScanBack Kids | 96 Artwork Master Register — Dev</title>
+<style>
+:root{color-scheme:light;--blue:#16336b;--muted:#516483;--border:#dce6f5;--pink:#f9419a}
+*{box-sizing:border-box}body{margin:0;background:linear-gradient(180deg,#e7f3ff 0%,#fff1f9 40%,#f8fbff 100%);color:var(--blue);font:15px/1.5 Arial,sans-serif}
+header{background:white;border-bottom:1px solid var(--border)}header .container{display:flex;gap:14px;align-items:center;justify-content:space-between;flex-wrap:wrap;padding:18px 0}
+.container{width:min(1320px,calc(100% - 28px));margin:auto}a{color:#215fe5}h1{font-size:clamp(27px,4vw,42px);letter-spacing:-1px;margin:8px 0}h2{font-size:19px}p{margin:7px 0}
+.pill{border-radius:999px;background:#ffecf6;padding:6px 12px;color:#b51966;font-size:12px;font-weight:800}
+.warning{background:#fff8de;border:1px solid #e6cd83;padding:14px 16px;border-radius:14px;margin:14px 0;color:#674f18}
+.cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:13px;margin:20px 0 45px}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:11px;margin:16px 0}
+.stat,.slot{background:white;border:1px solid var(--border);border-radius:16px;padding:13px;box-shadow:0 8px 24px #12345c0b}
+.stat strong{font-size:25px;display:block}.stat span{color:var(--muted);font-size:12px}
+.controls{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:20px 0}
+label{font-size:13px;font-weight:700}select{border:1px solid #b9cbe8;border-radius:9px;background:white;padding:11px;max-width:100%;font:inherit}
+.slot{min-width:0;overflow:hidden;padding:10px}
+.slot-head{display:flex;align-items:center;gap:5px;justify-content:space-between;font-size:13px;font-weight:900;margin-bottom:9px}
+.chip{font-size:10px;background:#f6e2ec;color:#9b2762;padding:3px 6px;border-radius:8px}
+.images{display:grid;grid-template-columns:1fr 1fr;gap:7px}
+.art{width:100%;aspect-ratio:1;background:#eef2f8;border-radius:9px;overflow:hidden;display:flex;align-items:center;justify-content:center;color:#74829c;font-size:11px;text-align:center}
+.art img{height:100%;width:100%;object-fit:cover}
+.sprite{background-repeat:no-repeat;background-color:#eef2f8}
+.caption{font-size:11px;color:var(--muted);margin:3px 0 8px;text-align:center}
+.name{font-weight:800;min-height:38px;font-size:13px;overflow-wrap:anywhere}
+.note{font-size:11px;color:#6c7588}.tag{font-size:11px;font-weight:700;color:#8e4c17;background:#fff6e5;border-radius:8px;padding:5px 8px;display:inline-block;margin-top:6px}
+footer{color:var(--muted);font-size:12px;margin-bottom:26px}
+@media(max-width:980px){.cards{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:640px){.cards{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:370px){.cards{grid-template-columns:1fr}}
+</style></head>
+<body><header><div class="container"><strong>🌈 ScanBack <span style="color:#ee3b8f">Kids</span></strong><span class="pill">DEVELOPMENT ONLY · NOT APPROVED FOR PRINTING</span><a href="customize-ready.html">← Test Sticker Studio</a></div></header>
+<main class="container"><h1>96-design master artwork register</h1><p>Four themes · 24 planning slots each · existing original IDs preserved · no live QR or commerce</p>
+<div class="warning"><strong>Important:</strong> These 96 visible legacy thumbnails are NOT verified as 96 original printable artworks. The right image, where present, is the V6.15 original catalog preview. A matching slot number does not prove the two images are the same. No image is printer-approved.</div>
+<section class="stats" aria-label="Artwork inventory"><div class="stat"><strong id="total">—</strong><span>Planning slots / legacy thumbnails</span></div><div class="stat"><strong id="original">—</strong><span>Linked current originals (preview only)</span></div><div class="stat"><strong id="candidate">—</strong><span>Unverified candidate master files</span></div><div class="stat"><strong id="approved">0</strong><span>Verified commercial print masters</span></div></section>
+<section class="controls" aria-label="Filter artwork"><label for="theme">Theme</label><select id="theme"><option value="all">All themes</option><option value="space">Space Adventure</option><option value="dino">Dinosaur World</option><option value="rainbow">Rainbow Magic</option><option value="sports">Sports Champions</option></select><label for="filter">Show</label><select id="filter"><option value="all">All 96 slots</option><option value="original">Mapped original previews</option><option value="missing">Original art still needed</option><option value="candidate">Legacy master candidates</option></select><span id="shown" role="status" aria-live="polite"></span></section>
+<div id="gallery" class="cards" aria-live="polite"></div></main>
+<footer class="container">Read-only register. Artwork approvals require independent review, final master resolution checks, ownership confirmation, and physical printer proof. No production system is connected.</footer>
+<script>
+(function(){'use strict';
+const get=id=>document.getElementById(id),container=get('gallery');
+let slots=[];
+function text(el,tag,content,cls){const n=document.createElement(tag);n.textContent=content;if(cls)n.className=cls;el.append(n);return n;}
+function artBox(parent,label,url,sprite){const wrap=document.createElement('div');const art=text(wrap,'div','','art'+(sprite?' sprite':''));if(sprite){const cols=sprite.cols,rows=sprite.rows;art.style.backgroundImage='url('+encodeURI('/'+sprite.path)+')';art.style.backgroundSize=(cols*100)+'% '+(rows*100)+'%';art.style.backgroundPosition=((cols===1?0:sprite.col/(cols-1)*100))+'% '+((rows===1?0:sprite.row/(rows-1)*100))+'%';}
+else if(url){const img=document.createElement('img');img.src='/'+url;img.loading='lazy';img.alt=label;art.append(img);}
+else art.textContent='Not assigned';
+text(wrap,'p',label,'caption');parent.append(wrap);}
+function render(){
+ const key=get('theme').value,filter=get('filter').value;
+ const visible=slots.filter(s=>(key==='all'||s.theme_key===key)&&(filter==='all'||(filter==='original'&&s.existing_original)||(filter==='missing'&&!s.existing_original)||(filter==='candidate'&&s.legacy_print_candidate)));
+ container.replaceChildren();
+ for(const s of visible){
+  const card=text(container,'article','','slot');
+  const header=text(card,'div','','slot-head');text(header,'span',s.slot_id.toUpperCase());text(header,'span','PRINT BLOCKED','chip');
+  const imgs=text(card,'div','','images');
+  artBox(imgs,'Legacy preview',s.legacy_thumbnail.path,null);
+  artBox(imgs,'V6.15 original',null,s.existing_original?.sprite||null);
+  text(card,'div',s.existing_original?.name||'New original artwork needed','name');
+  text(card,'div',s.existing_original?'Original ID: '+s.existing_original.artwork_id:'No assigned original artwork ID','note');
+  if(s.legacy_print_candidate)text(card,'div','Candidate master file exists · NOT verified','tag');
+ }
+ get('shown').textContent=visible.length+' / 96 slots shown';
+}
+get('theme').addEventListener('change',render);get('filter').addEventListener('change',render);
+fetch('commerce/v615-96-artwork-register.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('Missing development artwork register');return r.json()}).then(data=>{
+ if(data.schema!=='scanback-kids-v615-artwork-master-register-v1'||data.production_release!=='NOT_APPROVED'||data.slots?.length!==96)throw Error('Unexpected manifest schema');
+ slots=data.slots;
+ get('total').textContent=slots.length;get('original').textContent=slots.filter(x=>x.existing_original).length;
+ get('candidate').textContent=slots.filter(x=>x.legacy_print_candidate).length;
+ get('approved').textContent=slots.filter(x=>x.verified_original_art_only_master).length;
+ render();
+}).catch(e=>{container.textContent='Cannot load the development register: '+e.message;get('shown').textContent='Error';});
+})();
+</script></body></html>
