@@ -69,7 +69,8 @@
           "width": 1672,
           "height": 941,
           "codec": "VP8 "
-        }
+        },
+        "artwork_zone_dpi": 1213
       }
     },
     {
@@ -183,7 +184,8 @@
           "width": 1672,
           "height": 941,
           "codec": "VP8 "
-        }
+        },
+        "artwork_zone_dpi": 1213
       }
     },
     {
@@ -697,7 +699,8 @@
           "width": 1448,
           "height": 1086,
           "codec": "VP8 "
-        }
+        },
+        "artwork_zone_dpi": 1051
       }
     },
     {
@@ -736,7 +739,8 @@
           "width": 1448,
           "height": 1086,
           "codec": "VP8 "
-        }
+        },
+        "artwork_zone_dpi": 1051
       }
     },
     {
@@ -871,7 +875,8 @@
           "width": 1448,
           "height": 1086,
           "codec": "VP8 "
-        }
+        },
+        "artwork_zone_dpi": 1051
       }
     },
     {
@@ -1423,7 +1428,8 @@
           "width": 1122,
           "height": 1402,
           "codec": "VP8 "
-        }
+        },
+        "artwork_zone_dpi": 1149
       }
     },
     {
@@ -1455,7 +1461,8 @@
           "width": 1122,
           "height": 1402,
           "codec": "VP8 "
-        }
+        },
+        "artwork_zone_dpi": 1149
       }
     },
     {
@@ -1487,7 +1494,8 @@
           "width": 1122,
           "height": 992,
           "codec": "VP8 "
-        }
+        },
+        "artwork_zone_dpi": 814
       }
     },
     {
@@ -2133,7 +2141,8 @@
           "width": 1672,
           "height": 941,
           "codec": "VP8 "
-        }
+        },
+        "artwork_zone_dpi": 1213
       }
     },
     {
@@ -2738,6 +2747,63 @@
         }
       ],
       "note": "Pixel dimensions alone do not establish sufficient resolution at final printed size or authenticity; sports/04 remains rejected."
+    },
+    "digital_resolution_screen": {
+      "count": 9,
+      "artwork_zone_mm": [
+        35,
+        31
+      ],
+      "minimum_dpi": 300,
+      "results": [
+        {
+          "id": "SPACE-01",
+          "dpi": 1213
+        },
+        {
+          "id": "SPACE-05",
+          "dpi": 1213
+        },
+        {
+          "id": "DINO-01",
+          "dpi": 1051
+        },
+        {
+          "id": "DINO-02",
+          "dpi": 1051
+        },
+        {
+          "id": "DINO-06",
+          "dpi": 1051
+        },
+        {
+          "id": "RAINBOW-01",
+          "dpi": 1149
+        },
+        {
+          "id": "RAINBOW-02",
+          "dpi": 1149
+        },
+        {
+          "id": "RAINBOW-03",
+          "dpi": 814
+        },
+        {
+          "id": "SPORTS-04",
+          "dpi": 1213
+        }
+      ],
+      "pass_resolution": 9,
+      "note": "Resolution-only gate; no identity or printing approval implied",
+      "rounded_trim_mm": [
+        60,
+        31
+      ],
+      "diecut_trim_mm": [
+        55,
+        58
+      ],
+      "bleed_mm": 2.5
     }
   }
 }
