@@ -59,3 +59,17 @@ t('owner confirms Space 01 astronaut visual identity without print authorization
  assert.equal(master.production_ready,false);
  assert.equal(audit.production_print_release,false);
 });
+
+t('Rainbow Unicorn original has no exact candidate among the three rainbow masters',()=>{
+ const x=audit.original_identity_map.find(x=>x.artwork_id==='rainbow-unicorn');
+ assert.equal(x.identity_is_verified_against_candidate_master,false);
+ assert.equal(x.reviewed_candidate_exclusions.status,'NO_EXACT_ART_ONLY_MASTER_FOUND');
+ for(const id of ['rainbow-01','rainbow-02','rainbow-03']){
+  const c=audit.candidates.find(x=>x.slot_id===id);
+  assert.equal(c.linked_original_artwork_id,null);
+  assert.equal(c.visual_identity_verdict,'REJECTED_NOT_AN_EXACT_MATCH');
+  assert.equal(c.production_ready,false);
+ }
+ assert.equal(audit.review_summary.visually_matched_candidates,2);
+ assert.equal(audit.production_print_release,false);
+});
