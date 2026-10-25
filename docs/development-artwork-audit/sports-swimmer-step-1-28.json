@@ -1,0 +1,22 @@
+{
+  "audit_step": "1.28",
+  "theme": "sports",
+  "original_identity": "Sports Swimmer",
+  "candidate": "assets/print-masters/sports/04.webp",
+  "identity_match": "rejected",
+  "review_outcome": "Original Sports Swimmer does not match candidate sports/04.webp, as confirmed by reviewer.",
+  "print_master_approved": false,
+  "printing_enabled": false,
+  "production_change": false,
+  "reason": "Visual identity mismatch. Do not associate candidate with original or auto-approve it for printing.",
+  "investigation": {
+    "status": "open",
+    "next_actions": [
+      "Compare other Sports Champion candidate artwork against the approved original at full resolution.",
+      "Document character, pose, background and distinguishing details before proposing a new match.",
+      "Require explicit human confirmation of any replacement before marking approved."
+    ],
+    "replacement_candidate": null
+  },
+  "scope": "Development artwork identity audit only; no image or application configuration changes."
+}
