@@ -2576,7 +2576,7 @@
   ],
   "commercial_print_audit": {
     "started_date": "2026-10-25",
-    "phase": "1 — inventory and source evidence",
+    "phase": "Digital source availability verification started",
     "state": "IN_PROGRESS",
     "assessments": {
       "catalog_positions": 96,
@@ -2601,6 +2601,10 @@
       "physical_printer_proof_and_signoff": "5–10, dependent on printer turnaround",
       "total": "11–22 working days after original assets and printer specifications available"
     },
-    "limitations": "Dates are planning estimates, not a background execution commitment; physical signoff requires printer and actual proofs."
+    "limitations": "Dates are planning estimates, not a background execution commitment; physical signoff requires printer and actual proofs.",
+    "source_inventory_checked": "2026-10-25",
+    "a4_contact_sheet": "development-96-a4-proof.html",
+    "next_gate": "Measure 9 candidate masters in native pixels, compare identities, then recover missing 87; no print approval without passed checks",
+    "warning": "A4 contact proof is visual-only, not cut-ready production proof."
   }
 }
