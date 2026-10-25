@@ -1591,7 +1591,18 @@
         "print_rights_approved": false,
         "physical_vendor_proof_approved": false
       },
-      "commercial_print_status": "BLOCKED_UNVERIFIED"
+      "commercial_print_status": "BLOCKED_UNVERIFIED",
+      "exact_original_master_gap": {
+        "artwork_id": "rainbow-unicorn",
+        "status": "NO_EXACT_CANDIDATE",
+        "rejected_candidates": [
+          "assets/print-masters/rainbow/01.webp",
+          "assets/print-masters/rainbow/02.webp",
+          "assets/print-masters/rainbow/03.webp"
+        ],
+        "next_action": "SOURCE_OR_RECREATE_ART_ONLY_MASTER_MATCHING_ORIGINAL_BACKPACK_UNICORN",
+        "commercial_print_approved": false
+      }
     },
     {
       "slot_id": "rainbow-02",
