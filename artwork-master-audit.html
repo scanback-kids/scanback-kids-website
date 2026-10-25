@@ -17,7 +17,7 @@ preview(imgs,c.candidate_path,'Candidate master (NOT approved)');originalPreview
 const div=el(card,'div','','third');el(div,'div',c.pixels.width+' × '+c.pixels.height+' pixels','num');
 el(div,'div','Estimated effective resolution: '+c.effective_dpi_at_35x31mm_contain+' DPI at 35 × 31 mm contain','small');
 el(div,'div','Numerical ≥300 DPI: '+(c.meets_numeric_300dpi_at_art_zone?'YES':'NO')+' · does not imply usable printable artwork','small');
-el(div,'div',c.original_identity_verified?'Visual identity matched: '+c.linked_original_artwork_id+' · art-only, rights and printing UNVERIFIED':'Visual identity: unverified · art-only: unverified · rights: unverified','small');
+el(div,'div',c.visual_identity_verdict==='REJECTED_NOT_AN_EXACT_MATCH'?'REJECTED: not the original backpack Unicorn · print blocked':c.original_identity_verified?'Visual identity matched: '+c.linked_original_artwork_id+' · art-only, rights and printing UNVERIFIED':'Visual identity: unverified · art-only: unverified · rights: unverified','small');
 el(card,'div','PRINT BLOCKED — Requires manual original-artwork comparison and printer proof','flag');
 }
 $('summary').textContent=a.candidates.length+' candidates · '+a.original_identity_map.length+' preserved original IDs · '+a.candidates.filter(x=>x.original_identity_verified).length+' visually matched · 0 approved print masters';
