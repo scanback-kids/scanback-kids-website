@@ -76,7 +76,16 @@
         "print_rights_approved": false,
         "physical_vendor_proof_approved": false
       },
-      "commercial_print_status": "BLOCKED_UNVERIFIED"
+      "commercial_print_status": "BLOCKED_UNVERIFIED",
+      "reviewed_original_master_candidate": {
+        "original_artwork_id": "space-astronaut",
+        "candidate_slot_id": "space-01",
+        "candidate_path": "assets/print-masters/space/01.webp",
+        "candidate_git_blob_sha": "15bf6d21a96eb0bd683fb16c73da4c62ef3e9f61",
+        "review_scope": "VISUAL_CHARACTER_SCENE_MATCH_ONLY",
+        "review_date": "2026-10-25",
+        "commercial_print_approved": false
+      }
     },
     {
       "slot_id": "space-02",

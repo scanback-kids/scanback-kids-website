@@ -24,17 +24,21 @@
         "row": 0
       },
       "identity_is_verified_against_legacy_variant": false,
-      "identity_is_verified_against_candidate_master": false,
+      "identity_is_verified_against_candidate_master": true,
       "commercial_print_allowed": false,
       "proposed_candidate_master": {
         "candidate_master_path": "assets/print-masters/space/01.webp",
         "candidate_blob_sha": "15bf6d21a96eb0bd683fb16c73da4c62ef3e9f61",
         "candidate_slot_id": "space-01",
-        "status": "PENDING_OWNER_VISUAL_CONFIRMATION",
+        "status": "OWNER_VISUALLY_CONFIRMED_2026-10-25",
         "reviewer_type": "ASSISTANT_PRELIMINARY_IMAGE_COMPARISON",
         "notes": "Studio original astronaut and master both show brown-haired smiling child in blue-and-white suit, open blue glove waving, yellow stars, planets and upper-right rocket. Close character and scene match; owner must verify full visual identity.",
         "commercial_print_approval": false
-      }
+      },
+      "reviewed_candidate_master_path": "assets/print-masters/space/01.webp",
+      "reviewed_candidate_slot_id": "space-01",
+      "reviewed_candidate_blob_sha": "15bf6d21a96eb0bd683fb16c73da4c62ef3e9f61",
+      "identity_review_scope": "VISUAL_IDENTITY_ONLY_NO_PRINT_APPROVAL"
     },
     {
       "artwork_id": "space-robot",
@@ -320,15 +324,15 @@
       "effective_dpi_at_35x31mm_contain": 1213,
       "meets_numeric_300dpi_at_art_zone": true,
       "linked_original_artwork_id": "space-astronaut",
-      "original_identity_verified": false,
+      "original_identity_verified": true,
       "art_only_verified": false,
       "license_or_rights_verified": false,
       "printer_approved": false,
       "production_ready": false,
-      "reason": "Pixel count is only a resolution measurement; no visual comparison, rights review, art-only verification or physical proof has been approved.",
+      "reason": "Owner confirmed Space Adventure 01 astronaut preview matches space/01.webp. Visual identity only; art-only, rights, cut, QR, sample and vendor printing approval are outstanding.",
       "visual_match_proposal": {
         "canonical_original_artwork_id": "space-astronaut",
-        "status": "PENDING_OWNER_VISUAL_CONFIRMATION",
+        "status": "OWNER_VISUALLY_CONFIRMED_2026-10-25",
         "commercial_print_approval": false
       }
     },
@@ -491,8 +495,8 @@
     }
   ],
   "review_summary": {
-    "visually_matched_candidates": 1,
+    "visually_matched_candidates": 2,
     "approved_print_masters": 0,
-    "notes": "Dino original 01 (dino-purple) matches legacy master dino/02.webp, not green dino/01.webp."
+    "notes": "Owner visually confirmed space-astronaut ↔ space/01.webp and dino-purple ↔ dino/02.webp; no commercial artwork approvals."
   }
 }

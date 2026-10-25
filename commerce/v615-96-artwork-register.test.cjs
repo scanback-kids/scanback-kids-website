@@ -56,3 +56,13 @@ test('validator detects missing entry, swapped original preview, and false maste
  const fake=clone();fake.slots[0].commercial_print_status='APPROVED';
  assert.equal(validateRegister(fake).ok,false);
 });
+
+test('Space 01 astronaut visually confirmed by owner; asset hash fixed and print remains blocked',()=>{
+ const slot=getByOriginalId('space-astronaut');
+ assert.equal(slot.slot_id,'space-01');
+ assert.equal(slot.reviewed_original_master_candidate.candidate_path,'assets/print-masters/space/01.webp');
+ assert.equal(slot.reviewed_original_master_candidate.candidate_git_blob_sha,slot.legacy_print_candidate.git_blob_sha);
+ assert.equal(slot.reviewed_original_master_candidate.commercial_print_approved,false);
+ assert.equal(validateRegister().summary.print_eligible,0);
+ assert.equal(isCommercialPrintApproved(slot),false);
+});

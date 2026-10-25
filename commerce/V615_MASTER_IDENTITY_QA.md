@@ -11,3 +11,9 @@ This is a **measurement and review queue**, not an approved original-artwork-to-
 - No changes to the 20-ID customer-facing V6.15 catalog, saved drafts, payments, Supabase, Print Studio exports, live site or shipping.
 
 To run offline regression checks in a GitHub checkout: `node --test commerce/v615-original-master-audit.test.cjs`.
+
+## Owner-confirmed artwork identity — Space Adventure 01 (25 October 2026)
+
+Owner confirmed that V6.15 original `space-astronaut` (Astronaut Explorer) visually matches exact candidate `assets/print-masters/space/01.webp` (Git blob `15bf6d21a96eb0bd683fb16c73da4c62ef3e9f61`). The saved-draft artwork ID and preview sprite remain unchanged. This is **visual character/scene identity only**, not print or rights approval. All relevant flags stay false, `commercial_print_status: BLOCKED_UNVERIFIED` remains on all 96 slots, and no payment, live QR or shipping change was made.
+
+Candidate `assets/print-masters/space/05.webp` shows a green alien in a UFO and does **not** match the existing white/blue robot original `space-robot`; this candidate remains unassigned pending separate artwork onboarding.

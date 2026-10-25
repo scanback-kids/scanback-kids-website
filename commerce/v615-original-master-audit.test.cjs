@@ -8,7 +8,7 @@ t('exact V6.15 mapping and blocked release for every existing original',()=>{
  assert.deepEqual(new Set(audit.original_identity_map.map(x=>x.artwork_id)),new Set(originals.list.map(x=>x.id)));
  assert.equal(new Set(audit.original_identity_map.map(x=>x.slot_id)).size,20);
  assert.ok(audit.original_identity_map.every(x=>x.commercial_print_allowed===false));
- assert.equal(audit.original_identity_map.filter(x=>x.identity_is_verified_against_candidate_master).length,1);
+ assert.equal(audit.original_identity_map.filter(x=>x.identity_is_verified_against_candidate_master).length,2);
 });
 t('nine candidate paths and source IDs have never been silently replaced',()=>{
  assert.equal(audit.candidates.length,9);
@@ -20,8 +20,8 @@ t('nine candidate paths and source IDs have never been silently replaced',()=>{
  const dpi=Math.round(25.4/Math.min(35/c.pixels.width,31/c.pixels.height));
  assert.equal(c.effective_dpi_at_35x31mm_contain,dpi);
  assert.equal(c.meets_numeric_300dpi_at_art_zone,dpi>=300);
- assert.equal(c.original_identity_verified,c.slot_id==='dino-02');
- assert.equal(c.linked_original_artwork_id,c.slot_id==='dino-02'?'dino-purple':null);
+ assert.equal(c.original_identity_verified,['dino-02','space-01'].includes(c.slot_id));
+ assert.equal(c.linked_original_artwork_id,c.slot_id==='dino-02'?'dino-purple':c.slot_id==='space-01'?'space-astronaut':null);
  assert.equal(c.production_ready,false);
  }
 });
@@ -41,4 +41,21 @@ t('Dino 01 original links visually to candidate dino/02, with print approval blo
  assert.equal(purple.production_ready,false);
  assert.equal(purple.printer_approved,false);
  assert.equal(register.slots.find(x=>x.slot_id==='dino-01').reviewed_original_master_candidate.candidate_path,purple.candidate_path);
+});
+
+t('owner confirms Space 01 astronaut visual identity without print authorization',()=>{
+ const id=audit.original_identity_map.find(x=>x.artwork_id==='space-astronaut');
+ const master=audit.candidates.find(x=>x.slot_id==='space-01');
+ const registerSlot=register.slots.find(x=>x.slot_id==='space-01');
+ assert.equal(id.reviewed_candidate_master_path,'assets/print-masters/space/01.webp');
+ assert.equal(id.reviewed_candidate_blob_sha,master.git_blob_sha);
+ assert.equal(registerSlot.reviewed_original_master_candidate.candidate_git_blob_sha,master.git_blob_sha);
+ assert.equal(id.identity_is_verified_against_candidate_master,true);
+ assert.equal(master.original_identity_verified,true);
+ assert.equal(id.commercial_print_allowed,false);
+ assert.equal(master.art_only_verified,false);
+ assert.equal(master.license_or_rights_verified,false);
+ assert.equal(master.printer_approved,false);
+ assert.equal(master.production_ready,false);
+ assert.equal(audit.production_print_release,false);
 });
