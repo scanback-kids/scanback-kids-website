@@ -54,7 +54,16 @@
       "print_master_file_present": true,
       "print_master_candidate": "assets/print-masters/space/01.webp",
       "print_master_status": "NOT_APPROVED",
-      "print_enabled": false
+      "print_enabled": false,
+      "commercial_qa": {
+        "state": "BLOCKED_SOURCE_OR_APPROVAL",
+        "source_candidate_present": true,
+        "identity_verification": "GALLERY_REFERENCE_ONLY",
+        "native_resolution": "NOT_MEASURED",
+        "prepress": "NOT_TESTED",
+        "physical_proof": "NOT_TESTED",
+        "commercial_approved": false
+      }
     },
     {
       "id": "SPACE-02",
@@ -77,7 +86,16 @@
       "print_master_file_present": false,
       "print_master_candidate": null,
       "print_master_status": "NOT_APPROVED",
-      "print_enabled": false
+      "print_enabled": false,
+      "commercial_qa": {
+        "state": "BLOCKED_SOURCE_OR_APPROVAL",
+        "source_candidate_present": false,
+        "identity_verification": "GALLERY_REFERENCE_ONLY",
+        "native_resolution": "NOT_MEASURED",
+        "prepress": "NOT_TESTED",
+        "physical_proof": "NOT_TESTED",
+        "commercial_approved": false
+      }
     },
     {
       "id": "SPACE-03",
@@ -93,7 +111,16 @@
       "print_master_file_present": false,
       "print_master_candidate": null,
       "print_master_status": "NOT_APPROVED",
-      "print_enabled": false
+      "print_enabled": false,
+      "commercial_qa": {
+        "state": "BLOCKED_SOURCE_OR_APPROVAL",
+        "source_candidate_present": false,
+        "identity_verification": "NOT_VERIFIED",
+        "native_resolution": "NOT_MEASURED",
+        "prepress": "NOT_TESTED",
+        "physical_proof": "NOT_TESTED",
+        "commercial_approved": false
+      }
     },
     {
       "id": "SPACE-04",
@@ -109,7 +136,16 @@
       "print_master_file_present": false,
       "print_master_candidate": null,
       "print_master_status": "NOT_APPROVED",
-      "print_enabled": false
+      "print_enabled": false,
+      "commercial_qa": {
+        "state": "BLOCKED_SOURCE_OR_APPROVAL",
+        "source_candidate_present": false,
+        "identity_verification": "NOT_VERIFIED",
+        "native_resolution": "NOT_MEASURED",
+        "prepress": "NOT_TESTED",
+        "physical_proof": "NOT_TESTED",
+        "commercial_approved": false
+      }
     },
     {
       "id": "SPACE-05",
@@ -125,7 +161,16 @@
       "print_master_file_present": true,
       "print_master_candidate": "assets/print-masters/space/05.webp",
       "print_master_status": "NOT_APPROVED",
-      "print_enabled": false
+      "print_enabled": false,
+      "commercial_qa": {
+        "state": "BLOCKED_SOURCE_OR_APPROVAL",
+        "source_candidate_present": true,
+        "identity_verification": "NOT_VERIFIED",
+        "native_resolution": "NOT_MEASURED",
+        "prepress": "NOT_TESTED",
+        "physical_proof": "NOT_TESTED",
+        "commercial_approved": false
+      }
     },
     {
       "id": "SPACE-06",
@@ -141,7 +186,16 @@
       "print_master_file_present": false,
       "print_master_candidate": null,
       "print_master_status": "NOT_APPROVED",
-      "print_enabled": false
+      "print_enabled": false,
+      "commercial_qa": {
+        "state": "BLOCKED_SOURCE_OR_APPROVAL",
+        "source_candidate_present": false,
+        "identity_verification": "NOT_VERIFIED",
+        "native_resolution": "NOT_MEASURED",
+        "prepress": "NOT_TESTED",
+        "physical_proof": "NOT_TESTED",
+        "commercial_approved": false
+      }
     },
     {
       "id": "SPACE-07",
@@ -157,7 +211,16 @@
       "print_master_file_present": false,
       "print_master_candidate": null,
       "print_master_status": "NOT_APPROVED",
-      "print_enabled": false
+      "print_enabled": false,
+      "commercial_qa": {
+        "state": "BLOCKED_SOURCE_OR_APPROVAL",
+        "source_candidate_present": false,
+        "identity_verification": "NOT_VERIFIED",
+        "native_resolution": "NOT_MEASURED",
+        "prepress": "NOT_TESTED",
+        "physical_proof": "NOT_TESTED",
+        "commercial_approved": false
+      }
     },
     {
       "id": "SPACE-08",
@@ -173,7 +236,16 @@
       "print_master_file_present": false,
       "print_master_candidate": null,
       "print_master_status": "NOT_APPROVED",
-      "print_enabled": false
+      "print_enabled": false,
+      "commercial_qa": {
+        "state": "BLOCKED_SOURCE_OR_APPROVAL",
+        "source_candidate_present": false,
+        "identity_verification": "NOT_VERIFIED",
+        "native_resolution": "NOT_MEASURED",
+        "prepress": "NOT_TESTED",
+        "physical_proof": "NOT_TESTED",
+        "commercial_approved": false
+      }
     },
     {
       "id": "SPACE-09",
@@ -189,7 +261,16 @@
       "print_master_file_present": false,
       "print_master_candidate": null,
       "print_master_status": "NOT_APPROVED",
-      "print_enabled": false
+      "print_enabled": false,
+      "commercial_qa": {
+        "state": "BLOCKED_SOURCE_OR_APPROVAL",
+        "source_candidate_present": false,
+        "identity_verification": "NOT_VERIFIED",
+        "native_resolution": "NOT_MEASURED",
+        "prepress": "NOT_TESTED",
+        "physical_proof": "NOT_TESTED",
+        "commercial_approved": false
+      }
     },
     {
       "id": "SPACE-10",
@@ -205,7 +286,16 @@
       "print_master_file_present": false,
       "print_master_candidate": null,
       "print_master_status": "NOT_APPROVED",
-      "print_enabled": false
+      "print_enabled": false,
+      "commercial_qa": {
+        "state": "BLOCKED_SOURCE_OR_APPROVAL",
+        "source_candidate_present": false,
+        "identity_verification": "NOT_VERIFIED",
+        "native_resolution": "NOT_MEASURED",
+        "prepress": "NOT_TESTED",
+        "physical_proof": "NOT_TESTED",
+        "commercial_approved": false
+      }
     },
     {
       "id": "SPACE-11",
@@ -221,7 +311,16 @@
       "print_master_file_present": false,
       "print_master_candidate": null,
       "print_master_status": "NOT_APPROVED",
-      "print_enabled": false
+      "print_enabled": false,
+      "commercial_qa": {
+        "state": "BLOCKED_SOURCE_OR_APPROVAL",
+        "source_candidate_present": false,
+        "identity_verification": "NOT_VERIFIED",
+        "native_resolution": "NOT_MEASURED",
+        "prepress": "NOT_TESTED",
+        "physical_proof": "NOT_TESTED",
+        "commercial_approved": false
+      }
     },
     {
       "id": "SPACE-12",
@@ -237,7 +336,16 @@
       "print_master_file_present": false,
       "print_master_candidate": null,
       "print_master_status": "NOT_APPROVED",
-      "print_enabled": false
+      "print_enabled": false,
+      "commercial_qa": {
+        "state": "BLOCKED_SOURCE_OR_APPROVAL",
+        "source_candidate_present": false,
+        "identity_verification": "NOT_VERIFIED",
+        "native_resolution": "NOT_MEASURED",
+        "prepress": "NOT_TESTED",
+        "physical_proof": "NOT_TESTED",
+        "commercial_approved": false
+      }
     },
     {
       "id": "SPACE-13",
@@ -253,7 +361,16 @@
       "print_master_file_present": false,
       "print_master_candidate": null,
       "print_master_status": "NOT_APPROVED",
-      "print_enabled": false
+      "print_enabled": false,
+      "commercial_qa": {
+        "state": "BLOCKED_SOURCE_OR_APPROVAL",
+        "source_candidate_present": false,
+        "identity_verification": "NOT_VERIFIED",
+        "native_resolution": "NOT_MEASURED",
+        "prepress": "NOT_TESTED",
+        "physical_proof": "NOT_TESTED",
+        "commercial_approved": false
+      }
     },
     {
       "id": "SPACE-14",
@@ -269,7 +386,16 @@
       "print_master_file_present": false,
       "print_master_candidate": null,
       "print_master_status": "NOT_APPROVED",
-      "print_enabled": false
+      "print_enabled": false,
+      "commercial_qa": {
+        "state": "BLOCKED_SOURCE_OR_APPROVAL",
+        "source_candidate_present": false,
+        "identity_verification": "NOT_VERIFIED",
+        "native_resolution": "NOT_MEASURED",
+        "prepress": "NOT_TESTED",
+        "physical_proof": "NOT_TESTED",
+        "commercial_approved": false
+      }
     },
     {
       "id": "SPACE-15",
@@ -285,7 +411,16 @@
       "print_master_file_present": false,
       "print_master_candidate": null,
       "print_master_status": "NOT_APPROVED",
-      "print_enabled": false
+      "print_enabled": false,
+      "commercial_qa": {
+        "state": "BLOCKED_SOURCE_OR_APPROVAL",
+        "source_candidate_present": false,
+        "identity_verification": "NOT_VERIFIED",
+        "native_resolution": "NOT_MEASURED",
+        "prepress": "NOT_TESTED",
+        "physical_proof": "NOT_TESTED",
+        "commercial_approved": false
+      }
     },
     {
       "id": "SPACE-16",
@@ -301,7 +436,16 @@
       "print_master_file_present": false,
       "print_master_candidate": null,
       "print_master_status": "NOT_APPROVED",
-      "print_enabled": false
+      "print_enabled": false,
+      "commercial_qa": {
+        "state": "BLOCKED_SOURCE_OR_APPROVAL",
+        "source_candidate_present": false,
+        "identity_verification": "NOT_VERIFIED",
+        "native_resolution": "NOT_MEASURED",
+        "prepress": "NOT_TESTED",
+        "physical_proof": "NOT_TESTED",
+        "commercial_approved": false
+      }
     },
     {
       "id": "SPACE-17",
@@ -317,7 +461,16 @@
       "print_master_file_present": false,
       "print_master_candidate": null,
       "print_master_status": "NOT_APPROVED",
-      "print_enabled": false
+      "print_enabled": false,
+      "commercial_qa": {
+        "state": "BLOCKED_SOURCE_OR_APPROVAL",
+        "source_candidate_present": false,
+        "identity_verification": "NOT_VERIFIED",
+        "native_resolution": "NOT_MEASURED",
+        "prepress": "NOT_TESTED",
+        "physical_proof": "NOT_TESTED",
+        "commercial_approved": false
+      }
     },
     {
       "id": "SPACE-18",
@@ -333,7 +486,16 @@
       "print_master_file_present": false,
       "print_master_candidate": null,
       "print_master_status": "NOT_APPROVED",
-      "print_enabled": false
+      "print_enabled": false,
+      "commercial_qa": {
+        "state": "BLOCKED_SOURCE_OR_APPROVAL",
+        "source_candidate_present": false,
+        "identity_verification": "NOT_VERIFIED",
+        "native_resolution": "NOT_MEASURED",
+        "prepress": "NOT_TESTED",
+        "physical_proof": "NOT_TESTED",
+        "commercial_approved": false
+      }
     },
     {
       "id": "SPACE-19",
@@ -349,7 +511,16 @@
       "print_master_file_present": false,
       "print_master_candidate": null,
       "print_master_status": "NOT_APPROVED",
-      "print_enabled": false
+      "print_enabled": false,
+      "commercial_qa": {
+        "state": "BLOCKED_SOURCE_OR_APPROVAL",
+        "source_candidate_present": false,
+        "identity_verification": "NOT_VERIFIED",
+        "native_resolution": "NOT_MEASURED",
+        "prepress": "NOT_TESTED",
+        "physical_proof": "NOT_TESTED",
+        "commercial_approved": false
+      }
     },
     {
       "id": "SPACE-20",
@@ -365,7 +536,16 @@
       "print_master_file_present": false,
       "print_master_candidate": null,
       "print_master_status": "NOT_APPROVED",
-      "print_enabled": false
+      "print_enabled": false,
+      "commercial_qa": {
+        "state": "BLOCKED_SOURCE_OR_APPROVAL",
+        "source_candidate_present": false,
+        "identity_verification": "NOT_VERIFIED",
+        "native_resolution": "NOT_MEASURED",
+        "prepress": "NOT_TESTED",
+        "physical_proof": "NOT_TESTED",
+        "commercial_approved": false
+      }
     },
     {
       "id": "SPACE-21",
@@ -381,7 +561,16 @@
       "print_master_file_present": false,
       "print_master_candidate": null,
       "print_master_status": "NOT_APPROVED",
-      "print_enabled": false
+      "print_enabled": false,
+      "commercial_qa": {
+        "state": "BLOCKED_SOURCE_OR_APPROVAL",
+        "source_candidate_present": false,
+        "identity_verification": "NOT_VERIFIED",
+        "native_resolution": "NOT_MEASURED",
+        "prepress": "NOT_TESTED",
+        "physical_proof": "NOT_TESTED",
+        "commercial_approved": false
+      }
     },
     {
       "id": "SPACE-22",
@@ -397,7 +586,16 @@
       "print_master_file_present": false,
       "print_master_candidate": null,
       "print_master_status": "NOT_APPROVED",
-      "print_enabled": false
+      "print_enabled": false,
+      "commercial_qa": {
+        "state": "BLOCKED_SOURCE_OR_APPROVAL",
+        "source_candidate_present": false,
+        "identity_verification": "NOT_VERIFIED",
+        "native_resolution": "NOT_MEASURED",
+        "prepress": "NOT_TESTED",
+        "physical_proof": "NOT_TESTED",
+        "commercial_approved": false
+      }
     },
     {
       "id": "SPACE-23",
@@ -413,7 +611,16 @@
       "print_master_file_present": false,
       "print_master_candidate": null,
       "print_master_status": "NOT_APPROVED",
-      "print_enabled": false
+      "print_enabled": false,
+      "commercial_qa": {
+        "state": "BLOCKED_SOURCE_OR_APPROVAL",
+        "source_candidate_present": false,
+        "identity_verification": "NOT_VERIFIED",
+        "native_resolution": "NOT_MEASURED",
+        "prepress": "NOT_TESTED",
+        "physical_proof": "NOT_TESTED",
+        "commercial_approved": false
+      }
     },
     {
       "id": "SPACE-24",
@@ -429,7 +636,16 @@
       "print_master_file_present": false,
       "print_master_candidate": null,
       "print_master_status": "NOT_APPROVED",
-      "print_enabled": false
+      "print_enabled": false,
+      "commercial_qa": {
+        "state": "BLOCKED_SOURCE_OR_APPROVAL",
+        "source_candidate_present": false,
+        "identity_verification": "NOT_VERIFIED",
+        "native_resolution": "NOT_MEASURED",
+        "prepress": "NOT_TESTED",
+        "physical_proof": "NOT_TESTED",
+        "commercial_approved": false
+      }
     },
     {
       "id": "DINO-01",
@@ -452,7 +668,16 @@
       "print_master_file_present": true,
       "print_master_candidate": "assets/print-masters/dino/01.webp",
       "print_master_status": "NOT_APPROVED",
-      "print_enabled": false
+      "print_enabled": false,
+      "commercial_qa": {
+        "state": "BLOCKED_SOURCE_OR_APPROVAL",
+        "source_candidate_present": true,
+        "identity_verification": "GALLERY_REFERENCE_ONLY",
+        "native_resolution": "NOT_MEASURED",
+        "prepress": "NOT_TESTED",
+        "physical_proof": "NOT_TESTED",
+        "commercial_approved": false
+      }
     },
     {
       "id": "DINO-02",
@@ -475,7 +700,16 @@
       "print_master_file_present": true,
       "print_master_candidate": "assets/print-masters/dino/02.webp",
       "print_master_status": "NOT_APPROVED",
-      "print_enabled": false
+      "print_enabled": false,
+      "commercial_qa": {
+        "state": "BLOCKED_SOURCE_OR_APPROVAL",
+        "source_candidate_present": true,
+        "identity_verification": "GALLERY_REFERENCE_ONLY",
+        "native_resolution": "NOT_MEASURED",
+        "prepress": "NOT_TESTED",
+        "physical_proof": "NOT_TESTED",
+        "commercial_approved": false
+      }
     },
     {
       "id": "DINO-03",
@@ -498,7 +732,16 @@
       "print_master_file_present": false,
       "print_master_candidate": null,
       "print_master_status": "NOT_APPROVED",
-      "print_enabled": false
+      "print_enabled": false,
+      "commercial_qa": {
+        "state": "BLOCKED_SOURCE_OR_APPROVAL",
+        "source_candidate_present": false,
+        "identity_verification": "GALLERY_REFERENCE_ONLY",
+        "native_resolution": "NOT_MEASURED",
+        "prepress": "NOT_TESTED",
+        "physical_proof": "NOT_TESTED",
+        "commercial_approved": false
+      }
     },
     {
       "id": "DINO-04",
@@ -521,7 +764,16 @@
       "print_master_file_present": false,
       "print_master_candidate": null,
       "print_master_status": "NOT_APPROVED",
-      "print_enabled": false
+      "print_enabled": false,
+      "commercial_qa": {
+        "state": "BLOCKED_SOURCE_OR_APPROVAL",
+        "source_candidate_present": false,
+        "identity_verification": "GALLERY_REFERENCE_ONLY",
+        "native_resolution": "NOT_MEASURED",
+        "prepress": "NOT_TESTED",
+        "physical_proof": "NOT_TESTED",
+        "commercial_approved": false
+      }
     },
     {
       "id": "DINO-05",
@@ -544,7 +796,16 @@
       "print_master_file_present": false,
       "print_master_candidate": null,
       "print_master_status": "NOT_APPROVED",
-      "print_enabled": false
+      "print_enabled": false,
+      "commercial_qa": {
+        "state": "BLOCKED_SOURCE_OR_APPROVAL",
+        "source_candidate_present": false,
+        "identity_verification": "GALLERY_REFERENCE_ONLY",
+        "native_resolution": "NOT_MEASURED",
+        "prepress": "NOT_TESTED",
+        "physical_proof": "NOT_TESTED",
+        "commercial_approved": false
+      }
     },
     {
       "id": "DINO-06",
@@ -567,7 +828,16 @@
       "print_master_file_present": true,
       "print_master_candidate": "assets/print-masters/dino/06.webp",
       "print_master_status": "NOT_APPROVED",
-      "print_enabled": false
+      "print_enabled": false,
+      "commercial_qa": {
+        "state": "BLOCKED_SOURCE_OR_APPROVAL",
+        "source_candidate_present": true,
+        "identity_verification": "GALLERY_REFERENCE_ONLY",
+        "native_resolution": "NOT_MEASURED",
+        "prepress": "NOT_TESTED",
+        "physical_proof": "NOT_TESTED",
+        "commercial_approved": false
+      }
     },
     {
       "id": "DINO-07",
@@ -590,7 +860,16 @@
       "print_master_file_present": false,
       "print_master_candidate": null,
       "print_master_status": "NOT_APPROVED",
-      "print_enabled": false
+      "print_enabled": false,
+      "commercial_qa": {
+        "state": "BLOCKED_SOURCE_OR_APPROVAL",
+        "source_candidate_present": false,
+        "identity_verification": "GALLERY_REFERENCE_ONLY",
+        "native_resolution": "NOT_MEASURED",
+        "prepress": "NOT_TESTED",
+        "physical_proof": "NOT_TESTED",
+        "commercial_approved": false
+      }
     },
     {
       "id": "DINO-08",
@@ -613,7 +892,16 @@
       "print_master_file_present": false,
       "print_master_candidate": null,
       "print_master_status": "NOT_APPROVED",
-      "print_enabled": false
+      "print_enabled": false,
+      "commercial_qa": {
+        "state": "BLOCKED_SOURCE_OR_APPROVAL",
+        "source_candidate_present": false,
+        "identity_verification": "GALLERY_REFERENCE_ONLY",
+        "native_resolution": "NOT_MEASURED",
+        "prepress": "NOT_TESTED",
+        "physical_proof": "NOT_TESTED",
+        "commercial_approved": false
+      }
     },
     {
       "id": "DINO-09",
@@ -636,7 +924,16 @@
       "print_master_file_present": false,
       "print_master_candidate": null,
       "print_master_status": "NOT_APPROVED",
-      "print_enabled": false
+      "print_enabled": false,
+      "commercial_qa": {
+        "state": "BLOCKED_SOURCE_OR_APPROVAL",
+        "source_candidate_present": false,
+        "identity_verification": "GALLERY_REFERENCE_ONLY",
+        "native_resolution": "NOT_MEASURED",
+        "prepress": "NOT_TESTED",
+        "physical_proof": "NOT_TESTED",
+        "commercial_approved": false
+      }
     },
     {
       "id": "DINO-10",
@@ -659,7 +956,16 @@
       "print_master_file_present": false,
       "print_master_candidate": null,
       "print_master_status": "NOT_APPROVED",
-      "print_enabled": false
+      "print_enabled": false,
+      "commercial_qa": {
+        "state": "BLOCKED_SOURCE_OR_APPROVAL",
+        "source_candidate_present": false,
+        "identity_verification": "GALLERY_REFERENCE_ONLY",
+        "native_resolution": "NOT_MEASURED",
+        "prepress": "NOT_TESTED",
+        "physical_proof": "NOT_TESTED",
+        "commercial_approved": false
+      }
     },
     {
       "id": "DINO-11",
@@ -682,7 +988,16 @@
       "print_master_file_present": false,
       "print_master_candidate": null,
       "print_master_status": "NOT_APPROVED",
-      "print_enabled": false
+      "print_enabled": false,
+      "commercial_qa": {
+        "state": "BLOCKED_SOURCE_OR_APPROVAL",
+        "source_candidate_present": false,
+        "identity_verification": "GALLERY_REFERENCE_ONLY",
+        "native_resolution": "NOT_MEASURED",
+        "prepress": "NOT_TESTED",
+        "physical_proof": "NOT_TESTED",
+        "commercial_approved": false
+      }
     },
     {
       "id": "DINO-12",
@@ -705,7 +1020,16 @@
       "print_master_file_present": false,
       "print_master_candidate": null,
       "print_master_status": "NOT_APPROVED",
-      "print_enabled": false
+      "print_enabled": false,
+      "commercial_qa": {
+        "state": "BLOCKED_SOURCE_OR_APPROVAL",
+        "source_candidate_present": false,
+        "identity_verification": "GALLERY_REFERENCE_ONLY",
+        "native_resolution": "NOT_MEASURED",
+        "prepress": "NOT_TESTED",
+        "physical_proof": "NOT_TESTED",
+        "commercial_approved": false
+      }
     },
     {
       "id": "DINO-13",
@@ -728,7 +1052,16 @@
       "print_master_file_present": false,
       "print_master_candidate": null,
       "print_master_status": "NOT_APPROVED",
-      "print_enabled": false
+      "print_enabled": false,
+      "commercial_qa": {
+        "state": "BLOCKED_SOURCE_OR_APPROVAL",
+        "source_candidate_present": false,
+        "identity_verification": "GALLERY_REFERENCE_ONLY",
+        "native_resolution": "NOT_MEASURED",
+        "prepress": "NOT_TESTED",
+        "physical_proof": "NOT_TESTED",
+        "commercial_approved": false
+      }
     },
     {
       "id": "DINO-14",
@@ -751,7 +1084,16 @@
       "print_master_file_present": false,
       "print_master_candidate": null,
       "print_master_status": "NOT_APPROVED",
-      "print_enabled": false
+      "print_enabled": false,
+      "commercial_qa": {
+        "state": "BLOCKED_SOURCE_OR_APPROVAL",
+        "source_candidate_present": false,
+        "identity_verification": "GALLERY_REFERENCE_ONLY",
+        "native_resolution": "NOT_MEASURED",
+        "prepress": "NOT_TESTED",
+        "physical_proof": "NOT_TESTED",
+        "commercial_approved": false
+      }
     },
     {
       "id": "DINO-15",
@@ -774,7 +1116,16 @@
       "print_master_file_present": false,
       "print_master_candidate": null,
       "print_master_status": "NOT_APPROVED",
-      "print_enabled": false
+      "print_enabled": false,
+      "commercial_qa": {
+        "state": "BLOCKED_SOURCE_OR_APPROVAL",
+        "source_candidate_present": false,
+        "identity_verification": "GALLERY_REFERENCE_ONLY",
+        "native_resolution": "NOT_MEASURED",
+        "prepress": "NOT_TESTED",
+        "physical_proof": "NOT_TESTED",
+        "commercial_approved": false
+      }
     },
     {
       "id": "DINO-16",
@@ -790,7 +1141,16 @@
       "print_master_file_present": false,
       "print_master_candidate": null,
       "print_master_status": "NOT_APPROVED",
-      "print_enabled": false
+      "print_enabled": false,
+      "commercial_qa": {
+        "state": "BLOCKED_SOURCE_OR_APPROVAL",
+        "source_candidate_present": false,
+        "identity_verification": "NOT_VERIFIED",
+        "native_resolution": "NOT_MEASURED",
+        "prepress": "NOT_TESTED",
+        "physical_proof": "NOT_TESTED",
+        "commercial_approved": false
+      }
     },
     {
       "id": "DINO-17",
@@ -806,7 +1166,16 @@
       "print_master_file_present": false,
       "print_master_candidate": null,
       "print_master_status": "NOT_APPROVED",
-      "print_enabled": false
+      "print_enabled": false,
+      "commercial_qa": {
+        "state": "BLOCKED_SOURCE_OR_APPROVAL",
+        "source_candidate_present": false,
+        "identity_verification": "NOT_VERIFIED",
+        "native_resolution": "NOT_MEASURED",
+        "prepress": "NOT_TESTED",
+        "physical_proof": "NOT_TESTED",
+        "commercial_approved": false
+      }
     },
     {
       "id": "DINO-18",
@@ -822,7 +1191,16 @@
       "print_master_file_present": false,
       "print_master_candidate": null,
       "print_master_status": "NOT_APPROVED",
-      "print_enabled": false
+      "print_enabled": false,
+      "commercial_qa": {
+        "state": "BLOCKED_SOURCE_OR_APPROVAL",
+        "source_candidate_present": false,
+        "identity_verification": "NOT_VERIFIED",
+        "native_resolution": "NOT_MEASURED",
+        "prepress": "NOT_TESTED",
+        "physical_proof": "NOT_TESTED",
+        "commercial_approved": false
+      }
     },
     {
       "id": "DINO-19",
@@ -838,7 +1216,16 @@
       "print_master_file_present": false,
       "print_master_candidate": null,
       "print_master_status": "NOT_APPROVED",
-      "print_enabled": false
+      "print_enabled": false,
+      "commercial_qa": {
+        "state": "BLOCKED_SOURCE_OR_APPROVAL",
+        "source_candidate_present": false,
+        "identity_verification": "NOT_VERIFIED",
+        "native_resolution": "NOT_MEASURED",
+        "prepress": "NOT_TESTED",
+        "physical_proof": "NOT_TESTED",
+        "commercial_approved": false
+      }
     },
     {
       "id": "DINO-20",
@@ -854,7 +1241,16 @@
       "print_master_file_present": false,
       "print_master_candidate": null,
       "print_master_status": "NOT_APPROVED",
-      "print_enabled": false
+      "print_enabled": false,
+      "commercial_qa": {
+        "state": "BLOCKED_SOURCE_OR_APPROVAL",
+        "source_candidate_present": false,
+        "identity_verification": "NOT_VERIFIED",
+        "native_resolution": "NOT_MEASURED",
+        "prepress": "NOT_TESTED",
+        "physical_proof": "NOT_TESTED",
+        "commercial_approved": false
+      }
     },
     {
       "id": "DINO-21",
@@ -870,7 +1266,16 @@
       "print_master_file_present": false,
       "print_master_candidate": null,
       "print_master_status": "NOT_APPROVED",
-      "print_enabled": false
+      "print_enabled": false,
+      "commercial_qa": {
+        "state": "BLOCKED_SOURCE_OR_APPROVAL",
+        "source_candidate_present": false,
+        "identity_verification": "NOT_VERIFIED",
+        "native_resolution": "NOT_MEASURED",
+        "prepress": "NOT_TESTED",
+        "physical_proof": "NOT_TESTED",
+        "commercial_approved": false
+      }
     },
     {
       "id": "DINO-22",
@@ -886,7 +1291,16 @@
       "print_master_file_present": false,
       "print_master_candidate": null,
       "print_master_status": "NOT_APPROVED",
-      "print_enabled": false
+      "print_enabled": false,
+      "commercial_qa": {
+        "state": "BLOCKED_SOURCE_OR_APPROVAL",
+        "source_candidate_present": false,
+        "identity_verification": "NOT_VERIFIED",
+        "native_resolution": "NOT_MEASURED",
+        "prepress": "NOT_TESTED",
+        "physical_proof": "NOT_TESTED",
+        "commercial_approved": false
+      }
     },
     {
       "id": "DINO-23",
@@ -902,7 +1316,16 @@
       "print_master_file_present": false,
       "print_master_candidate": null,
       "print_master_status": "NOT_APPROVED",
-      "print_enabled": false
+      "print_enabled": false,
+      "commercial_qa": {
+        "state": "BLOCKED_SOURCE_OR_APPROVAL",
+        "source_candidate_present": false,
+        "identity_verification": "NOT_VERIFIED",
+        "native_resolution": "NOT_MEASURED",
+        "prepress": "NOT_TESTED",
+        "physical_proof": "NOT_TESTED",
+        "commercial_approved": false
+      }
     },
     {
       "id": "DINO-24",
@@ -918,7 +1341,16 @@
       "print_master_file_present": false,
       "print_master_candidate": null,
       "print_master_status": "NOT_APPROVED",
-      "print_enabled": false
+      "print_enabled": false,
+      "commercial_qa": {
+        "state": "BLOCKED_SOURCE_OR_APPROVAL",
+        "source_candidate_present": false,
+        "identity_verification": "NOT_VERIFIED",
+        "native_resolution": "NOT_MEASURED",
+        "prepress": "NOT_TESTED",
+        "physical_proof": "NOT_TESTED",
+        "commercial_approved": false
+      }
     },
     {
       "id": "RAINBOW-01",
@@ -941,7 +1373,16 @@
       "print_master_file_present": true,
       "print_master_candidate": "assets/print-masters/rainbow/01.webp",
       "print_master_status": "NOT_APPROVED",
-      "print_enabled": false
+      "print_enabled": false,
+      "commercial_qa": {
+        "state": "BLOCKED_SOURCE_OR_APPROVAL",
+        "source_candidate_present": true,
+        "identity_verification": "GALLERY_REFERENCE_ONLY",
+        "native_resolution": "NOT_MEASURED",
+        "prepress": "NOT_TESTED",
+        "physical_proof": "NOT_TESTED",
+        "commercial_approved": false
+      }
     },
     {
       "id": "RAINBOW-02",
@@ -957,7 +1398,16 @@
       "print_master_file_present": true,
       "print_master_candidate": "assets/print-masters/rainbow/02.webp",
       "print_master_status": "NOT_APPROVED",
-      "print_enabled": false
+      "print_enabled": false,
+      "commercial_qa": {
+        "state": "BLOCKED_SOURCE_OR_APPROVAL",
+        "source_candidate_present": true,
+        "identity_verification": "NOT_VERIFIED",
+        "native_resolution": "NOT_MEASURED",
+        "prepress": "NOT_TESTED",
+        "physical_proof": "NOT_TESTED",
+        "commercial_approved": false
+      }
     },
     {
       "id": "RAINBOW-03",
@@ -973,7 +1423,16 @@
       "print_master_file_present": true,
       "print_master_candidate": "assets/print-masters/rainbow/03.webp",
       "print_master_status": "NOT_APPROVED",
-      "print_enabled": false
+      "print_enabled": false,
+      "commercial_qa": {
+        "state": "BLOCKED_SOURCE_OR_APPROVAL",
+        "source_candidate_present": true,
+        "identity_verification": "NOT_VERIFIED",
+        "native_resolution": "NOT_MEASURED",
+        "prepress": "NOT_TESTED",
+        "physical_proof": "NOT_TESTED",
+        "commercial_approved": false
+      }
     },
     {
       "id": "RAINBOW-04",
@@ -989,7 +1448,16 @@
       "print_master_file_present": false,
       "print_master_candidate": null,
       "print_master_status": "NOT_APPROVED",
-      "print_enabled": false
+      "print_enabled": false,
+      "commercial_qa": {
+        "state": "BLOCKED_SOURCE_OR_APPROVAL",
+        "source_candidate_present": false,
+        "identity_verification": "NOT_VERIFIED",
+        "native_resolution": "NOT_MEASURED",
+        "prepress": "NOT_TESTED",
+        "physical_proof": "NOT_TESTED",
+        "commercial_approved": false
+      }
     },
     {
       "id": "RAINBOW-05",
@@ -1005,7 +1473,16 @@
       "print_master_file_present": false,
       "print_master_candidate": null,
       "print_master_status": "NOT_APPROVED",
-      "print_enabled": false
+      "print_enabled": false,
+      "commercial_qa": {
+        "state": "BLOCKED_SOURCE_OR_APPROVAL",
+        "source_candidate_present": false,
+        "identity_verification": "NOT_VERIFIED",
+        "native_resolution": "NOT_MEASURED",
+        "prepress": "NOT_TESTED",
+        "physical_proof": "NOT_TESTED",
+        "commercial_approved": false
+      }
     },
     {
       "id": "RAINBOW-06",
@@ -1021,7 +1498,16 @@
       "print_master_file_present": false,
       "print_master_candidate": null,
       "print_master_status": "NOT_APPROVED",
-      "print_enabled": false
+      "print_enabled": false,
+      "commercial_qa": {
+        "state": "BLOCKED_SOURCE_OR_APPROVAL",
+        "source_candidate_present": false,
+        "identity_verification": "NOT_VERIFIED",
+        "native_resolution": "NOT_MEASURED",
+        "prepress": "NOT_TESTED",
+        "physical_proof": "NOT_TESTED",
+        "commercial_approved": false
+      }
     },
     {
       "id": "RAINBOW-07",
@@ -1037,7 +1523,16 @@
       "print_master_file_present": false,
       "print_master_candidate": null,
       "print_master_status": "NOT_APPROVED",
-      "print_enabled": false
+      "print_enabled": false,
+      "commercial_qa": {
+        "state": "BLOCKED_SOURCE_OR_APPROVAL",
+        "source_candidate_present": false,
+        "identity_verification": "NOT_VERIFIED",
+        "native_resolution": "NOT_MEASURED",
+        "prepress": "NOT_TESTED",
+        "physical_proof": "NOT_TESTED",
+        "commercial_approved": false
+      }
     },
     {
       "id": "RAINBOW-08",
@@ -1053,7 +1548,16 @@
       "print_master_file_present": false,
       "print_master_candidate": null,
       "print_master_status": "NOT_APPROVED",
-      "print_enabled": false
+      "print_enabled": false,
+      "commercial_qa": {
+        "state": "BLOCKED_SOURCE_OR_APPROVAL",
+        "source_candidate_present": false,
+        "identity_verification": "NOT_VERIFIED",
+        "native_resolution": "NOT_MEASURED",
+        "prepress": "NOT_TESTED",
+        "physical_proof": "NOT_TESTED",
+        "commercial_approved": false
+      }
     },
     {
       "id": "RAINBOW-09",
@@ -1069,7 +1573,16 @@
       "print_master_file_present": false,
       "print_master_candidate": null,
       "print_master_status": "NOT_APPROVED",
-      "print_enabled": false
+      "print_enabled": false,
+      "commercial_qa": {
+        "state": "BLOCKED_SOURCE_OR_APPROVAL",
+        "source_candidate_present": false,
+        "identity_verification": "NOT_VERIFIED",
+        "native_resolution": "NOT_MEASURED",
+        "prepress": "NOT_TESTED",
+        "physical_proof": "NOT_TESTED",
+        "commercial_approved": false
+      }
     },
     {
       "id": "RAINBOW-10",
@@ -1085,7 +1598,16 @@
       "print_master_file_present": false,
       "print_master_candidate": null,
       "print_master_status": "NOT_APPROVED",
-      "print_enabled": false
+      "print_enabled": false,
+      "commercial_qa": {
+        "state": "BLOCKED_SOURCE_OR_APPROVAL",
+        "source_candidate_present": false,
+        "identity_verification": "NOT_VERIFIED",
+        "native_resolution": "NOT_MEASURED",
+        "prepress": "NOT_TESTED",
+        "physical_proof": "NOT_TESTED",
+        "commercial_approved": false
+      }
     },
     {
       "id": "RAINBOW-11",
@@ -1101,7 +1623,16 @@
       "print_master_file_present": false,
       "print_master_candidate": null,
       "print_master_status": "NOT_APPROVED",
-      "print_enabled": false
+      "print_enabled": false,
+      "commercial_qa": {
+        "state": "BLOCKED_SOURCE_OR_APPROVAL",
+        "source_candidate_present": false,
+        "identity_verification": "NOT_VERIFIED",
+        "native_resolution": "NOT_MEASURED",
+        "prepress": "NOT_TESTED",
+        "physical_proof": "NOT_TESTED",
+        "commercial_approved": false
+      }
     },
     {
       "id": "RAINBOW-12",
@@ -1117,7 +1648,16 @@
       "print_master_file_present": false,
       "print_master_candidate": null,
       "print_master_status": "NOT_APPROVED",
-      "print_enabled": false
+      "print_enabled": false,
+      "commercial_qa": {
+        "state": "BLOCKED_SOURCE_OR_APPROVAL",
+        "source_candidate_present": false,
+        "identity_verification": "NOT_VERIFIED",
+        "native_resolution": "NOT_MEASURED",
+        "prepress": "NOT_TESTED",
+        "physical_proof": "NOT_TESTED",
+        "commercial_approved": false
+      }
     },
     {
       "id": "RAINBOW-13",
@@ -1133,7 +1673,16 @@
       "print_master_file_present": false,
       "print_master_candidate": null,
       "print_master_status": "NOT_APPROVED",
-      "print_enabled": false
+      "print_enabled": false,
+      "commercial_qa": {
+        "state": "BLOCKED_SOURCE_OR_APPROVAL",
+        "source_candidate_present": false,
+        "identity_verification": "NOT_VERIFIED",
+        "native_resolution": "NOT_MEASURED",
+        "prepress": "NOT_TESTED",
+        "physical_proof": "NOT_TESTED",
+        "commercial_approved": false
+      }
     },
     {
       "id": "RAINBOW-14",
@@ -1149,7 +1698,16 @@
       "print_master_file_present": false,
       "print_master_candidate": null,
       "print_master_status": "NOT_APPROVED",
-      "print_enabled": false
+      "print_enabled": false,
+      "commercial_qa": {
+        "state": "BLOCKED_SOURCE_OR_APPROVAL",
+        "source_candidate_present": false,
+        "identity_verification": "NOT_VERIFIED",
+        "native_resolution": "NOT_MEASURED",
+        "prepress": "NOT_TESTED",
+        "physical_proof": "NOT_TESTED",
+        "commercial_approved": false
+      }
     },
     {
       "id": "RAINBOW-15",
@@ -1165,7 +1723,16 @@
       "print_master_file_present": false,
       "print_master_candidate": null,
       "print_master_status": "NOT_APPROVED",
-      "print_enabled": false
+      "print_enabled": false,
+      "commercial_qa": {
+        "state": "BLOCKED_SOURCE_OR_APPROVAL",
+        "source_candidate_present": false,
+        "identity_verification": "NOT_VERIFIED",
+        "native_resolution": "NOT_MEASURED",
+        "prepress": "NOT_TESTED",
+        "physical_proof": "NOT_TESTED",
+        "commercial_approved": false
+      }
     },
     {
       "id": "RAINBOW-16",
@@ -1181,7 +1748,16 @@
       "print_master_file_present": false,
       "print_master_candidate": null,
       "print_master_status": "NOT_APPROVED",
-      "print_enabled": false
+      "print_enabled": false,
+      "commercial_qa": {
+        "state": "BLOCKED_SOURCE_OR_APPROVAL",
+        "source_candidate_present": false,
+        "identity_verification": "NOT_VERIFIED",
+        "native_resolution": "NOT_MEASURED",
+        "prepress": "NOT_TESTED",
+        "physical_proof": "NOT_TESTED",
+        "commercial_approved": false
+      }
     },
     {
       "id": "RAINBOW-17",
@@ -1197,7 +1773,16 @@
       "print_master_file_present": false,
       "print_master_candidate": null,
       "print_master_status": "NOT_APPROVED",
-      "print_enabled": false
+      "print_enabled": false,
+      "commercial_qa": {
+        "state": "BLOCKED_SOURCE_OR_APPROVAL",
+        "source_candidate_present": false,
+        "identity_verification": "NOT_VERIFIED",
+        "native_resolution": "NOT_MEASURED",
+        "prepress": "NOT_TESTED",
+        "physical_proof": "NOT_TESTED",
+        "commercial_approved": false
+      }
     },
     {
       "id": "RAINBOW-18",
@@ -1213,7 +1798,16 @@
       "print_master_file_present": false,
       "print_master_candidate": null,
       "print_master_status": "NOT_APPROVED",
-      "print_enabled": false
+      "print_enabled": false,
+      "commercial_qa": {
+        "state": "BLOCKED_SOURCE_OR_APPROVAL",
+        "source_candidate_present": false,
+        "identity_verification": "NOT_VERIFIED",
+        "native_resolution": "NOT_MEASURED",
+        "prepress": "NOT_TESTED",
+        "physical_proof": "NOT_TESTED",
+        "commercial_approved": false
+      }
     },
     {
       "id": "RAINBOW-19",
@@ -1229,7 +1823,16 @@
       "print_master_file_present": false,
       "print_master_candidate": null,
       "print_master_status": "NOT_APPROVED",
-      "print_enabled": false
+      "print_enabled": false,
+      "commercial_qa": {
+        "state": "BLOCKED_SOURCE_OR_APPROVAL",
+        "source_candidate_present": false,
+        "identity_verification": "NOT_VERIFIED",
+        "native_resolution": "NOT_MEASURED",
+        "prepress": "NOT_TESTED",
+        "physical_proof": "NOT_TESTED",
+        "commercial_approved": false
+      }
     },
     {
       "id": "RAINBOW-20",
@@ -1245,7 +1848,16 @@
       "print_master_file_present": false,
       "print_master_candidate": null,
       "print_master_status": "NOT_APPROVED",
-      "print_enabled": false
+      "print_enabled": false,
+      "commercial_qa": {
+        "state": "BLOCKED_SOURCE_OR_APPROVAL",
+        "source_candidate_present": false,
+        "identity_verification": "NOT_VERIFIED",
+        "native_resolution": "NOT_MEASURED",
+        "prepress": "NOT_TESTED",
+        "physical_proof": "NOT_TESTED",
+        "commercial_approved": false
+      }
     },
     {
       "id": "RAINBOW-21",
@@ -1261,7 +1873,16 @@
       "print_master_file_present": false,
       "print_master_candidate": null,
       "print_master_status": "NOT_APPROVED",
-      "print_enabled": false
+      "print_enabled": false,
+      "commercial_qa": {
+        "state": "BLOCKED_SOURCE_OR_APPROVAL",
+        "source_candidate_present": false,
+        "identity_verification": "NOT_VERIFIED",
+        "native_resolution": "NOT_MEASURED",
+        "prepress": "NOT_TESTED",
+        "physical_proof": "NOT_TESTED",
+        "commercial_approved": false
+      }
     },
     {
       "id": "RAINBOW-22",
@@ -1277,7 +1898,16 @@
       "print_master_file_present": false,
       "print_master_candidate": null,
       "print_master_status": "NOT_APPROVED",
-      "print_enabled": false
+      "print_enabled": false,
+      "commercial_qa": {
+        "state": "BLOCKED_SOURCE_OR_APPROVAL",
+        "source_candidate_present": false,
+        "identity_verification": "NOT_VERIFIED",
+        "native_resolution": "NOT_MEASURED",
+        "prepress": "NOT_TESTED",
+        "physical_proof": "NOT_TESTED",
+        "commercial_approved": false
+      }
     },
     {
       "id": "RAINBOW-23",
@@ -1293,7 +1923,16 @@
       "print_master_file_present": false,
       "print_master_candidate": null,
       "print_master_status": "NOT_APPROVED",
-      "print_enabled": false
+      "print_enabled": false,
+      "commercial_qa": {
+        "state": "BLOCKED_SOURCE_OR_APPROVAL",
+        "source_candidate_present": false,
+        "identity_verification": "NOT_VERIFIED",
+        "native_resolution": "NOT_MEASURED",
+        "prepress": "NOT_TESTED",
+        "physical_proof": "NOT_TESTED",
+        "commercial_approved": false
+      }
     },
     {
       "id": "RAINBOW-24",
@@ -1309,7 +1948,16 @@
       "print_master_file_present": false,
       "print_master_candidate": null,
       "print_master_status": "NOT_APPROVED",
-      "print_enabled": false
+      "print_enabled": false,
+      "commercial_qa": {
+        "state": "BLOCKED_SOURCE_OR_APPROVAL",
+        "source_candidate_present": false,
+        "identity_verification": "NOT_VERIFIED",
+        "native_resolution": "NOT_MEASURED",
+        "prepress": "NOT_TESTED",
+        "physical_proof": "NOT_TESTED",
+        "commercial_approved": false
+      }
     },
     {
       "id": "SPORTS-01",
@@ -1332,7 +1980,16 @@
       "print_master_file_present": false,
       "print_master_candidate": null,
       "print_master_status": "NOT_APPROVED",
-      "print_enabled": false
+      "print_enabled": false,
+      "commercial_qa": {
+        "state": "BLOCKED_SOURCE_OR_APPROVAL",
+        "source_candidate_present": false,
+        "identity_verification": "GALLERY_REFERENCE_ONLY",
+        "native_resolution": "NOT_MEASURED",
+        "prepress": "NOT_TESTED",
+        "physical_proof": "NOT_TESTED",
+        "commercial_approved": false
+      }
     },
     {
       "id": "SPORTS-02",
@@ -1355,7 +2012,16 @@
       "print_master_file_present": false,
       "print_master_candidate": null,
       "print_master_status": "NOT_APPROVED",
-      "print_enabled": false
+      "print_enabled": false,
+      "commercial_qa": {
+        "state": "BLOCKED_SOURCE_OR_APPROVAL",
+        "source_candidate_present": false,
+        "identity_verification": "GALLERY_REFERENCE_ONLY",
+        "native_resolution": "NOT_MEASURED",
+        "prepress": "NOT_TESTED",
+        "physical_proof": "NOT_TESTED",
+        "commercial_approved": false
+      }
     },
     {
       "id": "SPORTS-03",
@@ -1371,7 +2037,16 @@
       "print_master_file_present": false,
       "print_master_candidate": null,
       "print_master_status": "NOT_APPROVED",
-      "print_enabled": false
+      "print_enabled": false,
+      "commercial_qa": {
+        "state": "BLOCKED_SOURCE_OR_APPROVAL",
+        "source_candidate_present": false,
+        "identity_verification": "NOT_VERIFIED",
+        "native_resolution": "NOT_MEASURED",
+        "prepress": "NOT_TESTED",
+        "physical_proof": "NOT_TESTED",
+        "commercial_approved": false
+      }
     },
     {
       "id": "SPORTS-04",
@@ -1387,7 +2062,16 @@
       "print_master_file_present": true,
       "print_master_candidate": "assets/print-masters/sports/04.webp",
       "print_master_status": "NOT_APPROVED",
-      "print_enabled": false
+      "print_enabled": false,
+      "commercial_qa": {
+        "state": "BLOCKED_SOURCE_OR_APPROVAL",
+        "source_candidate_present": true,
+        "identity_verification": "NOT_VERIFIED",
+        "native_resolution": "NOT_MEASURED",
+        "prepress": "NOT_TESTED",
+        "physical_proof": "NOT_TESTED",
+        "commercial_approved": false
+      }
     },
     {
       "id": "SPORTS-05",
@@ -1403,7 +2087,16 @@
       "print_master_file_present": false,
       "print_master_candidate": null,
       "print_master_status": "NOT_APPROVED",
-      "print_enabled": false
+      "print_enabled": false,
+      "commercial_qa": {
+        "state": "BLOCKED_SOURCE_OR_APPROVAL",
+        "source_candidate_present": false,
+        "identity_verification": "NOT_VERIFIED",
+        "native_resolution": "NOT_MEASURED",
+        "prepress": "NOT_TESTED",
+        "physical_proof": "NOT_TESTED",
+        "commercial_approved": false
+      }
     },
     {
       "id": "SPORTS-06",
@@ -1419,7 +2112,16 @@
       "print_master_file_present": false,
       "print_master_candidate": null,
       "print_master_status": "NOT_APPROVED",
-      "print_enabled": false
+      "print_enabled": false,
+      "commercial_qa": {
+        "state": "BLOCKED_SOURCE_OR_APPROVAL",
+        "source_candidate_present": false,
+        "identity_verification": "NOT_VERIFIED",
+        "native_resolution": "NOT_MEASURED",
+        "prepress": "NOT_TESTED",
+        "physical_proof": "NOT_TESTED",
+        "commercial_approved": false
+      }
     },
     {
       "id": "SPORTS-07",
@@ -1435,7 +2137,16 @@
       "print_master_file_present": false,
       "print_master_candidate": null,
       "print_master_status": "NOT_APPROVED",
-      "print_enabled": false
+      "print_enabled": false,
+      "commercial_qa": {
+        "state": "BLOCKED_SOURCE_OR_APPROVAL",
+        "source_candidate_present": false,
+        "identity_verification": "NOT_VERIFIED",
+        "native_resolution": "NOT_MEASURED",
+        "prepress": "NOT_TESTED",
+        "physical_proof": "NOT_TESTED",
+        "commercial_approved": false
+      }
     },
     {
       "id": "SPORTS-08",
@@ -1451,7 +2162,16 @@
       "print_master_file_present": false,
       "print_master_candidate": null,
       "print_master_status": "NOT_APPROVED",
-      "print_enabled": false
+      "print_enabled": false,
+      "commercial_qa": {
+        "state": "BLOCKED_SOURCE_OR_APPROVAL",
+        "source_candidate_present": false,
+        "identity_verification": "NOT_VERIFIED",
+        "native_resolution": "NOT_MEASURED",
+        "prepress": "NOT_TESTED",
+        "physical_proof": "NOT_TESTED",
+        "commercial_approved": false
+      }
     },
     {
       "id": "SPORTS-09",
@@ -1467,7 +2187,16 @@
       "print_master_file_present": false,
       "print_master_candidate": null,
       "print_master_status": "NOT_APPROVED",
-      "print_enabled": false
+      "print_enabled": false,
+      "commercial_qa": {
+        "state": "BLOCKED_SOURCE_OR_APPROVAL",
+        "source_candidate_present": false,
+        "identity_verification": "NOT_VERIFIED",
+        "native_resolution": "NOT_MEASURED",
+        "prepress": "NOT_TESTED",
+        "physical_proof": "NOT_TESTED",
+        "commercial_approved": false
+      }
     },
     {
       "id": "SPORTS-10",
@@ -1483,7 +2212,16 @@
       "print_master_file_present": false,
       "print_master_candidate": null,
       "print_master_status": "NOT_APPROVED",
-      "print_enabled": false
+      "print_enabled": false,
+      "commercial_qa": {
+        "state": "BLOCKED_SOURCE_OR_APPROVAL",
+        "source_candidate_present": false,
+        "identity_verification": "NOT_VERIFIED",
+        "native_resolution": "NOT_MEASURED",
+        "prepress": "NOT_TESTED",
+        "physical_proof": "NOT_TESTED",
+        "commercial_approved": false
+      }
     },
     {
       "id": "SPORTS-11",
@@ -1499,7 +2237,16 @@
       "print_master_file_present": false,
       "print_master_candidate": null,
       "print_master_status": "NOT_APPROVED",
-      "print_enabled": false
+      "print_enabled": false,
+      "commercial_qa": {
+        "state": "BLOCKED_SOURCE_OR_APPROVAL",
+        "source_candidate_present": false,
+        "identity_verification": "NOT_VERIFIED",
+        "native_resolution": "NOT_MEASURED",
+        "prepress": "NOT_TESTED",
+        "physical_proof": "NOT_TESTED",
+        "commercial_approved": false
+      }
     },
     {
       "id": "SPORTS-12",
@@ -1515,7 +2262,16 @@
       "print_master_file_present": false,
       "print_master_candidate": null,
       "print_master_status": "NOT_APPROVED",
-      "print_enabled": false
+      "print_enabled": false,
+      "commercial_qa": {
+        "state": "BLOCKED_SOURCE_OR_APPROVAL",
+        "source_candidate_present": false,
+        "identity_verification": "NOT_VERIFIED",
+        "native_resolution": "NOT_MEASURED",
+        "prepress": "NOT_TESTED",
+        "physical_proof": "NOT_TESTED",
+        "commercial_approved": false
+      }
     },
     {
       "id": "SPORTS-13",
@@ -1531,7 +2287,16 @@
       "print_master_file_present": false,
       "print_master_candidate": null,
       "print_master_status": "NOT_APPROVED",
-      "print_enabled": false
+      "print_enabled": false,
+      "commercial_qa": {
+        "state": "BLOCKED_SOURCE_OR_APPROVAL",
+        "source_candidate_present": false,
+        "identity_verification": "NOT_VERIFIED",
+        "native_resolution": "NOT_MEASURED",
+        "prepress": "NOT_TESTED",
+        "physical_proof": "NOT_TESTED",
+        "commercial_approved": false
+      }
     },
     {
       "id": "SPORTS-14",
@@ -1547,7 +2312,16 @@
       "print_master_file_present": false,
       "print_master_candidate": null,
       "print_master_status": "NOT_APPROVED",
-      "print_enabled": false
+      "print_enabled": false,
+      "commercial_qa": {
+        "state": "BLOCKED_SOURCE_OR_APPROVAL",
+        "source_candidate_present": false,
+        "identity_verification": "NOT_VERIFIED",
+        "native_resolution": "NOT_MEASURED",
+        "prepress": "NOT_TESTED",
+        "physical_proof": "NOT_TESTED",
+        "commercial_approved": false
+      }
     },
     {
       "id": "SPORTS-15",
@@ -1563,7 +2337,16 @@
       "print_master_file_present": false,
       "print_master_candidate": null,
       "print_master_status": "NOT_APPROVED",
-      "print_enabled": false
+      "print_enabled": false,
+      "commercial_qa": {
+        "state": "BLOCKED_SOURCE_OR_APPROVAL",
+        "source_candidate_present": false,
+        "identity_verification": "NOT_VERIFIED",
+        "native_resolution": "NOT_MEASURED",
+        "prepress": "NOT_TESTED",
+        "physical_proof": "NOT_TESTED",
+        "commercial_approved": false
+      }
     },
     {
       "id": "SPORTS-16",
@@ -1579,7 +2362,16 @@
       "print_master_file_present": false,
       "print_master_candidate": null,
       "print_master_status": "NOT_APPROVED",
-      "print_enabled": false
+      "print_enabled": false,
+      "commercial_qa": {
+        "state": "BLOCKED_SOURCE_OR_APPROVAL",
+        "source_candidate_present": false,
+        "identity_verification": "NOT_VERIFIED",
+        "native_resolution": "NOT_MEASURED",
+        "prepress": "NOT_TESTED",
+        "physical_proof": "NOT_TESTED",
+        "commercial_approved": false
+      }
     },
     {
       "id": "SPORTS-17",
@@ -1595,7 +2387,16 @@
       "print_master_file_present": false,
       "print_master_candidate": null,
       "print_master_status": "NOT_APPROVED",
-      "print_enabled": false
+      "print_enabled": false,
+      "commercial_qa": {
+        "state": "BLOCKED_SOURCE_OR_APPROVAL",
+        "source_candidate_present": false,
+        "identity_verification": "NOT_VERIFIED",
+        "native_resolution": "NOT_MEASURED",
+        "prepress": "NOT_TESTED",
+        "physical_proof": "NOT_TESTED",
+        "commercial_approved": false
+      }
     },
     {
       "id": "SPORTS-18",
@@ -1611,7 +2412,16 @@
       "print_master_file_present": false,
       "print_master_candidate": null,
       "print_master_status": "NOT_APPROVED",
-      "print_enabled": false
+      "print_enabled": false,
+      "commercial_qa": {
+        "state": "BLOCKED_SOURCE_OR_APPROVAL",
+        "source_candidate_present": false,
+        "identity_verification": "NOT_VERIFIED",
+        "native_resolution": "NOT_MEASURED",
+        "prepress": "NOT_TESTED",
+        "physical_proof": "NOT_TESTED",
+        "commercial_approved": false
+      }
     },
     {
       "id": "SPORTS-19",
@@ -1627,7 +2437,16 @@
       "print_master_file_present": false,
       "print_master_candidate": null,
       "print_master_status": "NOT_APPROVED",
-      "print_enabled": false
+      "print_enabled": false,
+      "commercial_qa": {
+        "state": "BLOCKED_SOURCE_OR_APPROVAL",
+        "source_candidate_present": false,
+        "identity_verification": "NOT_VERIFIED",
+        "native_resolution": "NOT_MEASURED",
+        "prepress": "NOT_TESTED",
+        "physical_proof": "NOT_TESTED",
+        "commercial_approved": false
+      }
     },
     {
       "id": "SPORTS-20",
@@ -1643,7 +2462,16 @@
       "print_master_file_present": false,
       "print_master_candidate": null,
       "print_master_status": "NOT_APPROVED",
-      "print_enabled": false
+      "print_enabled": false,
+      "commercial_qa": {
+        "state": "BLOCKED_SOURCE_OR_APPROVAL",
+        "source_candidate_present": false,
+        "identity_verification": "NOT_VERIFIED",
+        "native_resolution": "NOT_MEASURED",
+        "prepress": "NOT_TESTED",
+        "physical_proof": "NOT_TESTED",
+        "commercial_approved": false
+      }
     },
     {
       "id": "SPORTS-21",
@@ -1659,7 +2487,16 @@
       "print_master_file_present": false,
       "print_master_candidate": null,
       "print_master_status": "NOT_APPROVED",
-      "print_enabled": false
+      "print_enabled": false,
+      "commercial_qa": {
+        "state": "BLOCKED_SOURCE_OR_APPROVAL",
+        "source_candidate_present": false,
+        "identity_verification": "NOT_VERIFIED",
+        "native_resolution": "NOT_MEASURED",
+        "prepress": "NOT_TESTED",
+        "physical_proof": "NOT_TESTED",
+        "commercial_approved": false
+      }
     },
     {
       "id": "SPORTS-22",
@@ -1675,7 +2512,16 @@
       "print_master_file_present": false,
       "print_master_candidate": null,
       "print_master_status": "NOT_APPROVED",
-      "print_enabled": false
+      "print_enabled": false,
+      "commercial_qa": {
+        "state": "BLOCKED_SOURCE_OR_APPROVAL",
+        "source_candidate_present": false,
+        "identity_verification": "NOT_VERIFIED",
+        "native_resolution": "NOT_MEASURED",
+        "prepress": "NOT_TESTED",
+        "physical_proof": "NOT_TESTED",
+        "commercial_approved": false
+      }
     },
     {
       "id": "SPORTS-23",
@@ -1691,7 +2537,16 @@
       "print_master_file_present": false,
       "print_master_candidate": null,
       "print_master_status": "NOT_APPROVED",
-      "print_enabled": false
+      "print_enabled": false,
+      "commercial_qa": {
+        "state": "BLOCKED_SOURCE_OR_APPROVAL",
+        "source_candidate_present": false,
+        "identity_verification": "NOT_VERIFIED",
+        "native_resolution": "NOT_MEASURED",
+        "prepress": "NOT_TESTED",
+        "physical_proof": "NOT_TESTED",
+        "commercial_approved": false
+      }
     },
     {
       "id": "SPORTS-24",
@@ -1707,7 +2562,45 @@
       "print_master_file_present": false,
       "print_master_candidate": null,
       "print_master_status": "NOT_APPROVED",
-      "print_enabled": false
+      "print_enabled": false,
+      "commercial_qa": {
+        "state": "BLOCKED_SOURCE_OR_APPROVAL",
+        "source_candidate_present": false,
+        "identity_verification": "NOT_VERIFIED",
+        "native_resolution": "NOT_MEASURED",
+        "prepress": "NOT_TESTED",
+        "physical_proof": "NOT_TESTED",
+        "commercial_approved": false
+      }
     }
-  ]
+  ],
+  "commercial_print_audit": {
+    "started_date": "2026-10-25",
+    "phase": "1 — inventory and source evidence",
+    "state": "IN_PROGRESS",
+    "assessments": {
+      "catalog_positions": 96,
+      "linked_previews": 96,
+      "master_candidate_files": 9,
+      "missing_master_files": 87,
+      "recovered_gallery_references": 20,
+      "additional_original_identity_pending": 76,
+      "approved_commercial_masters": 0
+    },
+    "gates": [
+      "Original artwork identity verified",
+      "Standalone master present and native pixels validated at final artwork placement",
+      "Bleed/safe zones/name/QR independent layout validated",
+      "Die-cut and rounded rectangle printer proof approved",
+      "Physical proof and QR scan checks passed",
+      "Only then production approval"
+    ],
+    "estimated_elapsed_working_days": {
+      "source_recovery_and_visual_audit": "3–7, conditional on originals supplied",
+      "digital_prepress_and_revision": "3–5",
+      "physical_printer_proof_and_signoff": "5–10, dependent on printer turnaround",
+      "total": "11–22 working days after original assets and printer specifications available"
+    },
+    "limitations": "Dates are planning estimates, not a background execution commitment; physical signoff requires printer and actual proofs."
+  }
 }
