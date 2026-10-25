@@ -56,13 +56,20 @@
       "print_master_status": "NOT_APPROVED",
       "print_enabled": false,
       "commercial_qa": {
-        "state": "BLOCKED_SOURCE_OR_APPROVAL",
+        "state": "BLOCKED_IDENTITY_AND_PRINT_LAYOUT",
         "source_candidate_present": true,
         "identity_verification": "GALLERY_REFERENCE_ONLY",
-        "native_resolution": "NOT_MEASURED",
+        "native_resolution": "MEASURED_NOT_YET_ACCEPTED",
         "prepress": "NOT_TESTED",
         "physical_proof": "NOT_TESTED",
-        "commercial_approved": false
+        "commercial_approved": false,
+        "master_dimensions": {
+          "id": "SPACE-01",
+          "path": "assets/print-masters/space/01.webp",
+          "width": 1672,
+          "height": 941,
+          "codec": "VP8 "
+        }
       }
     },
     {
@@ -163,13 +170,20 @@
       "print_master_status": "NOT_APPROVED",
       "print_enabled": false,
       "commercial_qa": {
-        "state": "BLOCKED_SOURCE_OR_APPROVAL",
+        "state": "BLOCKED_IDENTITY_AND_PRINT_LAYOUT",
         "source_candidate_present": true,
         "identity_verification": "NOT_VERIFIED",
-        "native_resolution": "NOT_MEASURED",
+        "native_resolution": "MEASURED_NOT_YET_ACCEPTED",
         "prepress": "NOT_TESTED",
         "physical_proof": "NOT_TESTED",
-        "commercial_approved": false
+        "commercial_approved": false,
+        "master_dimensions": {
+          "id": "SPACE-05",
+          "path": "assets/print-masters/space/05.webp",
+          "width": 1672,
+          "height": 941,
+          "codec": "VP8 "
+        }
       }
     },
     {
@@ -670,13 +684,20 @@
       "print_master_status": "NOT_APPROVED",
       "print_enabled": false,
       "commercial_qa": {
-        "state": "BLOCKED_SOURCE_OR_APPROVAL",
+        "state": "BLOCKED_IDENTITY_AND_PRINT_LAYOUT",
         "source_candidate_present": true,
         "identity_verification": "GALLERY_REFERENCE_ONLY",
-        "native_resolution": "NOT_MEASURED",
+        "native_resolution": "MEASURED_NOT_YET_ACCEPTED",
         "prepress": "NOT_TESTED",
         "physical_proof": "NOT_TESTED",
-        "commercial_approved": false
+        "commercial_approved": false,
+        "master_dimensions": {
+          "id": "DINO-01",
+          "path": "assets/print-masters/dino/01.webp",
+          "width": 1448,
+          "height": 1086,
+          "codec": "VP8 "
+        }
       }
     },
     {
@@ -702,13 +723,20 @@
       "print_master_status": "NOT_APPROVED",
       "print_enabled": false,
       "commercial_qa": {
-        "state": "BLOCKED_SOURCE_OR_APPROVAL",
+        "state": "BLOCKED_IDENTITY_AND_PRINT_LAYOUT",
         "source_candidate_present": true,
         "identity_verification": "GALLERY_REFERENCE_ONLY",
-        "native_resolution": "NOT_MEASURED",
+        "native_resolution": "MEASURED_NOT_YET_ACCEPTED",
         "prepress": "NOT_TESTED",
         "physical_proof": "NOT_TESTED",
-        "commercial_approved": false
+        "commercial_approved": false,
+        "master_dimensions": {
+          "id": "DINO-02",
+          "path": "assets/print-masters/dino/02.webp",
+          "width": 1448,
+          "height": 1086,
+          "codec": "VP8 "
+        }
       }
     },
     {
@@ -830,13 +858,20 @@
       "print_master_status": "NOT_APPROVED",
       "print_enabled": false,
       "commercial_qa": {
-        "state": "BLOCKED_SOURCE_OR_APPROVAL",
+        "state": "BLOCKED_IDENTITY_AND_PRINT_LAYOUT",
         "source_candidate_present": true,
         "identity_verification": "GALLERY_REFERENCE_ONLY",
-        "native_resolution": "NOT_MEASURED",
+        "native_resolution": "MEASURED_NOT_YET_ACCEPTED",
         "prepress": "NOT_TESTED",
         "physical_proof": "NOT_TESTED",
-        "commercial_approved": false
+        "commercial_approved": false,
+        "master_dimensions": {
+          "id": "DINO-06",
+          "path": "assets/print-masters/dino/06.webp",
+          "width": 1448,
+          "height": 1086,
+          "codec": "VP8 "
+        }
       }
     },
     {
@@ -1375,13 +1410,20 @@
       "print_master_status": "NOT_APPROVED",
       "print_enabled": false,
       "commercial_qa": {
-        "state": "BLOCKED_SOURCE_OR_APPROVAL",
+        "state": "BLOCKED_IDENTITY_AND_PRINT_LAYOUT",
         "source_candidate_present": true,
         "identity_verification": "GALLERY_REFERENCE_ONLY",
-        "native_resolution": "NOT_MEASURED",
+        "native_resolution": "MEASURED_NOT_YET_ACCEPTED",
         "prepress": "NOT_TESTED",
         "physical_proof": "NOT_TESTED",
-        "commercial_approved": false
+        "commercial_approved": false,
+        "master_dimensions": {
+          "id": "RAINBOW-01",
+          "path": "assets/print-masters/rainbow/01.webp",
+          "width": 1122,
+          "height": 1402,
+          "codec": "VP8 "
+        }
       }
     },
     {
@@ -1400,13 +1442,20 @@
       "print_master_status": "NOT_APPROVED",
       "print_enabled": false,
       "commercial_qa": {
-        "state": "BLOCKED_SOURCE_OR_APPROVAL",
+        "state": "BLOCKED_IDENTITY_AND_PRINT_LAYOUT",
         "source_candidate_present": true,
         "identity_verification": "NOT_VERIFIED",
-        "native_resolution": "NOT_MEASURED",
+        "native_resolution": "MEASURED_NOT_YET_ACCEPTED",
         "prepress": "NOT_TESTED",
         "physical_proof": "NOT_TESTED",
-        "commercial_approved": false
+        "commercial_approved": false,
+        "master_dimensions": {
+          "id": "RAINBOW-02",
+          "path": "assets/print-masters/rainbow/02.webp",
+          "width": 1122,
+          "height": 1402,
+          "codec": "VP8 "
+        }
       }
     },
     {
@@ -1425,13 +1474,20 @@
       "print_master_status": "NOT_APPROVED",
       "print_enabled": false,
       "commercial_qa": {
-        "state": "BLOCKED_SOURCE_OR_APPROVAL",
+        "state": "BLOCKED_IDENTITY_AND_PRINT_LAYOUT",
         "source_candidate_present": true,
         "identity_verification": "NOT_VERIFIED",
-        "native_resolution": "NOT_MEASURED",
+        "native_resolution": "MEASURED_NOT_YET_ACCEPTED",
         "prepress": "NOT_TESTED",
         "physical_proof": "NOT_TESTED",
-        "commercial_approved": false
+        "commercial_approved": false,
+        "master_dimensions": {
+          "id": "RAINBOW-03",
+          "path": "assets/print-masters/rainbow/03.webp",
+          "width": 1122,
+          "height": 992,
+          "codec": "VP8 "
+        }
       }
     },
     {
@@ -2064,13 +2120,20 @@
       "print_master_status": "NOT_APPROVED",
       "print_enabled": false,
       "commercial_qa": {
-        "state": "BLOCKED_SOURCE_OR_APPROVAL",
+        "state": "BLOCKED_IDENTITY_AND_PRINT_LAYOUT",
         "source_candidate_present": true,
         "identity_verification": "NOT_VERIFIED",
-        "native_resolution": "NOT_MEASURED",
+        "native_resolution": "MEASURED_NOT_YET_ACCEPTED",
         "prepress": "NOT_TESTED",
         "physical_proof": "NOT_TESTED",
-        "commercial_approved": false
+        "commercial_approved": false,
+        "master_dimensions": {
+          "id": "SPORTS-04",
+          "path": "assets/print-masters/sports/04.webp",
+          "width": 1672,
+          "height": 941,
+          "codec": "VP8 "
+        }
       }
     },
     {
@@ -2576,7 +2639,7 @@
   ],
   "commercial_print_audit": {
     "started_date": "2026-10-25",
-    "phase": "Digital source availability verification started",
+    "phase": "Nine candidate masters measured; awaiting original identity and final-size qualification",
     "state": "IN_PROGRESS",
     "assessments": {
       "catalog_positions": 96,
@@ -2605,6 +2668,76 @@
     "source_inventory_checked": "2026-10-25",
     "a4_contact_sheet": "development-96-a4-proof.html",
     "next_gate": "Measure 9 candidate masters in native pixels, compare identities, then recover missing 87; no print approval without passed checks",
-    "warning": "A4 contact proof is visual-only, not cut-ready production proof."
+    "warning": "A4 contact proof is visual-only, not cut-ready production proof.",
+    "master_dimension_audit": {
+      "measured": 9,
+      "total": 9,
+      "results": [
+        {
+          "id": "SPACE-01",
+          "path": "assets/print-masters/space/01.webp",
+          "width": 1672,
+          "height": 941,
+          "codec": "VP8 "
+        },
+        {
+          "id": "SPACE-05",
+          "path": "assets/print-masters/space/05.webp",
+          "width": 1672,
+          "height": 941,
+          "codec": "VP8 "
+        },
+        {
+          "id": "DINO-01",
+          "path": "assets/print-masters/dino/01.webp",
+          "width": 1448,
+          "height": 1086,
+          "codec": "VP8 "
+        },
+        {
+          "id": "DINO-02",
+          "path": "assets/print-masters/dino/02.webp",
+          "width": 1448,
+          "height": 1086,
+          "codec": "VP8 "
+        },
+        {
+          "id": "DINO-06",
+          "path": "assets/print-masters/dino/06.webp",
+          "width": 1448,
+          "height": 1086,
+          "codec": "VP8 "
+        },
+        {
+          "id": "RAINBOW-01",
+          "path": "assets/print-masters/rainbow/01.webp",
+          "width": 1122,
+          "height": 1402,
+          "codec": "VP8 "
+        },
+        {
+          "id": "RAINBOW-02",
+          "path": "assets/print-masters/rainbow/02.webp",
+          "width": 1122,
+          "height": 1402,
+          "codec": "VP8 "
+        },
+        {
+          "id": "RAINBOW-03",
+          "path": "assets/print-masters/rainbow/03.webp",
+          "width": 1122,
+          "height": 992,
+          "codec": "VP8 "
+        },
+        {
+          "id": "SPORTS-04",
+          "path": "assets/print-masters/sports/04.webp",
+          "width": 1672,
+          "height": 941,
+          "codec": "VP8 "
+        }
+      ],
+      "note": "Pixel dimensions alone do not establish sufficient resolution at final printed size or authenticity; sports/04 remains rejected."
+    }
   }
 }
