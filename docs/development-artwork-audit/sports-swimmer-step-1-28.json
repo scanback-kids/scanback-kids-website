@@ -10,7 +10,7 @@
   "production_change": false,
   "reason": "Visual identity mismatch. Do not associate candidate with original or auto-approve it for printing.",
   "investigation": {
-    "status": "standalone_original_not_found_in_current_development_tree",
+    "status": "recovery_blocked_genuine_source_not_found",
     "findings": [
       "Recovered V6.15 gallery ready-designs.html identifies Swimming Champion as id 6 (Sports Champions).",
       "The swimmer original is presented as a tile in assets/ready-20-v615.webp at sprite x=33.333333333333336%, y=25%. This is a gallery atlas, not a standalone validated print master.",
@@ -25,12 +25,12 @@
     "print_master_path": null,
     "replacement_candidate": null,
     "next_actions": [
-      "Recover original high-resolution Swimming Champion from archived art source or original export; do not crop gallery into a claimed original.",
-      "Compare recovered file side by side against V6.15 gallery design 06.",
-      "Validate actual pixel dimensions, transparency/crop, safe zones, resolution and user approval.",
-      "Only after validated identity, create an explicit print master mapping in development."
+      "Retrieve original exported full-resolution Swimming Champion artwork from original creator/archived files.",
+      "Compare to recovered V6.15 design 06 before accepting identity.",
+      "Verify actual pixel dimensions, bleed and image quality before updating print-master mapping.",
+      "Keep candidate sports/04.webp rejected and printing disabled."
     ],
-    "step": "1.30",
+    "step": "1.31",
     "asset_inventory": {
       "original_gallery": "assets/ready-20-v615.webp",
       "design_id": 6,
@@ -38,6 +38,15 @@
       "existing_candidate": "assets/print-masters/sports/04.webp",
       "existing_candidate_status": "rejected",
       "theme_previews": "assets/themes/sports/01.webp through 24.webp; preview-sized, not approved source masters"
+    },
+    "archive_review": {
+      "legacy_qa_report": "V5_5_ARTWORK_QA_REPORT.pdf",
+      "legacy_qa_finding": "Sports #04 Swimming Champion recorded as ARTWORK PENDING; genuine master required.",
+      "staging_reference": "ScanBack_Design04_NameSpacing_QA_20261020.html",
+      "staging_identity": "sports-swimmer",
+      "staging_source_dimensions_claim": "1254 x 1254 px preview-layer source dimensions; not proof of standalone original",
+      "finding": "Earlier documents corroborate identity but do not provide a verified standalone original.",
+      "approved_master_found": false
     }
   },
   "scope": "Development artwork identity audit only; no image or application configuration changes."
