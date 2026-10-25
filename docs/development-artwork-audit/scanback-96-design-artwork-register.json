@@ -71,7 +71,8 @@
           "codec": "VP8 "
         },
         "artwork_zone_dpi": 1213,
-        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED"
+        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
       }
     },
     {
@@ -104,7 +105,8 @@
         "prepress": "NOT_TESTED",
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
-        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED"
+        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
       }
     },
     {
@@ -130,7 +132,8 @@
         "prepress": "NOT_TESTED",
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
-        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED"
+        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
       }
     },
     {
@@ -156,7 +159,8 @@
         "prepress": "NOT_TESTED",
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
-        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED"
+        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
       }
     },
     {
@@ -190,7 +194,8 @@
           "codec": "VP8 "
         },
         "artwork_zone_dpi": 1213,
-        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED"
+        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
       }
     },
     {
@@ -216,7 +221,8 @@
         "prepress": "NOT_TESTED",
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
-        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED"
+        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
       }
     },
     {
@@ -242,7 +248,8 @@
         "prepress": "NOT_TESTED",
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
-        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED"
+        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
       }
     },
     {
@@ -268,7 +275,8 @@
         "prepress": "NOT_TESTED",
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
-        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED"
+        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
       }
     },
     {
@@ -294,7 +302,8 @@
         "prepress": "NOT_TESTED",
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
-        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED"
+        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
       }
     },
     {
@@ -320,7 +329,8 @@
         "prepress": "NOT_TESTED",
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
-        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED"
+        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
       }
     },
     {
@@ -346,7 +356,8 @@
         "prepress": "NOT_TESTED",
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
-        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED"
+        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
       }
     },
     {
@@ -372,7 +383,8 @@
         "prepress": "NOT_TESTED",
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
-        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED"
+        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
       }
     },
     {
@@ -398,7 +410,8 @@
         "prepress": "NOT_TESTED",
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
-        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED"
+        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
       }
     },
     {
@@ -424,7 +437,8 @@
         "prepress": "NOT_TESTED",
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
-        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED"
+        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
       }
     },
     {
@@ -450,7 +464,8 @@
         "prepress": "NOT_TESTED",
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
-        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED"
+        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
       }
     },
     {
@@ -476,7 +491,8 @@
         "prepress": "NOT_TESTED",
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
-        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED"
+        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
       }
     },
     {
@@ -502,7 +518,8 @@
         "prepress": "NOT_TESTED",
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
-        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED"
+        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
       }
     },
     {
@@ -528,7 +545,8 @@
         "prepress": "NOT_TESTED",
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
-        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED"
+        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
       }
     },
     {
@@ -554,7 +572,8 @@
         "prepress": "NOT_TESTED",
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
-        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED"
+        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
       }
     },
     {
@@ -580,7 +599,8 @@
         "prepress": "NOT_TESTED",
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
-        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED"
+        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
       }
     },
     {
@@ -606,7 +626,8 @@
         "prepress": "NOT_TESTED",
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
-        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED"
+        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
       }
     },
     {
@@ -632,7 +653,8 @@
         "prepress": "NOT_TESTED",
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
-        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED"
+        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
       }
     },
     {
@@ -658,7 +680,8 @@
         "prepress": "NOT_TESTED",
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
-        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED"
+        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
       }
     },
     {
@@ -684,7 +707,8 @@
         "prepress": "NOT_TESTED",
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
-        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED"
+        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
       }
     },
     {
@@ -725,7 +749,8 @@
           "codec": "VP8 "
         },
         "artwork_zone_dpi": 1051,
-        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED"
+        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
       }
     },
     {
@@ -766,7 +791,8 @@
           "codec": "VP8 "
         },
         "artwork_zone_dpi": 1051,
-        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED"
+        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
       }
     },
     {
@@ -799,7 +825,8 @@
         "prepress": "NOT_TESTED",
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
-        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED"
+        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
       }
     },
     {
@@ -832,7 +859,8 @@
         "prepress": "NOT_TESTED",
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
-        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED"
+        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
       }
     },
     {
@@ -865,7 +893,8 @@
         "prepress": "NOT_TESTED",
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
-        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED"
+        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
       }
     },
     {
@@ -906,7 +935,8 @@
           "codec": "VP8 "
         },
         "artwork_zone_dpi": 1051,
-        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED"
+        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
       }
     },
     {
@@ -939,7 +969,8 @@
         "prepress": "NOT_TESTED",
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
-        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED"
+        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
       }
     },
     {
@@ -972,7 +1003,8 @@
         "prepress": "NOT_TESTED",
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
-        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED"
+        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
       }
     },
     {
@@ -1005,7 +1037,8 @@
         "prepress": "NOT_TESTED",
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
-        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED"
+        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
       }
     },
     {
@@ -1038,7 +1071,8 @@
         "prepress": "NOT_TESTED",
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
-        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED"
+        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
       }
     },
     {
@@ -1071,7 +1105,8 @@
         "prepress": "NOT_TESTED",
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
-        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED"
+        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
       }
     },
     {
@@ -1104,7 +1139,8 @@
         "prepress": "NOT_TESTED",
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
-        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED"
+        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
       }
     },
     {
@@ -1137,7 +1173,8 @@
         "prepress": "NOT_TESTED",
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
-        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED"
+        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
       }
     },
     {
@@ -1170,7 +1207,8 @@
         "prepress": "NOT_TESTED",
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
-        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED"
+        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
       }
     },
     {
@@ -1203,7 +1241,8 @@
         "prepress": "NOT_TESTED",
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
-        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED"
+        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
       }
     },
     {
@@ -1229,7 +1268,8 @@
         "prepress": "NOT_TESTED",
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
-        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED"
+        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
       }
     },
     {
@@ -1255,7 +1295,8 @@
         "prepress": "NOT_TESTED",
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
-        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED"
+        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
       }
     },
     {
@@ -1281,7 +1322,8 @@
         "prepress": "NOT_TESTED",
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
-        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED"
+        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
       }
     },
     {
@@ -1307,7 +1349,8 @@
         "prepress": "NOT_TESTED",
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
-        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED"
+        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
       }
     },
     {
@@ -1333,7 +1376,8 @@
         "prepress": "NOT_TESTED",
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
-        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED"
+        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
       }
     },
     {
@@ -1359,7 +1403,8 @@
         "prepress": "NOT_TESTED",
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
-        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED"
+        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
       }
     },
     {
@@ -1385,7 +1430,8 @@
         "prepress": "NOT_TESTED",
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
-        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED"
+        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
       }
     },
     {
@@ -1411,7 +1457,8 @@
         "prepress": "NOT_TESTED",
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
-        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED"
+        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
       }
     },
     {
@@ -1437,7 +1484,8 @@
         "prepress": "NOT_TESTED",
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
-        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED"
+        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
       }
     },
     {
@@ -1478,7 +1526,8 @@
           "codec": "VP8 "
         },
         "artwork_zone_dpi": 1149,
-        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED"
+        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
       }
     },
     {
@@ -1512,7 +1561,8 @@
           "codec": "VP8 "
         },
         "artwork_zone_dpi": 1149,
-        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED"
+        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
       }
     },
     {
@@ -1546,7 +1596,8 @@
           "codec": "VP8 "
         },
         "artwork_zone_dpi": 814,
-        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED"
+        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
       }
     },
     {
@@ -1572,7 +1623,8 @@
         "prepress": "NOT_TESTED",
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
-        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED"
+        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
       }
     },
     {
@@ -1598,7 +1650,8 @@
         "prepress": "NOT_TESTED",
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
-        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED"
+        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
       }
     },
     {
@@ -1624,7 +1677,8 @@
         "prepress": "NOT_TESTED",
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
-        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED"
+        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
       }
     },
     {
@@ -1650,7 +1704,8 @@
         "prepress": "NOT_TESTED",
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
-        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED"
+        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
       }
     },
     {
@@ -1676,7 +1731,8 @@
         "prepress": "NOT_TESTED",
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
-        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED"
+        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
       }
     },
     {
@@ -1702,7 +1758,8 @@
         "prepress": "NOT_TESTED",
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
-        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED"
+        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
       }
     },
     {
@@ -1728,7 +1785,8 @@
         "prepress": "NOT_TESTED",
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
-        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED"
+        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
       }
     },
     {
@@ -1754,7 +1812,8 @@
         "prepress": "NOT_TESTED",
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
-        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED"
+        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
       }
     },
     {
@@ -1780,7 +1839,8 @@
         "prepress": "NOT_TESTED",
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
-        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED"
+        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
       }
     },
     {
@@ -1806,7 +1866,8 @@
         "prepress": "NOT_TESTED",
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
-        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED"
+        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
       }
     },
     {
@@ -1832,7 +1893,8 @@
         "prepress": "NOT_TESTED",
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
-        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED"
+        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
       }
     },
     {
@@ -1858,7 +1920,8 @@
         "prepress": "NOT_TESTED",
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
-        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED"
+        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
       }
     },
     {
@@ -1884,7 +1947,8 @@
         "prepress": "NOT_TESTED",
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
-        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED"
+        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
       }
     },
     {
@@ -1910,7 +1974,8 @@
         "prepress": "NOT_TESTED",
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
-        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED"
+        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
       }
     },
     {
@@ -1936,7 +2001,8 @@
         "prepress": "NOT_TESTED",
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
-        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED"
+        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
       }
     },
     {
@@ -1962,7 +2028,8 @@
         "prepress": "NOT_TESTED",
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
-        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED"
+        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
       }
     },
     {
@@ -1988,7 +2055,8 @@
         "prepress": "NOT_TESTED",
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
-        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED"
+        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
       }
     },
     {
@@ -2014,7 +2082,8 @@
         "prepress": "NOT_TESTED",
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
-        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED"
+        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
       }
     },
     {
@@ -2040,7 +2109,8 @@
         "prepress": "NOT_TESTED",
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
-        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED"
+        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
       }
     },
     {
@@ -2066,7 +2136,8 @@
         "prepress": "NOT_TESTED",
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
-        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED"
+        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
       }
     },
     {
@@ -2092,7 +2163,8 @@
         "prepress": "NOT_TESTED",
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
-        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED"
+        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
       }
     },
     {
@@ -2125,7 +2197,8 @@
         "prepress": "NOT_TESTED",
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
-        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED"
+        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
       }
     },
     {
@@ -2158,7 +2231,8 @@
         "prepress": "NOT_TESTED",
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
-        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED"
+        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
       }
     },
     {
@@ -2184,7 +2258,8 @@
         "prepress": "NOT_TESTED",
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
-        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED"
+        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
       }
     },
     {
@@ -2218,7 +2293,8 @@
           "codec": "VP8 "
         },
         "artwork_zone_dpi": 1213,
-        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED"
+        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
       }
     },
     {
@@ -2244,7 +2320,8 @@
         "prepress": "NOT_TESTED",
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
-        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED"
+        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
       }
     },
     {
@@ -2270,7 +2347,8 @@
         "prepress": "NOT_TESTED",
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
-        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED"
+        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
       }
     },
     {
@@ -2296,7 +2374,8 @@
         "prepress": "NOT_TESTED",
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
-        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED"
+        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
       }
     },
     {
@@ -2322,7 +2401,8 @@
         "prepress": "NOT_TESTED",
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
-        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED"
+        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
       }
     },
     {
@@ -2348,7 +2428,8 @@
         "prepress": "NOT_TESTED",
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
-        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED"
+        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
       }
     },
     {
@@ -2374,7 +2455,8 @@
         "prepress": "NOT_TESTED",
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
-        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED"
+        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
       }
     },
     {
@@ -2400,7 +2482,8 @@
         "prepress": "NOT_TESTED",
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
-        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED"
+        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
       }
     },
     {
@@ -2426,7 +2509,8 @@
         "prepress": "NOT_TESTED",
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
-        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED"
+        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
       }
     },
     {
@@ -2452,7 +2536,8 @@
         "prepress": "NOT_TESTED",
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
-        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED"
+        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
       }
     },
     {
@@ -2478,7 +2563,8 @@
         "prepress": "NOT_TESTED",
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
-        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED"
+        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
       }
     },
     {
@@ -2504,7 +2590,8 @@
         "prepress": "NOT_TESTED",
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
-        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED"
+        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
       }
     },
     {
@@ -2530,7 +2617,8 @@
         "prepress": "NOT_TESTED",
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
-        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED"
+        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
       }
     },
     {
@@ -2556,7 +2644,8 @@
         "prepress": "NOT_TESTED",
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
-        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED"
+        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
       }
     },
     {
@@ -2582,7 +2671,8 @@
         "prepress": "NOT_TESTED",
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
-        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED"
+        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
       }
     },
     {
@@ -2608,7 +2698,8 @@
         "prepress": "NOT_TESTED",
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
-        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED"
+        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
       }
     },
     {
@@ -2634,7 +2725,8 @@
         "prepress": "NOT_TESTED",
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
-        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED"
+        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
       }
     },
     {
@@ -2660,7 +2752,8 @@
         "prepress": "NOT_TESTED",
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
-        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED"
+        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
       }
     },
     {
@@ -2686,7 +2779,8 @@
         "prepress": "NOT_TESTED",
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
-        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED"
+        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
       }
     },
     {
@@ -2712,7 +2806,8 @@
         "prepress": "NOT_TESTED",
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
-        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED"
+        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
       }
     },
     {
@@ -2738,7 +2833,8 @@
         "prepress": "NOT_TESTED",
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
-        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED"
+        "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
       }
     }
   ],
@@ -2959,6 +3055,49 @@
         }
       },
       "interpretation": "Geometric page fit and lack of tile overlap pass for both layouts. This is not a visual proof of artwork bleed or legibility, nor a QR scan check. Test before print approval."
+    },
+    "step_2_4": {
+      "date": "2026-10-25",
+      "basis": "Reviewed actual Studio source functions composeOne, pdfQR and pdfContour",
+      "status": "STATIC_QA_COMPLETE_RENDERS_REQUIRED",
+      "findings": {
+        "name_qr_separation": "PASS_STATIC: separate horizontal name/QR regions",
+        "qr_quiet_zone": "PRESENT_IN_CODE: 4 modules white border",
+        "qr_density": "RUNTIME_PROTECTION: rejects modules with cell <0.23mm",
+        "qr_actual_scan": "NOT_TESTED",
+        "rounding_and_cut_contour": "PRESENT_CONCEPT_ONLY",
+        "bleed_coverage": "FAIL_VISUAL_ARTWORK_BLEED: artwork inset by 0.8mm inside trim, only theme flat color fills outer bleed",
+        "small_text": "REVIEW: captions and labels use very small fonts on rounded labels",
+        "actual_pdf": "NOT_RENDERED_OR_VISUALLY_REVIEWED"
+      },
+      "dimensions": {
+        "rounded": {
+          "qr_size_mm": 11.3,
+          "qr_border_mm": 2.65,
+          "name_max_width_mm": 40.85,
+          "caption_font_pt": 4.7,
+          "name_max_font_pt": 8.8,
+          "item_font_max_pt": 4.6,
+          "brand_font_pt": 3,
+          "artwork_trim_inset_mm": 0.8
+        },
+        "diecut": {
+          "qr_size_mm": 13.5,
+          "qr_border_mm": 2.65,
+          "name_max_width_mm": 33.65,
+          "caption_font_pt": 6.1,
+          "name_max_font_pt": 12.2,
+          "item_font_max_pt": 6.3,
+          "brand_font_pt": 3.5,
+          "artwork_trim_inset_mm": 0.8
+        }
+      },
+      "recommendations": [
+        "Do not certify illustrated full-bleed until background art extends beyond cut boundary.",
+        "Render sample A4 PDFs for both geometries and inspect actual text and QR at 100%.",
+        "Check real QR URLs using multiple density cases and scan exported codes.",
+        "Retain commercial-print block for all 96 until source identities and content gates pass."
+      ]
     }
   }
 }
