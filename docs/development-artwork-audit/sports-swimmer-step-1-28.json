@@ -10,13 +10,25 @@
   "production_change": false,
   "reason": "Visual identity mismatch. Do not associate candidate with original or auto-approve it for printing.",
   "investigation": {
-    "status": "open",
-    "next_actions": [
-      "Compare other Sports Champion candidate artwork against the approved original at full resolution.",
-      "Document character, pose, background and distinguishing details before proposing a new match.",
-      "Require explicit human confirmation of any replacement before marking approved."
+    "status": "reference_located_master_not_verified",
+    "findings": [
+      "Recovered V6.15 gallery ready-designs.html identifies Swimming Champion as id 6 (Sports Champions).",
+      "The swimmer original is presented as a tile in assets/ready-20-v615.webp at sprite x=33.333333333333336%, y=25%. This is a gallery atlas, not a standalone validated print master.",
+      "Previous staging preview identifies sports-swimmer as Swimming Champion at array index 5 (zero-based); this agrees with gallery id 6.",
+      "sports/04.webp remains rejected based on reviewer mismatch."
     ],
-    "replacement_candidate": null
+    "reference_gallery": "ready-designs.html",
+    "reference_asset": "assets/ready-20-v615.webp",
+    "gallery_design_id": 6,
+    "staging_design_id": "sports-swimmer",
+    "staging_zero_based_index": 5,
+    "print_master_path": null,
+    "replacement_candidate": null,
+    "next_actions": [
+      "Locate standalone high-resolution original used to assemble the V6.15 gallery sprite.",
+      "Compare visually with the gallery reference and confirm adequate print resolution.",
+      "Require reviewer sign-off; do not relabel sports/04.webp or enable printing."
+    ]
   },
   "scope": "Development artwork identity audit only; no image or application configuration changes."
 }
