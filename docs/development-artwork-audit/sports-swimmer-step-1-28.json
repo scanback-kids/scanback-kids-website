@@ -10,7 +10,7 @@
   "production_change": false,
   "reason": "Visual identity mismatch. Do not associate candidate with original or auto-approve it for printing.",
   "investigation": {
-    "status": "recovery_blocked_genuine_source_not_found",
+    "status": "original_source_not_recovered_from_repository_history",
     "findings": [
       "Recovered V6.15 gallery ready-designs.html identifies Swimming Champion as id 6 (Sports Champions).",
       "The swimmer original is presented as a tile in assets/ready-20-v615.webp at sprite x=33.333333333333336%, y=25%. This is a gallery atlas, not a standalone validated print master.",
@@ -30,7 +30,7 @@
       "Verify actual pixel dimensions, bleed and image quality before updating print-master mapping.",
       "Keep candidate sports/04.webp rejected and printing disabled."
     ],
-    "step": "1.31",
+    "step": "1.32",
     "asset_inventory": {
       "original_gallery": "assets/ready-20-v615.webp",
       "design_id": 6,
@@ -47,6 +47,20 @@
       "staging_source_dimensions_claim": "1254 x 1254 px preview-layer source dimensions; not proof of standalone original",
       "finding": "Earlier documents corroborate identity but do not provide a verified standalone original.",
       "approved_master_found": false
+    },
+    "history_review": {
+      "rejected_candidate_commit": "e46ef431bff80c1e19c333d7600f3212692fd086",
+      "rejected_candidate_commit_date": "2026-10-15",
+      "gallery_commit": "1b19e32b2e0a1570814780253b96a7b064ef54b4",
+      "gallery_commit_date": "2026-10-17",
+      "finding": "History of the known candidate and recovered gallery confirms separate provenance, but provides no verified standalone original master."
+    },
+    "recovery_gate": {
+      "requires_original_source": true,
+      "requires_visual_identity_check": true,
+      "requires_native_resolution_check": true,
+      "requires_user_approval": true,
+      "eligible_for_print": false
     }
   },
   "scope": "Development artwork identity audit only; no image or application configuration changes."
