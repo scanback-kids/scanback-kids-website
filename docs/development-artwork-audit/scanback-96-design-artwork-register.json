@@ -58,7 +58,7 @@
       "commercial_qa": {
         "state": "BLOCKED_IDENTITY_AND_PRINT_LAYOUT",
         "source_candidate_present": true,
-        "identity_verification": "GALLERY_REFERENCE_ONLY",
+        "identity_verification": "REFERENCE_ONLY_NOT_MATCH_CERTIFIED",
         "native_resolution": "MEASURED_NOT_YET_ACCEPTED",
         "prepress": "NOT_TESTED",
         "physical_proof": "NOT_TESTED",
@@ -72,7 +72,8 @@
         },
         "artwork_zone_dpi": 1213,
         "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
-        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION",
+        "step_2_9_source_status": "CANDIDATE_AWAITING_IDENTITY"
       }
     },
     {
@@ -100,13 +101,14 @@
       "commercial_qa": {
         "state": "BLOCKED_SOURCE_OR_APPROVAL",
         "source_candidate_present": false,
-        "identity_verification": "GALLERY_REFERENCE_ONLY",
+        "identity_verification": "REFERENCE_ONLY_NOT_MATCH_CERTIFIED",
         "native_resolution": "NOT_MEASURED",
         "prepress": "NOT_TESTED",
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
         "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
-        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION",
+        "step_2_9_source_status": "NO_STANDALONE_MASTER"
       }
     },
     {
@@ -133,7 +135,8 @@
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
         "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
-        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION",
+        "step_2_9_source_status": "NO_STANDALONE_MASTER"
       }
     },
     {
@@ -160,7 +163,8 @@
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
         "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
-        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION",
+        "step_2_9_source_status": "NO_STANDALONE_MASTER"
       }
     },
     {
@@ -195,7 +199,8 @@
         },
         "artwork_zone_dpi": 1213,
         "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
-        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION",
+        "step_2_9_source_status": "CANDIDATE_AWAITING_IDENTITY"
       }
     },
     {
@@ -222,7 +227,8 @@
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
         "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
-        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION",
+        "step_2_9_source_status": "NO_STANDALONE_MASTER"
       }
     },
     {
@@ -249,7 +255,8 @@
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
         "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
-        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION",
+        "step_2_9_source_status": "NO_STANDALONE_MASTER"
       }
     },
     {
@@ -276,7 +283,8 @@
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
         "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
-        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION",
+        "step_2_9_source_status": "NO_STANDALONE_MASTER"
       }
     },
     {
@@ -303,7 +311,8 @@
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
         "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
-        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION",
+        "step_2_9_source_status": "NO_STANDALONE_MASTER"
       }
     },
     {
@@ -330,7 +339,8 @@
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
         "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
-        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION",
+        "step_2_9_source_status": "NO_STANDALONE_MASTER"
       }
     },
     {
@@ -357,7 +367,8 @@
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
         "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
-        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION",
+        "step_2_9_source_status": "NO_STANDALONE_MASTER"
       }
     },
     {
@@ -384,7 +395,8 @@
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
         "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
-        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION",
+        "step_2_9_source_status": "NO_STANDALONE_MASTER"
       }
     },
     {
@@ -411,7 +423,8 @@
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
         "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
-        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION",
+        "step_2_9_source_status": "NO_STANDALONE_MASTER"
       }
     },
     {
@@ -438,7 +451,8 @@
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
         "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
-        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION",
+        "step_2_9_source_status": "NO_STANDALONE_MASTER"
       }
     },
     {
@@ -465,7 +479,8 @@
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
         "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
-        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION",
+        "step_2_9_source_status": "NO_STANDALONE_MASTER"
       }
     },
     {
@@ -492,7 +507,8 @@
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
         "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
-        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION",
+        "step_2_9_source_status": "NO_STANDALONE_MASTER"
       }
     },
     {
@@ -519,7 +535,8 @@
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
         "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
-        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION",
+        "step_2_9_source_status": "NO_STANDALONE_MASTER"
       }
     },
     {
@@ -546,7 +563,8 @@
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
         "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
-        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION",
+        "step_2_9_source_status": "NO_STANDALONE_MASTER"
       }
     },
     {
@@ -573,7 +591,8 @@
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
         "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
-        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION",
+        "step_2_9_source_status": "NO_STANDALONE_MASTER"
       }
     },
     {
@@ -600,7 +619,8 @@
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
         "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
-        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION",
+        "step_2_9_source_status": "NO_STANDALONE_MASTER"
       }
     },
     {
@@ -627,7 +647,8 @@
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
         "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
-        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION",
+        "step_2_9_source_status": "NO_STANDALONE_MASTER"
       }
     },
     {
@@ -654,7 +675,8 @@
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
         "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
-        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION",
+        "step_2_9_source_status": "NO_STANDALONE_MASTER"
       }
     },
     {
@@ -681,7 +703,8 @@
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
         "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
-        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION",
+        "step_2_9_source_status": "NO_STANDALONE_MASTER"
       }
     },
     {
@@ -708,7 +731,8 @@
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
         "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
-        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION",
+        "step_2_9_source_status": "NO_STANDALONE_MASTER"
       }
     },
     {
@@ -736,7 +760,7 @@
       "commercial_qa": {
         "state": "BLOCKED_IDENTITY_AND_PRINT_LAYOUT",
         "source_candidate_present": true,
-        "identity_verification": "GALLERY_REFERENCE_ONLY",
+        "identity_verification": "REFERENCE_ONLY_NOT_MATCH_CERTIFIED",
         "native_resolution": "MEASURED_NOT_YET_ACCEPTED",
         "prepress": "NOT_TESTED",
         "physical_proof": "NOT_TESTED",
@@ -750,7 +774,8 @@
         },
         "artwork_zone_dpi": 1051,
         "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
-        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION",
+        "step_2_9_source_status": "CANDIDATE_AWAITING_IDENTITY"
       }
     },
     {
@@ -778,7 +803,7 @@
       "commercial_qa": {
         "state": "BLOCKED_IDENTITY_AND_PRINT_LAYOUT",
         "source_candidate_present": true,
-        "identity_verification": "GALLERY_REFERENCE_ONLY",
+        "identity_verification": "REFERENCE_ONLY_NOT_MATCH_CERTIFIED",
         "native_resolution": "MEASURED_NOT_YET_ACCEPTED",
         "prepress": "NOT_TESTED",
         "physical_proof": "NOT_TESTED",
@@ -792,7 +817,8 @@
         },
         "artwork_zone_dpi": 1051,
         "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
-        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION",
+        "step_2_9_source_status": "CANDIDATE_AWAITING_IDENTITY"
       }
     },
     {
@@ -820,13 +846,14 @@
       "commercial_qa": {
         "state": "BLOCKED_SOURCE_OR_APPROVAL",
         "source_candidate_present": false,
-        "identity_verification": "GALLERY_REFERENCE_ONLY",
+        "identity_verification": "REFERENCE_ONLY_NOT_MATCH_CERTIFIED",
         "native_resolution": "NOT_MEASURED",
         "prepress": "NOT_TESTED",
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
         "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
-        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION",
+        "step_2_9_source_status": "NO_STANDALONE_MASTER"
       }
     },
     {
@@ -854,13 +881,14 @@
       "commercial_qa": {
         "state": "BLOCKED_SOURCE_OR_APPROVAL",
         "source_candidate_present": false,
-        "identity_verification": "GALLERY_REFERENCE_ONLY",
+        "identity_verification": "REFERENCE_ONLY_NOT_MATCH_CERTIFIED",
         "native_resolution": "NOT_MEASURED",
         "prepress": "NOT_TESTED",
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
         "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
-        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION",
+        "step_2_9_source_status": "NO_STANDALONE_MASTER"
       }
     },
     {
@@ -888,13 +916,14 @@
       "commercial_qa": {
         "state": "BLOCKED_SOURCE_OR_APPROVAL",
         "source_candidate_present": false,
-        "identity_verification": "GALLERY_REFERENCE_ONLY",
+        "identity_verification": "REFERENCE_ONLY_NOT_MATCH_CERTIFIED",
         "native_resolution": "NOT_MEASURED",
         "prepress": "NOT_TESTED",
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
         "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
-        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION",
+        "step_2_9_source_status": "NO_STANDALONE_MASTER"
       }
     },
     {
@@ -922,7 +951,7 @@
       "commercial_qa": {
         "state": "BLOCKED_IDENTITY_AND_PRINT_LAYOUT",
         "source_candidate_present": true,
-        "identity_verification": "GALLERY_REFERENCE_ONLY",
+        "identity_verification": "REFERENCE_ONLY_NOT_MATCH_CERTIFIED",
         "native_resolution": "MEASURED_NOT_YET_ACCEPTED",
         "prepress": "NOT_TESTED",
         "physical_proof": "NOT_TESTED",
@@ -936,7 +965,8 @@
         },
         "artwork_zone_dpi": 1051,
         "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
-        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION",
+        "step_2_9_source_status": "CANDIDATE_AWAITING_IDENTITY"
       }
     },
     {
@@ -964,13 +994,14 @@
       "commercial_qa": {
         "state": "BLOCKED_SOURCE_OR_APPROVAL",
         "source_candidate_present": false,
-        "identity_verification": "GALLERY_REFERENCE_ONLY",
+        "identity_verification": "REFERENCE_ONLY_NOT_MATCH_CERTIFIED",
         "native_resolution": "NOT_MEASURED",
         "prepress": "NOT_TESTED",
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
         "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
-        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION",
+        "step_2_9_source_status": "NO_STANDALONE_MASTER"
       }
     },
     {
@@ -998,13 +1029,14 @@
       "commercial_qa": {
         "state": "BLOCKED_SOURCE_OR_APPROVAL",
         "source_candidate_present": false,
-        "identity_verification": "GALLERY_REFERENCE_ONLY",
+        "identity_verification": "REFERENCE_ONLY_NOT_MATCH_CERTIFIED",
         "native_resolution": "NOT_MEASURED",
         "prepress": "NOT_TESTED",
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
         "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
-        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION",
+        "step_2_9_source_status": "NO_STANDALONE_MASTER"
       }
     },
     {
@@ -1032,13 +1064,14 @@
       "commercial_qa": {
         "state": "BLOCKED_SOURCE_OR_APPROVAL",
         "source_candidate_present": false,
-        "identity_verification": "GALLERY_REFERENCE_ONLY",
+        "identity_verification": "REFERENCE_ONLY_NOT_MATCH_CERTIFIED",
         "native_resolution": "NOT_MEASURED",
         "prepress": "NOT_TESTED",
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
         "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
-        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION",
+        "step_2_9_source_status": "NO_STANDALONE_MASTER"
       }
     },
     {
@@ -1066,13 +1099,14 @@
       "commercial_qa": {
         "state": "BLOCKED_SOURCE_OR_APPROVAL",
         "source_candidate_present": false,
-        "identity_verification": "GALLERY_REFERENCE_ONLY",
+        "identity_verification": "REFERENCE_ONLY_NOT_MATCH_CERTIFIED",
         "native_resolution": "NOT_MEASURED",
         "prepress": "NOT_TESTED",
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
         "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
-        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION",
+        "step_2_9_source_status": "NO_STANDALONE_MASTER"
       }
     },
     {
@@ -1100,13 +1134,14 @@
       "commercial_qa": {
         "state": "BLOCKED_SOURCE_OR_APPROVAL",
         "source_candidate_present": false,
-        "identity_verification": "GALLERY_REFERENCE_ONLY",
+        "identity_verification": "REFERENCE_ONLY_NOT_MATCH_CERTIFIED",
         "native_resolution": "NOT_MEASURED",
         "prepress": "NOT_TESTED",
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
         "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
-        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION",
+        "step_2_9_source_status": "NO_STANDALONE_MASTER"
       }
     },
     {
@@ -1134,13 +1169,14 @@
       "commercial_qa": {
         "state": "BLOCKED_SOURCE_OR_APPROVAL",
         "source_candidate_present": false,
-        "identity_verification": "GALLERY_REFERENCE_ONLY",
+        "identity_verification": "REFERENCE_ONLY_NOT_MATCH_CERTIFIED",
         "native_resolution": "NOT_MEASURED",
         "prepress": "NOT_TESTED",
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
         "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
-        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION",
+        "step_2_9_source_status": "NO_STANDALONE_MASTER"
       }
     },
     {
@@ -1168,13 +1204,14 @@
       "commercial_qa": {
         "state": "BLOCKED_SOURCE_OR_APPROVAL",
         "source_candidate_present": false,
-        "identity_verification": "GALLERY_REFERENCE_ONLY",
+        "identity_verification": "REFERENCE_ONLY_NOT_MATCH_CERTIFIED",
         "native_resolution": "NOT_MEASURED",
         "prepress": "NOT_TESTED",
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
         "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
-        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION",
+        "step_2_9_source_status": "NO_STANDALONE_MASTER"
       }
     },
     {
@@ -1202,13 +1239,14 @@
       "commercial_qa": {
         "state": "BLOCKED_SOURCE_OR_APPROVAL",
         "source_candidate_present": false,
-        "identity_verification": "GALLERY_REFERENCE_ONLY",
+        "identity_verification": "REFERENCE_ONLY_NOT_MATCH_CERTIFIED",
         "native_resolution": "NOT_MEASURED",
         "prepress": "NOT_TESTED",
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
         "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
-        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION",
+        "step_2_9_source_status": "NO_STANDALONE_MASTER"
       }
     },
     {
@@ -1236,13 +1274,14 @@
       "commercial_qa": {
         "state": "BLOCKED_SOURCE_OR_APPROVAL",
         "source_candidate_present": false,
-        "identity_verification": "GALLERY_REFERENCE_ONLY",
+        "identity_verification": "REFERENCE_ONLY_NOT_MATCH_CERTIFIED",
         "native_resolution": "NOT_MEASURED",
         "prepress": "NOT_TESTED",
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
         "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
-        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION",
+        "step_2_9_source_status": "NO_STANDALONE_MASTER"
       }
     },
     {
@@ -1269,7 +1308,8 @@
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
         "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
-        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION",
+        "step_2_9_source_status": "NO_STANDALONE_MASTER"
       }
     },
     {
@@ -1296,7 +1336,8 @@
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
         "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
-        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION",
+        "step_2_9_source_status": "NO_STANDALONE_MASTER"
       }
     },
     {
@@ -1323,7 +1364,8 @@
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
         "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
-        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION",
+        "step_2_9_source_status": "NO_STANDALONE_MASTER"
       }
     },
     {
@@ -1350,7 +1392,8 @@
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
         "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
-        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION",
+        "step_2_9_source_status": "NO_STANDALONE_MASTER"
       }
     },
     {
@@ -1377,7 +1420,8 @@
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
         "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
-        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION",
+        "step_2_9_source_status": "NO_STANDALONE_MASTER"
       }
     },
     {
@@ -1404,7 +1448,8 @@
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
         "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
-        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION",
+        "step_2_9_source_status": "NO_STANDALONE_MASTER"
       }
     },
     {
@@ -1431,7 +1476,8 @@
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
         "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
-        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION",
+        "step_2_9_source_status": "NO_STANDALONE_MASTER"
       }
     },
     {
@@ -1458,7 +1504,8 @@
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
         "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
-        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION",
+        "step_2_9_source_status": "NO_STANDALONE_MASTER"
       }
     },
     {
@@ -1485,7 +1532,8 @@
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
         "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
-        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION",
+        "step_2_9_source_status": "NO_STANDALONE_MASTER"
       }
     },
     {
@@ -1513,7 +1561,7 @@
       "commercial_qa": {
         "state": "BLOCKED_IDENTITY_AND_PRINT_LAYOUT",
         "source_candidate_present": true,
-        "identity_verification": "GALLERY_REFERENCE_ONLY",
+        "identity_verification": "REJECTED",
         "native_resolution": "MEASURED_NOT_YET_ACCEPTED",
         "prepress": "NOT_TESTED",
         "physical_proof": "NOT_TESTED",
@@ -1527,7 +1575,8 @@
         },
         "artwork_zone_dpi": 1149,
         "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
-        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION",
+        "step_2_9_source_status": "REJECTED_ORIGINAL_MISMATCH"
       }
     },
     {
@@ -1548,7 +1597,7 @@
       "commercial_qa": {
         "state": "BLOCKED_IDENTITY_AND_PRINT_LAYOUT",
         "source_candidate_present": true,
-        "identity_verification": "NOT_VERIFIED",
+        "identity_verification": "REJECTED",
         "native_resolution": "MEASURED_NOT_YET_ACCEPTED",
         "prepress": "NOT_TESTED",
         "physical_proof": "NOT_TESTED",
@@ -1562,7 +1611,8 @@
         },
         "artwork_zone_dpi": 1149,
         "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
-        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION",
+        "step_2_9_source_status": "REJECTED_ORIGINAL_MISMATCH"
       }
     },
     {
@@ -1583,7 +1633,7 @@
       "commercial_qa": {
         "state": "BLOCKED_IDENTITY_AND_PRINT_LAYOUT",
         "source_candidate_present": true,
-        "identity_verification": "NOT_VERIFIED",
+        "identity_verification": "REJECTED",
         "native_resolution": "MEASURED_NOT_YET_ACCEPTED",
         "prepress": "NOT_TESTED",
         "physical_proof": "NOT_TESTED",
@@ -1597,7 +1647,8 @@
         },
         "artwork_zone_dpi": 814,
         "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
-        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION",
+        "step_2_9_source_status": "REJECTED_ORIGINAL_MISMATCH"
       }
     },
     {
@@ -1624,7 +1675,8 @@
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
         "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
-        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION",
+        "step_2_9_source_status": "NO_STANDALONE_MASTER"
       }
     },
     {
@@ -1651,7 +1703,8 @@
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
         "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
-        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION",
+        "step_2_9_source_status": "NO_STANDALONE_MASTER"
       }
     },
     {
@@ -1678,7 +1731,8 @@
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
         "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
-        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION",
+        "step_2_9_source_status": "NO_STANDALONE_MASTER"
       }
     },
     {
@@ -1705,7 +1759,8 @@
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
         "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
-        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION",
+        "step_2_9_source_status": "NO_STANDALONE_MASTER"
       }
     },
     {
@@ -1732,7 +1787,8 @@
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
         "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
-        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION",
+        "step_2_9_source_status": "NO_STANDALONE_MASTER"
       }
     },
     {
@@ -1759,7 +1815,8 @@
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
         "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
-        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION",
+        "step_2_9_source_status": "NO_STANDALONE_MASTER"
       }
     },
     {
@@ -1786,7 +1843,8 @@
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
         "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
-        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION",
+        "step_2_9_source_status": "NO_STANDALONE_MASTER"
       }
     },
     {
@@ -1813,7 +1871,8 @@
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
         "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
-        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION",
+        "step_2_9_source_status": "NO_STANDALONE_MASTER"
       }
     },
     {
@@ -1840,7 +1899,8 @@
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
         "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
-        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION",
+        "step_2_9_source_status": "NO_STANDALONE_MASTER"
       }
     },
     {
@@ -1867,7 +1927,8 @@
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
         "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
-        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION",
+        "step_2_9_source_status": "NO_STANDALONE_MASTER"
       }
     },
     {
@@ -1894,7 +1955,8 @@
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
         "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
-        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION",
+        "step_2_9_source_status": "NO_STANDALONE_MASTER"
       }
     },
     {
@@ -1921,7 +1983,8 @@
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
         "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
-        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION",
+        "step_2_9_source_status": "NO_STANDALONE_MASTER"
       }
     },
     {
@@ -1948,7 +2011,8 @@
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
         "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
-        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION",
+        "step_2_9_source_status": "NO_STANDALONE_MASTER"
       }
     },
     {
@@ -1975,7 +2039,8 @@
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
         "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
-        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION",
+        "step_2_9_source_status": "NO_STANDALONE_MASTER"
       }
     },
     {
@@ -2002,7 +2067,8 @@
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
         "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
-        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION",
+        "step_2_9_source_status": "NO_STANDALONE_MASTER"
       }
     },
     {
@@ -2029,7 +2095,8 @@
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
         "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
-        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION",
+        "step_2_9_source_status": "NO_STANDALONE_MASTER"
       }
     },
     {
@@ -2056,7 +2123,8 @@
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
         "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
-        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION",
+        "step_2_9_source_status": "NO_STANDALONE_MASTER"
       }
     },
     {
@@ -2083,7 +2151,8 @@
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
         "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
-        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION",
+        "step_2_9_source_status": "NO_STANDALONE_MASTER"
       }
     },
     {
@@ -2110,7 +2179,8 @@
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
         "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
-        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION",
+        "step_2_9_source_status": "NO_STANDALONE_MASTER"
       }
     },
     {
@@ -2137,7 +2207,8 @@
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
         "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
-        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION",
+        "step_2_9_source_status": "NO_STANDALONE_MASTER"
       }
     },
     {
@@ -2164,7 +2235,8 @@
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
         "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
-        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION",
+        "step_2_9_source_status": "NO_STANDALONE_MASTER"
       }
     },
     {
@@ -2192,13 +2264,14 @@
       "commercial_qa": {
         "state": "BLOCKED_SOURCE_OR_APPROVAL",
         "source_candidate_present": false,
-        "identity_verification": "GALLERY_REFERENCE_ONLY",
+        "identity_verification": "REFERENCE_ONLY_NOT_MATCH_CERTIFIED",
         "native_resolution": "NOT_MEASURED",
         "prepress": "NOT_TESTED",
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
         "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
-        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION",
+        "step_2_9_source_status": "NO_STANDALONE_MASTER"
       }
     },
     {
@@ -2226,13 +2299,14 @@
       "commercial_qa": {
         "state": "BLOCKED_SOURCE_OR_APPROVAL",
         "source_candidate_present": false,
-        "identity_verification": "GALLERY_REFERENCE_ONLY",
+        "identity_verification": "REFERENCE_ONLY_NOT_MATCH_CERTIFIED",
         "native_resolution": "NOT_MEASURED",
         "prepress": "NOT_TESTED",
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
         "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
-        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION",
+        "step_2_9_source_status": "NO_STANDALONE_MASTER"
       }
     },
     {
@@ -2259,7 +2333,8 @@
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
         "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
-        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION",
+        "step_2_9_source_status": "NO_STANDALONE_MASTER"
       }
     },
     {
@@ -2280,7 +2355,7 @@
       "commercial_qa": {
         "state": "BLOCKED_IDENTITY_AND_PRINT_LAYOUT",
         "source_candidate_present": true,
-        "identity_verification": "NOT_VERIFIED",
+        "identity_verification": "REJECTED",
         "native_resolution": "MEASURED_NOT_YET_ACCEPTED",
         "prepress": "NOT_TESTED",
         "physical_proof": "NOT_TESTED",
@@ -2294,7 +2369,8 @@
         },
         "artwork_zone_dpi": 1213,
         "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
-        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION",
+        "step_2_9_source_status": "REJECTED_ORIGINAL_MISMATCH"
       }
     },
     {
@@ -2321,7 +2397,8 @@
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
         "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
-        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION",
+        "step_2_9_source_status": "NO_STANDALONE_MASTER"
       }
     },
     {
@@ -2348,7 +2425,8 @@
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
         "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
-        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION",
+        "step_2_9_source_status": "NO_STANDALONE_MASTER"
       }
     },
     {
@@ -2375,7 +2453,8 @@
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
         "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
-        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION",
+        "step_2_9_source_status": "NO_STANDALONE_MASTER"
       }
     },
     {
@@ -2402,7 +2481,8 @@
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
         "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
-        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION",
+        "step_2_9_source_status": "NO_STANDALONE_MASTER"
       }
     },
     {
@@ -2429,7 +2509,8 @@
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
         "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
-        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION",
+        "step_2_9_source_status": "NO_STANDALONE_MASTER"
       }
     },
     {
@@ -2456,7 +2537,8 @@
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
         "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
-        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION",
+        "step_2_9_source_status": "NO_STANDALONE_MASTER"
       }
     },
     {
@@ -2483,7 +2565,8 @@
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
         "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
-        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION",
+        "step_2_9_source_status": "NO_STANDALONE_MASTER"
       }
     },
     {
@@ -2510,7 +2593,8 @@
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
         "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
-        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION",
+        "step_2_9_source_status": "NO_STANDALONE_MASTER"
       }
     },
     {
@@ -2537,7 +2621,8 @@
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
         "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
-        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION",
+        "step_2_9_source_status": "NO_STANDALONE_MASTER"
       }
     },
     {
@@ -2564,7 +2649,8 @@
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
         "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
-        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION",
+        "step_2_9_source_status": "NO_STANDALONE_MASTER"
       }
     },
     {
@@ -2591,7 +2677,8 @@
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
         "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
-        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION",
+        "step_2_9_source_status": "NO_STANDALONE_MASTER"
       }
     },
     {
@@ -2618,7 +2705,8 @@
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
         "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
-        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION",
+        "step_2_9_source_status": "NO_STANDALONE_MASTER"
       }
     },
     {
@@ -2645,7 +2733,8 @@
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
         "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
-        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION",
+        "step_2_9_source_status": "NO_STANDALONE_MASTER"
       }
     },
     {
@@ -2672,7 +2761,8 @@
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
         "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
-        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION",
+        "step_2_9_source_status": "NO_STANDALONE_MASTER"
       }
     },
     {
@@ -2699,7 +2789,8 @@
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
         "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
-        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION",
+        "step_2_9_source_status": "NO_STANDALONE_MASTER"
       }
     },
     {
@@ -2726,7 +2817,8 @@
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
         "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
-        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION",
+        "step_2_9_source_status": "NO_STANDALONE_MASTER"
       }
     },
     {
@@ -2753,7 +2845,8 @@
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
         "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
-        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION",
+        "step_2_9_source_status": "NO_STANDALONE_MASTER"
       }
     },
     {
@@ -2780,7 +2873,8 @@
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
         "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
-        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION",
+        "step_2_9_source_status": "NO_STANDALONE_MASTER"
       }
     },
     {
@@ -2807,7 +2901,8 @@
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
         "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
-        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION",
+        "step_2_9_source_status": "NO_STANDALONE_MASTER"
       }
     },
     {
@@ -2834,7 +2929,8 @@
         "physical_proof": "NOT_TESTED",
         "commercial_approved": false,
         "layout_status": "A4_GRID_FITS; CONTENT_NOT_VERIFIED",
-        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION"
+        "content_gate": "PENDING_ACTUAL_PDF_AND_BLEED_VALIDATION",
+        "step_2_9_source_status": "NO_STANDALONE_MASTER"
       }
     }
   ],
@@ -3120,6 +3216,19 @@
       "qr_scan_of_production_links": "NOT_TESTED",
       "approval": "BLOCKED",
       "reference_layout_disposition": "Supplementary test only; not a replacement for approved V6.15 proof"
+    },
+    "step_2_9": {
+      "date": "2026-10-27",
+      "baseline": "V6.15, locked by user",
+      "scope": "Source and identity readiness across 96 positions; no layout modification",
+      "counts": {
+        "CANDIDATE_AWAITING_IDENTITY": 5,
+        "NO_STANDALONE_MASTER": 87,
+        "REJECTED_ORIGINAL_MISMATCH": 4
+      },
+      "identity_limitations": "Gallery references do not prove print candidate visually matches approved original; rejected mappings remain blocked",
+      "next_gate": "Obtain and compare authentic masters for outstanding catalog positions; certify candidates only after identity and pixel quality review",
+      "status": "SOURCE_AUDIT_COMPLETE; PRINT_IDENTITY_SIGNOFF_PENDING"
     }
   },
   "layout_baseline": {
