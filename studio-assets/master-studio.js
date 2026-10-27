@@ -139,7 +139,7 @@ function pdfContour(pdf,x,y,shape){const pts=contourPoints(shape);pdf.setDrawCol
  for(let i=0;i<pts.length;i++){const a=pts[i],b=pts[(i+1)%pts.length];pdf.line(x+a[0],y+a[1],x+b[0],y+b[1]);}}
 function pictureCanvas(img,w=1200,h=800){const c=document.createElement('canvas');c.width=w;c.height=h;const cx=c.getContext('2d');cx.imageSmoothingEnabled=true;cx.imageSmoothingQuality='high';const ratio=Math.max(w/img.naturalWidth,h/img.naturalHeight);const dw=img.naturalWidth*ratio,dh=img.naturalHeight*ratio;cx.drawImage(img,(w-dw)/2,(h-dh)/2,dw,dh);return c.toDataURL('image/jpeg',.94);}
 function composeOne(pdf,s,a,x,y,shape,assetJpeg){const g=geometry(shape),pal=theme(s),isCut=shape==='diecut',W=g.W,H=g.H;
- // Reference-style composition: vibrant illustration ABOVE an integral white nameplate,
+ // PREPRESS: palette-only bleed is intentional for TEST previews. Illustration starts inside trim.\n // Do not call this full-artwork bleed or enable commercial export until a verified master\n // with bleed-safe background has been approved for the particular design.\n // Reference-style composition: vibrant illustration ABOVE an integral white nameplate,
  // with a QR at the LOWER RIGHT. QR/text are vector, NEVER painted by an AI source image.
  rgb(pdf,cardPalette[s.theme_key]||[205,235,255]);pdf.rect(x-g.BLEED,y-g.BLEED,W+g.BLEED*2,H+g.BLEED*2,'F');
  pdf.addImage(assetJpeg,'JPEG',x+.8,y+.8,W-1.6,isCut?H-14.6:H-10.2,undefined,'FAST');
@@ -187,11 +187,11 @@ async function pdfProof(){if(loading||!current)return;
   pdf.setPage(k);pdf.setFont('helvetica','bold');pdf.setTextColor(162,45,89);pdf.setFontSize(7.5);
   pdf.text(`RAZORPAY TEST MODE · PRINT SAMPLE ONLY · NOT FOR CUSTOMER DISPATCH ${k}/${pages}`,5,8);
   pdf.setFont('helvetica','normal');pdf.setTextColor(104,122,152);pdf.setFontSize(5.9);
-  pdf.text(`ORDER ${o.id.slice(0,8).toUpperCase()} · ${shape.toUpperCase()} · ${g.W}x${g.H}mm TRIM · 2.5mm BLEED · PRINT 100%`,5,293);
+  pdf.text(`ORDER ${o.id.slice(0,8).toUpperCase()} · ${shape.toUpperCase()} · ${g.W}x${g.H}mm TRIM · 2.5mm PALETTE BLEED · PRINT 100%`,5,293);
  }
  const name=`ScanBack_${o.id.slice(0,8)}_${shape}_PRINT_SAMPLE.pdf`;
  pdf.save(name);
- show(`Saved ${name}. ${st.quality?'All selected image masters passed 300 DPI.':'Some selected images failed 300 DPI. REPLACE before commercial printing.'} This is still a watermarked TEST proof.`);
+ show(`Saved ${name}. ${st.quality?'Candidate resolution passes 300 DPI only; identity unverified.':'Some selected images failed 300 DPI. REPLACE before commercial printing.'} Background bleed is palette-only, not full-artwork bleed. TEST proof only; no dispatch.`);
  }catch(e){show('Proof export failed: '+e.message,true);}finally{lockUi(false);}}
 function exportCuts(){if(!current||!$('confirmed').checked)return show('Confirm Test Mode proofing first.',true);
  const ss=current.stickers,shape=current.order.sticker_shape||'rounded',files=svgCut(shape,ss.length);
