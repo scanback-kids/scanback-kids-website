@@ -3098,6 +3098,27 @@
         "Check real QR URLs using multiple density cases and scan exported codes.",
         "Retain commercial-print block for all 96 until source identities and content gates pass."
       ]
+    },
+    "step_2_8": {
+      "date": "2026-10-27",
+      "scope": "Independent A4 geometry/layout demonstration with placeholders; not Studio exported live-order proof",
+      "rounded": {
+        "page_count": 1,
+        "positions": 21,
+        "geometry_errors": 0,
+        "qr_mm": 11.3
+      },
+      "diecut": {
+        "page_count": 1,
+        "positions": 9,
+        "geometry_errors": 0,
+        "qr_mm": 13.5
+      },
+      "rendering_check": "Example reportlab PDFs generated and rasterized for manual inspection; artwork placeholders, demo QR",
+      "actual_studio_export": "NOT_TESTED",
+      "original_artwork_rendering": "NOT_TESTED",
+      "qr_scan_of_production_links": "NOT_TESTED",
+      "approval": "BLOCKED"
     }
   }
 }
