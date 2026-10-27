@@ -2840,7 +2840,7 @@
   ],
   "commercial_print_audit": {
     "started_date": "2026-10-25",
-    "phase": "Nine candidate masters measured; awaiting original identity and final-size qualification",
+    "phase": "Continue source/identity QA using user-approved V6.15 A4 layout; no repeat layout redesign",
     "state": "IN_PROGRESS",
     "assessments": {
       "catalog_positions": 96,
@@ -3118,7 +3118,22 @@
       "actual_studio_export": "NOT_TESTED",
       "original_artwork_rendering": "NOT_TESTED",
       "qr_scan_of_production_links": "NOT_TESTED",
-      "approval": "BLOCKED"
+      "approval": "BLOCKED",
+      "reference_layout_disposition": "Supplementary test only; not a replacement for approved V6.15 proof"
     }
+  },
+  "layout_baseline": {
+    "version": "V6.15",
+    "approved_date": "2026-10-17",
+    "reference": "V6.15 — Updated A4 print proof",
+    "status": "USER_APPROVED_LOCKED",
+    "policy": "Preserve approved artwork positions, QR/name geometry, page arrangement, text hierarchy and trim layout. Do not restart or redesign layout. Only change if objective evidence reveals a functional defect, and obtain explicit approval before doing so.",
+    "note": "Approval supplied by user; original proof file not independently compared in this audit.",
+    "remaining_scope": [
+      "Verify remaining artwork identity and source-file quality",
+      "Validate artwork against locked layout without moving QR/name/cut positions",
+      "Confirm representative QR scanning and export quality against approved proof",
+      "Create final 96-design artwork register with exceptions clearly marked"
+    ]
   }
 }
