@@ -1,0 +1,198 @@
+{
+  "design_count": 24,
+  "files": [
+    {
+      "id": "SPORTS-01",
+      "sport": "Cricket Boy",
+      "file": "sports-designs/01.png",
+      "sha256": "cec835f78e81c489536e57990a25ad1e77be090d6a757399f4f2384cdf682904",
+      "approval": "user approved artwork concept",
+      "print_validation": "development_only"
+    },
+    {
+      "id": "SPORTS-02",
+      "sport": "Soccer Girl",
+      "file": "sports-designs/02.png",
+      "sha256": "3395760f52e33bc13485eb0938d8eb5834e0e8aca3d09b518d92ff5ca7b777f8",
+      "approval": "user approved artwork concept",
+      "print_validation": "development_only"
+    },
+    {
+      "id": "SPORTS-03",
+      "sport": "Basketball Boy",
+      "file": "sports-designs/03.png",
+      "sha256": "6e863c5df5cfafa48fd4845644c1c389d947ba80ec43ab23d8cd26f01b423a79",
+      "approval": "user approved artwork concept",
+      "print_validation": "development_only"
+    },
+    {
+      "id": "SPORTS-04",
+      "sport": "Swimmer",
+      "file": "sports-designs/04.png",
+      "sha256": "284323df9396713dc71db04799c41a5e1c712f3b1911b5bb3fd15ded70f2d2ed",
+      "approval": "user approved artwork concept",
+      "print_validation": "development_only"
+    },
+    {
+      "id": "SPORTS-05",
+      "sport": "Cycling Boy",
+      "file": "sports-designs/05.png",
+      "sha256": "c1aaf43fc4ba794dd436bbb1265cbad9d332b39e14789b454d897eea27896b35",
+      "approval": "user approved artwork concept",
+      "print_validation": "development_only"
+    },
+    {
+      "id": "SPORTS-06",
+      "sport": "Tennis Girl",
+      "file": "sports-designs/06.png",
+      "sha256": "2b56f4560d5136dd4f66a06ad64871695472ffa47208ce343c557c2ff2b6a899",
+      "approval": "user approved artwork concept",
+      "print_validation": "development_only"
+    },
+    {
+      "id": "SPORTS-07",
+      "sport": "Badminton Boy",
+      "file": "sports-designs/07.png",
+      "sha256": "dc42298e9912fb5f57abdae87880f2d27a035906b19e2092d350f0b83ba996c1",
+      "approval": "user approved artwork concept",
+      "print_validation": "development_only"
+    },
+    {
+      "id": "SPORTS-08",
+      "sport": "Running Girl",
+      "file": "sports-designs/08.png",
+      "sha256": "e57413210a40c7c26af5c9692f012ed708a2fee91ec3a1438e8ef6a9b3019724",
+      "approval": "user approved artwork concept",
+      "print_validation": "development_only"
+    },
+    {
+      "id": "SPORTS-09",
+      "sport": "Karate Boy",
+      "file": "sports-designs/09.png",
+      "sha256": "00dc6fff477a261f2811429157a85558ce8620445ec3b0cf1aeb2dfd2fdae06f",
+      "approval": "user approved artwork concept",
+      "print_validation": "development_only"
+    },
+    {
+      "id": "SPORTS-10",
+      "sport": "Roller-Skating Girl",
+      "file": "sports-designs/10.png",
+      "sha256": "95291082a8117e5dbe8cbdad185f52fe4d5c0fc3e7a13f6add7290fc78d70136",
+      "approval": "user approved artwork concept",
+      "print_validation": "development_only"
+    },
+    {
+      "id": "SPORTS-11",
+      "sport": "Baseball Boy",
+      "file": "sports-designs/11.png",
+      "sha256": "cc2ebeaf04fb9e355e4bd556aaf2795e962ec20224f9a1a61a91814d6545691e",
+      "approval": "user approved artwork concept",
+      "print_validation": "development_only"
+    },
+    {
+      "id": "SPORTS-12",
+      "sport": "Gymnast Girl",
+      "file": "sports-designs/12.png",
+      "sha256": "94c7fc46e10febb7f038ee37f5d786fb010ace7f058e8f1ef4fe7e31fdfdc076",
+      "approval": "user approved artwork concept",
+      "print_validation": "development_only"
+    },
+    {
+      "id": "SPORTS-13",
+      "sport": "Boxing Boy",
+      "file": "sports-designs/13.png",
+      "sha256": "c156c870a8190b321bf6b9d28a76f22445404c1fd78b0ccec77c9e153debbdf6",
+      "approval": "user approved artwork concept",
+      "print_validation": "development_only"
+    },
+    {
+      "id": "SPORTS-14",
+      "sport": "Volleyball Girl",
+      "file": "sports-designs/14.png",
+      "sha256": "03e9069342f0693fb4af441bfa7162122ab4afb940c4a702f4fe7c22efa77170",
+      "approval": "user approved artwork concept",
+      "print_validation": "development_only"
+    },
+    {
+      "id": "SPORTS-15",
+      "sport": "Rugby Boy",
+      "file": "sports-designs/15.png",
+      "sha256": "461df71a4e7af5e79d3cd9d690d87df84e1c9d3f5219cfd67cd00bbb3ce18780",
+      "approval": "user approved artwork concept",
+      "print_validation": "development_only"
+    },
+    {
+      "id": "SPORTS-16",
+      "sport": "Table-Tennis Boy",
+      "file": "sports-designs/16.png",
+      "sha256": "83094ea9723a6a33edfaffe83ad9cbd30e4cf1c6511ea6504944414b43da33c3",
+      "approval": "user approved artwork concept",
+      "print_validation": "development_only"
+    },
+    {
+      "id": "SPORTS-17",
+      "sport": "Ice-Hockey Boy",
+      "file": "sports-designs/17.png",
+      "sha256": "a750ece87be3b70c8be3534ef921a7865d572c3d219503189ab7d14ea9c03ada",
+      "approval": "user approved artwork concept",
+      "print_validation": "development_only"
+    },
+    {
+      "id": "SPORTS-18",
+      "sport": "Archery Girl",
+      "file": "sports-designs/18.png",
+      "sha256": "86d39c21eaeb9a4c06c30f6d4cadd3db2701b0ee73a2fc1ce22f9fe8cfbdffbe",
+      "approval": "user approved artwork concept",
+      "print_validation": "development_only"
+    },
+    {
+      "id": "SPORTS-19",
+      "sport": "Tennis Boy",
+      "file": "sports-designs/19.png",
+      "sha256": "2c2a4943abfa0fbcf2b7024817655b7bf65d99a5df009754bde8dffa9aca2ecf",
+      "approval": "user approved artwork concept",
+      "print_validation": "development_only"
+    },
+    {
+      "id": "SPORTS-20",
+      "sport": "Skateboard Boy",
+      "file": "sports-designs/20.png",
+      "sha256": "08e1912bfd2dd84ae0dfa4ef0a54cf6eec90fe0db8555127c4ac3b816e5a16a7",
+      "approval": "user approved artwork concept",
+      "print_validation": "development_only"
+    },
+    {
+      "id": "SPORTS-21",
+      "sport": "Badminton Girl",
+      "file": "sports-designs/21.png",
+      "sha256": "df3f1b98ae59c4e158f1c1cb0050e9963346f00964707be7dc5463ad99928f92",
+      "approval": "user approved artwork concept",
+      "print_validation": "development_only"
+    },
+    {
+      "id": "SPORTS-22",
+      "sport": "Tennis Boy",
+      "file": "sports-designs/22.png",
+      "sha256": "641fdceb9e066b2fccf2943fbbcd1846ff85e0ed3799270b1c7a609fc1f98650",
+      "approval": "user approved artwork concept",
+      "print_validation": "development_only"
+    },
+    {
+      "id": "SPORTS-23",
+      "sport": "Cricket Girl",
+      "file": "sports-designs/23.png",
+      "sha256": "a7e76ada12a99337f7e174cc8a3f09751ceb50a58775fc754145852717177282",
+      "approval": "user approved artwork concept",
+      "print_validation": "development_only"
+    },
+    {
+      "id": "SPORTS-24",
+      "sport": "Cycling Girl",
+      "file": "sports-designs/24.png",
+      "sha256": "e525f7435e88b8c3e244492f2e00c07078d4864281d63258dff390c162c98f14",
+      "approval": "user approved artwork concept",
+      "print_validation": "development_only"
+    }
+  ],
+  "note": "SPORTS-22 tennis, SPORTS-23 cricket, SPORTS-24 cycling. Original V6.15 20-master engine unchanged."
+}
