@@ -111,8 +111,15 @@ def render(id,name,item,base='https://scanback.in/print-qa'):
   a=conf['name'];b=conf['item']
   dr.rounded_rectangle(a,radius=34,fill='white',outline='#1458C3',width=8)
   dr.rounded_rectangle(b,radius=25,fill='#FFDA26',outline='white',width=6)
-  name_status=fit(dr,name,a,'#E91643',maximum=60,minimum=18)
-  item_status=fit(dr,item,b,'#102D72',maximum=39,minimum=14)
+  # V6.15: ownership header, dynamic name and item occupy different
+  # safe zones; this is per-artwork configuration for SPORTS-21..24.
+  header=[a[0]+20,a[1]+9,a[2]-20,a[1]+38]
+  fit(dr,'This item belongs to',header,'#142C75',maximum=30,minimum=17)
+  safe_name=[a[0]+18,a[1]+39,a[2]-18,a[3]-8]
+  if safe_name[3]-safe_name[1]<42:
+   raise ValueError('Insufficient name plate height on SPORTS-'+id)
+  name_status=fit(dr,name,safe_name,'#E91643',maximum=57,minimum=17)
+  item_status=fit(dr,item,[b[0]+18,b[1]+6,b[2]-18,b[3]-7],'#102D72',maximum=39,minimum=14)
   qrbox=conf['qr'];qsize=min(165,qrbox[2]-qrbox[0]-30,qrbox[3]-qrbox[1]-30)
   qx=qrbox[0]+(qrbox[2]-qrbox[0]-qsize)//2
   qy=qrbox[1]+(qrbox[3]-qrbox[1]-qsize)//2
