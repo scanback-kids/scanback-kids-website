@@ -1,0 +1,30 @@
+{
+  "id": "space-astronaut",
+  "source_artwork": "space_explorer_personalised_sticker_label.png",
+  "width": 1254,
+  "height": 1254,
+  "name": [
+    0.308,
+    0.698,
+    0.43,
+    0.103
+  ],
+  "item": [
+    0.350877,
+    0.832536,
+    0.335726,
+    0.058214
+  ],
+  "qr": [
+    0.742,
+    0.704,
+    0.177,
+    0.216
+  ],
+  "name_color": "#1467e7",
+  "default_item": "School Bag",
+  "approval": "ARTWORK_APPROVED_LAYOUT_PILOT",
+  "cut_contour": "NOT_PRINTER_APPROVED",
+  "notice": "Artwork has empty label zones; generated names and QR are separate layers. QR URL must be verified on server for real orders.",
+  "item_ink_target": "0.66 of calibrated safe box, centered"
+}

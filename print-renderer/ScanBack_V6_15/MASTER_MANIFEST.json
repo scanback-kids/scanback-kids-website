@@ -1,0 +1,162 @@
+[
+  {
+    "id": "dino-purple",
+    "group": "mixed",
+    "sticker_width_mm": 82,
+    "header": "embedded_in_approved_artwork",
+    "qr_fit": "inside_original_illustrated_qr_box",
+    "master_status": "QA_ONLY"
+  },
+  {
+    "id": "rainbow-unicorn",
+    "group": "mixed",
+    "sticker_width_mm": 82,
+    "header": "embedded_in_approved_artwork",
+    "qr_fit": "inside_original_illustrated_qr_box",
+    "master_status": "QA_ONLY"
+  },
+  {
+    "id": "space-astronaut",
+    "group": "mixed",
+    "sticker_width_mm": 82,
+    "header": "embedded_in_approved_artwork",
+    "qr_fit": "inside_original_illustrated_qr_box",
+    "master_status": "QA_ONLY"
+  },
+  {
+    "id": "space-robot",
+    "group": "mixed",
+    "sticker_width_mm": 82,
+    "header": "embedded_in_approved_artwork",
+    "qr_fit": "inside_original_illustrated_qr_box",
+    "master_status": "QA_ONLY"
+  },
+  {
+    "id": "sports-racer",
+    "group": "mixed",
+    "sticker_width_mm": 82,
+    "header": "embedded_in_approved_artwork",
+    "qr_fit": "inside_original_illustrated_qr_box",
+    "master_status": "QA_ONLY"
+  },
+  {
+    "id": "sports-swimmer",
+    "group": "mixed",
+    "sticker_width_mm": 82,
+    "header": "embedded_in_approved_artwork",
+    "qr_fit": "inside_original_illustrated_qr_box",
+    "master_status": "QA_ONLY"
+  },
+  {
+    "id": "dino-07",
+    "group": "dino4",
+    "sticker_width_mm": 95,
+    "header": "embedded_in_approved_artwork",
+    "qr_fit": "inside_original_illustrated_qr_box",
+    "master_status": "QA_ONLY"
+  },
+  {
+    "id": "dino-08",
+    "group": "dino4",
+    "sticker_width_mm": 95,
+    "header": "embedded_in_approved_artwork",
+    "qr_fit": "inside_original_illustrated_qr_box",
+    "master_status": "QA_ONLY"
+  },
+  {
+    "id": "dino-09",
+    "group": "dino4",
+    "sticker_width_mm": 95,
+    "header": "embedded_in_approved_artwork",
+    "qr_fit": "inside_original_illustrated_qr_box",
+    "master_status": "QA_ONLY"
+  },
+  {
+    "id": "dino-10",
+    "group": "dino4",
+    "sticker_width_mm": 95,
+    "header": "embedded_in_approved_artwork",
+    "qr_fit": "inside_original_illustrated_qr_box",
+    "master_status": "QA_ONLY"
+  },
+  {
+    "id": "dino-11",
+    "group": "dino10",
+    "sticker_width_mm": 95,
+    "header": "editable_enlarged_43px",
+    "qr_fit": "inside_original_illustrated_qr_box",
+    "master_status": "QA_ONLY"
+  },
+  {
+    "id": "dino-12",
+    "group": "dino10",
+    "sticker_width_mm": 95,
+    "header": "editable_enlarged_43px",
+    "qr_fit": "inside_original_illustrated_qr_box",
+    "master_status": "QA_ONLY"
+  },
+  {
+    "id": "dino-13",
+    "group": "dino10",
+    "sticker_width_mm": 95,
+    "header": "editable_enlarged_43px",
+    "qr_fit": "inside_original_illustrated_qr_box",
+    "master_status": "QA_ONLY"
+  },
+  {
+    "id": "dino-14",
+    "group": "dino10",
+    "sticker_width_mm": 95,
+    "header": "editable_enlarged_43px",
+    "qr_fit": "inside_original_illustrated_qr_box",
+    "master_status": "QA_ONLY"
+  },
+  {
+    "id": "dino-15",
+    "group": "dino10",
+    "sticker_width_mm": 95,
+    "header": "editable_enlarged_43px",
+    "qr_fit": "inside_original_illustrated_qr_box",
+    "master_status": "QA_ONLY"
+  },
+  {
+    "id": "dino-16",
+    "group": "dino10",
+    "sticker_width_mm": 95,
+    "header": "editable_enlarged_43px",
+    "qr_fit": "inside_original_illustrated_qr_box",
+    "master_status": "QA_ONLY"
+  },
+  {
+    "id": "dino-17",
+    "group": "dino10",
+    "sticker_width_mm": 95,
+    "header": "editable_enlarged_43px",
+    "qr_fit": "inside_original_illustrated_qr_box",
+    "master_status": "QA_ONLY"
+  },
+  {
+    "id": "dino-18",
+    "group": "dino10",
+    "sticker_width_mm": 95,
+    "header": "editable_enlarged_43px",
+    "qr_fit": "inside_original_illustrated_qr_box",
+    "master_status": "QA_ONLY"
+  },
+  {
+    "id": "dino-19",
+    "group": "dino10",
+    "sticker_width_mm": 95,
+    "header": "editable_enlarged_43px",
+    "qr_fit": "inside_original_illustrated_qr_box",
+    "master_status": "QA_ONLY"
+  },
+  {
+    "id": "dino-20",
+    "group": "dino10",
+    "sticker_width_mm": 95,
+    "header": "editable_enlarged_43px",
+    "qr_fit": "inside_original_illustrated_qr_box",
+    "master_status": "QA_ONLY"
+  }
+]

@@ -1,0 +1,78 @@
+{
+  "theme": "dino",
+  "design": "12",
+  "title": "Orange Crested Dinosaur",
+  "source": "cheerful_dinosaur_jungle_name_tag.png",
+  "default_item": "Water Bottle",
+  "canvas": {
+    "width": 1122,
+    "height": 1402
+  },
+  "image": "/assets/print-masters/dino/12.webp",
+  "name": {
+    "plate_bounds": [
+      260,
+      1099,
+      831,
+      1213
+    ],
+    "text_bounds": [
+      287,
+      1120,
+      804,
+      1191
+    ],
+    "color": "#123574",
+    "max_ink_height": 55,
+    "min_ink_height": 39,
+    "min_width_scale": 0.6
+  },
+  "item": {
+    "plate_bounds": [
+      276,
+      1223,
+      809,
+      1311
+    ],
+    "text_bounds": [
+      301,
+      1237,
+      784,
+      1296
+    ],
+    "color": "#102C66",
+    "max_ink_height": 46,
+    "min_ink_height": 32,
+    "min_width_scale": 0.63
+  },
+  "qr": {
+    "bounds": [
+      865,
+      1130,
+      1041,
+      1306
+    ],
+    "quiet_zone_modules": 4,
+    "inside_frame_inset_px": 6
+  },
+  "header": {
+    "content": "This item belongs to",
+    "center": [
+      554,
+      1075
+    ],
+    "max_ink_height": 34
+  },
+  "footer": {
+    "content": "\u2665 ScanBack Kids",
+    "center": [
+      555,
+      1330
+    ],
+    "max_ink_height": 25
+  },
+  "cutline": {
+    "status": "concept_requires_printer_approval"
+  },
+  "production_status": "DEVELOPMENT_QA_ONLY"
+}

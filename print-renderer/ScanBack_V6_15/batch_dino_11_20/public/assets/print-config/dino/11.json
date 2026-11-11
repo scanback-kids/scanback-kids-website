@@ -1,0 +1,78 @@
+{
+  "theme": "dino",
+  "design": "11",
+  "title": "Blue Ankylosaurus",
+  "source": "baby_ankylosaurus_jungle_name_sticker.png",
+  "default_item": "School Bag",
+  "canvas": {
+    "width": 1122,
+    "height": 1402
+  },
+  "image": "/assets/print-masters/dino/11.webp",
+  "name": {
+    "plate_bounds": [
+      288,
+      1041,
+      830,
+      1157
+    ],
+    "text_bounds": [
+      315,
+      1062,
+      803,
+      1135
+    ],
+    "color": "#123574",
+    "max_ink_height": 55,
+    "min_ink_height": 39,
+    "min_width_scale": 0.6
+  },
+  "item": {
+    "plate_bounds": [
+      302,
+      1164,
+      816,
+      1253
+    ],
+    "text_bounds": [
+      327,
+      1178,
+      791,
+      1238
+    ],
+    "color": "#102C66",
+    "max_ink_height": 46,
+    "min_ink_height": 32,
+    "min_width_scale": 0.63
+  },
+  "qr": {
+    "bounds": [
+      865,
+      1072,
+      1041,
+      1248
+    ],
+    "quiet_zone_modules": 4,
+    "inside_frame_inset_px": 6
+  },
+  "header": {
+    "content": "This item belongs to",
+    "center": [
+      554,
+      1017
+    ],
+    "max_ink_height": 34
+  },
+  "footer": {
+    "content": "\u2665 ScanBack Kids",
+    "center": [
+      555,
+      1272
+    ],
+    "max_ink_height": 25
+  },
+  "cutline": {
+    "status": "concept_requires_printer_approval"
+  },
+  "production_status": "DEVELOPMENT_QA_ONLY"
+}

@@ -1,0 +1,30 @@
+{
+  "id": "sports-racer",
+  "source_artwork": "go_kart_champion_label_template.png",
+  "width": 1254,
+  "height": 1254,
+  "name": [
+    0.313,
+    0.717,
+    0.409,
+    0.086
+  ],
+  "item": [
+    0.354067,
+    0.830941,
+    0.345295,
+    0.058214
+  ],
+  "qr": [
+    0.763,
+    0.735,
+    0.159,
+    0.177
+  ],
+  "name_color": "#eb2525",
+  "default_item": "Jacket",
+  "approval": "ARTWORK_APPROVED_LAYOUT_PILOT",
+  "cut_contour": "NOT_PRINTER_APPROVED",
+  "notice": "Artwork has empty label zones; generated names and QR are separate layers. QR URL must be verified on server for real orders.",
+  "item_ink_target": "0.66 of calibrated safe box, centered"
+}

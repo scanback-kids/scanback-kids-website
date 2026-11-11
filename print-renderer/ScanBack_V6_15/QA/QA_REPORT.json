@@ -1,0 +1,549 @@
+{
+  "masters_present": 20,
+  "masters_by_group": {
+    "mixed": 6,
+    "dino_07_10": 4,
+    "dino_11_20": 10
+  },
+  "changes": [
+    "Shared fractional-pitch QR fitting inside each existing QR box",
+    "Enlarged dynamic editable header for Dinosaur 11-20 only"
+  ],
+  "limitations": [
+    "Older first 10 headers are painted into the artwork and remain unchanged, to preserve approved illustrations",
+    "This package covers 20 recovered editable masters, NOT all 96 storefront previews",
+    "All URLs are synthetic demonstration destinations; no real Supabase allocation",
+    "Die-cut concepts are not approved machine cut paths"
+  ],
+  "scenarios": [
+    {
+      "child": "MIRA",
+      "blank_item": false,
+      "designs": 20,
+      "source_qrs": 20,
+      "records": [
+        {
+          "id": "dino-purple",
+          "qr_box_coverage": 0.704,
+          "name": "MIRA",
+          "blank_item": false,
+          "source_qr": true
+        },
+        {
+          "id": "rainbow-unicorn",
+          "qr_box_coverage": 0.689,
+          "name": "MIRA",
+          "blank_item": false,
+          "source_qr": true
+        },
+        {
+          "id": "space-astronaut",
+          "qr_box_coverage": 0.719,
+          "name": "MIRA",
+          "blank_item": false,
+          "source_qr": true
+        },
+        {
+          "id": "space-robot",
+          "qr_box_coverage": 0.848,
+          "name": "MIRA",
+          "blank_item": false,
+          "source_qr": true
+        },
+        {
+          "id": "sports-racer",
+          "qr_box_coverage": 0.775,
+          "name": "MIRA",
+          "blank_item": false,
+          "source_qr": true
+        },
+        {
+          "id": "sports-swimmer",
+          "qr_box_coverage": 0.802,
+          "name": "MIRA",
+          "blank_item": false,
+          "source_qr": true
+        },
+        {
+          "id": "dino-07",
+          "qr_box_coverage": 0.806,
+          "name": "MIRA",
+          "blank_item": false,
+          "source_qr": true
+        },
+        {
+          "id": "dino-08",
+          "qr_box_coverage": 0.753,
+          "name": "MIRA",
+          "blank_item": false,
+          "source_qr": true
+        },
+        {
+          "id": "dino-09",
+          "qr_box_coverage": 0.808,
+          "name": "MIRA",
+          "blank_item": false,
+          "source_qr": true
+        },
+        {
+          "id": "dino-10",
+          "qr_box_coverage": 0.783,
+          "name": "MIRA",
+          "blank_item": false,
+          "source_qr": true
+        },
+        {
+          "id": "dino-11",
+          "qr_box_coverage": 0.868,
+          "name": "MIRA",
+          "blank_item": false,
+          "source_qr": true
+        },
+        {
+          "id": "dino-12",
+          "qr_box_coverage": 0.868,
+          "name": "MIRA",
+          "blank_item": false,
+          "source_qr": true
+        },
+        {
+          "id": "dino-13",
+          "qr_box_coverage": 0.868,
+          "name": "MIRA",
+          "blank_item": false,
+          "source_qr": true
+        },
+        {
+          "id": "dino-14",
+          "qr_box_coverage": 0.868,
+          "name": "MIRA",
+          "blank_item": false,
+          "source_qr": true
+        },
+        {
+          "id": "dino-15",
+          "qr_box_coverage": 0.868,
+          "name": "MIRA",
+          "blank_item": false,
+          "source_qr": true
+        },
+        {
+          "id": "dino-16",
+          "qr_box_coverage": 0.868,
+          "name": "MIRA",
+          "blank_item": false,
+          "source_qr": true
+        },
+        {
+          "id": "dino-17",
+          "qr_box_coverage": 0.868,
+          "name": "MIRA",
+          "blank_item": false,
+          "source_qr": true
+        },
+        {
+          "id": "dino-18",
+          "qr_box_coverage": 0.868,
+          "name": "MIRA",
+          "blank_item": false,
+          "source_qr": true
+        },
+        {
+          "id": "dino-19",
+          "qr_box_coverage": 0.868,
+          "name": "MIRA",
+          "blank_item": false,
+          "source_qr": true
+        },
+        {
+          "id": "dino-20",
+          "qr_box_coverage": 0.868,
+          "name": "MIRA",
+          "blank_item": false,
+          "source_qr": true
+        }
+      ],
+      "pdf_qrs_decoded": 20,
+      "pdf_qrs_total": 20,
+      "pdf_scans": [
+        {
+          "id": "dino-purple",
+          "decoded": true
+        },
+        {
+          "id": "rainbow-unicorn",
+          "decoded": true
+        },
+        {
+          "id": "space-astronaut",
+          "decoded": true
+        },
+        {
+          "id": "space-robot",
+          "decoded": true
+        },
+        {
+          "id": "sports-racer",
+          "decoded": true
+        },
+        {
+          "id": "sports-swimmer",
+          "decoded": true
+        },
+        {
+          "id": "dino-07",
+          "decoded": true
+        },
+        {
+          "id": "dino-08",
+          "decoded": true
+        },
+        {
+          "id": "dino-09",
+          "decoded": true
+        },
+        {
+          "id": "dino-10",
+          "decoded": true
+        },
+        {
+          "id": "dino-11",
+          "decoded": true
+        },
+        {
+          "id": "dino-12",
+          "decoded": true
+        },
+        {
+          "id": "dino-13",
+          "decoded": true
+        },
+        {
+          "id": "dino-14",
+          "decoded": true
+        },
+        {
+          "id": "dino-15",
+          "decoded": true
+        },
+        {
+          "id": "dino-16",
+          "decoded": true
+        },
+        {
+          "id": "dino-17",
+          "decoded": true
+        },
+        {
+          "id": "dino-18",
+          "decoded": true
+        },
+        {
+          "id": "dino-19",
+          "decoded": true
+        },
+        {
+          "id": "dino-20",
+          "decoded": true
+        }
+      ]
+    },
+    {
+      "child": "KRISHNAANSH",
+      "blank_item": false,
+      "designs": 20,
+      "source_qrs": 20,
+      "records": [
+        {
+          "id": "dino-purple",
+          "qr_box_coverage": 0.704,
+          "name": "KRISHNAANSH",
+          "blank_item": false,
+          "source_qr": true
+        },
+        {
+          "id": "rainbow-unicorn",
+          "qr_box_coverage": 0.689,
+          "name": "KRISHNAANSH",
+          "blank_item": false,
+          "source_qr": true
+        },
+        {
+          "id": "space-astronaut",
+          "qr_box_coverage": 0.719,
+          "name": "KRISHNAANSH",
+          "blank_item": false,
+          "source_qr": true
+        },
+        {
+          "id": "space-robot",
+          "qr_box_coverage": 0.848,
+          "name": "KRISHNAANSH",
+          "blank_item": false,
+          "source_qr": true
+        },
+        {
+          "id": "sports-racer",
+          "qr_box_coverage": 0.775,
+          "name": "KRISHNAANSH",
+          "blank_item": false,
+          "source_qr": true
+        },
+        {
+          "id": "sports-swimmer",
+          "qr_box_coverage": 0.802,
+          "name": "KRISHNAANSH",
+          "blank_item": false,
+          "source_qr": true
+        },
+        {
+          "id": "dino-07",
+          "qr_box_coverage": 0.806,
+          "name": "KRISHNAANSH",
+          "blank_item": false,
+          "source_qr": true
+        },
+        {
+          "id": "dino-08",
+          "qr_box_coverage": 0.753,
+          "name": "KRISHNAANSH",
+          "blank_item": false,
+          "source_qr": true
+        },
+        {
+          "id": "dino-09",
+          "qr_box_coverage": 0.808,
+          "name": "KRISHNAANSH",
+          "blank_item": false,
+          "source_qr": true
+        },
+        {
+          "id": "dino-10",
+          "qr_box_coverage": 0.783,
+          "name": "KRISHNAANSH",
+          "blank_item": false,
+          "source_qr": true
+        },
+        {
+          "id": "dino-11",
+          "qr_box_coverage": 0.868,
+          "name": "KRISHNAANSH",
+          "blank_item": false,
+          "source_qr": true
+        },
+        {
+          "id": "dino-12",
+          "qr_box_coverage": 0.868,
+          "name": "KRISHNAANSH",
+          "blank_item": false,
+          "source_qr": true
+        },
+        {
+          "id": "dino-13",
+          "qr_box_coverage": 0.868,
+          "name": "KRISHNAANSH",
+          "blank_item": false,
+          "source_qr": true
+        },
+        {
+          "id": "dino-14",
+          "qr_box_coverage": 0.868,
+          "name": "KRISHNAANSH",
+          "blank_item": false,
+          "source_qr": true
+        },
+        {
+          "id": "dino-15",
+          "qr_box_coverage": 0.868,
+          "name": "KRISHNAANSH",
+          "blank_item": false,
+          "source_qr": true
+        },
+        {
+          "id": "dino-16",
+          "qr_box_coverage": 0.868,
+          "name": "KRISHNAANSH",
+          "blank_item": false,
+          "source_qr": true
+        },
+        {
+          "id": "dino-17",
+          "qr_box_coverage": 0.868,
+          "name": "KRISHNAANSH",
+          "blank_item": false,
+          "source_qr": true
+        },
+        {
+          "id": "dino-18",
+          "qr_box_coverage": 0.868,
+          "name": "KRISHNAANSH",
+          "blank_item": false,
+          "source_qr": true
+        },
+        {
+          "id": "dino-19",
+          "qr_box_coverage": 0.868,
+          "name": "KRISHNAANSH",
+          "blank_item": false,
+          "source_qr": true
+        },
+        {
+          "id": "dino-20",
+          "qr_box_coverage": 0.868,
+          "name": "KRISHNAANSH",
+          "blank_item": false,
+          "source_qr": true
+        }
+      ]
+    },
+    {
+      "child": "ZOE",
+      "blank_item": true,
+      "designs": 20,
+      "source_qrs": 20,
+      "records": [
+        {
+          "id": "dino-purple",
+          "qr_box_coverage": 0.704,
+          "name": "ZOE",
+          "blank_item": true,
+          "source_qr": true
+        },
+        {
+          "id": "rainbow-unicorn",
+          "qr_box_coverage": 0.689,
+          "name": "ZOE",
+          "blank_item": true,
+          "source_qr": true
+        },
+        {
+          "id": "space-astronaut",
+          "qr_box_coverage": 0.719,
+          "name": "ZOE",
+          "blank_item": true,
+          "source_qr": true
+        },
+        {
+          "id": "space-robot",
+          "qr_box_coverage": 0.848,
+          "name": "ZOE",
+          "blank_item": true,
+          "source_qr": true
+        },
+        {
+          "id": "sports-racer",
+          "qr_box_coverage": 0.775,
+          "name": "ZOE",
+          "blank_item": true,
+          "source_qr": true
+        },
+        {
+          "id": "sports-swimmer",
+          "qr_box_coverage": 0.802,
+          "name": "ZOE",
+          "blank_item": true,
+          "source_qr": true
+        },
+        {
+          "id": "dino-07",
+          "qr_box_coverage": 0.806,
+          "name": "ZOE",
+          "blank_item": true,
+          "source_qr": true
+        },
+        {
+          "id": "dino-08",
+          "qr_box_coverage": 0.753,
+          "name": "ZOE",
+          "blank_item": true,
+          "source_qr": true
+        },
+        {
+          "id": "dino-09",
+          "qr_box_coverage": 0.808,
+          "name": "ZOE",
+          "blank_item": true,
+          "source_qr": true
+        },
+        {
+          "id": "dino-10",
+          "qr_box_coverage": 0.783,
+          "name": "ZOE",
+          "blank_item": true,
+          "source_qr": true
+        },
+        {
+          "id": "dino-11",
+          "qr_box_coverage": 0.868,
+          "name": "ZOE",
+          "blank_item": true,
+          "source_qr": true
+        },
+        {
+          "id": "dino-12",
+          "qr_box_coverage": 0.868,
+          "name": "ZOE",
+          "blank_item": true,
+          "source_qr": true
+        },
+        {
+          "id": "dino-13",
+          "qr_box_coverage": 0.868,
+          "name": "ZOE",
+          "blank_item": true,
+          "source_qr": true
+        },
+        {
+          "id": "dino-14",
+          "qr_box_coverage": 0.868,
+          "name": "ZOE",
+          "blank_item": true,
+          "source_qr": true
+        },
+        {
+          "id": "dino-15",
+          "qr_box_coverage": 0.868,
+          "name": "ZOE",
+          "blank_item": true,
+          "source_qr": true
+        },
+        {
+          "id": "dino-16",
+          "qr_box_coverage": 0.868,
+          "name": "ZOE",
+          "blank_item": true,
+          "source_qr": true
+        },
+        {
+          "id": "dino-17",
+          "qr_box_coverage": 0.868,
+          "name": "ZOE",
+          "blank_item": true,
+          "source_qr": true
+        },
+        {
+          "id": "dino-18",
+          "qr_box_coverage": 0.868,
+          "name": "ZOE",
+          "blank_item": true,
+          "source_qr": true
+        },
+        {
+          "id": "dino-19",
+          "qr_box_coverage": 0.868,
+          "name": "ZOE",
+          "blank_item": true,
+          "source_qr": true
+        },
+        {
+          "id": "dino-20",
+          "qr_box_coverage": 0.868,
+          "name": "ZOE",
+          "blank_item": true,
+          "source_qr": true
+        }
+      ]
+    }
+  ],
+  "all_pass": true
+}
