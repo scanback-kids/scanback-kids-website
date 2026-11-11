@@ -8,8 +8,9 @@ adds one as QA approximation. These 4 need visual design refinement before launc
 This file does not allocate Supabase items or enable printing/fulfillment.
 """
 from __future__ import annotations
-# This development QA adapter uses a 95 mm sticker width so its 37-module
-# demonstration QR has >=0.30 mm module pitch. The older 82 mm output does NOT.
+# This development QA adapter uses a 95 mm sticker width and expanded
+# QR modules. Both 37-module demo and 45-module UUID-length URL test QR codes
+# passed local 24/24 PDF scans at >=0.30mm/module. The 55mm format is NOT verified.
 # This DOES NOT certify the 55x58 or 60x31 production formats. Supabase
 # does not allocate identifiers here: --urls-json requires preallocated URLs.
 
@@ -44,7 +45,7 @@ LAYOUT.update({
  '21':{'name':[256,859,943,1000],'item':[256,999,930,1085],'qr':[968,837,1188,1057],'status':'ADDED_ITEM_PANEL_NEEDS_VISUAL_REAPPROVAL'},
  '22':{'name':[292,830,861,942],'item':[322,946,857,1028],'qr':[862,839,1088,1066],'status':'NO_ORIGINAL_QR_PANEL; PROVISIONAL_CODE_PANEL'},
  '23':{'name':[319,846,853,957],'item':[340,962,833,1043],'qr':[855,848,1076,1067],'status':'NO_ORIGINAL_QR_PANEL; PROVISIONAL_CODE_PANEL'},
- '24':{'name':[624,440,1075,584],'item':[624,588,1080,694],'qr':[1026,584,1228,784],'status':'ADDED_ITEM_PANEL_NEEDS_VISUAL_REAPPROVAL'},
+ '24':{'name':[624,440,1075,584],'item':[624,588,1080,694],'qr':[1021,580,1232,791],'status':'ADDED_ITEM_PANEL_NEEDS_VISUAL_REAPPROVAL'},
 })
 
 def font(sz): return ImageFont.truetype(FONT,int(sz))
@@ -102,7 +103,7 @@ def render(id,name,item,base='https://scanback.in/print-qa'):
   dr.rounded_rectangle([b[0]+13,b[1]+8,b[2]-12,b[3]+9],radius=27,fill='#FFDB23')
   name_status=fit(dr,name,[a[0]+24,a[1]+16,a[2]-24,a[3]+1],'#EB143B',maximum=62,minimum=17)
   item_status=fit(dr,item,[b[0]+28,b[1]+14,b[2]-27,b[3]+3],'#132C76',maximum=46,minimum=15)
-  qrbox=conf['qr']; qsize=178
+  qrbox=conf['qr']; qsize=216
   qx=qrbox[0]+(qrbox[2]-qrbox[0]-qsize)//2
   qy=qrbox[1]+dy+(qrbox[3]-qrbox[1]-qsize)//2
  else:
@@ -120,7 +121,7 @@ def render(id,name,item,base='https://scanback.in/print-qa'):
    raise ValueError('Insufficient name plate height on SPORTS-'+id)
   name_status=fit(dr,name,safe_name,'#E91643',maximum=57,minimum=17)
   item_status=fit(dr,item,[b[0]+18,b[1]+6,b[2]-18,b[3]-7],'#102D72',maximum=39,minimum=14)
-  qrbox=conf['qr'];qsize=min(165,qrbox[2]-qrbox[0]-30,qrbox[3]-qrbox[1]-30)
+  qrbox=conf['qr'];qsize=min(220,qrbox[2]-qrbox[0]-12,qrbox[3]-qrbox[1]-12)
   qx=qrbox[0]+(qrbox[2]-qrbox[0]-qsize)//2
   qy=qrbox[1]+(qrbox[3]-qrbox[1]-qsize)//2
  url=base.rstrip('/')+'/SPORTS-'+id
