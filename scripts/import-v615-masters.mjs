@@ -25,7 +25,7 @@ try {
     const path=row.candidate_path;
     if(!/^(SPACE|DINO|RAINBOW|SPORTS)-(0[1-9]|1[0-9]|2[0-4])$/.test(id)||ids.has(id)) throw Error('Invalid or duplicate ID: '+id);
     ids.add(id);
-    if(!/^assets\/print-master-candidates\/(space|dino|rainbow|sports)\/(0[1-9]|1[0-9]|2[0-4])\.webp$/.test(path)) throw Error('Unsafe candidate path: '+path);
+    if(!/^assets\/print-masters\/(space|dino|rainbow|sports)\/(0[1-9]|1[0-9]|2[0-4])\.webp$/.test(path)) throw Error('Unsafe candidate path: '+path);
     const source=join(tmp,path);
     if(!existsSync(source)) throw Error('Missing image: '+path);
     const sha=createHash('sha256').update(readFileSync(source)).digest('hex');
