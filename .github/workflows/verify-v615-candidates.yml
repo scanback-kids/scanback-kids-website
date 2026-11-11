@@ -1,0 +1,39 @@
+name: Verify 96 V6.15 artwork candidates
+on:
+  push:
+    branches:
+      - development/v615-96-master-integration
+    paths:
+      - 'assets/print-master-candidates/**'
+      - 'docs/development-artwork-audit/v615-candidate-manifest.json'
+      - '.github/workflows/verify-v615-candidates.yml'
+  workflow_dispatch:
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate 96 candidate image files and SHA-256 hashes
+        run: |
+          python3 - <<'PY'
+          import json, hashlib, pathlib, sys
+          root=pathlib.Path('.')
+          manifest=root/'docs/development-artwork-audit/v615-candidate-manifest.json'
+          if not manifest.exists():
+              print('Manifest not uploaded yet; artwork integration incomplete')
+              sys.exit(1)
+          data=json.loads(manifest.read_text())
+          rows=data.get('items', [])
+          assert len(rows)==96, f'Expected 96 entries; got {len(rows)}'
+          seen=set()
+          for row in rows:
+              ident=row['id']; path=pathlib.Path(row['candidate_path'])
+              assert ident not in seen, f'Duplicate ID {ident}'
+              seen.add(ident)
+              assert path.as_posix().startswith('assets/print-master-candidates/'), path
+              assert path.is_file(), f'Missing {ident}: {path}'
+              actual=hashlib.sha256(path.read_bytes()).hexdigest()
+              assert actual==row['candidate_sha256'], f'Checksum mismatch: {ident}'
+          print('PASS: 96 unique candidate files and SHA-256 hashes verified')
+          print('NOTE: commercial print and identity approval are separate gates')
+          PY
