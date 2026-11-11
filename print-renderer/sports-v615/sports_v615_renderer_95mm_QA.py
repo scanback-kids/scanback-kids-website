@@ -45,7 +45,7 @@ LAYOUT.update({
  '21':{'name':[256,859,943,1000],'item':[256,999,930,1085],'qr':[968,837,1188,1057],'status':'ADDED_ITEM_PANEL_NEEDS_VISUAL_REAPPROVAL'},
  '22':{'name':[292,830,861,942],'item':[322,946,857,1028],'qr':[862,839,1088,1066],'status':'NO_ORIGINAL_QR_PANEL; PROVISIONAL_CODE_PANEL'},
  '23':{'name':[319,846,853,957],'item':[340,962,833,1043],'qr':[855,848,1076,1067],'status':'NO_ORIGINAL_QR_PANEL; PROVISIONAL_CODE_PANEL'},
- '24':{'name':[624,440,1075,584],'item':[624,588,1080,694],'qr':[1021,580,1232,791],'status':'ADDED_ITEM_PANEL_NEEDS_VISUAL_REAPPROVAL'},
+ '24':{'name':[624,440,1009,584],'item':[624,588,991,694],'qr':[1021,580,1232,791],'status':'ADDED_ITEM_PANEL_NEEDS_VISUAL_REAPPROVAL'},
 })
 
 def font(sz): return ImageFont.truetype(FONT,int(sz))
@@ -121,12 +121,25 @@ def render(id,name,item,base='https://scanback.in/print-qa'):
    raise ValueError('Insufficient name plate height on SPORTS-'+id)
   name_status=fit(dr,name,safe_name,'#E91643',maximum=57,minimum=17)
   item_status=fit(dr,item,[b[0]+18,b[1]+6,b[2]-18,b[3]-7],'#102D72',maximum=39,minimum=14)
-  qrbox=conf['qr'];qsize=min(220,qrbox[2]-qrbox[0]-12,qrbox[3]-qrbox[1]-12)
-  qx=qrbox[0]+(qrbox[2]-qrbox[0]-qsize)//2
-  qy=qrbox[1]+(qrbox[3]-qrbox[1]-qsize)//2
+  # The original AI-rendered art for 21-24 may contain a decorative QR.
+  # Replace ALL of those pixels inside the original panel before drawing
+  # the single actual QR; do not cover the illustrated outer panel border.
+  qr_interior={
+   '21':(999,867,1207,1073),
+   '22':(886,860,1074,1047),
+   '23':(879,870,1059,1046),
+   '24':(1021,597,1244,820),
+  }[id]
+  ix0,iy0,ix1,iy1=qr_interior
+  dr.rectangle([ix0,iy0,ix1,iy1],fill='white')
+  qsize=min(ix1-ix0,iy1-iy0)-8
+  qx=ix0+(ix1-ix0-qsize)//2
+  qy=iy0+(iy1-iy0-qsize)//2
  url=base.rstrip('/')+'/SPORTS-'+id
  qm,modules=qr_image(url,qsize)
- dr.rounded_rectangle([qx-7,qy-7,qx+qsize+7,qy+qsize+7],radius=5,fill='white')
+ # Do not paint beyond the existing decorative QR-panel border for 21-24.
+ if id<='20':
+  dr.rounded_rectangle([qx-7,qy-7,qx+qsize+7,qy+qsize+7],radius=5,fill='white')
  im.paste(qm,(qx,qy))
  rec={'design_id':'SPORTS-'+id,'source_sha256':hashlib.sha256(src.read_bytes()).hexdigest(),
       'name':name,'item':item,'url':url,'qr_bounds_px':[qx,qy,qx+qsize,qy+qsize],
