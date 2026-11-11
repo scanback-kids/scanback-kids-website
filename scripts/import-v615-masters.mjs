@@ -16,7 +16,7 @@ const tmp=mkdtempSync(join(tmpdir(),'scanback-v615-'));
 try {
   execFileSync('unzip',['-q',zip,'-d',tmp]);
   const manifest=JSON.parse(readFileSync(join(tmp,'manifest.json'),'utf8'));
-  const rows=Array.isArray(manifest)?manifest:(manifest.entries||manifest.catalog||manifest.designs);
+  const rows=Array.isArray(manifest)?manifest:(manifest.items||manifest.entries||manifest.catalog||manifest.designs);
   if(!Array.isArray(rows)||rows.length!==96) throw Error('Manifest must contain exactly 96 artwork entries');
   const ids=new Set();
   const planned=[];
