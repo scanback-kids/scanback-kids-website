@@ -4,7 +4,7 @@ on:
     branches:
       - development/v615-96-master-integration
     paths:
-      - 'assets/print-master-candidates/**'
+      - 'assets/print-masters/**'
       - 'docs/development-artwork-audit/v615-candidate-manifest.json'
       - '.github/workflows/verify-v615-candidates.yml'
   workflow_dispatch:
@@ -30,7 +30,7 @@ jobs:
               ident=row['id']; path=pathlib.Path(row['candidate_path'])
               assert ident not in seen, f'Duplicate ID {ident}'
               seen.add(ident)
-              assert path.as_posix().startswith('assets/print-master-candidates/'), path
+              assert path.as_posix().startswith('assets/print-masters/'), path
               assert path.is_file(), f'Missing {ident}: {path}'
               actual=hashlib.sha256(path.read_bytes()).hexdigest()
               assert actual==row['candidate_sha256'], f'Checksum mismatch: {ident}'
