@@ -1,0 +1,437 @@
+{
+  "status": "CONFIG_COORDINATES_RECOVERED_ONLY",
+  "count": 10,
+  "visual_signoff": false,
+  "rows": [
+    {
+      "id": "dino-11",
+      "config_path": "print-renderer/ScanBack_V6_15/batch_dino_11_20/public/assets/print-config/dino/11.json",
+      "config_blob_sha": "2aa785a93f20063443bd700a73b7244051fe5630",
+      "dimensions": [
+        1122,
+        1402
+      ],
+      "name_box": [
+        0.2807487,
+        0.7574893,
+        0.7156863,
+        0.8095578
+      ],
+      "name_plate": [
+        0.2566845,
+        0.7425107,
+        0.7397504,
+        0.8252496
+      ],
+      "item_box": [
+        0.2914439,
+        0.8402282,
+        0.7049911,
+        0.8830243
+      ],
+      "item_plate": [
+        0.2691622,
+        0.8302425,
+        0.7272727,
+        0.8937233
+      ],
+      "qr_box": [
+        0.7709447,
+        0.764622,
+        0.9278075,
+        0.8901569
+      ],
+      "master_path": "print-renderer/ScanBack_V6_15/batch_dino_11_20/public/assets/print-masters/dino/11.webp",
+      "source_basis": "LEGACY_V615_ORIGINAL_MASTER_CONFIG",
+      "catalog_96_identity_verified": false,
+      "commercial_print_approved": false
+    },
+    {
+      "id": "dino-12",
+      "config_path": "print-renderer/ScanBack_V6_15/batch_dino_11_20/public/assets/print-config/dino/12.json",
+      "config_blob_sha": "614339acb94dbf96e44fed470f2410b1c38fdd6e",
+      "dimensions": [
+        1122,
+        1402
+      ],
+      "name_box": [
+        0.2557932,
+        0.7988588,
+        0.7165775,
+        0.8495007
+      ],
+      "name_plate": [
+        0.2317291,
+        0.7838802,
+        0.7406417,
+        0.8651926
+      ],
+      "item_box": [
+        0.2682709,
+        0.882311,
+        0.6987522,
+        0.9243937
+      ],
+      "item_plate": [
+        0.2459893,
+        0.8723252,
+        0.7210339,
+        0.9350927
+      ],
+      "qr_box": [
+        0.7709447,
+        0.8059914,
+        0.9278075,
+        0.9315264
+      ],
+      "master_path": "print-renderer/ScanBack_V6_15/batch_dino_11_20/public/assets/print-masters/dino/12.webp",
+      "source_basis": "LEGACY_V615_ORIGINAL_MASTER_CONFIG",
+      "catalog_96_identity_verified": false,
+      "commercial_print_approved": false
+    },
+    {
+      "id": "dino-13",
+      "config_path": "print-renderer/ScanBack_V6_15/batch_dino_11_20/public/assets/print-config/dino/13.json",
+      "config_blob_sha": "923bbb7ad892f78350f4ec54757c7b4df1b92d30",
+      "dimensions": [
+        1122,
+        1402
+      ],
+      "name_box": [
+        0.2780749,
+        0.7746077,
+        0.7156863,
+        0.8252496
+      ],
+      "name_plate": [
+        0.2540107,
+        0.7596291,
+        0.7397504,
+        0.8409415
+      ],
+      "item_box": [
+        0.285205,
+        0.8566334,
+        0.7058824,
+        0.9044223
+      ],
+      "item_plate": [
+        0.2629234,
+        0.8466476,
+        0.728164,
+        0.9151213
+      ],
+      "qr_box": [
+        0.7709447,
+        0.7817404,
+        0.9278075,
+        0.9072753
+      ],
+      "master_path": "print-renderer/ScanBack_V6_15/batch_dino_11_20/public/assets/print-masters/dino/13.webp",
+      "source_basis": "LEGACY_V615_ORIGINAL_MASTER_CONFIG",
+      "catalog_96_identity_verified": false,
+      "commercial_print_approved": false
+    },
+    {
+      "id": "dino-14",
+      "config_path": "print-renderer/ScanBack_V6_15/batch_dino_11_20/public/assets/print-config/dino/14.json",
+      "config_blob_sha": "35c632a129e730b62909034854fe70b843dc1ca2",
+      "dimensions": [
+        1122,
+        1402
+      ],
+      "name_box": [
+        0.2789661,
+        0.7603424,
+        0.7040998,
+        0.8109843
+      ],
+      "name_plate": [
+        0.254902,
+        0.7453638,
+        0.728164,
+        0.8266762
+      ],
+      "item_box": [
+        0.2807487,
+        0.8445078,
+        0.6889483,
+        0.89301
+      ],
+      "item_plate": [
+        0.258467,
+        0.8345221,
+        0.7112299,
+        0.903709
+      ],
+      "qr_box": [
+        0.7709447,
+        0.767475,
+        0.9278075,
+        0.89301
+      ],
+      "master_path": "print-renderer/ScanBack_V6_15/batch_dino_11_20/public/assets/print-masters/dino/14.webp",
+      "source_basis": "LEGACY_V615_ORIGINAL_MASTER_CONFIG",
+      "catalog_96_identity_verified": false,
+      "commercial_print_approved": false
+    },
+    {
+      "id": "dino-15",
+      "config_path": "print-renderer/ScanBack_V6_15/batch_dino_11_20/public/assets/print-config/dino/15.json",
+      "config_blob_sha": "7741023161321cd74a4227adfbddf727884c47f4",
+      "dimensions": [
+        1122,
+        1402
+      ],
+      "name_box": [
+        0.2905526,
+        0.7817404,
+        0.7085561,
+        0.8338088
+      ],
+      "name_plate": [
+        0.2664884,
+        0.7667618,
+        0.7326203,
+        0.8495007
+      ],
+      "item_box": [
+        0.2950089,
+        0.8651926,
+        0.7023173,
+        0.9094151
+      ],
+      "item_plate": [
+        0.2727273,
+        0.8552068,
+        0.7245989,
+        0.9201141
+      ],
+      "qr_box": [
+        0.7709447,
+        0.788873,
+        0.9278075,
+        0.914408
+      ],
+      "master_path": "print-renderer/ScanBack_V6_15/batch_dino_11_20/public/assets/print-masters/dino/15.webp",
+      "source_basis": "LEGACY_V615_ORIGINAL_MASTER_CONFIG",
+      "catalog_96_identity_verified": false,
+      "commercial_print_approved": false
+    },
+    {
+      "id": "dino-16",
+      "config_path": "print-renderer/ScanBack_V6_15/batch_dino_11_20/public/assets/print-config/dino/16.json",
+      "config_blob_sha": "efa7b93156402cf88152e9a8422e3329c89b287c",
+      "dimensions": [
+        1122,
+        1402
+      ],
+      "name_box": [
+        0.2602496,
+        0.7482168,
+        0.7076649,
+        0.8052782
+      ],
+      "name_plate": [
+        0.2361854,
+        0.7332382,
+        0.7317291,
+        0.82097
+      ],
+      "item_box": [
+        0.2825312,
+        0.8359486,
+        0.7112299,
+        0.882311
+      ],
+      "item_plate": [
+        0.2602496,
+        0.8259629,
+        0.7335116,
+        0.89301
+      ],
+      "qr_box": [
+        0.7709447,
+        0.7553495,
+        0.9278075,
+        0.8808845
+      ],
+      "master_path": "print-renderer/ScanBack_V6_15/batch_dino_11_20/public/assets/print-masters/dino/16.webp",
+      "source_basis": "LEGACY_V615_ORIGINAL_MASTER_CONFIG",
+      "catalog_96_identity_verified": false,
+      "commercial_print_approved": false
+    },
+    {
+      "id": "dino-17",
+      "config_path": "print-renderer/ScanBack_V6_15/batch_dino_11_20/public/assets/print-config/dino/17.json",
+      "config_blob_sha": "5a76c0a1fad3f65a4ddba117a2a7c7f4de6824e4",
+      "dimensions": [
+        1122,
+        1402
+      ],
+      "name_box": [
+        0.2727273,
+        0.7617689,
+        0.7076649,
+        0.8152639
+      ],
+      "name_plate": [
+        0.2486631,
+        0.7467903,
+        0.7317291,
+        0.8309558
+      ],
+      "item_box": [
+        0.2629234,
+        0.8473609,
+        0.7112299,
+        0.8958631
+      ],
+      "item_plate": [
+        0.2406417,
+        0.8373752,
+        0.7335116,
+        0.9065621
+      ],
+      "qr_box": [
+        0.7709447,
+        0.7689016,
+        0.9278075,
+        0.8944365
+      ],
+      "master_path": "print-renderer/ScanBack_V6_15/batch_dino_11_20/public/assets/print-masters/dino/17.webp",
+      "source_basis": "LEGACY_V615_ORIGINAL_MASTER_CONFIG",
+      "catalog_96_identity_verified": false,
+      "commercial_print_approved": false
+    },
+    {
+      "id": "dino-18",
+      "config_path": "print-renderer/ScanBack_V6_15/batch_dino_11_20/public/assets/print-config/dino/18.json",
+      "config_blob_sha": "c767bed289884258ac6ec50c76d32c08b557f6d2",
+      "dimensions": [
+        1122,
+        1402
+      ],
+      "name_box": [
+        0.2647059,
+        0.7845934,
+        0.7085561,
+        0.8330956
+      ],
+      "name_plate": [
+        0.2406417,
+        0.7696148,
+        0.7326203,
+        0.8487874
+      ],
+      "item_box": [
+        0.2736185,
+        0.863766,
+        0.6871658,
+        0.9058488
+      ],
+      "item_plate": [
+        0.2513369,
+        0.8537803,
+        0.7094474,
+        0.9165478
+      ],
+      "qr_box": [
+        0.7709447,
+        0.7917261,
+        0.9278075,
+        0.9172611
+      ],
+      "master_path": "print-renderer/ScanBack_V6_15/batch_dino_11_20/public/assets/print-masters/dino/18.webp",
+      "source_basis": "LEGACY_V615_ORIGINAL_MASTER_CONFIG",
+      "catalog_96_identity_verified": false,
+      "commercial_print_approved": false
+    },
+    {
+      "id": "dino-19",
+      "config_path": "print-renderer/ScanBack_V6_15/batch_dino_11_20/public/assets/print-config/dino/19.json",
+      "config_blob_sha": "d7ce687ac6dddb7c37afc60fa4fff1d846920c9e",
+      "dimensions": [
+        1122,
+        1402
+      ],
+      "name_box": [
+        0.2860963,
+        0.78602,
+        0.7219251,
+        0.8345221
+      ],
+      "name_plate": [
+        0.2620321,
+        0.7710414,
+        0.7459893,
+        0.850214
+      ],
+      "item_box": [
+        0.2905526,
+        0.8659058,
+        0.7094474,
+        0.9087019
+      ],
+      "item_plate": [
+        0.2682709,
+        0.8559201,
+        0.7317291,
+        0.9194009
+      ],
+      "qr_box": [
+        0.7709447,
+        0.7931526,
+        0.9278075,
+        0.9186876
+      ],
+      "master_path": "print-renderer/ScanBack_V6_15/batch_dino_11_20/public/assets/print-masters/dino/19.webp",
+      "source_basis": "LEGACY_V615_ORIGINAL_MASTER_CONFIG",
+      "catalog_96_identity_verified": false,
+      "commercial_print_approved": false
+    },
+    {
+      "id": "dino-20",
+      "config_path": "print-renderer/ScanBack_V6_15/batch_dino_11_20/public/assets/print-config/dino/20.json",
+      "config_blob_sha": "b66f2da5ef23b6d9b4b50ee17e3e8a24a2bb0430",
+      "dimensions": [
+        1122,
+        1402
+      ],
+      "name_box": [
+        0.2673797,
+        0.7853067,
+        0.7237077,
+        0.8359486
+      ],
+      "name_plate": [
+        0.2433155,
+        0.7703281,
+        0.7477718,
+        0.8516405
+      ],
+      "item_box": [
+        0.2771836,
+        0.8666191,
+        0.7210339,
+        0.9087019
+      ],
+      "item_plate": [
+        0.254902,
+        0.8566334,
+        0.7433155,
+        0.9194009
+      ],
+      "qr_box": [
+        0.7709447,
+        0.7924394,
+        0.9278075,
+        0.9179743
+      ],
+      "master_path": "print-renderer/ScanBack_V6_15/batch_dino_11_20/public/assets/print-masters/dino/20.webp",
+      "source_basis": "LEGACY_V615_ORIGINAL_MASTER_CONFIG",
+      "catalog_96_identity_verified": false,
+      "commercial_print_approved": false
+    }
+  ]
+}
