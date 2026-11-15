@@ -1,0 +1,31 @@
+name: V6.15 composite source match audit
+on:
+  pull_request:
+    paths:
+      - 'assets/print-masters/**'
+      - 'print-renderer/ScanBack_V6_15/**'
+      - 'print-renderer/v615_legacy_geometry_*.json'
+      - 'print-renderer/discover_v615_composite_matches.py'
+      - 'docs/development-artwork-audit/v615-candidate-manifest.json'
+      - '.github/workflows/v615-composite-match-audit.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
+      - name: Install audited image-processing dependencies
+        run: python3 -m pip install 'Pillow==11.3.0' 'numpy==2.2.6' 'opencv-python-headless==4.12.0.88'
+      - name: Compare original V6.15 composites to all 96 candidate illustrations (read-only)
+        run: python3 print-renderer/discover_v615_composite_matches.py --output qa-output/v615-96-composite-match-evidence.json
+      - name: Upload per-design source-match evidence
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: v615-96-composite-match-evidence
+          path: qa-output/v615-96-composite-match-evidence.json
+          if-no-files-found: error
