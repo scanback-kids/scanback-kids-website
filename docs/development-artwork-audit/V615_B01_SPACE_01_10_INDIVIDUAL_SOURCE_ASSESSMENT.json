@@ -1,0 +1,204 @@
+{
+  "batch_id": "B01",
+  "scope": "SPACE-01 through SPACE-10",
+  "review_date": "2026-11-15",
+  "sources": "actual catalog WebPs inspected directly in GitHub; no automated composite fabrication",
+  "source_illustration_identity_hashes_from_manifest": true,
+  "master_source_pixels_changed": false,
+  "original_composite_recovered": false,
+  "per_design_original_geometry_verified": 0,
+  "print_proof_ready": 0,
+  "commercial_print_approved": false,
+  "designs": [
+    {
+      "id": "SPACE-01",
+      "source": "assets/print-masters/space/01.webp",
+      "sha256": "a1adf6ad0976cfa5796af32a64ade801bc3229df777bdf21b47157461bf6c655",
+      "dimensions": [
+        1501,
+        1048
+      ],
+      "visually_observed_subject": "Boy astronaut with blue headphones reaching forward",
+      "source_visual_form": "full_bleed_landscape_scene",
+      "existing_original_v615_nameplate_identifiable": false,
+      "existing_original_v615_item_plate_identifiable": false,
+      "existing_original_v615_white_QR_panel_identifiable": false,
+      "existing_original_v615_diecut_contour_identifiable": false,
+      "unmodified_original_artwork": true,
+      "approved_composite_path": null,
+      "source_geometry_status": "NO_EXISTING_STICKER_COMPOSITE_REGIONS_IN_STANDALONE_SCENE",
+      "next_action": "Produce a separate design-specific proposed full-sticker composite; preserve every source pixel, compare to V6.15 approved visual style, verify individually before print gate"
+    },
+    {
+      "id": "SPACE-02",
+      "source": "assets/print-masters/space/02.webp",
+      "sha256": "933b713e0a19fc9a434925809e5ea77170a9b08164678a4ca357fb4a85a1394d",
+      "dimensions": [
+        1501,
+        1048
+      ],
+      "visually_observed_subject": "Boy astronaut floating in star field",
+      "source_visual_form": "full_bleed_landscape_scene",
+      "existing_original_v615_nameplate_identifiable": false,
+      "existing_original_v615_item_plate_identifiable": false,
+      "existing_original_v615_white_QR_panel_identifiable": false,
+      "existing_original_v615_diecut_contour_identifiable": false,
+      "unmodified_original_artwork": true,
+      "approved_composite_path": null,
+      "source_geometry_status": "NO_EXISTING_STICKER_COMPOSITE_REGIONS_IN_STANDALONE_SCENE",
+      "next_action": "Produce a separate design-specific proposed full-sticker composite; preserve every source pixel, compare to V6.15 approved visual style, verify individually before print gate"
+    },
+    {
+      "id": "SPACE-03",
+      "source": "assets/print-masters/space/03.webp",
+      "sha256": "7ed9ef3bb0708e62577e8238289a16ee22e500a929a47a2d4aec42a17f62db31",
+      "dimensions": [
+        1497,
+        1051
+      ],
+      "visually_observed_subject": "Astronaut puppy flying over moon",
+      "source_visual_form": "full_bleed_landscape_scene",
+      "existing_original_v615_nameplate_identifiable": false,
+      "existing_original_v615_item_plate_identifiable": false,
+      "existing_original_v615_white_QR_panel_identifiable": false,
+      "existing_original_v615_diecut_contour_identifiable": false,
+      "unmodified_original_artwork": true,
+      "approved_composite_path": null,
+      "source_geometry_status": "NO_EXISTING_STICKER_COMPOSITE_REGIONS_IN_STANDALONE_SCENE",
+      "next_action": "Produce a separate design-specific proposed full-sticker composite; preserve every source pixel, compare to V6.15 approved visual style, verify individually before print gate"
+    },
+    {
+      "id": "SPACE-04",
+      "source": "assets/print-masters/space/04.webp",
+      "sha256": "918dfe784ab844c875b8ad6c970e34d8162bc2798811114add86d95f82a36823",
+      "dimensions": [
+        1501,
+        1048
+      ],
+      "visually_observed_subject": "Friendly smiling space robot flying",
+      "source_visual_form": "full_bleed_landscape_scene",
+      "existing_original_v615_nameplate_identifiable": false,
+      "existing_original_v615_item_plate_identifiable": false,
+      "existing_original_v615_white_QR_panel_identifiable": false,
+      "existing_original_v615_diecut_contour_identifiable": false,
+      "unmodified_original_artwork": true,
+      "approved_composite_path": null,
+      "source_geometry_status": "NO_EXISTING_STICKER_COMPOSITE_REGIONS_IN_STANDALONE_SCENE",
+      "next_action": "Produce a separate design-specific proposed full-sticker composite; preserve every source pixel, compare to V6.15 approved visual style, verify individually before print gate"
+    },
+    {
+      "id": "SPACE-05",
+      "source": "assets/print-masters/space/05.webp",
+      "sha256": "e27633ad3cca6e2be08d17f68bbddbcd6cb2e9175e9602033a6385f1cb92b8ea",
+      "dimensions": [
+        1501,
+        1048
+      ],
+      "visually_observed_subject": "Green alien in silver UFO",
+      "source_visual_form": "full_bleed_landscape_scene",
+      "existing_original_v615_nameplate_identifiable": false,
+      "existing_original_v615_item_plate_identifiable": false,
+      "existing_original_v615_white_QR_panel_identifiable": false,
+      "existing_original_v615_diecut_contour_identifiable": false,
+      "unmodified_original_artwork": true,
+      "approved_composite_path": null,
+      "source_geometry_status": "NO_EXISTING_STICKER_COMPOSITE_REGIONS_IN_STANDALONE_SCENE",
+      "next_action": "Produce a separate design-specific proposed full-sticker composite; preserve every source pixel, compare to V6.15 approved visual style, verify individually before print gate"
+    },
+    {
+      "id": "SPACE-06",
+      "source": "assets/print-masters/space/06.webp",
+      "sha256": "2346bc73d2e36b709f86e4823977222461edf0cc180e9d8ba0398bac90ee4a81",
+      "dimensions": [
+        1501,
+        1048
+      ],
+      "visually_observed_subject": "Rocket launching with golden flame",
+      "source_visual_form": "full_bleed_landscape_scene",
+      "existing_original_v615_nameplate_identifiable": false,
+      "existing_original_v615_item_plate_identifiable": false,
+      "existing_original_v615_white_QR_panel_identifiable": false,
+      "existing_original_v615_diecut_contour_identifiable": false,
+      "unmodified_original_artwork": true,
+      "approved_composite_path": null,
+      "source_geometry_status": "NO_EXISTING_STICKER_COMPOSITE_REGIONS_IN_STANDALONE_SCENE",
+      "next_action": "Produce a separate design-specific proposed full-sticker composite; preserve every source pixel, compare to V6.15 approved visual style, verify individually before print gate"
+    },
+    {
+      "id": "SPACE-07",
+      "source": "assets/print-masters/space/07.webp",
+      "sha256": "cb8877e757643a705544ec8aea369f1a81281286ec31f0a364adbba5cae8d401",
+      "dimensions": [
+        1501,
+        1048
+      ],
+      "visually_observed_subject": "Boy astronaut driving lunar rover",
+      "source_visual_form": "full_bleed_landscape_scene",
+      "existing_original_v615_nameplate_identifiable": false,
+      "existing_original_v615_item_plate_identifiable": false,
+      "existing_original_v615_white_QR_panel_identifiable": false,
+      "existing_original_v615_diecut_contour_identifiable": false,
+      "unmodified_original_artwork": true,
+      "approved_composite_path": null,
+      "source_geometry_status": "NO_EXISTING_STICKER_COMPOSITE_REGIONS_IN_STANDALONE_SCENE",
+      "next_action": "Produce a separate design-specific proposed full-sticker composite; preserve every source pixel, compare to V6.15 approved visual style, verify individually before print gate"
+    },
+    {
+      "id": "SPACE-08",
+      "source": "assets/print-masters/space/08.webp",
+      "sha256": "32d55f455557bfd4d7c423a990050cc20a7e0481792f875ecfc2bfd4b19d8fdc",
+      "dimensions": [
+        1501,
+        1048
+      ],
+      "visually_observed_subject": "Boy astronaut with rocket-powered jetpack",
+      "source_visual_form": "full_bleed_landscape_scene",
+      "existing_original_v615_nameplate_identifiable": false,
+      "existing_original_v615_item_plate_identifiable": false,
+      "existing_original_v615_white_QR_panel_identifiable": false,
+      "existing_original_v615_diecut_contour_identifiable": false,
+      "unmodified_original_artwork": true,
+      "approved_composite_path": null,
+      "source_geometry_status": "NO_EXISTING_STICKER_COMPOSITE_REGIONS_IN_STANDALONE_SCENE",
+      "next_action": "Produce a separate design-specific proposed full-sticker composite; preserve every source pixel, compare to V6.15 approved visual style, verify individually before print gate"
+    },
+    {
+      "id": "SPACE-09",
+      "source": "assets/print-masters/space/09.webp",
+      "sha256": "f423b4d131b6d438834ea102df698edc90cac334ebc0adfebcc79906a816384a",
+      "dimensions": [
+        1501,
+        1048
+      ],
+      "visually_observed_subject": "Girl astronaut riding pink hoverboard",
+      "source_visual_form": "full_bleed_landscape_scene",
+      "existing_original_v615_nameplate_identifiable": false,
+      "existing_original_v615_item_plate_identifiable": false,
+      "existing_original_v615_white_QR_panel_identifiable": false,
+      "existing_original_v615_diecut_contour_identifiable": false,
+      "unmodified_original_artwork": true,
+      "approved_composite_path": null,
+      "source_geometry_status": "NO_EXISTING_STICKER_COMPOSITE_REGIONS_IN_STANDALONE_SCENE",
+      "next_action": "Produce a separate design-specific proposed full-sticker composite; preserve every source pixel, compare to V6.15 approved visual style, verify individually before print gate"
+    },
+    {
+      "id": "SPACE-10",
+      "source": "assets/print-masters/space/10.webp",
+      "sha256": "00d06df7ecfa469359169fb5c902de3377f6fe7f43cea1a51d8160fcd960bc38",
+      "dimensions": [
+        1501,
+        1048
+      ],
+      "visually_observed_subject": "Boy astronaut inside spacecraft cockpit",
+      "source_visual_form": "full_bleed_landscape_scene",
+      "existing_original_v615_nameplate_identifiable": false,
+      "existing_original_v615_item_plate_identifiable": false,
+      "existing_original_v615_white_QR_panel_identifiable": false,
+      "existing_original_v615_diecut_contour_identifiable": false,
+      "unmodified_original_artwork": true,
+      "approved_composite_path": null,
+      "source_geometry_status": "NO_EXISTING_STICKER_COMPOSITE_REGIONS_IN_STANDALONE_SCENE",
+      "next_action": "Produce a separate design-specific proposed full-sticker composite; preserve every source pixel, compare to V6.15 approved visual style, verify individually before print gate"
+    }
+  ]
+}
