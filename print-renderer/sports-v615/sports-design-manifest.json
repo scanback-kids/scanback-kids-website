@@ -1,0 +1,174 @@
+{
+  "description": "Approved 24 Sports V6.15 design identities. Files need to be present at exact asset_path for printing.",
+  "print_approval": false,
+  "designs": [
+    {
+      "id": "SPORTS-01",
+      "sport": "Cricket boy",
+      "asset_path": "print-renderer/sports-v615/assets/01.png",
+      "approved_in_conversation": true,
+      "source_binary_in_repository": false
+    },
+    {
+      "id": "SPORTS-02",
+      "sport": "Soccer girl",
+      "asset_path": "print-renderer/sports-v615/assets/02.png",
+      "approved_in_conversation": true,
+      "source_binary_in_repository": false
+    },
+    {
+      "id": "SPORTS-03",
+      "sport": "Basketball boy",
+      "asset_path": "print-renderer/sports-v615/assets/03.png",
+      "approved_in_conversation": true,
+      "source_binary_in_repository": false
+    },
+    {
+      "id": "SPORTS-04",
+      "sport": "Swimmer",
+      "asset_path": "print-renderer/sports-v615/assets/04.png",
+      "approved_in_conversation": true,
+      "source_binary_in_repository": false
+    },
+    {
+      "id": "SPORTS-05",
+      "sport": "Cycling boy",
+      "asset_path": "print-renderer/sports-v615/assets/05.png",
+      "approved_in_conversation": true,
+      "source_binary_in_repository": false
+    },
+    {
+      "id": "SPORTS-06",
+      "sport": "Tennis girl",
+      "asset_path": "print-renderer/sports-v615/assets/06.png",
+      "approved_in_conversation": true,
+      "source_binary_in_repository": false
+    },
+    {
+      "id": "SPORTS-07",
+      "sport": "Badminton boy",
+      "asset_path": "print-renderer/sports-v615/assets/07.png",
+      "approved_in_conversation": true,
+      "source_binary_in_repository": false
+    },
+    {
+      "id": "SPORTS-08",
+      "sport": "Runner girl",
+      "asset_path": "print-renderer/sports-v615/assets/08.png",
+      "approved_in_conversation": true,
+      "source_binary_in_repository": false
+    },
+    {
+      "id": "SPORTS-09",
+      "sport": "Karate boy",
+      "asset_path": "print-renderer/sports-v615/assets/09.png",
+      "approved_in_conversation": true,
+      "source_binary_in_repository": false
+    },
+    {
+      "id": "SPORTS-10",
+      "sport": "Roller-skating girl",
+      "asset_path": "print-renderer/sports-v615/assets/10.png",
+      "approved_in_conversation": true,
+      "source_binary_in_repository": false
+    },
+    {
+      "id": "SPORTS-11",
+      "sport": "Baseball boy",
+      "asset_path": "print-renderer/sports-v615/assets/11.png",
+      "approved_in_conversation": true,
+      "source_binary_in_repository": false
+    },
+    {
+      "id": "SPORTS-12",
+      "sport": "Gymnast girl",
+      "asset_path": "print-renderer/sports-v615/assets/12.png",
+      "approved_in_conversation": true,
+      "source_binary_in_repository": false
+    },
+    {
+      "id": "SPORTS-13",
+      "sport": "Boxer boy",
+      "asset_path": "print-renderer/sports-v615/assets/13.png",
+      "approved_in_conversation": true,
+      "source_binary_in_repository": false
+    },
+    {
+      "id": "SPORTS-14",
+      "sport": "Volleyball girl",
+      "asset_path": "print-renderer/sports-v615/assets/14.png",
+      "approved_in_conversation": true,
+      "source_binary_in_repository": false
+    },
+    {
+      "id": "SPORTS-15",
+      "sport": "Rugby boy",
+      "asset_path": "print-renderer/sports-v615/assets/15.png",
+      "approved_in_conversation": true,
+      "source_binary_in_repository": false
+    },
+    {
+      "id": "SPORTS-16",
+      "sport": "Table-tennis boy",
+      "asset_path": "print-renderer/sports-v615/assets/16.png",
+      "approved_in_conversation": true,
+      "source_binary_in_repository": false
+    },
+    {
+      "id": "SPORTS-17",
+      "sport": "Ice-hockey boy",
+      "asset_path": "print-renderer/sports-v615/assets/17.png",
+      "approved_in_conversation": true,
+      "source_binary_in_repository": false
+    },
+    {
+      "id": "SPORTS-18",
+      "sport": "Archery girl",
+      "asset_path": "print-renderer/sports-v615/assets/18.png",
+      "approved_in_conversation": true,
+      "source_binary_in_repository": false
+    },
+    {
+      "id": "SPORTS-19",
+      "sport": "Tennis boy",
+      "asset_path": "print-renderer/sports-v615/assets/19.png",
+      "approved_in_conversation": true,
+      "source_binary_in_repository": false
+    },
+    {
+      "id": "SPORTS-20",
+      "sport": "Skateboard boy",
+      "asset_path": "print-renderer/sports-v615/assets/20.png",
+      "approved_in_conversation": true,
+      "source_binary_in_repository": false
+    },
+    {
+      "id": "SPORTS-21",
+      "sport": "Badminton girl",
+      "asset_path": "print-renderer/sports-v615/assets/21.png",
+      "approved_in_conversation": true,
+      "source_binary_in_repository": false
+    },
+    {
+      "id": "SPORTS-22",
+      "sport": "Tennis boy",
+      "asset_path": "print-renderer/sports-v615/assets/22.png",
+      "approved_in_conversation": true,
+      "source_binary_in_repository": false
+    },
+    {
+      "id": "SPORTS-23",
+      "sport": "Cricket girl",
+      "asset_path": "print-renderer/sports-v615/assets/23.png",
+      "approved_in_conversation": true,
+      "source_binary_in_repository": false
+    },
+    {
+      "id": "SPORTS-24",
+      "sport": "Cycling girl",
+      "asset_path": "print-renderer/sports-v615/assets/24.png",
+      "approved_in_conversation": true,
+      "source_binary_in_repository": false
+    }
+  ]
+}
