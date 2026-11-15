@@ -1,0 +1,317 @@
+{
+  "status": "CONFIG_COORDINATES_RECOVERED_ONLY",
+  "count": 10,
+  "visual_signoff": false,
+  "rows": [
+    {
+      "id": "dino-purple",
+      "config_path": "print-renderer/ScanBack_V6_15/batch_mixed/masters/dino-purple.json",
+      "config_blob_sha": "cf119c0d97ced840979d2ac81b1f02112de08dff",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "name_box": [
+        0.329,
+        0.685,
+        0.714,
+        0.789
+      ],
+      "item_box": [
+        0.330144,
+        0.800638,
+        0.673047,
+        0.858852
+      ],
+      "qr_box": [
+        0.744,
+        0.699,
+        0.902,
+        0.893
+      ],
+      "master_path": "print-renderer/ScanBack_V6_15/batch_mixed/masters/dino-purple.webp",
+      "source_basis": "LEGACY_V615_ORIGINAL_MASTER_CONFIG",
+      "catalog_96_identity_verified": false,
+      "commercial_print_approved": false
+    },
+    {
+      "id": "rainbow-unicorn",
+      "config_path": "print-renderer/ScanBack_V6_15/batch_mixed/masters/rainbow-unicorn.json",
+      "config_blob_sha": "f27d4d3f45ff9b8f6b3bc48de181c9831c42ecce",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "name_box": [
+        0.346,
+        0.677,
+        0.715,
+        0.762
+      ],
+      "item_box": [
+        0.360447,
+        0.804625,
+        0.660288,
+        0.852472
+      ],
+      "qr_box": [
+        0.747,
+        0.706,
+        0.907,
+        0.9059999999999999
+      ],
+      "master_path": "print-renderer/ScanBack_V6_15/batch_mixed/masters/rainbow-unicorn.webp",
+      "source_basis": "LEGACY_V615_ORIGINAL_MASTER_CONFIG",
+      "catalog_96_identity_verified": false,
+      "commercial_print_approved": false
+    },
+    {
+      "id": "space-astronaut",
+      "config_path": "print-renderer/ScanBack_V6_15/batch_mixed/masters/space-astronaut.json",
+      "config_blob_sha": "661af9529bee37ec5d84d3f66d8f63e9bad6ce38",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "name_box": [
+        0.308,
+        0.698,
+        0.738,
+        0.8009999999999999
+      ],
+      "item_box": [
+        0.350877,
+        0.832536,
+        0.6866030000000001,
+        0.89075
+      ],
+      "qr_box": [
+        0.742,
+        0.704,
+        0.919,
+        0.9199999999999999
+      ],
+      "master_path": "print-renderer/ScanBack_V6_15/batch_mixed/masters/space-astronaut.webp",
+      "source_basis": "LEGACY_V615_ORIGINAL_MASTER_CONFIG",
+      "catalog_96_identity_verified": false,
+      "commercial_print_approved": false
+    },
+    {
+      "id": "space-robot",
+      "config_path": "print-renderer/ScanBack_V6_15/batch_mixed/masters/space-robot.json",
+      "config_blob_sha": "68019d34ad2d88a05edd9cb74d20de64ce3220fd",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "name_box": [
+        0.343,
+        0.738,
+        0.712,
+        0.816
+      ],
+      "item_box": [
+        0.354067,
+        0.851675,
+        0.6634770000000001,
+        0.8995219999999999
+      ],
+      "qr_box": [
+        0.738,
+        0.746,
+        0.9159999999999999,
+        0.919
+      ],
+      "master_path": "print-renderer/ScanBack_V6_15/batch_mixed/masters/space-robot.webp",
+      "source_basis": "LEGACY_V615_ORIGINAL_MASTER_CONFIG",
+      "catalog_96_identity_verified": false,
+      "commercial_print_approved": false
+    },
+    {
+      "id": "sports-racer",
+      "config_path": "print-renderer/ScanBack_V6_15/batch_mixed/masters/sports-racer.json",
+      "config_blob_sha": "046f4e479f1249cc146c02db8f346f8eb0241186",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "name_box": [
+        0.313,
+        0.717,
+        0.722,
+        0.8029999999999999
+      ],
+      "item_box": [
+        0.354067,
+        0.830941,
+        0.699362,
+        0.889155
+      ],
+      "qr_box": [
+        0.763,
+        0.735,
+        0.922,
+        0.9119999999999999
+      ],
+      "master_path": "print-renderer/ScanBack_V6_15/batch_mixed/masters/sports-racer.webp",
+      "source_basis": "LEGACY_V615_ORIGINAL_MASTER_CONFIG",
+      "catalog_96_identity_verified": false,
+      "commercial_print_approved": false
+    },
+    {
+      "id": "sports-swimmer",
+      "config_path": "print-renderer/ScanBack_V6_15/batch_mixed/masters/sports-swimmer.json",
+      "config_blob_sha": "b957fc4ec353f9ef29cea50ef2ca7c7aee2d5055",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "name_box": [
+        0.316,
+        0.664,
+        0.716,
+        0.748
+      ],
+      "item_box": [
+        0.370016,
+        0.791069,
+        0.649123,
+        0.8341310000000001
+      ],
+      "qr_box": [
+        0.753,
+        0.718,
+        0.924,
+        0.903
+      ],
+      "master_path": "print-renderer/ScanBack_V6_15/batch_mixed/masters/sports-swimmer.webp",
+      "source_basis": "LEGACY_V615_ORIGINAL_MASTER_CONFIG",
+      "catalog_96_identity_verified": false,
+      "commercial_print_approved": false
+    },
+    {
+      "id": "dino-07",
+      "config_path": "print-renderer/ScanBack_V6_15/batch_dino_07_10/public/assets/print-config/dino/07.json",
+      "config_blob_sha": "d843462887a4517a43876176523c16ebf6fcfbed",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "name_box": [
+        0.2743222,
+        0.7679426,
+        0.715311,
+        0.8277512
+      ],
+      "item_box": [
+        0.2767145,
+        0.8437002,
+        0.7248804,
+        0.9066986
+      ],
+      "qr_box": [
+        0.7655502,
+        0.761563,
+        0.9298246,
+        0.9154705
+      ],
+      "master_path": "print-renderer/ScanBack_V6_15/batch_dino_07_10/public/assets/print-masters/dino/07.webp",
+      "source_basis": "LEGACY_V615_ORIGINAL_MASTER_CONFIG",
+      "catalog_96_identity_verified": false,
+      "commercial_print_approved": false
+    },
+    {
+      "id": "dino-08",
+      "config_path": "print-renderer/ScanBack_V6_15/batch_dino_07_10/public/assets/print-config/dino/08.json",
+      "config_blob_sha": "7bde6ebb6d6e626ab35c2ffe7decf024dd4c89e7",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "name_box": [
+        0.2727273,
+        0.7711324,
+        0.7129187,
+        0.8245614
+      ],
+      "item_box": [
+        0.2862839,
+        0.8421053,
+        0.7113238,
+        0.9066986
+      ],
+      "qr_box": [
+        0.76874,
+        0.7647528,
+        0.9362041,
+        0.9122807
+      ],
+      "master_path": "print-renderer/ScanBack_V6_15/batch_dino_07_10/public/assets/print-masters/dino/08.webp",
+      "source_basis": "LEGACY_V615_ORIGINAL_MASTER_CONFIG",
+      "catalog_96_identity_verified": false,
+      "commercial_print_approved": false
+    },
+    {
+      "id": "dino-09",
+      "config_path": "print-renderer/ScanBack_V6_15/batch_dino_07_10/public/assets/print-config/dino/09.json",
+      "config_blob_sha": "23f7c3e44b0296facb34de6aed8862bd3a89da3e",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "name_box": [
+        0.2751196,
+        0.7743222,
+        0.7192982,
+        0.8373206
+      ],
+      "item_box": [
+        0.2870813,
+        0.8460925,
+        0.7145136,
+        0.9106858
+      ],
+      "qr_box": [
+        0.7464115,
+        0.7655502,
+        0.9170654,
+        0.9250399
+      ],
+      "master_path": "print-renderer/ScanBack_V6_15/batch_dino_07_10/public/assets/print-masters/dino/09.webp",
+      "source_basis": "LEGACY_V615_ORIGINAL_MASTER_CONFIG",
+      "catalog_96_identity_verified": false,
+      "commercial_print_approved": false
+    },
+    {
+      "id": "dino-10",
+      "config_path": "print-renderer/ScanBack_V6_15/batch_dino_07_10/public/assets/print-config/dino/10.json",
+      "config_blob_sha": "6e9f738924a73cd74180a240fb6dd136e02aef14",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "name_box": [
+        0.2822967,
+        0.784689,
+        0.7288676,
+        0.8444976
+      ],
+      "item_box": [
+        0.2671451,
+        0.8588517,
+        0.7376396,
+        0.914673
+      ],
+      "qr_box": [
+        0.7679426,
+        0.7671451,
+        0.9409888,
+        0.9242424
+      ],
+      "master_path": "print-renderer/ScanBack_V6_15/batch_dino_07_10/public/assets/print-masters/dino/10.webp",
+      "source_basis": "LEGACY_V615_ORIGINAL_MASTER_CONFIG",
+      "catalog_96_identity_verified": false,
+      "commercial_print_approved": false
+    }
+  ]
+}
