@@ -1,0 +1,778 @@
+{
+  "schema_version": "1.0",
+  "project": "ScanBack Kids V6.15 96-design expansion",
+  "sports_first": true,
+  "priority": "Preserve user-approved sports illustrations and recover exact 24 concept composite PNG assets prior to proof execution",
+  "source_manifest": "docs/development-artwork-audit/v615-candidate-manifest.json",
+  "production_enabled": false,
+  "batches": [
+    {
+      "batch_id": "B01",
+      "design_count": 10,
+      "designs": [
+        {
+          "id": "SPACE-01",
+          "source_artwork": "assets/print-masters/space/01.webp",
+          "artwork_sha256": "a1adf6ad0976cfa5796af32a64ade801bc3229df777bdf21b47157461bf6c655",
+          "approved_composite_path": null,
+          "approved_composite_sha256": null,
+          "geometry_verified": false,
+          "a4_pdf_verified": false,
+          "qa_status": "AWAITING_DESIGN_SPECIFIC_COMPOSITE"
+        },
+        {
+          "id": "SPACE-02",
+          "source_artwork": "assets/print-masters/space/02.webp",
+          "artwork_sha256": "933b713e0a19fc9a434925809e5ea77170a9b08164678a4ca357fb4a85a1394d",
+          "approved_composite_path": null,
+          "approved_composite_sha256": null,
+          "geometry_verified": false,
+          "a4_pdf_verified": false,
+          "qa_status": "AWAITING_DESIGN_SPECIFIC_COMPOSITE"
+        },
+        {
+          "id": "SPACE-03",
+          "source_artwork": "assets/print-masters/space/03.webp",
+          "artwork_sha256": "7ed9ef3bb0708e62577e8238289a16ee22e500a929a47a2d4aec42a17f62db31",
+          "approved_composite_path": null,
+          "approved_composite_sha256": null,
+          "geometry_verified": false,
+          "a4_pdf_verified": false,
+          "qa_status": "AWAITING_DESIGN_SPECIFIC_COMPOSITE"
+        },
+        {
+          "id": "SPACE-04",
+          "source_artwork": "assets/print-masters/space/04.webp",
+          "artwork_sha256": "918dfe784ab844c875b8ad6c970e34d8162bc2798811114add86d95f82a36823",
+          "approved_composite_path": null,
+          "approved_composite_sha256": null,
+          "geometry_verified": false,
+          "a4_pdf_verified": false,
+          "qa_status": "AWAITING_DESIGN_SPECIFIC_COMPOSITE"
+        },
+        {
+          "id": "SPACE-05",
+          "source_artwork": "assets/print-masters/space/05.webp",
+          "artwork_sha256": "e27633ad3cca6e2be08d17f68bbddbcd6cb2e9175e9602033a6385f1cb92b8ea",
+          "approved_composite_path": null,
+          "approved_composite_sha256": null,
+          "geometry_verified": false,
+          "a4_pdf_verified": false,
+          "qa_status": "AWAITING_DESIGN_SPECIFIC_COMPOSITE"
+        },
+        {
+          "id": "SPACE-06",
+          "source_artwork": "assets/print-masters/space/06.webp",
+          "artwork_sha256": "2346bc73d2e36b709f86e4823977222461edf0cc180e9d8ba0398bac90ee4a81",
+          "approved_composite_path": null,
+          "approved_composite_sha256": null,
+          "geometry_verified": false,
+          "a4_pdf_verified": false,
+          "qa_status": "AWAITING_DESIGN_SPECIFIC_COMPOSITE"
+        },
+        {
+          "id": "SPACE-07",
+          "source_artwork": "assets/print-masters/space/07.webp",
+          "artwork_sha256": "cb8877e757643a705544ec8aea369f1a81281286ec31f0a364adbba5cae8d401",
+          "approved_composite_path": null,
+          "approved_composite_sha256": null,
+          "geometry_verified": false,
+          "a4_pdf_verified": false,
+          "qa_status": "AWAITING_DESIGN_SPECIFIC_COMPOSITE"
+        },
+        {
+          "id": "SPACE-08",
+          "source_artwork": "assets/print-masters/space/08.webp",
+          "artwork_sha256": "32d55f455557bfd4d7c423a990050cc20a7e0481792f875ecfc2bfd4b19d8fdc",
+          "approved_composite_path": null,
+          "approved_composite_sha256": null,
+          "geometry_verified": false,
+          "a4_pdf_verified": false,
+          "qa_status": "AWAITING_DESIGN_SPECIFIC_COMPOSITE"
+        },
+        {
+          "id": "SPACE-09",
+          "source_artwork": "assets/print-masters/space/09.webp",
+          "artwork_sha256": "f423b4d131b6d438834ea102df698edc90cac334ebc0adfebcc79906a816384a",
+          "approved_composite_path": null,
+          "approved_composite_sha256": null,
+          "geometry_verified": false,
+          "a4_pdf_verified": false,
+          "qa_status": "AWAITING_DESIGN_SPECIFIC_COMPOSITE"
+        },
+        {
+          "id": "SPACE-10",
+          "source_artwork": "assets/print-masters/space/10.webp",
+          "artwork_sha256": "00d06df7ecfa469359169fb5c902de3377f6fe7f43cea1a51d8160fcd960bc38",
+          "approved_composite_path": null,
+          "approved_composite_sha256": null,
+          "geometry_verified": false,
+          "a4_pdf_verified": false,
+          "qa_status": "AWAITING_DESIGN_SPECIFIC_COMPOSITE"
+        }
+      ]
+    },
+    {
+      "batch_id": "B02",
+      "design_count": 10,
+      "designs": [
+        {
+          "id": "SPACE-11",
+          "source_artwork": "assets/print-masters/space/11.webp",
+          "artwork_sha256": "040fcbe819c7fc455e9dec189c19bfbde0c6a4e2ed5d6cdc3a53526784ad0974",
+          "approved_composite_path": null,
+          "approved_composite_sha256": null,
+          "geometry_verified": false,
+          "a4_pdf_verified": false,
+          "qa_status": "AWAITING_DESIGN_SPECIFIC_COMPOSITE"
+        },
+        {
+          "id": "SPACE-12",
+          "source_artwork": "assets/print-masters/space/12.webp",
+          "artwork_sha256": "8299f85d21699c7ad86d5c8ab3a6f94642714b2db8dee3155495b34fcd5c8688",
+          "approved_composite_path": null,
+          "approved_composite_sha256": null,
+          "geometry_verified": false,
+          "a4_pdf_verified": false,
+          "qa_status": "AWAITING_DESIGN_SPECIFIC_COMPOSITE"
+        },
+        {
+          "id": "SPACE-13",
+          "source_artwork": "assets/print-masters/space/13.webp",
+          "artwork_sha256": "a5e0b5db732929c1bc918cf0edc9f59bf650515e1b57b0716ead07658d722483",
+          "approved_composite_path": null,
+          "approved_composite_sha256": null,
+          "geometry_verified": false,
+          "a4_pdf_verified": false,
+          "qa_status": "AWAITING_DESIGN_SPECIFIC_COMPOSITE"
+        },
+        {
+          "id": "SPACE-14",
+          "source_artwork": "assets/print-masters/space/14.webp",
+          "artwork_sha256": "82ea37fce22f97363b30830c73d04946c87246b8073fca596021fa44784b783c",
+          "approved_composite_path": null,
+          "approved_composite_sha256": null,
+          "geometry_verified": false,
+          "a4_pdf_verified": false,
+          "qa_status": "AWAITING_DESIGN_SPECIFIC_COMPOSITE"
+        },
+        {
+          "id": "SPACE-15",
+          "source_artwork": "assets/print-masters/space/15.webp",
+          "artwork_sha256": "20c87a9f84ecca6f79e0e05ec3f69e78847c9bc58c3b6eb003df056285dfb8d8",
+          "approved_composite_path": null,
+          "approved_composite_sha256": null,
+          "geometry_verified": false,
+          "a4_pdf_verified": false,
+          "qa_status": "AWAITING_DESIGN_SPECIFIC_COMPOSITE"
+        },
+        {
+          "id": "SPACE-16",
+          "source_artwork": "assets/print-masters/space/16.webp",
+          "artwork_sha256": "a93fd542904a02414b5d7b514a0f25ea16d18f593ca2c38b78cb3648d769ca0e",
+          "approved_composite_path": null,
+          "approved_composite_sha256": null,
+          "geometry_verified": false,
+          "a4_pdf_verified": false,
+          "qa_status": "AWAITING_DESIGN_SPECIFIC_COMPOSITE"
+        },
+        {
+          "id": "SPACE-17",
+          "source_artwork": "assets/print-masters/space/17.webp",
+          "artwork_sha256": "529516afd7323a3a546adce72a2c669ce7eb1909673913985326a064b7eb02a1",
+          "approved_composite_path": null,
+          "approved_composite_sha256": null,
+          "geometry_verified": false,
+          "a4_pdf_verified": false,
+          "qa_status": "AWAITING_DESIGN_SPECIFIC_COMPOSITE"
+        },
+        {
+          "id": "SPACE-18",
+          "source_artwork": "assets/print-masters/space/18.webp",
+          "artwork_sha256": "7e41efd33717139b23a056b442709e3d1c20694c5dd3a6ec495da72c108d8797",
+          "approved_composite_path": null,
+          "approved_composite_sha256": null,
+          "geometry_verified": false,
+          "a4_pdf_verified": false,
+          "qa_status": "AWAITING_DESIGN_SPECIFIC_COMPOSITE"
+        },
+        {
+          "id": "SPACE-19",
+          "source_artwork": "assets/print-masters/space/19.webp",
+          "artwork_sha256": "899cf0f6bdac172c69f4701322841301431358bf94023a2946f38bde4da67272",
+          "approved_composite_path": null,
+          "approved_composite_sha256": null,
+          "geometry_verified": false,
+          "a4_pdf_verified": false,
+          "qa_status": "AWAITING_DESIGN_SPECIFIC_COMPOSITE"
+        },
+        {
+          "id": "SPACE-20",
+          "source_artwork": "assets/print-masters/space/20.webp",
+          "artwork_sha256": "9157a3cf999b2f36f1bf97055d560050c51f6e927df936fab7410853bb7433cc",
+          "approved_composite_path": null,
+          "approved_composite_sha256": null,
+          "geometry_verified": false,
+          "a4_pdf_verified": false,
+          "qa_status": "AWAITING_DESIGN_SPECIFIC_COMPOSITE"
+        }
+      ]
+    },
+    {
+      "batch_id": "B03",
+      "design_count": 10,
+      "designs": [
+        {
+          "id": "SPACE-21",
+          "source_artwork": "assets/print-masters/space/21.webp",
+          "artwork_sha256": "1b62be8db412419be9799690986328c396ccfc301328becf632668f91d0e55b9",
+          "approved_composite_path": null,
+          "approved_composite_sha256": null,
+          "geometry_verified": false,
+          "a4_pdf_verified": false,
+          "qa_status": "AWAITING_DESIGN_SPECIFIC_COMPOSITE"
+        },
+        {
+          "id": "SPACE-22",
+          "source_artwork": "assets/print-masters/space/22.webp",
+          "artwork_sha256": "16daa9b2d77dd4e6602e1d7844813d5233000df0891dc4a23c043586a5ea4b80",
+          "approved_composite_path": null,
+          "approved_composite_sha256": null,
+          "geometry_verified": false,
+          "a4_pdf_verified": false,
+          "qa_status": "AWAITING_DESIGN_SPECIFIC_COMPOSITE"
+        },
+        {
+          "id": "SPACE-23",
+          "source_artwork": "assets/print-masters/space/23.webp",
+          "artwork_sha256": "ed97633f9d201451a49cb1a24415c50bc5da3a68acb0db8785b4b5b9469ce2cc",
+          "approved_composite_path": null,
+          "approved_composite_sha256": null,
+          "geometry_verified": false,
+          "a4_pdf_verified": false,
+          "qa_status": "AWAITING_DESIGN_SPECIFIC_COMPOSITE"
+        },
+        {
+          "id": "SPACE-24",
+          "source_artwork": "assets/print-masters/space/24.webp",
+          "artwork_sha256": "26a84b46cc107830dde27c082a0c670ceb4dc43973b849274e3c996274be7519",
+          "approved_composite_path": null,
+          "approved_composite_sha256": null,
+          "geometry_verified": false,
+          "a4_pdf_verified": false,
+          "qa_status": "AWAITING_DESIGN_SPECIFIC_COMPOSITE"
+        },
+        {
+          "id": "DINO-01",
+          "source_artwork": "assets/print-masters/dino/01.webp",
+          "artwork_sha256": "de5969790b02609c683a6f80137cd2798891f7d638628e5705306797aea43369",
+          "approved_composite_path": null,
+          "approved_composite_sha256": null,
+          "geometry_verified": false,
+          "a4_pdf_verified": false,
+          "qa_status": "AWAITING_DESIGN_SPECIFIC_COMPOSITE"
+        },
+        {
+          "id": "DINO-02",
+          "source_artwork": "assets/print-masters/dino/02.webp",
+          "artwork_sha256": "b0a7b313e5f788dac771ecc662a3c4f40e6502aecd7991f7bb59782ee3934a15",
+          "approved_composite_path": null,
+          "approved_composite_sha256": null,
+          "geometry_verified": false,
+          "a4_pdf_verified": false,
+          "qa_status": "AWAITING_DESIGN_SPECIFIC_COMPOSITE"
+        },
+        {
+          "id": "DINO-03",
+          "source_artwork": "assets/print-masters/dino/03.webp",
+          "artwork_sha256": "f1ccb4baa12ed54ee07ebd894d08a538d1050fb87c4b23d2950aa47565b44313",
+          "approved_composite_path": null,
+          "approved_composite_sha256": null,
+          "geometry_verified": false,
+          "a4_pdf_verified": false,
+          "qa_status": "AWAITING_DESIGN_SPECIFIC_COMPOSITE"
+        },
+        {
+          "id": "DINO-04",
+          "source_artwork": "assets/print-masters/dino/04.webp",
+          "artwork_sha256": "74a8c474b7591234ea449c46c20c06a2d0de4afc5ebd4cb624824521d74cbccc",
+          "approved_composite_path": null,
+          "approved_composite_sha256": null,
+          "geometry_verified": false,
+          "a4_pdf_verified": false,
+          "qa_status": "AWAITING_DESIGN_SPECIFIC_COMPOSITE"
+        },
+        {
+          "id": "DINO-05",
+          "source_artwork": "assets/print-masters/dino/05.webp",
+          "artwork_sha256": "8301427edfa596ce8196ebfdc515436a07cd7734f5fa05c531539337d87e3a96",
+          "approved_composite_path": null,
+          "approved_composite_sha256": null,
+          "geometry_verified": false,
+          "a4_pdf_verified": false,
+          "qa_status": "AWAITING_DESIGN_SPECIFIC_COMPOSITE"
+        },
+        {
+          "id": "DINO-06",
+          "source_artwork": "assets/print-masters/dino/06.webp",
+          "artwork_sha256": "47fd5199f0832f9fd8fe9d39bbb68210189b914083e2d22fdd59962a3b17c1d6",
+          "approved_composite_path": null,
+          "approved_composite_sha256": null,
+          "geometry_verified": false,
+          "a4_pdf_verified": false,
+          "qa_status": "AWAITING_DESIGN_SPECIFIC_COMPOSITE"
+        }
+      ]
+    },
+    {
+      "batch_id": "B04",
+      "design_count": 10,
+      "designs": [
+        {
+          "id": "DINO-07",
+          "source_artwork": "assets/print-masters/dino/07.webp",
+          "artwork_sha256": "3e7701368a1804a6640f14b459763f605d584e5e1cb7e55d185f9102619c2172",
+          "approved_composite_path": null,
+          "approved_composite_sha256": null,
+          "geometry_verified": false,
+          "a4_pdf_verified": false,
+          "qa_status": "AWAITING_DESIGN_SPECIFIC_COMPOSITE"
+        },
+        {
+          "id": "DINO-08",
+          "source_artwork": "assets/print-masters/dino/08.webp",
+          "artwork_sha256": "bbebb0a6c87830f5971492e078ea4dfb55e646d61337845e3460e4a654f181e5",
+          "approved_composite_path": null,
+          "approved_composite_sha256": null,
+          "geometry_verified": false,
+          "a4_pdf_verified": false,
+          "qa_status": "AWAITING_DESIGN_SPECIFIC_COMPOSITE"
+        },
+        {
+          "id": "DINO-09",
+          "source_artwork": "assets/print-masters/dino/09.webp",
+          "artwork_sha256": "8c82dc9065518c379b35a117ad516f4f86ad8de6f6000a7cd3c31836f36fa766",
+          "approved_composite_path": null,
+          "approved_composite_sha256": null,
+          "geometry_verified": false,
+          "a4_pdf_verified": false,
+          "qa_status": "AWAITING_DESIGN_SPECIFIC_COMPOSITE"
+        },
+        {
+          "id": "DINO-10",
+          "source_artwork": "assets/print-masters/dino/10.webp",
+          "artwork_sha256": "29c2b2fb6f1c588c15b7f4465b5c3058cf1105b21ecfc85cdea2955e8a3ee000",
+          "approved_composite_path": null,
+          "approved_composite_sha256": null,
+          "geometry_verified": false,
+          "a4_pdf_verified": false,
+          "qa_status": "AWAITING_DESIGN_SPECIFIC_COMPOSITE"
+        },
+        {
+          "id": "DINO-11",
+          "source_artwork": "assets/print-masters/dino/11.webp",
+          "artwork_sha256": "56647974c1b04df000da0104699578840064b13d85c018821b73223fab3a5d65",
+          "approved_composite_path": null,
+          "approved_composite_sha256": null,
+          "geometry_verified": false,
+          "a4_pdf_verified": false,
+          "qa_status": "AWAITING_DESIGN_SPECIFIC_COMPOSITE"
+        },
+        {
+          "id": "DINO-12",
+          "source_artwork": "assets/print-masters/dino/12.webp",
+          "artwork_sha256": "5a9d2103b9d682af215d014bb0b937bec25ba4ad8d7077847ee5532bdfd037f6",
+          "approved_composite_path": null,
+          "approved_composite_sha256": null,
+          "geometry_verified": false,
+          "a4_pdf_verified": false,
+          "qa_status": "AWAITING_DESIGN_SPECIFIC_COMPOSITE"
+        },
+        {
+          "id": "DINO-13",
+          "source_artwork": "assets/print-masters/dino/13.webp",
+          "artwork_sha256": "46404c67645c3ad31998e2eff65cfed9ec1f89a002c6087e6b7fcc18aac99fbd",
+          "approved_composite_path": null,
+          "approved_composite_sha256": null,
+          "geometry_verified": false,
+          "a4_pdf_verified": false,
+          "qa_status": "AWAITING_DESIGN_SPECIFIC_COMPOSITE"
+        },
+        {
+          "id": "DINO-14",
+          "source_artwork": "assets/print-masters/dino/14.webp",
+          "artwork_sha256": "ce06a80fc7318c04aedb291d9e60a152f97f87c2e11077457f39497e7bc87858",
+          "approved_composite_path": null,
+          "approved_composite_sha256": null,
+          "geometry_verified": false,
+          "a4_pdf_verified": false,
+          "qa_status": "AWAITING_DESIGN_SPECIFIC_COMPOSITE"
+        },
+        {
+          "id": "DINO-15",
+          "source_artwork": "assets/print-masters/dino/15.webp",
+          "artwork_sha256": "fa1f4faa8713f68aaf78b4178efe279d588eb7bb3aefd9953f42354c2f5eddde",
+          "approved_composite_path": null,
+          "approved_composite_sha256": null,
+          "geometry_verified": false,
+          "a4_pdf_verified": false,
+          "qa_status": "AWAITING_DESIGN_SPECIFIC_COMPOSITE"
+        },
+        {
+          "id": "DINO-16",
+          "source_artwork": "assets/print-masters/dino/16.webp",
+          "artwork_sha256": "fd47cebc72c281e2e6c63161a1f86bc2c4c471680d6b65297e18f780806b3559",
+          "approved_composite_path": null,
+          "approved_composite_sha256": null,
+          "geometry_verified": false,
+          "a4_pdf_verified": false,
+          "qa_status": "AWAITING_DESIGN_SPECIFIC_COMPOSITE"
+        }
+      ]
+    },
+    {
+      "batch_id": "B05",
+      "design_count": 10,
+      "designs": [
+        {
+          "id": "DINO-17",
+          "source_artwork": "assets/print-masters/dino/17.webp",
+          "artwork_sha256": "dc702272a9f15a4ca7bb2046c32f300c3dbcbbb39e37f6208cd6f25f0d047484",
+          "approved_composite_path": null,
+          "approved_composite_sha256": null,
+          "geometry_verified": false,
+          "a4_pdf_verified": false,
+          "qa_status": "AWAITING_DESIGN_SPECIFIC_COMPOSITE"
+        },
+        {
+          "id": "DINO-18",
+          "source_artwork": "assets/print-masters/dino/18.webp",
+          "artwork_sha256": "8576c9be283162effd60e208f388a0b3802e26c096ae1b23eb128025c96086ca",
+          "approved_composite_path": null,
+          "approved_composite_sha256": null,
+          "geometry_verified": false,
+          "a4_pdf_verified": false,
+          "qa_status": "AWAITING_DESIGN_SPECIFIC_COMPOSITE"
+        },
+        {
+          "id": "DINO-19",
+          "source_artwork": "assets/print-masters/dino/19.webp",
+          "artwork_sha256": "efa622b648677eefca329bd6cfa317c84b8b6bbea5f9a5b7f272176875499292",
+          "approved_composite_path": null,
+          "approved_composite_sha256": null,
+          "geometry_verified": false,
+          "a4_pdf_verified": false,
+          "qa_status": "AWAITING_DESIGN_SPECIFIC_COMPOSITE"
+        },
+        {
+          "id": "DINO-20",
+          "source_artwork": "assets/print-masters/dino/20.webp",
+          "artwork_sha256": "5e3363b3316766fd498533b4c61e94288ea9bde2e6081357de47c1f3a38571c8",
+          "approved_composite_path": null,
+          "approved_composite_sha256": null,
+          "geometry_verified": false,
+          "a4_pdf_verified": false,
+          "qa_status": "AWAITING_DESIGN_SPECIFIC_COMPOSITE"
+        },
+        {
+          "id": "DINO-21",
+          "source_artwork": "assets/print-masters/dino/21.webp",
+          "artwork_sha256": "811f05353c71afcfdde4078eeeae4bd07b3efb91e7f9be4298209946a59729b3",
+          "approved_composite_path": null,
+          "approved_composite_sha256": null,
+          "geometry_verified": false,
+          "a4_pdf_verified": false,
+          "qa_status": "AWAITING_DESIGN_SPECIFIC_COMPOSITE"
+        },
+        {
+          "id": "DINO-22",
+          "source_artwork": "assets/print-masters/dino/22.webp",
+          "artwork_sha256": "395c281d182d2dc50668d440d0a01497cde16a622949256c7afc9f0bf54560c1",
+          "approved_composite_path": null,
+          "approved_composite_sha256": null,
+          "geometry_verified": false,
+          "a4_pdf_verified": false,
+          "qa_status": "AWAITING_DESIGN_SPECIFIC_COMPOSITE"
+        },
+        {
+          "id": "DINO-23",
+          "source_artwork": "assets/print-masters/dino/23.webp",
+          "artwork_sha256": "2465e2facbc8e1983ca8c5fe3b8b7655f587283324bdeecd5e6a28e728e2acc9",
+          "approved_composite_path": null,
+          "approved_composite_sha256": null,
+          "geometry_verified": false,
+          "a4_pdf_verified": false,
+          "qa_status": "AWAITING_DESIGN_SPECIFIC_COMPOSITE"
+        },
+        {
+          "id": "DINO-24",
+          "source_artwork": "assets/print-masters/dino/24.webp",
+          "artwork_sha256": "e95801a1f6544a18257334824de11dd90a3b38db346e7f9974a85a695dc030ce",
+          "approved_composite_path": null,
+          "approved_composite_sha256": null,
+          "geometry_verified": false,
+          "a4_pdf_verified": false,
+          "qa_status": "AWAITING_DESIGN_SPECIFIC_COMPOSITE"
+        },
+        {
+          "id": "RAINBOW-01",
+          "source_artwork": "assets/print-masters/rainbow/01.webp",
+          "artwork_sha256": "1a1d3850ee96ee6fa273eaaecee8fb38b3ace5d4bf4e9e7bbd784f6d361be33d",
+          "approved_composite_path": null,
+          "approved_composite_sha256": null,
+          "geometry_verified": false,
+          "a4_pdf_verified": false,
+          "qa_status": "AWAITING_DESIGN_SPECIFIC_COMPOSITE"
+        },
+        {
+          "id": "RAINBOW-02",
+          "source_artwork": "assets/print-masters/rainbow/02.webp",
+          "artwork_sha256": "e595274a55a482d39a984e450fa129a3ab383ca51c493e948e98e43fbd486dbb",
+          "approved_composite_path": null,
+          "approved_composite_sha256": null,
+          "geometry_verified": false,
+          "a4_pdf_verified": false,
+          "qa_status": "AWAITING_DESIGN_SPECIFIC_COMPOSITE"
+        }
+      ]
+    },
+    {
+      "batch_id": "B06",
+      "design_count": 10,
+      "designs": [
+        {
+          "id": "RAINBOW-03",
+          "source_artwork": "assets/print-masters/rainbow/03.webp",
+          "artwork_sha256": "2b62a98ee91633d3c4988333c4a27519c8bddaeba6b66119b82f80d0e5391be6",
+          "approved_composite_path": null,
+          "approved_composite_sha256": null,
+          "geometry_verified": false,
+          "a4_pdf_verified": false,
+          "qa_status": "AWAITING_DESIGN_SPECIFIC_COMPOSITE"
+        },
+        {
+          "id": "RAINBOW-04",
+          "source_artwork": "assets/print-masters/rainbow/04.webp",
+          "artwork_sha256": "19539eecfa62d9b5c0305acb9b56068fc08a6f77d49a9c6f86ac750a8a79ba1d",
+          "approved_composite_path": null,
+          "approved_composite_sha256": null,
+          "geometry_verified": false,
+          "a4_pdf_verified": false,
+          "qa_status": "AWAITING_DESIGN_SPECIFIC_COMPOSITE"
+        },
+        {
+          "id": "RAINBOW-05",
+          "source_artwork": "assets/print-masters/rainbow/05.webp",
+          "artwork_sha256": "1bb64d429da31c81baaec236f2b006b70213c34ea580c4fc373f9ea5f58e9bed",
+          "approved_composite_path": null,
+          "approved_composite_sha256": null,
+          "geometry_verified": false,
+          "a4_pdf_verified": false,
+          "qa_status": "AWAITING_DESIGN_SPECIFIC_COMPOSITE"
+        },
+        {
+          "id": "RAINBOW-06",
+          "source_artwork": "assets/print-masters/rainbow/06.webp",
+          "artwork_sha256": "253372f440c0b9ec138092a6edd8c5b4ed0239411b7384d66e10de345469ea24",
+          "approved_composite_path": null,
+          "approved_composite_sha256": null,
+          "geometry_verified": false,
+          "a4_pdf_verified": false,
+          "qa_status": "AWAITING_DESIGN_SPECIFIC_COMPOSITE"
+        },
+        {
+          "id": "RAINBOW-07",
+          "source_artwork": "assets/print-masters/rainbow/07.webp",
+          "artwork_sha256": "5002c61921fea7c842d53c22125e751cdc2624c7b6a2067458468d68f34ea57c",
+          "approved_composite_path": null,
+          "approved_composite_sha256": null,
+          "geometry_verified": false,
+          "a4_pdf_verified": false,
+          "qa_status": "AWAITING_DESIGN_SPECIFIC_COMPOSITE"
+        },
+        {
+          "id": "RAINBOW-08",
+          "source_artwork": "assets/print-masters/rainbow/08.webp",
+          "artwork_sha256": "7043667edc30bea6ccee1363e008ac0888e6879657ea08d8f9336d0feead0684",
+          "approved_composite_path": null,
+          "approved_composite_sha256": null,
+          "geometry_verified": false,
+          "a4_pdf_verified": false,
+          "qa_status": "AWAITING_DESIGN_SPECIFIC_COMPOSITE"
+        },
+        {
+          "id": "RAINBOW-09",
+          "source_artwork": "assets/print-masters/rainbow/09.webp",
+          "artwork_sha256": "f3341890f42b5706aa7251dd685f8d4273a462b570b2077b6005de68161d18ae",
+          "approved_composite_path": null,
+          "approved_composite_sha256": null,
+          "geometry_verified": false,
+          "a4_pdf_verified": false,
+          "qa_status": "AWAITING_DESIGN_SPECIFIC_COMPOSITE"
+        },
+        {
+          "id": "RAINBOW-10",
+          "source_artwork": "assets/print-masters/rainbow/10.webp",
+          "artwork_sha256": "45bfc5ab48078aebf143abae13d950950d90d50bfcb4e7fae2c9e1579bdb5e33",
+          "approved_composite_path": null,
+          "approved_composite_sha256": null,
+          "geometry_verified": false,
+          "a4_pdf_verified": false,
+          "qa_status": "AWAITING_DESIGN_SPECIFIC_COMPOSITE"
+        },
+        {
+          "id": "RAINBOW-11",
+          "source_artwork": "assets/print-masters/rainbow/11.webp",
+          "artwork_sha256": "5da753a24765728ddeb5245d5c14dad17da69053c494185d4defa79d3af4298e",
+          "approved_composite_path": null,
+          "approved_composite_sha256": null,
+          "geometry_verified": false,
+          "a4_pdf_verified": false,
+          "qa_status": "AWAITING_DESIGN_SPECIFIC_COMPOSITE"
+        },
+        {
+          "id": "RAINBOW-12",
+          "source_artwork": "assets/print-masters/rainbow/12.webp",
+          "artwork_sha256": "0705c3bd513d5947d13707a8936964479af4614ede1fe0e4e4b94321bf417692",
+          "approved_composite_path": null,
+          "approved_composite_sha256": null,
+          "geometry_verified": false,
+          "a4_pdf_verified": false,
+          "qa_status": "AWAITING_DESIGN_SPECIFIC_COMPOSITE"
+        }
+      ]
+    },
+    {
+      "batch_id": "B07",
+      "design_count": 10,
+      "designs": [
+        {
+          "id": "RAINBOW-13",
+          "source_artwork": "assets/print-masters/rainbow/13.webp",
+          "artwork_sha256": "3a8d1076014826847b6608dd226df72164ddabf5b9b7e46fa0eec5591773b8a0",
+          "approved_composite_path": null,
+          "approved_composite_sha256": null,
+          "geometry_verified": false,
+          "a4_pdf_verified": false,
+          "qa_status": "AWAITING_DESIGN_SPECIFIC_COMPOSITE"
+        },
+        {
+          "id": "RAINBOW-14",
+          "source_artwork": "assets/print-masters/rainbow/14.webp",
+          "artwork_sha256": "c8ef92f8e9f02c08f47ab114bfc358c5b4cc6fe9db02186df1f1edd4e13a798f",
+          "approved_composite_path": null,
+          "approved_composite_sha256": null,
+          "geometry_verified": false,
+          "a4_pdf_verified": false,
+          "qa_status": "AWAITING_DESIGN_SPECIFIC_COMPOSITE"
+        },
+        {
+          "id": "RAINBOW-15",
+          "source_artwork": "assets/print-masters/rainbow/15.webp",
+          "artwork_sha256": "739c3ae2657a83da3b16c081bce6bd88e17027963ab665c7054782e93c547aef",
+          "approved_composite_path": null,
+          "approved_composite_sha256": null,
+          "geometry_verified": false,
+          "a4_pdf_verified": false,
+          "qa_status": "AWAITING_DESIGN_SPECIFIC_COMPOSITE"
+        },
+        {
+          "id": "RAINBOW-16",
+          "source_artwork": "assets/print-masters/rainbow/16.webp",
+          "artwork_sha256": "5867794088d9ef442a910e0823dc2bb381d0fb027c039a301c6fea0e601ae633",
+          "approved_composite_path": null,
+          "approved_composite_sha256": null,
+          "geometry_verified": false,
+          "a4_pdf_verified": false,
+          "qa_status": "AWAITING_DESIGN_SPECIFIC_COMPOSITE"
+        },
+        {
+          "id": "RAINBOW-17",
+          "source_artwork": "assets/print-masters/rainbow/17.webp",
+          "artwork_sha256": "4db0f90d89859e24dc2df6b404699d052f4fc5c897fdb6ec427cdf2fda29f91e",
+          "approved_composite_path": null,
+          "approved_composite_sha256": null,
+          "geometry_verified": false,
+          "a4_pdf_verified": false,
+          "qa_status": "AWAITING_DESIGN_SPECIFIC_COMPOSITE"
+        },
+        {
+          "id": "RAINBOW-18",
+          "source_artwork": "assets/print-masters/rainbow/18.webp",
+          "artwork_sha256": "0ac14824dbc80ece4378cdebe08f9e097e43b7fb91b0f00fbff8c0ca3df06218",
+          "approved_composite_path": null,
+          "approved_composite_sha256": null,
+          "geometry_verified": false,
+          "a4_pdf_verified": false,
+          "qa_status": "AWAITING_DESIGN_SPECIFIC_COMPOSITE"
+        },
+        {
+          "id": "RAINBOW-19",
+          "source_artwork": "assets/print-masters/rainbow/19.webp",
+          "artwork_sha256": "08d387e07d79ba9ea9e64acc1b26196b9fd8120d9fb4e37ca933adf733cd26e1",
+          "approved_composite_path": null,
+          "approved_composite_sha256": null,
+          "geometry_verified": false,
+          "a4_pdf_verified": false,
+          "qa_status": "AWAITING_DESIGN_SPECIFIC_COMPOSITE"
+        },
+        {
+          "id": "RAINBOW-20",
+          "source_artwork": "assets/print-masters/rainbow/20.webp",
+          "artwork_sha256": "c89ca9a33e764e696c96101ebb3bcd45f52e83e4b19d53a04e5bce3e57540c68",
+          "approved_composite_path": null,
+          "approved_composite_sha256": null,
+          "geometry_verified": false,
+          "a4_pdf_verified": false,
+          "qa_status": "AWAITING_DESIGN_SPECIFIC_COMPOSITE"
+        },
+        {
+          "id": "RAINBOW-21",
+          "source_artwork": "assets/print-masters/rainbow/21.webp",
+          "artwork_sha256": "4eb477484241fff09130515d0f0916e687aa9510a4cc0af30e76f1b35bed8aad",
+          "approved_composite_path": null,
+          "approved_composite_sha256": null,
+          "geometry_verified": false,
+          "a4_pdf_verified": false,
+          "qa_status": "AWAITING_DESIGN_SPECIFIC_COMPOSITE"
+        },
+        {
+          "id": "RAINBOW-22",
+          "source_artwork": "assets/print-masters/rainbow/22.webp",
+          "artwork_sha256": "202f9d4727591585ffd6da7f4592b0497a7c61003a427802acbf3ad681583266",
+          "approved_composite_path": null,
+          "approved_composite_sha256": null,
+          "geometry_verified": false,
+          "a4_pdf_verified": false,
+          "qa_status": "AWAITING_DESIGN_SPECIFIC_COMPOSITE"
+        }
+      ]
+    },
+    {
+      "batch_id": "B08",
+      "design_count": 2,
+      "designs": [
+        {
+          "id": "RAINBOW-23",
+          "source_artwork": "assets/print-masters/rainbow/23.webp",
+          "artwork_sha256": "c7474413d3afc409611f0538ccb477efd5aeb1d580aa8dfb368355c1fc74f7b2",
+          "approved_composite_path": null,
+          "approved_composite_sha256": null,
+          "geometry_verified": false,
+          "a4_pdf_verified": false,
+          "qa_status": "AWAITING_DESIGN_SPECIFIC_COMPOSITE"
+        },
+        {
+          "id": "RAINBOW-24",
+          "source_artwork": "assets/print-masters/rainbow/24.webp",
+          "artwork_sha256": "688411895ebf996e95067184a378b01a6c013ea7322d3b9cb1ffd99e0b8d7dae",
+          "approved_composite_path": null,
+          "approved_composite_sha256": null,
+          "geometry_verified": false,
+          "a4_pdf_verified": false,
+          "qa_status": "AWAITING_DESIGN_SPECIFIC_COMPOSITE"
+        }
+      ]
+    }
+  ]
+}
