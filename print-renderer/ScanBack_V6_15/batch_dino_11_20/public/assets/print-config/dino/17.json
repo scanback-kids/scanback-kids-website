@@ -1,0 +1,78 @@
+{
+  "theme": "dino",
+  "design": "17",
+  "title": "Green Leaf Dinosaur",
+  "source": "dinosaur_world_personalisation_sticker.png",
+  "default_item": "Story Book",
+  "canvas": {
+    "width": 1122,
+    "height": 1402
+  },
+  "image": "/assets/print-masters/dino/17.webp",
+  "name": {
+    "plate_bounds": [
+      279,
+      1047,
+      821,
+      1165
+    ],
+    "text_bounds": [
+      306,
+      1068,
+      794,
+      1143
+    ],
+    "color": "#123574",
+    "max_ink_height": 55,
+    "min_ink_height": 39,
+    "min_width_scale": 0.6
+  },
+  "item": {
+    "plate_bounds": [
+      270,
+      1174,
+      823,
+      1271
+    ],
+    "text_bounds": [
+      295,
+      1188,
+      798,
+      1256
+    ],
+    "color": "#102C66",
+    "max_ink_height": 46,
+    "min_ink_height": 32,
+    "min_width_scale": 0.63
+  },
+  "qr": {
+    "bounds": [
+      865,
+      1078,
+      1041,
+      1254
+    ],
+    "quiet_zone_modules": 4,
+    "inside_frame_inset_px": 6
+  },
+  "header": {
+    "content": "This item belongs to",
+    "center": [
+      554,
+      1023
+    ],
+    "max_ink_height": 34
+  },
+  "footer": {
+    "content": "\u2665 ScanBack Kids",
+    "center": [
+      555,
+      1290
+    ],
+    "max_ink_height": 25
+  },
+  "cutline": {
+    "status": "concept_requires_printer_approval"
+  },
+  "production_status": "DEVELOPMENT_QA_ONLY"
+}

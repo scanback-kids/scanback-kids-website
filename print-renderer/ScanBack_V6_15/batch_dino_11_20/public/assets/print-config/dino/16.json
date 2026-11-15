@@ -1,0 +1,78 @@
+{
+  "theme": "dino",
+  "design": "16",
+  "title": "Blue Spinosaurus",
+  "source": "cheerful_spinosaurus_lagoon_sticker.png",
+  "default_item": "Sports Kit",
+  "canvas": {
+    "width": 1122,
+    "height": 1402
+  },
+  "image": "/assets/print-masters/dino/16.webp",
+  "name": {
+    "plate_bounds": [
+      265,
+      1028,
+      821,
+      1151
+    ],
+    "text_bounds": [
+      292,
+      1049,
+      794,
+      1129
+    ],
+    "color": "#123574",
+    "max_ink_height": 55,
+    "min_ink_height": 39,
+    "min_width_scale": 0.6
+  },
+  "item": {
+    "plate_bounds": [
+      292,
+      1158,
+      823,
+      1252
+    ],
+    "text_bounds": [
+      317,
+      1172,
+      798,
+      1237
+    ],
+    "color": "#102C66",
+    "max_ink_height": 46,
+    "min_ink_height": 32,
+    "min_width_scale": 0.63
+  },
+  "qr": {
+    "bounds": [
+      865,
+      1059,
+      1041,
+      1235
+    ],
+    "quiet_zone_modules": 4,
+    "inside_frame_inset_px": 6
+  },
+  "header": {
+    "content": "This item belongs to",
+    "center": [
+      554,
+      1004
+    ],
+    "max_ink_height": 34
+  },
+  "footer": {
+    "content": "\u2665 ScanBack Kids",
+    "center": [
+      555,
+      1271
+    ],
+    "max_ink_height": 25
+  },
+  "cutline": {
+    "status": "concept_requires_printer_approval"
+  },
+  "production_status": "DEVELOPMENT_QA_ONLY"
+}

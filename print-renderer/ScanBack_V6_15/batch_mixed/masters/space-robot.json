@@ -1,0 +1,30 @@
+{
+  "id": "space-robot",
+  "source_artwork": "bunny_robot_space_art_sticker.png",
+  "width": 1254,
+  "height": 1254,
+  "name": [
+    0.343,
+    0.738,
+    0.369,
+    0.078
+  ],
+  "item": [
+    0.354067,
+    0.851675,
+    0.30941,
+    0.047847
+  ],
+  "qr": [
+    0.738,
+    0.746,
+    0.178,
+    0.173
+  ],
+  "name_color": "#6828cf",
+  "default_item": "Art Kit",
+  "approval": "ARTWORK_APPROVED_LAYOUT_PILOT",
+  "cut_contour": "NOT_PRINTER_APPROVED",
+  "notice": "Artwork has empty label zones; generated names and QR are separate layers. QR URL must be verified on server for real orders.",
+  "item_ink_target": "0.66 of calibrated safe box, centered"
+}

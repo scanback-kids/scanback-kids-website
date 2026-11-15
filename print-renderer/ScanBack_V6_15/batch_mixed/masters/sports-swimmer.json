@@ -1,0 +1,30 @@
+{
+  "id": "sports-swimmer",
+  "source_artwork": "splashy_swimming_sticker_template.png",
+  "width": 1254,
+  "height": 1254,
+  "name": [
+    0.316,
+    0.664,
+    0.4,
+    0.084
+  ],
+  "item": [
+    0.370016,
+    0.791069,
+    0.279107,
+    0.043062
+  ],
+  "qr": [
+    0.753,
+    0.718,
+    0.171,
+    0.185
+  ],
+  "name_color": "#0c76e4",
+  "default_item": "Pencil Box",
+  "approval": "ARTWORK_APPROVED_LAYOUT_PILOT",
+  "cut_contour": "NOT_PRINTER_APPROVED",
+  "notice": "Artwork has empty label zones; generated names and QR are separate layers. QR URL must be verified on server for real orders.",
+  "item_ink_target": "0.66 of calibrated safe box, centered"
+}

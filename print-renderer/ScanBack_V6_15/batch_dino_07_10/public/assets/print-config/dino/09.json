@@ -1,0 +1,46 @@
+{
+  "theme": "dino",
+  "design": "09",
+  "title": "Teal Baby Dinosaur",
+  "width": 1254,
+  "height": 1254,
+  "image": "/assets/print-masters/dino/09.webp",
+  "name": {
+    "box": [
+      345,
+      971,
+      902,
+      1050
+    ],
+    "color": "#0799AB",
+    "min_ink_height": 42,
+    "max_ink_height": 58,
+    "min_horizontal_scale": 0.6
+  },
+  "item": {
+    "box": [
+      360,
+      1061,
+      896,
+      1142
+    ],
+    "color": "#102D69",
+    "min_ink_height": 32,
+    "max_ink_height": 49,
+    "min_horizontal_scale": 0.65
+  },
+  "qr": {
+    "box": [
+      936,
+      960,
+      1150,
+      1160
+    ],
+    "quiet_zone_modules": 4
+  },
+  "cut": {
+    "offset_pixels": 6,
+    "requires_printer_approval": true
+  },
+  "status": "QA_CANDIDATE_NOT_DISPATCH_APPROVED"
+}

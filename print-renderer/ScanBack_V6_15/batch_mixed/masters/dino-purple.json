@@ -1,0 +1,30 @@
+{
+  "id": "dino-purple",
+  "source_artwork": "dinosaur_world_custom_sticker_label.png",
+  "width": 1254,
+  "height": 1254,
+  "name": [
+    0.329,
+    0.685,
+    0.385,
+    0.104
+  ],
+  "item": [
+    0.330144,
+    0.800638,
+    0.342903,
+    0.058214
+  ],
+  "qr": [
+    0.744,
+    0.699,
+    0.158,
+    0.194
+  ],
+  "name_color": "#0d9a66",
+  "default_item": "Water Bottle",
+  "approval": "ARTWORK_APPROVED_LAYOUT_PILOT",
+  "cut_contour": "NOT_PRINTER_APPROVED",
+  "notice": "Artwork has empty label zones; generated names and QR are separate layers. QR URL must be verified on server for real orders.",
+  "item_ink_target": "0.66 of calibrated safe box, centered"
+}

@@ -1,0 +1,36 @@
+{
+  "test": "local PDF raster scan QA, 300 DPI, synthetic HTTPS QR destinations",
+  "artwork_sha256": "96/96 matched",
+  "rounded": {
+    "size_mm": [
+      60,
+      31
+    ],
+    "pages": 5,
+    "qr_pass": 94,
+    "qr_fail": [
+      "SPORTS-02",
+      "SPORTS-08"
+    ]
+  },
+  "diecut": {
+    "size_mm": [
+      55,
+      58
+    ],
+    "pages": 11,
+    "qr_pass": 93,
+    "qr_fail": [
+      "SPACE-17",
+      "DINO-01",
+      "SPORTS-08"
+    ]
+  },
+  "status": "BLOCKED",
+  "limitations": [
+    "QA run was performed with a local proof harness; repository adapter has not yet been independently executed",
+    "Synthetic QR URLs only; no Supabase allocation",
+    "Original V6.15 per-artwork geometry not yet mapped to 96 designs",
+    "No production printing or shipment approval"
+  ]
+}
