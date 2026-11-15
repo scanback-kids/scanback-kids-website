@@ -26,6 +26,10 @@ These are catalog-to-legacy visual review candidates with at least 10 geometric 
 
 **Important:** Several *cross-theme* feature matches also scored highly, including SPORTS-08 to space-astronaut (23 inliers) and SPORTS-11 to dino-07 (10). These are strong warnings that feature counts are **not** sufficient proof of design identity. For that reason the matching script does not write approvals or transfer geometry.
 
+## Manual image inspection of the strongest Sports lead
+
+Directly inspecting the two committed images confirmed that `assets/print-masters/sports/22.webp` and the original `batch_mixed/masters/sports-racer.webp` depict the same red go-kart racer scene with a winking child, checkered flags and a trophy. The legacy composite includes illustrated nameplate, item label and white QR region. This establishes a **plausible shared underlying racer illustration**, not pixel identity, correct catalog assignment, approval of SPORTS-22's source identity, or transferable coordinates. The older SPORTS-22 manifest says “Tennis boy”, so this remains an explicit identity conflict.
+
 ## Source-composite recovery status
 
 - Existing *20 original composite masters* remain preserved and source-coordinate-verified.
