@@ -1,0 +1,46 @@
+{
+  "theme": "dino",
+  "design": "08",
+  "title": "Orange Dinosaur Splash",
+  "width": 1254,
+  "height": 1254,
+  "image": "/assets/print-masters/dino/08.webp",
+  "name": {
+    "box": [
+      342,
+      967,
+      894,
+      1034
+    ],
+    "color": "#ED8212",
+    "min_ink_height": 42,
+    "max_ink_height": 58,
+    "min_horizontal_scale": 0.6
+  },
+  "item": {
+    "box": [
+      359,
+      1056,
+      892,
+      1137
+    ],
+    "color": "#102D69",
+    "min_ink_height": 32,
+    "max_ink_height": 49,
+    "min_horizontal_scale": 0.65
+  },
+  "qr": {
+    "box": [
+      964,
+      959,
+      1174,
+      1144
+    ],
+    "quiet_zone_modules": 4
+  },
+  "cut": {
+    "offset_pixels": 6,
+    "requires_printer_approval": true
+  },
+  "status": "QA_CANDIDATE_NOT_DISPATCH_APPROVED"
+}

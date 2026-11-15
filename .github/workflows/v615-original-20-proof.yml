@@ -1,0 +1,46 @@
+name: V6.15 original 20-master print renderer regression
+on:
+  pull_request:
+    paths:
+      - 'print-renderer/ScanBack_V6_15/**'
+      - '.github/workflows/v615-original-20-proof.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  original-20-proof:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5.6.0
+        with:
+          python-version: '3.11'
+      - name: Install dependencies for original V6.15 PDF generator
+        run: python -m pip install 'Pillow==11.3.0' 'numpy==2.2.6' 'opencv-python-headless==4.12.0.88' 'qrcode==8.2' 'PyMuPDF==1.26.5' 'reportlab==4.4.4'
+      - name: Run preserved original generator across 20 composites (demo QR only)
+        run: python print-renderer/ScanBack_V6_15/generate_proofs.py --qa
+      - name: Check reported source and rendered PDF QR tests
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path('print-renderer/ScanBack_V6_15/QA/QA_REPORT.json')
+          q=json.loads(p.read_text())
+          assert q['masters_present']==20, q['masters_present']
+          assert q['all_pass'] is True, 'original 20 QA reported failure'
+          assert len(q['scenarios'])==3
+          assert all(x['source_qrs']==20 for x in q['scenarios'])
+          assert q['scenarios'][0]['pdf_qrs_decoded']==20
+          print('Original 20 V6.15 proof source and PDF QR regression passed')
+          PY
+      - name: Preserve original 20-master rendered PDF and QR audit
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: v615-original-20-proof-regression
+          path: |
+            print-renderer/ScanBack_V6_15/QA/QA_REPORT.json
+            print-renderer/ScanBack_V6_15/QA/MIRA_ALL_20_A4_ACTUAL_GENERATOR.pdf
+          if-no-files-found: error

@@ -1,0 +1,78 @@
+{
+  "theme": "dino",
+  "design": "18",
+  "title": "Orange T-Rex",
+  "source": "glossy_chibi_t_rex_jungle_sticker.png",
+  "default_item": "Art Kit",
+  "canvas": {
+    "width": 1122,
+    "height": 1402
+  },
+  "image": "/assets/print-masters/dino/18.webp",
+  "name": {
+    "plate_bounds": [
+      270,
+      1079,
+      822,
+      1190
+    ],
+    "text_bounds": [
+      297,
+      1100,
+      795,
+      1168
+    ],
+    "color": "#123574",
+    "max_ink_height": 55,
+    "min_ink_height": 39,
+    "min_width_scale": 0.6
+  },
+  "item": {
+    "plate_bounds": [
+      282,
+      1197,
+      796,
+      1285
+    ],
+    "text_bounds": [
+      307,
+      1211,
+      771,
+      1270
+    ],
+    "color": "#102C66",
+    "max_ink_height": 46,
+    "min_ink_height": 32,
+    "min_width_scale": 0.63
+  },
+  "qr": {
+    "bounds": [
+      865,
+      1110,
+      1041,
+      1286
+    ],
+    "quiet_zone_modules": 4,
+    "inside_frame_inset_px": 6
+  },
+  "header": {
+    "content": "This item belongs to",
+    "center": [
+      554,
+      1055
+    ],
+    "max_ink_height": 34
+  },
+  "footer": {
+    "content": "\u2665 ScanBack Kids",
+    "center": [
+      555,
+      1304
+    ],
+    "max_ink_height": 25
+  },
+  "cutline": {
+    "status": "concept_requires_printer_approval"
+  },
+  "production_status": "DEVELOPMENT_QA_ONLY"
+}

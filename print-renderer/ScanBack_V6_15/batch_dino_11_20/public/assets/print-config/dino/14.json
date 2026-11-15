@@ -1,0 +1,78 @@
+{
+  "theme": "dino",
+  "design": "14",
+  "title": "Rainbow Stegosaurus",
+  "source": "cheerful_rainbow_stegosaurus_meadow_sticker.png",
+  "default_item": "Notebook",
+  "canvas": {
+    "width": 1122,
+    "height": 1402
+  },
+  "image": "/assets/print-masters/dino/14.webp",
+  "name": {
+    "plate_bounds": [
+      286,
+      1045,
+      817,
+      1159
+    ],
+    "text_bounds": [
+      313,
+      1066,
+      790,
+      1137
+    ],
+    "color": "#123574",
+    "max_ink_height": 55,
+    "min_ink_height": 39,
+    "min_width_scale": 0.6
+  },
+  "item": {
+    "plate_bounds": [
+      290,
+      1170,
+      798,
+      1267
+    ],
+    "text_bounds": [
+      315,
+      1184,
+      773,
+      1252
+    ],
+    "color": "#102C66",
+    "max_ink_height": 46,
+    "min_ink_height": 32,
+    "min_width_scale": 0.63
+  },
+  "qr": {
+    "bounds": [
+      865,
+      1076,
+      1041,
+      1252
+    ],
+    "quiet_zone_modules": 4,
+    "inside_frame_inset_px": 6
+  },
+  "header": {
+    "content": "This item belongs to",
+    "center": [
+      554,
+      1021
+    ],
+    "max_ink_height": 34
+  },
+  "footer": {
+    "content": "\u2665 ScanBack Kids",
+    "center": [
+      555,
+      1286
+    ],
+    "max_ink_height": 25
+  },
+  "cutline": {
+    "status": "concept_requires_printer_approval"
+  },
+  "production_status": "DEVELOPMENT_QA_ONLY"
+}

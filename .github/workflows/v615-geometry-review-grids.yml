@@ -1,0 +1,28 @@
+name: V6.15 geometry review grids
+on:
+  pull_request:
+    paths:
+      - 'assets/print-masters/**'
+      - 'print-renderer/v615_96_geometry_registry.json'
+      - 'print-renderer/create_96_geometry_review_sheets.py'
+      - '.github/workflows/v615-geometry-review-grids.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  build-grids:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
+      - name: Install image dependency
+        run: python3 -m pip install 'Pillow==11.3.0'
+      - name: Generate source-coordinate review sheets (no artwork mutation)
+        run: python3 print-renderer/create_96_geometry_review_sheets.py --out qa-output/geometry-review
+      - name: Upload review sheets
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: v615-96-source-coordinate-grids
+          path: qa-output/geometry-review/*.png
+          if-no-files-found: error

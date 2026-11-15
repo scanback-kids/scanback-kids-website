@@ -1,0 +1,127 @@
+{
+  "compared": 20,
+  "zero_unexpected_artwork_pixels": 20,
+  "all_pass": true,
+  "results": [
+    {
+      "id": "dino-purple",
+      "outside_permitted_regions_changed_pixels": 0,
+      "sticker_dimensions_preserved": true,
+      "qr_box_preserved": true
+    },
+    {
+      "id": "rainbow-unicorn",
+      "outside_permitted_regions_changed_pixels": 0,
+      "sticker_dimensions_preserved": true,
+      "qr_box_preserved": true
+    },
+    {
+      "id": "space-astronaut",
+      "outside_permitted_regions_changed_pixels": 0,
+      "sticker_dimensions_preserved": true,
+      "qr_box_preserved": true
+    },
+    {
+      "id": "space-robot",
+      "outside_permitted_regions_changed_pixels": 0,
+      "sticker_dimensions_preserved": true,
+      "qr_box_preserved": true
+    },
+    {
+      "id": "sports-racer",
+      "outside_permitted_regions_changed_pixels": 0,
+      "sticker_dimensions_preserved": true,
+      "qr_box_preserved": true
+    },
+    {
+      "id": "sports-swimmer",
+      "outside_permitted_regions_changed_pixels": 0,
+      "sticker_dimensions_preserved": true,
+      "qr_box_preserved": true
+    },
+    {
+      "id": "dino-07",
+      "outside_permitted_regions_changed_pixels": 0,
+      "sticker_dimensions_preserved": true,
+      "qr_box_preserved": true
+    },
+    {
+      "id": "dino-08",
+      "outside_permitted_regions_changed_pixels": 0,
+      "sticker_dimensions_preserved": true,
+      "qr_box_preserved": true
+    },
+    {
+      "id": "dino-09",
+      "outside_permitted_regions_changed_pixels": 0,
+      "sticker_dimensions_preserved": true,
+      "qr_box_preserved": true
+    },
+    {
+      "id": "dino-10",
+      "outside_permitted_regions_changed_pixels": 0,
+      "sticker_dimensions_preserved": true,
+      "qr_box_preserved": true
+    },
+    {
+      "id": "dino-11",
+      "outside_permitted_regions_changed_pixels": 0,
+      "sticker_dimensions_preserved": true,
+      "qr_box_preserved": true
+    },
+    {
+      "id": "dino-12",
+      "outside_permitted_regions_changed_pixels": 0,
+      "sticker_dimensions_preserved": true,
+      "qr_box_preserved": true
+    },
+    {
+      "id": "dino-13",
+      "outside_permitted_regions_changed_pixels": 0,
+      "sticker_dimensions_preserved": true,
+      "qr_box_preserved": true
+    },
+    {
+      "id": "dino-14",
+      "outside_permitted_regions_changed_pixels": 0,
+      "sticker_dimensions_preserved": true,
+      "qr_box_preserved": true
+    },
+    {
+      "id": "dino-15",
+      "outside_permitted_regions_changed_pixels": 0,
+      "sticker_dimensions_preserved": true,
+      "qr_box_preserved": true
+    },
+    {
+      "id": "dino-16",
+      "outside_permitted_regions_changed_pixels": 0,
+      "sticker_dimensions_preserved": true,
+      "qr_box_preserved": true
+    },
+    {
+      "id": "dino-17",
+      "outside_permitted_regions_changed_pixels": 0,
+      "sticker_dimensions_preserved": true,
+      "qr_box_preserved": true
+    },
+    {
+      "id": "dino-18",
+      "outside_permitted_regions_changed_pixels": 0,
+      "sticker_dimensions_preserved": true,
+      "qr_box_preserved": true
+    },
+    {
+      "id": "dino-19",
+      "outside_permitted_regions_changed_pixels": 0,
+      "sticker_dimensions_preserved": true,
+      "qr_box_preserved": true
+    },
+    {
+      "id": "dino-20",
+      "outside_permitted_regions_changed_pixels": 0,
+      "sticker_dimensions_preserved": true,
+      "qr_box_preserved": true
+    }
+  ]
+}

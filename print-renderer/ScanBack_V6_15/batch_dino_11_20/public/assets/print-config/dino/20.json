@@ -1,0 +1,78 @@
+{
+  "theme": "dino",
+  "design": "20",
+  "title": "Sunset Styracosaurus",
+  "source": "baby_styracosaurus_sunset_jungle_sticker.png",
+  "default_item": "Toy Box",
+  "canvas": {
+    "width": 1122,
+    "height": 1402
+  },
+  "image": "/assets/print-masters/dino/20.webp",
+  "name": {
+    "plate_bounds": [
+      273,
+      1080,
+      839,
+      1194
+    ],
+    "text_bounds": [
+      300,
+      1101,
+      812,
+      1172
+    ],
+    "color": "#123574",
+    "max_ink_height": 55,
+    "min_ink_height": 39,
+    "min_width_scale": 0.6
+  },
+  "item": {
+    "plate_bounds": [
+      286,
+      1201,
+      834,
+      1289
+    ],
+    "text_bounds": [
+      311,
+      1215,
+      809,
+      1274
+    ],
+    "color": "#102C66",
+    "max_ink_height": 46,
+    "min_ink_height": 32,
+    "min_width_scale": 0.63
+  },
+  "qr": {
+    "bounds": [
+      865,
+      1111,
+      1041,
+      1287
+    ],
+    "quiet_zone_modules": 4,
+    "inside_frame_inset_px": 6
+  },
+  "header": {
+    "content": "This item belongs to",
+    "center": [
+      554,
+      1056
+    ],
+    "max_ink_height": 34
+  },
+  "footer": {
+    "content": "\u2665 ScanBack Kids",
+    "center": [
+      555,
+      1308
+    ],
+    "max_ink_height": 25
+  },
+  "cutline": {
+    "status": "concept_requires_printer_approval"
+  },
+  "production_status": "DEVELOPMENT_QA_ONLY"
+}

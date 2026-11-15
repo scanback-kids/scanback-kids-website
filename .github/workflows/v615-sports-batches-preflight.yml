@@ -1,0 +1,28 @@
+name: V6.15 Sports 24 and remaining 72 source gates
+on:
+  pull_request:
+    paths:
+      - 'assets/print-masters/**'
+      - 'print-renderer/sports-v615/**'
+      - 'print-renderer/v615_remaining_72_batches.json'
+      - 'print-renderer/verify_v615_sports_first_batches.py'
+      - '.github/workflows/v615-sports-batches-preflight.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  sports-and-batches:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
+      - name: Audit Sports original PNG provenance, 96 catalog IDs and 72 batch assignments
+        run: python3 print-renderer/verify_v615_sports_first_batches.py --output qa-output/v615-sports-batch-readiness.json
+      - name: Upload QA report (does not signify print approval)
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        if: always()
+        with:
+          name: v615-sports-batch-readiness
+          path: qa-output/v615-sports-batch-readiness.json
+          if-no-files-found: error

@@ -1,0 +1,78 @@
+{
+  "theme": "dino",
+  "design": "19",
+  "title": "Orange Pachycephalosaurus",
+  "source": "dinosaur_jungle_adventure_sticker_label.png",
+  "default_item": "Jacket",
+  "canvas": {
+    "width": 1122,
+    "height": 1402
+  },
+  "image": "/assets/print-masters/dino/19.webp",
+  "name": {
+    "plate_bounds": [
+      294,
+      1081,
+      837,
+      1192
+    ],
+    "text_bounds": [
+      321,
+      1102,
+      810,
+      1170
+    ],
+    "color": "#123574",
+    "max_ink_height": 55,
+    "min_ink_height": 39,
+    "min_width_scale": 0.6
+  },
+  "item": {
+    "plate_bounds": [
+      301,
+      1200,
+      821,
+      1289
+    ],
+    "text_bounds": [
+      326,
+      1214,
+      796,
+      1274
+    ],
+    "color": "#102C66",
+    "max_ink_height": 46,
+    "min_ink_height": 32,
+    "min_width_scale": 0.63
+  },
+  "qr": {
+    "bounds": [
+      865,
+      1112,
+      1041,
+      1288
+    ],
+    "quiet_zone_modules": 4,
+    "inside_frame_inset_px": 6
+  },
+  "header": {
+    "content": "This item belongs to",
+    "center": [
+      554,
+      1057
+    ],
+    "max_ink_height": 34
+  },
+  "footer": {
+    "content": "\u2665 ScanBack Kids",
+    "center": [
+      555,
+      1308
+    ],
+    "max_ink_height": 25
+  },
+  "cutline": {
+    "status": "concept_requires_printer_approval"
+  },
+  "production_status": "DEVELOPMENT_QA_ONLY"
+}

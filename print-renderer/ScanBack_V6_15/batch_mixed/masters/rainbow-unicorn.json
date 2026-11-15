@@ -1,0 +1,30 @@
+{
+  "id": "rainbow-unicorn",
+  "source_artwork": "rainbow_magic_unicorn_sticker.png",
+  "width": 1254,
+  "height": 1254,
+  "name": [
+    0.346,
+    0.677,
+    0.369,
+    0.085
+  ],
+  "item": [
+    0.360447,
+    0.804625,
+    0.299841,
+    0.047847
+  ],
+  "qr": [
+    0.747,
+    0.706,
+    0.16,
+    0.2
+  ],
+  "name_color": "#ee2b97",
+  "default_item": "Lunch Box",
+  "approval": "ARTWORK_APPROVED_LAYOUT_PILOT",
+  "cut_contour": "NOT_PRINTER_APPROVED",
+  "notice": "Artwork has empty label zones; generated names and QR are separate layers. QR URL must be verified on server for real orders.",
+  "item_ink_target": "0.66 of calibrated safe box, centered"
+}
